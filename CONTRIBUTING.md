@@ -6,7 +6,7 @@ Contributions to this project are welcome and appreciated. You can contribute by
 
 2. **Clone the Repository**: After forking, you'll want to clone the repository to your local machine. This allows you to make changes to the files on your computer.
 
-3. **Find the Relevant YAML File**: Inside this file, you'll find a list of products and associated search queries for each supported search engine. 
+3. **Find the Relevant YAML File**: Inside this file, you'll find a list of products and associated search queries for each supported search engine.
 
 4. **Make Your Changes**: Add your new search query to the appropriate place in the YAML file. If you're adding a new product, you'll need to create a new entry in the file. Here's an example structure:
 
