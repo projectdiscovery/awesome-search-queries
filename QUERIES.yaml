@@ -2644,10 +2644,3 @@
     - platform: shodan
       queries:
         - http.favicon.hash:1485257654
-
-- name: elastic
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.favicon.hash:-267431135
