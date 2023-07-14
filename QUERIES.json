@@ -4536,5 +4536,17 @@
         ]
       }
     ]
+  },
+  {
+    "name": "kibana",
+    "type": "product",
+    "engines": [
+      {
+        "platform": "shodan",
+        "queries": [
+          "http.favicon.hash:-267431135"
+        ]
+      }
+    ]
   }
 ]
