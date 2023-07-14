@@ -1,0 +1,36 @@
+name: 📝 Convert YAML to JSON
+
+on:
+  push:
+    paths:
+      - 'QUERIES.yaml'
+  workflow_dispatch:
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+
+      - name: Convert YAML to JSON
+        run: |
+          sudo apt-get install -y python3-pip
+          pip3 install pyyaml
+          python3 -c "import sys, yaml, json; json.dump(yaml.safe_load(sys.stdin), sys.stdout, indent=2)" < QUERIES.yaml > QUERIES.json
+
+      - name: Check if there are changes
+        id: change
+        run: |
+          git add QUERIES.json
+          git status -s | wc -l | xargs -I {} echo CHANGES={} >> $GITHUB_OUTPUT
+
+      - name: Commit and push if it changed
+        if: steps.change.outputs.CHANGES > 0
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git commit -am "Auto YAML to JSON update [$(date)] :robot:" --allow-empty
+          git push
