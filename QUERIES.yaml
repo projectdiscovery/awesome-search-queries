@@ -2637,3 +2637,10 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-267431135
+
+- name: sonarqube
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:1485257654
