@@ -2645,6 +2645,13 @@
       queries:
         - http.favicon.hash:1485257654
 
+- name: couchdb
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"CouchDB"
+
 - name: mongodb
   type: product
   engines:
