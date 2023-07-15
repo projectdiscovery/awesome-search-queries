@@ -63,9 +63,6 @@ Your contributions will be reviewed and, if accepted, merged into the main proje
 1. **[uncover](https://github.com/projectdiscovery/uncover) Integration:** support for searching for specific product across all search engines.
 2. **[nuclei-templates](https://github.com/projectdiscovery/nuclei-templates) Integration:** auto populate search query metadata in nuclei templates for related products.
 
-
-Of course! It's important to write clear and understandable documentation. Here's a revised version of your note:
-
 ## Important Information
 
 - The file `QUERIES.json` is automatically generated through a GitHub Action workflow. Manual updates to this file are not recommended or necessary.
