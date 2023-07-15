@@ -2,35 +2,33 @@ name: 📝 Convert YAML to JSON
 
 on:
   push:
-    paths:
-      - 'QUERIES.yaml'
+    paths: ['QUERIES.yaml']
+    branches: [main]
   workflow_dispatch:
 
 jobs:
-  convert:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@master
         with:
           fetch-depth: 0
 
+      - run: pip3 install pyyaml --user
+
       - name: Convert YAML to JSON
-        run: |
-          sudo apt-get install -y python3-pip
-          pip3 install pyyaml
-          python3 -c "import sys, yaml, json; json.dump(yaml.safe_load(sys.stdin), sys.stdout, indent=2)" < QUERIES.yaml > QUERIES.json
+        run: cat QUERIES.yaml | python3 .github/scripts/yaml2json.py > QUERIES.json
 
-      - name: Check if there are changes
-        id: change
+      - name: Commit and push changes
         run: |
-          git add QUERIES.json
-          git status -s | wc -l | xargs -I {} echo CHANGES={} >> $GITHUB_OUTPUT
+          [[ "$(git status -s | wc -l)" == 0 ]] && exit 0
 
-      - name: Commit and push if it changed
-        if: steps.change.outputs.CHANGES > 0
-        run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-          git commit -am "Auto YAML to JSON update [$(date)] :robot:" --allow-empty
-          git push
+          git config --local user.email "ghost@users.noreply.github.com"
+          git config --local user.name "ghost"
+
+          COMMIT_MSG="build: "
+          [[ "${{ github.event_name }}" == "workflow_dispatch" ]] && COMMIT_MSG+="[force] "
+          COMMIT_MSG+="compile JSON [$(date "+%d/%m/%Y %T")] :robot:"
+
+          git commit -am "${COMMIT_MSG}"
+          git push origin "${GITHUB_REF_NAME}"

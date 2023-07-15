@@ -1,0 +1,1 @@
+import sys, yaml, json; json.dump(yaml.safe_load(sys.stdin), sys.stdout, separators=(',', ':'))
