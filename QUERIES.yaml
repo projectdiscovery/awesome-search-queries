@@ -2644,3 +2644,38 @@
     - platform: shodan
       queries:
         - http.favicon.hash:1485257654
+
+- name: mongodb
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"MongoDB"
+
+- name: mysql
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"MySQL"
+
+- name: vnc
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - port:3306 product:"VNC"
+
+- name: redis
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"redis"
+
+- name: influxdb
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"InfluxDB"
