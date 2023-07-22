@@ -50,6 +50,9 @@
     - platform: shodan
       queries:
         - http.title:"Mongo Express"
+    - platform: google
+      queries:
+        - intitle:"Mongo Express"
 
 - name: openemr
   type: product
@@ -67,6 +70,9 @@
     - platform: shodan
       queries:
         - http.title:"Tenda 11N"
+    - platform: google
+      queries:
+        - intitle:"Tenda 11N"
 
 - name: spacelogic_c-bus_home_controller_firmware
   type: product
@@ -88,6 +94,9 @@
     - platform: shodan
       queries:
         - http.title:"PhpCollab"
+    - platform: google
+      queries:
+        - intitle:"PhpCollab"
 
 - name: 74cms
   type: product
@@ -157,6 +166,9 @@
     - platform: shodan
       queries:
         - http.title:"Dapr Dashboard"
+    - platform: google
+      queries:
+        - intitle:"Dapr Dashboard"
 
 - name: webpanel
   type: product
@@ -164,6 +176,9 @@
     - platform: shodan
       queries:
         - http.title:"Login | Control WebPanel"
+    - platform: google
+      queries:
+        - intitle:"Login | Control WebPanel"
 
 - name: activehelper_livehelp_live_chat
   type: product
@@ -188,6 +203,9 @@
     - platform: shodan
       queries:
         - http.title:"Metabase"
+    - platform: google
+      queries:
+        - intitle:"Metabase"
 
 - name: kavita
   type: product
@@ -336,6 +354,9 @@
     - platform: shodan
       queries:
         - http.title:"dotCMS"
+    - platform: google
+      queries:
+        - intitle:"dotCMS"
 
 - name: high_cms
   type: product
@@ -405,6 +426,9 @@
     - platform: shodan
       queries:
         - http.title:"mlflow"
+    - platform: google
+      queries:
+        - intitle:"mlflow"
 
 - name: forget_about_shortcode_buttons
   type: product
@@ -443,6 +467,9 @@
     - platform: shodan
       queries:
         - http.title:"ClinicCases",html:"/cliniccases/"
+    - platform: google
+      queries:
+        - intitle:"ClinicCases",html:"/cliniccases/"
 
 - name: identity_manager
   type: product
@@ -460,6 +487,9 @@
     - platform: shodan
       queries:
         - http.title:"Server backup manager"
+    - platform: google
+      queries:
+        - intitle:"Server backup manager"
 
 - name: page-layout-builder
   type: product
@@ -524,6 +554,9 @@
     - platform: shodan
       queries:
         - http.title:"Login" "X-ORACLE-DMS-ECID" 200
+    - platform: google
+      queries:
+        - intitle:"Login" "X-ORACLE-DMS-ECID" 200
 
 - name: apisix
   type: product
@@ -624,6 +657,9 @@
       queries:
         - http.html:"Jellyfin"
         - http.title:"Jellyfin"
+    - platform: google
+      queries:
+        - intitle:"Jellyfin"
 
 - name: node-red-dashboard
   type: product
@@ -686,6 +722,9 @@
     - platform: shodan
       queries:
         - http.title:"erxes"
+    - platform: google
+      queries:
+        - intitle:"erxes"
 
 - name: dir-615_firmware
   type: product
@@ -693,6 +732,9 @@
     - platform: shodan
       queries:
         - http.title:"Roteador Wireless"
+    - platform: google
+      queries:
+        - intitle:"Roteador Wireless"
 
 - name: ghost
   type: product
@@ -735,6 +777,9 @@
     - platform: shodan
       queries:
         - http.title:"free5GC Web Console"
+    - platform: google
+      queries:
+        - intitle:"free5GC Web Console"
 
 - name: sg200-50_firmware
   type: product
@@ -752,6 +797,9 @@
     - platform: shodan
       queries:
         - http.title:"GitLab"
+    - platform: google
+      queries:
+        - intitle:"GitLab"
 
 - name: aurall_rec_monitor
   type: product
@@ -780,6 +828,9 @@
     - platform: shodan
       queries:
         - http.title:"KubeView"
+    - platform: google
+      queries:
+        - intitle:"KubeView"
 
 - name: cpanel
   type: product
@@ -847,6 +898,9 @@
     - platform: shodan
       queries:
         - http.title:"My Download Server"
+    - platform: google
+      queries:
+        - intitle:"My Download Server"
 
 - name: ofbiz
   type: product
@@ -864,6 +918,9 @@
     - platform: shodan
       queries:
         - http.title:'CAS - Central Authentication Service'
+    - platform: google
+      queries:
+        - intitle:'CAS - Central Authentication Service'
 
 - name: casdoor
   type: product
@@ -871,6 +928,9 @@
     - platform: shodan
       queries:
         - http.title:"Casdoor"
+    - platform: google
+      queries:
+        - intitle:"Casdoor"
 
 - name: opencats
   type: product
@@ -900,6 +960,9 @@
     - platform: shodan
       queries:
         - http.title:"ZyWall"
+    - platform: google
+      queries:
+        - intitle:"ZyWall"
 
 - name: cute_editor
   type: product
@@ -931,6 +994,9 @@
     - platform: shodan
       queries:
         - http.title:"SiteCore"
+    - platform: google
+      queries:
+        - intitle:"SiteCore"
 
 - name: appcms
   type: product
@@ -977,6 +1043,9 @@
     - platform: shodan
       queries:
         - http.title:"Flowchart Maker"
+    - platform: google
+      queries:
+        - intitle:"Flowchart Maker"
 
 - name: open_edx
   type: product
@@ -1251,6 +1320,9 @@
     - platform: shodan
       queries:
         - http.title:"Reolink"
+    - platform: google
+      queries:
+        - intitle:"Reolink"
 
 - name: sv-cpt-mc310_firmware
   type: product
@@ -1381,6 +1453,9 @@
     - platform: shodan
       queries:
         - http.title:"openSIS"
+    - platform: google
+      queries:
+        - intitle:"openSIS"
 
 - name: trilium
   type: product
@@ -1458,6 +1533,9 @@
     - platform: shodan
       queries:
         - http.title:"TP-LINK"
+    - platform: google
+      queries:
+        - intitle:"TP-LINK"
 
 - name: bibliopac
   type: product
@@ -1486,6 +1564,9 @@
     - platform: shodan
       queries:
         - http.title:"OpenAM"
+    - platform: google
+      queries:
+        - intitle:"OpenAM"
 
 - name: wpqa_builder
   type: product
@@ -1510,6 +1591,9 @@
     - platform: shodan
       queries:
         - http.title:"Supervisor Status"
+    - platform: google
+      queries:
+        - intitle:"Supervisor Status"
 
 - name: kentico_cms
   type: product
@@ -1524,6 +1608,9 @@
     - platform: shodan
       queries:
         - http.title:"Orchid Core VMS"
+    - platform: google
+      queries:
+        - intitle:"Orchid Core VMS"
 
 - name: gitblit
   type: product
@@ -1576,6 +1663,9 @@
     - platform: shodan
       queries:
         - http.title:"eMerge"
+    - platform: google
+      queries:
+        - intitle:"eMerge"
         - title:"eMerge"
 
 - name: vantara_pentaho
@@ -1711,6 +1801,9 @@
     - platform: shodan
       queries:
         - http.title:"datataker"
+    - platform: google
+      queries:
+        - intitle:"datataker"
 
 - name: phpmychat-plus
   type: product
@@ -1767,6 +1860,9 @@
     - platform: shodan
       queries:
         - http.title:"Citrix SD-WAN"
+    - platform: google
+      queries:
+        - intitle:"Citrix SD-WAN"
 
 - name: php_curl_class
   type: product
@@ -1837,6 +1933,9 @@
     - platform: shodan
       queries:
         - http.title:"phpPgAdmin"
+    - platform: google
+      queries:
+        - intitle:"phpPgAdmin"
 
 - name: alert_before_you_post
   type: product
@@ -1910,6 +2009,9 @@
     - platform: shodan
       queries:
         - http.title:"Rocket.Chat"
+    - platform: google
+      queries:
+        - intitle:"Rocket.Chat"
 
 - name: access_manager
   type: product
@@ -1920,6 +2022,9 @@
     - platform: shodan
       queries:
         - http.title:"Oracle Access Management"
+    - platform: google
+      queries:
+        - intitle:"Oracle Access Management"
 
 - name: wapples
   type: product
@@ -1927,6 +2032,9 @@
     - platform: shodan
       queries:
         - http.title:"Intelligent WAPPLES"
+    - platform: google
+      queries:
+        - intitle:"Intelligent WAPPLES"
 
 - name: servicenow
   type: product
@@ -1934,6 +2042,9 @@
     - platform: shodan
       queries:
         - http.title:"ServiceNow"
+    - platform: google
+      queries:
+        - intitle:"ServiceNow"
 
 - name: bitbucket
   type: product
@@ -1979,6 +2090,9 @@
     - platform: shodan
       queries:
         - http.title:"Outlook"
+    - platform: google
+      queries:
+        - intitle:"Outlook"
         - vuln:CVE-2021-26855
 
 - name: admin-font-editor
@@ -2106,6 +2220,9 @@
     - platform: shodan
       queries:
         - http.title:"Create a pipeline - Go",html:"GoCD Version"
+    - platform: google
+      queries:
+        - intitle:"Create a pipeline - Go",html:"GoCD Version"
 
 - name: tlr-2005ksh_firmware
   type: product
@@ -2216,6 +2333,9 @@
     - platform: shodan
       queries:
         - http.title:"Wi-Fi APP Login"
+    - platform: google
+      queries:
+        - intitle:"Wi-Fi APP Login"
 
 - name: aptus_web
   type: product
@@ -2223,6 +2343,9 @@
     - platform: shodan
       queries:
         - http.title:"Intellian Aptus Web"
+    - platform: google
+      queries:
+        - intitle:"Intellian Aptus Web"
 
 - name: vigorconnect
   type: product
@@ -2304,6 +2427,9 @@
     - platform: shodan
       queries:
         - http.title:"VoIPmonitor"
+    - platform: google
+      queries:
+        - intitle:"VoIPmonitor"
 
 - name: thinkphp
   type: product
@@ -2357,6 +2483,9 @@
     - platform: shodan
       queries:
         - http.title:"BIG-IP&reg;-+Redirect" +"Server"
+    - platform: google
+      queries:
+        - intitle:"BIG-IP&reg;-+Redirect" +"Server"
 
 - name: emerge_e3_firmware
   type: product
@@ -2364,6 +2493,9 @@
     - platform: shodan
       queries:
         - http.title:"Linear eMerge"
+    - platform: google
+      queries:
+        - intitle:"Linear eMerge"
 
 - name: unified_threat_management
   type: product
@@ -2434,6 +2566,9 @@
     - platform: shodan
       queries:
         - http.title:"ManageEngine"
+    - platform: google
+      queries:
+        - intitle:"ManageEngine"
 
 - name: usg20-vpn_firmware
   type: product
@@ -2487,6 +2622,9 @@
     - platform: shodan
       queries:
         - http.title:"Omnia MPX Node | Login"
+    - platform: google
+      queries:
+        - intitle:"Omnia MPX Node | Login"
 
 - name: resin
   type: product
@@ -2522,6 +2660,9 @@
     - platform: shodan
       queries:
         - http.title:"DokuWiki"
+    - platform: google
+      queries:
+        - intitle:"DokuWiki"
 
 - name: zywall_2_plus_internet_security_appliance_firmware
   type: product
@@ -2529,6 +2670,9 @@
     - platform: shodan
       queries:
         - http.title:"Zywall2Plus"
+    - platform: google
+      queries:
+        - intitle:"Zywall2Plus"
 
 - name: photo_station
   type: product
@@ -2550,6 +2694,9 @@
     - platform: shodan
       queries:
         - http.title:"ADAudit Plus" || http.title:"ManageEngine - ADManager Plus"
+    - platform: google
+      queries:
+        - intitle:"ADAudit Plus" || http.title:"ManageEngine - ADManager Plus"
 
 - name: tera-charts
   type: product
@@ -2578,6 +2725,9 @@
     - platform: shodan
       queries:
         - http.title:"prime infrastructure"
+    - platform: google
+      queries:
+        - intitle:"prime infrastructure"
 
 - name: zzcms
   type: product
@@ -2599,6 +2749,9 @@
     - platform: shodan
       queries:
         - http.title:"Sophos"
+    - platform: google
+      queries:
+        - intitle:"Sophos"
 
 - name: control_panel
   type: product
