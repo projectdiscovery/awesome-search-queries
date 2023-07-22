@@ -1,0 +1,20 @@
+extends: default
+
+yaml-files:
+  - 'QUERIES.yaml'
+
+rules:
+  trailing-spaces: disable
+  document-start: disable
+  document-end: disable
+  indentation:
+    spaces: 2
+    indent-sequences: true
+  braces:
+    forbid: true
+  brackets:
+    forbid: true
+  key-duplicates: {}
+  line-length: disable
+  empty-lines:
+    max: 1
