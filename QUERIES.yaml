@@ -2322,7 +2322,7 @@
         - http.favicon.hash:-2098066288
 
 - name: u8\+
-  vendor: []
+  vendor: yonyou
   type: product
   engines:
     - platform: google
