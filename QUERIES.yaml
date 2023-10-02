@@ -426,7 +426,7 @@
   engines:
     - platform: shodan
       queries:
-        - title:"Parallels H-Sphere
+        - title:"Parallels H-Sphere"
         - title:"h-sphere"
 
 - name: swim_team
