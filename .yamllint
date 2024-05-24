@@ -13,7 +13,7 @@ rules:
   braces:
     forbid: true
   brackets:
-    forbid: true
+    forbid: false
   key-duplicates: {}
   line-length: disable
   empty-lines:
