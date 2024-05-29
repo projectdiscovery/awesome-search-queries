@@ -17,7 +17,7 @@ jobs:
     - name: Clone awesome-search-queries Repository
       env:
         GTOKEN: ${{ secrets.GTOKEN }}
-      run: git clone https://${{ secrets.GTOKEN }}:x-oauth-basic@github.com/yourusername/awesome-search-queries
+      run: git clone https://${{ secrets.GTOKEN }}:x-oauth-basic@github.com/projectdiscovery/awesome-search-queries
 
     - name: Set up Python
       uses: actions/setup-python@v2
