@@ -1,0 +1,60 @@
+name: 🌥 Sync queries from Public Templates 
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *' # Runs every 6 hours
+
+jobs:
+  sync-repositories:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Clone nuclei-templates Repository
+      run: git clone https://${{ secrets.GTOKEN }}:x-oauth-basic@github.com/projectdiscovery/nuclei-templates
+
+    - name: Clone awesome-search-queries Repository
+      env:
+        GTOKEN: ${{ secrets.GTOKEN }}
+      run: git clone https://${{ secrets.GTOKEN }}:x-oauth-basic@github.com/yourusername/awesome-search-queries
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install Python Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install ruamel.yaml
+
+    - name: Run mapqueries.py Script
+      run: |
+        cd awesome-search-queries/.scripts
+        python mapqueries.py -tdir ${{ github.workspace }}/nuclei-templates -out ${{ github.workspace }}/awesome-search-queries/QUERIES.yaml -ignore ${{ github.workspace }}/awesome-search-queries/.ignore
+
+    - name: Commit and Push Changes to awesome-search-queries
+      env:
+        GIT_AUTHOR_EMAIL: bot@projectdiscovery.io
+        GIT_AUTHOR_NAME: '[PDBot]'
+        GIT_COMMITTER_EMAIL: bot@projectdiscovery.io
+        GIT_COMMITTER_NAME: '[PDBot]'
+        GIT_TERMINAL_PROMPT: "0"
+      run: |
+        cd awesome-search-queries
+        git config user.name '[PDBot]'
+        git config user.email 'bot@projectdiscovery.io'
+        git add QUERIES.yaml
+        if [ -z "$(git status --porcelain)" ]; then
+          echo "No changes to commit in awesome-search-queries"
+          exit 0
+        fi
+        git commit -m "Syncing queries from Templates"
+        git push https://${{ secrets.GTOKEN }}:x-oauth-basic@github.com/yourusername/awesome-search-queries.git || {
+          for i in {1..10}; do
+            git pull --rebase
+            git push https://${{ secrets.GTOKEN }}:x-oauth-basic@github.com/yourusername/awesome-search-queries.git && break
+            echo "Retry $i"
+          done
+        }
