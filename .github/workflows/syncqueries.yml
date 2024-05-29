@@ -31,7 +31,7 @@ jobs:
 
     - name: Run mapqueries.py Script
       run: |
-        cd awesome-search-queries/.scripts
+        cd awesome-search-queries/.github/scripts
         python mapqueries.py -tdir ${{ github.workspace }}/nuclei-templates -out ${{ github.workspace }}/awesome-search-queries/QUERIES.yaml -ignore ${{ github.workspace }}/awesome-search-queries/.ignore
 
     - name: Commit and Push Changes to awesome-search-queries
@@ -51,10 +51,10 @@ jobs:
           exit 0
         fi
         git commit -m "Syncing queries from Templates"
-        git push https://${{ secrets.GTOKEN }}:x-oauth-basic@github.com/yourusername/awesome-search-queries.git || {
+        git push https://${{ secrets.GTOKEN }}:x-oauth-basic@github.com/projectdiscovery/awesome-search-queries.git || {
           for i in {1..10}; do
             git pull --rebase
-            git push https://${{ secrets.GTOKEN }}:x-oauth-basic@github.com/yourusername/awesome-search-queries.git && break
+            git push https://${{ secrets.GTOKEN }}:x-oauth-basic@github.com/projectdiscovery/awesome-search-queries.git && break
             echo "Retry $i"
           done
         }
