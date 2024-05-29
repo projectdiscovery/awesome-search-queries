@@ -1,8 +1,8 @@
-name: 🌥 Sync queries from Public Templates 
+name: 🌥 Sync queries from Public Templates
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */6 * * *' # Runs every 6 hours
+    - cron: '0 */12 * * *' # Runs every 12 hours
 
 jobs:
   sync-repositories:
@@ -12,12 +12,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Clone nuclei-templates Repository
-      run: git clone https://${{ secrets.GTOKEN }}:x-oauth-basic@github.com/projectdiscovery/nuclei-templates
-
-    - name: Clone awesome-search-queries Repository
-      env:
-        GTOKEN: ${{ secrets.GTOKEN }}
-      run: git clone https://${{ secrets.GTOKEN }}:x-oauth-basic@github.com/projectdiscovery/awesome-search-queries
+      run: git clone https://github.com/projectdiscovery/nuclei-templates
 
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -31,8 +26,7 @@ jobs:
 
     - name: Run mapqueries.py Script
       run: |
-        cd awesome-search-queries/.github/scripts
-        python mapqueries.py -tdir ${{ github.workspace }}/nuclei-templates -out ${{ github.workspace }}/awesome-search-queries/QUERIES.yaml -ignore ${{ github.workspace }}/awesome-search-queries/.ignore
+        python .github/scripts/mapqueries.py -tdir ${{ github.workspace }}/nuclei-templates -out ${{ github.workspace }}/QUERIES.yaml -ignore ${{ github.workspace }}/.ignore
 
     - name: Commit and Push Changes to awesome-search-queries
       env:
@@ -42,7 +36,6 @@ jobs:
         GIT_COMMITTER_NAME: '[PDBot]'
         GIT_TERMINAL_PROMPT: "0"
       run: |
-        cd awesome-search-queries
         git config user.name '[PDBot]'
         git config user.email 'bot@projectdiscovery.io'
         git add QUERIES.yaml
@@ -51,10 +44,4 @@ jobs:
           exit 0
         fi
         git commit -m "Syncing queries from Templates"
-        git push https://${{ secrets.GTOKEN }}:x-oauth-basic@github.com/projectdiscovery/awesome-search-queries.git || {
-          for i in {1..10}; do
-            git pull --rebase
-            git push https://${{ secrets.GTOKEN }}:x-oauth-basic@github.com/projectdiscovery/awesome-search-queries.git && break
-            echo "Retry $i"
-          done
-        }
+        git push
