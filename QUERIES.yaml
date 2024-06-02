@@ -61,8 +61,8 @@
         - http.title:"ws_ftp server web transfer"
     - platform: fofa
       queries:
-        - title="ad hoc transfer"
         - title="ws_ftp server web transfer"
+        - title="ad hoc transfer"
     - platform: google
       queries:
         - intitle:"ws_ftp server web transfer"
@@ -77,8 +77,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:apache:couchdb"
         - product:"couchdb"
+        - cpe:"cpe:2.3:a:apache:couchdb"
 
 - name: rocketmq
   vendor: apache
@@ -87,8 +87,8 @@
     - platform: fofa
       queries:
         - title="rocketmq"
-        - title="rocketmq-console-ng"
         - protocol="rocketmq"
+        - title="rocketmq-console-ng"
     - platform: shodan
       queries:
         - http.title:"rocketmq"
@@ -104,9 +104,9 @@
   engines:
     - platform: shodan
       queries:
-        - product:"cisco ios http config" && 200
         - cpe:"cpe:2.3:o:cisco:ios"
         - product:"cisco ios http config"
+        - product:"cisco ios http config" && 200
 
 - name: airflow
   vendor: apache
@@ -114,13 +114,13 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"sign in - airflow"
         - http.title:"airflow - dags" || http.html:"apache airflow"
         - product:"redis"
+        - http.title:"sign in - airflow"
     - platform: fofa
       queries:
-        - title="sign in - airflow"
         - title="airflow - dags" || http.html:"apache airflow"
+        - title="sign in - airflow"
         - apache airflow
     - platform: google
       queries:
@@ -202,8 +202,8 @@
     - platform: shodan
       queries:
         - http.component:"atlassian confluence"
-        - http.component:"atlassian jira"
         - cpe:"cpe:2.3:a:atlassian:jira"
+        - http.component:"atlassian jira"
 
 - name: arcgis_server
   vendor: esri
@@ -225,9 +225,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:81586312
         - cpe:"cpe:2.3:a:jenkins:jenkins"
         - product:"jenkins"
-        - http.favicon.hash:81586312
     - platform: fofa
       queries:
         - icon_hash=81586312
@@ -238,13 +238,13 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"apache tomcat"
-        - http.title:"apache tomcat"
         - cpe:"cpe:2.3:a:apache:tomcat"
+        - http.title:"apache tomcat"
+        - http.html:"apache tomcat"
     - platform: fofa
       queries:
-        - body="apache tomcat"
         - title="apache tomcat"
+        - body="apache tomcat"
     - platform: google
       queries:
         - intitle:"apache tomcat"
@@ -296,8 +296,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"genieacs"
         - http.favicon.hash:-2098066288
+        - http.html:"genieacs"
     - platform: fofa
       queries:
         - icon_hash=-2098066288
@@ -363,8 +363,8 @@
   engines:
     - platform: fofa
       queries:
-        - body="thruk"
         - title=="thruk monitoring webinterface"
+        - body="thruk"
     - platform: shodan
       queries:
         - http.html:"thruk"
@@ -489,8 +489,8 @@
         - http.html:"weiphp"
     - platform: fofa
       queries:
-        - body="weiphp5.0"
         - body="weiphp"
+        - body="weiphp5.0"
 
 - name: processwire
   vendor: processwire
@@ -599,18 +599,18 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"powered by osticket"
         - http.title:"osticket"
         - http.title:"osticket installer"
+        - http.html:"powered by osticket"
     - platform: fofa
       queries:
-        - title="osticket"
         - body="powered by osticket"
         - title="osticket installer"
+        - title="osticket"
     - platform: google
       queries:
-        - intitle:"osticket"
         - intitle:"osticket installer"
+        - intitle:"osticket"
 
 - name: big-ip_access_policy_manager
   vendor: f5
@@ -686,8 +686,8 @@
         - http.title:"metabase"
     - platform: fofa
       queries:
-        - title="metabase"
         - app="metabase"
+        - title="metabase"
     - platform: google
       queries:
         - intitle:"metabase"
@@ -738,8 +738,8 @@
         - cpe:"cpe:2.3:a:adminer:adminer"
     - platform: fofa
       queries:
-        - app="adminer" && body="4.7.8"
         - title="login - adminer"
+        - app="adminer" && body="4.7.8"
     - platform: hunter
       queries:
         - app.name="adminer"&&web.body="4.7.8"
@@ -767,9 +767,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.title:"gitea"
         - http.html:"powered by gitea version"
         - cpe:"cpe:2.3:a:gitea:gitea"
-        - http.title:"gitea"
     - platform: fofa
       queries:
         - body="powered by gitea version"
@@ -784,8 +784,8 @@
   engines:
     - platform: shodan
       queries:
-        - 'http.title:"sign in: /home"'
         - 'server: labkey'
+        - 'http.title:"sign in: /home"'
     - platform: fofa
       queries:
         - 'title="sign in: /home"'
@@ -832,17 +832,17 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"cpanel - api codes"
-        - http.title:"cpanel"
         - cpe:"cpe:2.3:a:cpanel:cpanel"
+        - http.title:"cpanel"
+        - http.title:"cpanel - api codes"
     - platform: fofa
       queries:
-        - title="cpanel - api codes"
         - title="cpanel"
+        - title="cpanel - api codes"
     - platform: google
       queries:
-        - intitle:"cpanel - api codes"
         - intitle:"cpanel"
+        - intitle:"cpanel - api codes"
 
 - name: cip_92200_firmware
   vendor: intelbras
@@ -885,8 +885,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"consul by hashicorp"
         - cpe:"cpe:2.3:a:hashicorp:consul"
+        - http.title:"consul by hashicorp"
     - platform: fofa
       queries:
         - title="consul by hashicorp"
@@ -929,8 +929,8 @@
         - http.title:"ivanti connect secure"
     - platform: fofa
       queries:
-        - body="welcome.cgi?p=logo"
         - title="ivanti connect secure"
+        - body="welcome.cgi?p=logo"
     - platform: google
       queries:
         - intitle:"ivanti connect secure"
@@ -980,8 +980,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:drupal:drupal"
         - http.component:"drupal"
+        - cpe:"cpe:2.3:a:drupal:drupal"
 
 - name: piwigo
   vendor: piwigo
@@ -1029,8 +1029,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:phppgadmin
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:phppgadmin
     - platform: fofa
       queries:
         - title=phppgadmin
@@ -1072,8 +1072,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:-893681401
         - http.title:"sophos web appliance"
+        - http.favicon.hash:-893681401
     - platform: fofa
       queries:
         - title="sophos web appliance"
@@ -1183,8 +1183,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"sign in - appwrite"
         - http.favicon.hash:-633108100
+        - http.title:"sign in - appwrite"
     - platform: fofa
       queries:
         - icon_hash=-633108100
@@ -1210,15 +1210,15 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash=-74348711
-        - title="qlik-sense"
         - body="qlik"
+        - title="qlik-sense"
         - app="qlik-sense"
+        - icon_hash=-74348711
     - platform: shodan
       queries:
+        - http.title:"qlik-sense"
         - http.html:"qlik"
         - http.favicon.hash:-74348711
-        - http.title:"qlik-sense"
     - platform: google
       queries:
         - intitle:"qlik-sense"
@@ -1232,8 +1232,8 @@
         - http.title:"geoserver"
     - platform: fofa
       queries:
-        - app="geoserver"
         - title="geoserver"
+        - app="geoserver"
     - platform: google
       queries:
         - intitle:"geoserver"
@@ -1258,8 +1258,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"metasploit"
         - http.title:"metasploit - setup and configuration"
+        - http.title:"metasploit"
     - platform: zoomeye
       queries:
         - title:'metasploit'
@@ -1269,8 +1269,8 @@
         - title="metasploit"
     - platform: google
       queries:
-        - intitle:"metasploit"
         - intitle:"metasploit - setup and configuration"
+        - intitle:"metasploit"
 
 - name: linkerd
   vendor: linkerd
@@ -1289,12 +1289,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"sophos mobile"
         - http.favicon.hash:-1274798165
+        - http.title:"sophos mobile"
     - platform: fofa
       queries:
-        - icon_hash=-1274798165
         - title="sophos mobile"
+        - icon_hash=-1274798165
     - platform: google
       queries:
         - intitle:"sophos mobile"
@@ -1348,8 +1348,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:squirrelmail:squirrelmail"
         - http.title:"squirrelmail"
+        - cpe:"cpe:2.3:a:squirrelmail:squirrelmail"
     - platform: fofa
       queries:
         - title="squirrelmail"
@@ -1399,8 +1399,8 @@
   engines:
     - platform: google
       queries:
-        - intitle:"pega platform"
         - inurl:"/prweb/prauth/app/default"
+        - intitle:"pega platform"
     - platform: shodan
       queries:
         - http.title:"pega platform"
@@ -1462,9 +1462,9 @@
         - http.title:"3cx phone system management console"
     - platform: fofa
       queries:
-        - title="3cx phone system management console"
         - title="3cx webclient"
         - icon_hash=970132176
+        - title="3cx phone system management console"
 
 - name: lansweeper
   vendor: lansweeper
@@ -1486,16 +1486,16 @@
   engines:
     - platform: google
       queries:
-        - intitle:"securetransport" || http.favicon.hash:1330269434
         - intitle:"st web client"
+        - intitle:"securetransport" || http.favicon.hash:1330269434
     - platform: shodan
       queries:
-        - http.title:"securetransport" || http.favicon.hash:1330269434
         - http.title:"st web client"
+        - http.title:"securetransport" || http.favicon.hash:1330269434
     - platform: fofa
       queries:
-        - title="securetransport" || http.favicon.hash:1330269434
         - title="st web client"
+        - title="securetransport" || http.favicon.hash:1330269434
 
 - name: spark
   vendor: apache
@@ -1507,8 +1507,8 @@
         - http.html:"/apps/imt/html/"
     - platform: fofa
       queries:
-        - title="spark master at"
         - body="/apps/imt/html/"
+        - title="spark master at"
     - platform: google
       queries:
         - intitle:"spark master at"
@@ -1576,8 +1576,8 @@
         - http.html:"amcrest" "ldap user"
     - platform: fofa
       queries:
-        - body="amcrest" "ldap user"
         - body="amcrest"
+        - body="amcrest" "ldap user"
 
 - name: influxdb
   vendor: influxdata
@@ -1585,8 +1585,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"influxdb - admin interface"
         - influxdb
+        - http.title:"influxdb - admin interface"
     - platform: fofa
       queries:
         - title="influxdb - admin interface"
@@ -1600,16 +1600,16 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"openfire"
         - http.title:"openfire admin console"
+        - http.title:"openfire"
     - platform: fofa
       queries:
-        - title="openfire admin console"
         - title="openfire"
+        - title="openfire admin console"
     - platform: google
       queries:
-        - intitle:"openfire"
         - intitle:"openfire admin console"
+        - intitle:"openfire"
 
 - name: gogs
   vendor: gogs
@@ -1703,12 +1703,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:-476299640
         - http.title:"hestia control panel"
+        - http.favicon.hash:-476299640
     - platform: fofa
       queries:
-        - icon_hash=-476299640
         - title="hestia control panel"
+        - icon_hash=-476299640
     - platform: google
       queries:
         - intitle:"hestia control panel"
@@ -1755,18 +1755,18 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"login - pyload"
         - http.title:"pyload"
         - http.html:"pyload"
+        - http.title:"login - pyload"
     - platform: fofa
       queries:
+        - body="pyload"
         - title="pyload"
         - title="login - pyload"
-        - body="pyload"
     - platform: google
       queries:
-        - intitle:"pyload"
         - intitle:"login - pyload"
+        - intitle:"pyload"
     - platform: zoomeye
       queries:
         - app:"pyload"
@@ -1877,13 +1877,13 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:adobe:coldfusion"
         - http.component:"adobe coldfusion"
+        - cpe:"cpe:2.3:a:adobe:coldfusion"
         - http.title:"coldfusion administrator login"
     - platform: fofa
       queries:
-        - app="adobe-coldfusion"
         - title="coldfusion administrator login"
+        - app="adobe-coldfusion"
     - platform: google
       queries:
         - intitle:"coldfusion administrator login"
@@ -1936,14 +1936,14 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:-1105083093
         - http.html:"keycloak"
         - http.title:"keycloak"
-        - http.favicon.hash:-1105083093
     - platform: fofa
       queries:
+        - title="keycloak"
         - icon_hash=-1105083093
         - body="keycloak"
-        - title="keycloak"
     - platform: google
       queries:
         - intitle:"keycloak"
@@ -1987,8 +1987,8 @@
         - title="kafka center"
     - platform: google
       queries:
-        - intitle:"kafka consumer offset monitor"
         - intitle:"kafka center"
+        - intitle:"kafka consumer offset monitor"
 
 - name: open-xchange_appsuite
   vendor: open-xchange
@@ -2007,13 +2007,13 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:apache:solr"
         - http.title:"apache solr"
         - http.title:"solr admin"
+        - cpe:"cpe:2.3:a:apache:solr"
     - platform: fofa
       queries:
-        - title="solr admin"
         - title="apache solr"
+        - title="solr admin"
     - platform: google
       queries:
         - intitle:"solr admin"
@@ -2202,13 +2202,13 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:contao:contao"
-        - http.title:"contao"
         - http.html:"contao open source cms"
+        - http.title:"contao"
+        - cpe:"cpe:2.3:a:contao:contao"
     - platform: fofa
       queries:
-        - body="contao open source cms"
         - title="contao"
+        - body="contao open source cms"
     - platform: google
       queries:
         - intitle:"contao"
@@ -2233,18 +2233,18 @@
   engines:
     - platform: fofa
       queries:
-        - title="cacti"
         - icon_hash="-1797138069"
         - title="login to cacti"
+        - title="cacti"
     - platform: shodan
       queries:
-        - http.title:"cacti"
         - http.favicon.hash:"-1797138069"
         - http.title:"login to cacti"
+        - http.title:"cacti"
     - platform: google
       queries:
-        - intitle:"cacti"
         - intitle:"login to cacti"
+        - intitle:"cacti"
 
 - name: confluence_data_center
   vendor: atlassian
@@ -2350,13 +2350,13 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.favicon.hash:892542951
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.title:"zabbix-server"
     - platform: fofa
       queries:
-        - icon_hash=892542951
         - title="zabbix-server"
+        - icon_hash=892542951
         - app="zabbix-监控系统" && body="saml"
     - platform: google
       queries:
@@ -2372,8 +2372,8 @@
         - http.favicon.hash:-1067582922
     - platform: fofa
       queries:
-        - title="incapptic"
         - icon_hash=-1067582922
+        - title="incapptic"
     - platform: google
       queries:
         - intitle:"incapptic"
@@ -2402,8 +2402,8 @@
         - title="cloudpanel"
     - platform: shodan
       queries:
-        - http.favicon.hash:"151132309"
         - http.title:"cloudpanel"
+        - http.favicon.hash:"151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -2428,8 +2428,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:matomo:matomo"
         - http.favicon.hash:-2023266783
+        - cpe:"cpe:2.3:a:matomo:matomo"
     - platform: fofa
       queries:
         - icon_hash=-2023266783
@@ -2559,8 +2559,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"gitblit"
         - http.html:"gitblit"
+        - http.title:"gitblit"
     - platform: fofa
       queries:
         - title="gitblit"
@@ -2683,15 +2683,15 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash=1971268439
         - body="openemr"
         - title="openemr"
         - app="openemr"
+        - icon_hash=1971268439
     - platform: shodan
       queries:
-        - http.title:"openemr"
-        - http.html:"openemr"
         - http.favicon.hash:1971268439
+        - http.html:"openemr"
+        - http.title:"openemr"
     - platform: google
       queries:
         - intitle:"openemr"
@@ -2741,8 +2741,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"netdata dashboard"
         - 'server: netdata embedded http server'
+        - http.title:"netdata dashboard"
     - platform: fofa
       queries:
         - title="netdata dashboard"
@@ -2823,12 +2823,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"zimbra collaboration suite"
         - http.title:"zimbra web client sign in"
+        - http.title:"zimbra collaboration suite"
     - platform: fofa
       queries:
-        - title="zimbra web client sign in"
         - title="zimbra collaboration suite"
+        - title="zimbra web client sign in"
     - platform: google
       queries:
         - intitle:"zimbra collaboration suite"
@@ -3035,12 +3035,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"plesk obsidian"
         - http.title:"plesk obsidian"
+        - http.html:"plesk obsidian"
     - platform: fofa
       queries:
-        - title="plesk obsidian"
         - body="plesk obsidian"
+        - title="plesk obsidian"
     - platform: google
       queries:
         - intitle:"plesk obsidian"
@@ -3138,8 +3138,8 @@
     - platform: shodan
       queries:
         - http.html:"joomla! - open source content management"
-        - cpe:"cpe:2.3:a:joomla:joomla\!"
         - http.component:"joomla"
+        - cpe:"cpe:2.3:a:joomla:joomla\!"
     - platform: fofa
       queries:
         - body="joomla! - open source content management"
@@ -3164,8 +3164,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"manager" product:"wowza streaming engine"
         - cpe:"cpe:2.3:a:wowza:streaming_engine"
+        - http.title:"manager" product:"wowza streaming engine"
     - platform: fofa
       queries:
         - title="manager" product:"wowza streaming engine"
@@ -3235,8 +3235,8 @@
         - title="icinga"
     - platform: google
       queries:
-        - intitle:"icinga web 2 login"
         - intitle:"icinga"
+        - intitle:"icinga web 2 login"
 
 - name: successfactors
   vendor: sap
@@ -3380,8 +3380,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-1474875778"
         - http.title:"glpi"
+        - http.favicon.hash:"-1474875778"
     - platform: fofa
       queries:
         - title="glpi"
@@ -3478,8 +3478,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:f5:nginx"
         - http.title:"nginx ui"
+        - cpe:"cpe:2.3:a:f5:nginx"
     - platform: fofa
       queries:
         - title="nginx ui"
@@ -3507,8 +3507,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:mantisbt:mantisbt"
         - http.favicon.hash:662709064
+        - cpe:"cpe:2.3:a:mantisbt:mantisbt"
     - platform: fofa
       queries:
         - icon_hash=662709064
@@ -3558,12 +3558,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:1701804003
         - http.title:"servicenow"
+        - http.favicon.hash:1701804003
     - platform: fofa
       queries:
-        - title="servicenow"
         - icon_hash=1701804003
+        - title="servicenow"
     - platform: google
       queries:
         - intitle:"servicenow"
@@ -3781,8 +3781,8 @@
         - title="tautulli"
     - platform: google
       queries:
-        - intitle:"tautulli"
         - intitle:"tautulli - home"
+        - intitle:"tautulli"
 
 - name: greenbone_security_assistant
   vendor: greenbone
@@ -3821,8 +3821,8 @@
   engines:
     - platform: fofa
       queries:
-        - app="ektron-cms"
         - body="ektron"
+        - app="ektron-cms"
     - platform: shodan
       queries:
         - http.html:"ektron"
@@ -3849,13 +3849,13 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"setup github enterprise"
         - http.title:"github enterprise"
+        - http.title:"setup github enterprise"
     - platform: fofa
       queries:
+        - app="github-enterprise"
         - title="github enterprise"
         - title="setup github enterprise"
-        - app="github-enterprise"
     - platform: google
       queries:
         - intitle:"github enterprise"
@@ -3985,12 +3985,12 @@
     - platform: fofa
       queries:
         - title="minio console"
-        - title="minio browser"
         - app="minio"
+        - title="minio browser"
     - platform: google
       queries:
-        - intitle:"minio browser"
         - intitle:"minio console"
+        - intitle:"minio browser"
 
 - name: umbraco_cms
   vendor: umbraco
@@ -4043,13 +4043,13 @@
         - html:'content="papercut'
     - platform: shodan
       queries:
-        - http.html:'content="papercut'
         - http.html:"content=\"papercut\""
+        - http.html:'content="papercut'
         - cpe:"cpe:2.3:a:papercut:papercut_ng"
     - platform: fofa
       queries:
-        - body="content=\"papercut\""
         - body='content="papercut'
+        - body="content=\"papercut\""
 
 - name: ilias
   vendor: ilias
@@ -4104,12 +4104,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:-379154636
         - http.title:"kubeview"
+        - http.favicon.hash:-379154636
     - platform: fofa
       queries:
-        - icon_hash=-379154636
         - title="kubeview"
+        - icon_hash=-379154636
     - platform: google
       queries:
         - intitle:"kubeview"
@@ -4173,8 +4173,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"h2 console"
         - cpe:"cpe:2.3:a:h2database:h2"
+        - http.title:"h2 console"
     - platform: fofa
       queries:
         - title="h2 console"
@@ -4230,14 +4230,14 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-244067125"
-        - http.html:"solarview compact"
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
+        - http.html:"solarview compact"
+        - http.favicon.hash:"-244067125"
     - platform: fofa
       queries:
         - body="solarview compact"
-        - body="solarview compact" && title="top"
         - icon_hash="-244067125"
+        - body="solarview compact" && title="top"
 
 - name: backup_appliance
   vendor: exagrid
@@ -4376,8 +4376,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash=1090061843
         - title="webtitan"
+        - icon_hash=1090061843
     - platform: shodan
       queries:
         - http.favicon.hash:1090061843
@@ -4431,12 +4431,12 @@
         - http.title:sugarcrm
     - platform: google
       queries:
-        - intext:"sugarcrm inc. all rights reserved"
         - intitle:sugarcrm
+        - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
-        - body="sugarcrm inc. all rights reserved"
         - title=sugarcrm
+        - body="sugarcrm inc. all rights reserved"
 
 - name: code-server
   vendor: coder
@@ -4461,12 +4461,12 @@
         - intitle:"ftm manager"
     - platform: shodan
       queries:
-        - http.title:"ftm manager"
         - http.html:"ftm manager"
+        - http.title:"ftm manager"
     - platform: fofa
       queries:
-        - body="ftm manager"
         - title="ftm manager"
+        - body="ftm manager"
 
 - name: superset
   vendor: apache
@@ -4478,8 +4478,8 @@
         - http.favicon.hash:1582430156
     - platform: fofa
       queries:
-        - body="apache superset"
         - icon_hash=1582430156
+        - body="apache superset"
 
 - name: tew-827dru_firmware
   vendor: trendnet
@@ -4513,8 +4513,8 @@
         - intitle:"ssl network extender login"
     - platform: shodan
       queries:
-        - http.title:"check point ssl network extender"
         - http.title:"ssl network extender login"
+        - http.title:"check point ssl network extender"
     - platform: fofa
       queries:
         - title="ssl network extender login"
@@ -4608,8 +4608,8 @@
         - http.title:"apex it help desk"
     - platform: fofa
       queries:
-        - title="apex it help desk"
         - app="zoho-流量管理"
+        - title="apex it help desk"
     - platform: google
       queries:
         - intitle:"apex it help desk"
@@ -4680,8 +4680,8 @@
         - http.title:"manageengine"
     - platform: fofa
       queries:
-        - title="manageengine"
         - title="adselfservice plus"
+        - title="manageengine"
     - platform: google
       queries:
         - intitle:"manageengine"
@@ -4755,8 +4755,8 @@
         - http.title:"qnap"
     - platform: fofa
       queries:
-        - title="photo station"
         - title="qnap"
+        - title="photo station"
     - platform: google
       queries:
         - intitle:"qnap"
@@ -4846,12 +4846,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"h-sphere"
         - http.title:"parallels h-sphere"
+        - http.title:"h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
         - intitle:"parallels h-sphere"
@@ -4874,8 +4874,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:ibm:websphere_portal"
         - http.html:"ibm websphere portal"
+        - cpe:"cpe:2.3:a:ibm:websphere_portal"
     - platform: fofa
       queries:
         - body="ibm websphere portal"
@@ -4897,9 +4897,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.title:"aem sign in"
         - http.component:"adobe experience manager"
         - cpe:"cpe:2.3:a:adobe:experience_manager"
-        - http.title:"aem sign in"
     - platform: fofa
       queries:
         - title="aem sign in"
@@ -4913,12 +4913,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"openvpn connect"
         - http.title:"adobe connect"
+        - http.title:"openvpn connect"
     - platform: fofa
       queries:
-        - title="openvpn connect"
         - title="adobe connect"
+        - title="openvpn connect"
     - platform: google
       queries:
         - intitle:"openvpn connect"
@@ -4998,8 +4998,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="mesos"
         - app="apache-mesos"
+        - title="mesos"
     - platform: shodan
       queries:
         - http.title:"mesos"
@@ -5027,8 +5027,8 @@
   engines:
     - platform: fofa
       queries:
-        - fortimail && port=443
         - title="fortimail"
+        - fortimail && port=443
     - platform: shodan
       queries:
         - http.title:"fortimail"
@@ -5060,8 +5060,8 @@
         - http.title:"fortiwlm"
     - platform: fofa
       queries:
-        - body="fortiwlm"
         - title="fortiwlm"
+        - body="fortiwlm"
     - platform: google
       queries:
         - intitle:"fortiwlm"
@@ -5092,8 +5092,8 @@
         - port:10443 http.favicon.hash:945408572
     - platform: fofa
       queries:
-        - icon_hash=945408572
         - body="/remote/login" "xxxxxxxx"
+        - icon_hash=945408572
 
 - name: fortiap
   vendor: fortinet
@@ -5152,8 +5152,8 @@
   engines:
     - platform: fofa
       queries:
-        - body="kkfileview"
         - app="kkfileview"
+        - body="kkfileview"
     - platform: shodan
       queries:
         - http.html:"kkfileview"
@@ -5172,8 +5172,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"apache struts"
         - http.title:"struts2 showcase"
+        - http.html:"apache struts"
         - http.html:"struts problem report"
     - platform: fofa
       queries:
@@ -5375,8 +5375,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"microweber"
         - http.favicon.hash:780351152
+        - http.html:"microweber"
     - platform: fofa
       queries:
         - body="microweber"
@@ -5509,12 +5509,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"wavlink"
         - http.title:"wi-fi app login"
+        - http.html:"wavlink"
     - platform: fofa
       queries:
-        - body="wavlink"
         - title="wi-fi app login"
+        - body="wavlink"
     - platform: google
       queries:
         - intitle:"wi-fi app login"
@@ -5573,8 +5573,8 @@
         - title="thinkphp"
     - platform: shodan
       queries:
-        - http.title:"thinkphp"
         - cpe:"cpe:2.3:a:thinkphp:thinkphp"
+        - http.title:"thinkphp"
     - platform: google
       queries:
         - intitle:"thinkphp"
@@ -5589,12 +5589,12 @@
         - http.title:"emerge"
     - platform: fofa
       queries:
-        - title="emerge"
         - title="linear emerge"
+        - title="emerge"
     - platform: google
       queries:
-        - intitle:"emerge"
         - intitle:"linear emerge"
+        - intitle:"emerge"
 
 - name: ssl_vpn
   vendor: h3c
@@ -5610,8 +5610,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"wn530hg4"
         - http.title:"wi-fi app login"
+        - http.html:"wn530hg4"
     - platform: fofa
       queries:
         - body="wn530hg4"
@@ -5707,8 +5707,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"pmb group"
         - http.favicon.hash:1469328760
+        - http.html:"pmb group"
     - platform: fofa
       queries:
         - icon_hash=1469328760
@@ -5871,12 +5871,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:-1521640213
         - http.title:"hoteldruid"
+        - http.favicon.hash:-1521640213
     - platform: fofa
       queries:
-        - icon_hash=-1521640213
         - title="hoteldruid"
+        - icon_hash=-1521640213
     - platform: google
       queries:
         - intitle:"hoteldruid"
@@ -6050,12 +6050,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"wavlink"
         - http.title:"wi-fi app login"
+        - http.html:"wavlink"
     - platform: fofa
       queries:
-        - body="wavlink"
         - title="wi-fi app login"
+        - body="wavlink"
     - platform: google
       queries:
         - intitle:"wi-fi app login"
@@ -6088,8 +6088,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash=217119619
         - title="openvpn connect"
+        - icon_hash=217119619
         - app="rstudio-connect"
     - platform: shodan
       queries:
@@ -6119,8 +6119,8 @@
   engines:
     - platform: fofa
       queries:
-        - body="ofbiz"
         - app="apache_ofbiz"
+        - body="ofbiz"
     - platform: shodan
       queries:
         - http.html:"ofbiz"
@@ -6136,8 +6136,8 @@
         - http.favicon.hash:-1189292869
     - platform: fofa
       queries:
-        - body="flatpress"
         - icon_hash=-1189292869
+        - body="flatpress"
 
 - name: masacms
   vendor: masacms
@@ -6276,13 +6276,13 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="475145467"
         - icon_hash="1624375939"
+        - icon_hash="475145467"
         - app="zimbra-邮件系统"
     - platform: shodan
       queries:
-        - http.favicon.hash:"1624375939"
         - http.favicon.hash:"475145467"
+        - http.favicon.hash:"1624375939"
 
 - name: basic_pdu_firmware
   vendor: powertekpdus
@@ -6320,8 +6320,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash=-1250474341
         - app="vmware-workspace-one-access" || app="vmware-identity-manager" || app="vmware-vrealize"
+        - icon_hash=-1250474341
     - platform: shodan
       queries:
         - http.favicon.hash:-1250474341
@@ -6779,8 +6779,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="高清智能录播系统"
         - app="ncast-产品" && title=="高清智能录播系统"
+        - title="高清智能录播系统"
     - platform: zoomeye
       queries:
         - title:"高清智能录播系统"
@@ -6881,13 +6881,13 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash=1484947000
         - icon_hash=1484947000,1828756398,1170495932
         - app="goanywhere-mft"
+        - icon_hash=1484947000
     - platform: shodan
       queries:
-        - http.favicon.hash:1484947000,1828756398,1170495932
         - http.favicon.hash:1484947000
+        - http.favicon.hash:1484947000,1828756398,1170495932
     - platform: zoomeye
       queries:
         - app:"fortra goanywhere-mft"
@@ -6954,9 +6954,9 @@
         - /wp-content/plugins/eventon-lite/
     - platform: shodan
       queries:
-        - vuln:cve-2023-2796
         - http.html:/wp-content/plugins/eventon/
         - http.html:/wp-content/plugins/eventon-lite/
+        - vuln:cve-2023-2796
     - platform: google
       queries:
         - inurl:"/wp-content/plugins/eventon/"
@@ -7009,8 +7009,8 @@
         - body="data-xwiki-reference"
     - platform: shodan
       queries:
-        - xwiki
         - http.html:"data-xwiki-reference"
+        - xwiki
 
 - name: popup_module_\(on_entering\,_exit_popup\,_add_product\)_and_newsletter
   vendor: idnovate
@@ -7247,8 +7247,8 @@
   engines:
     - platform: fofa
       queries:
-        - body="powerjob"
         - app="powerjob"
+        - body="powerjob"
     - platform: shodan
       queries:
         - http.html:"powerjob"
@@ -7447,12 +7447,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"/wbm/" html:"wago"
         - http.html:"wago"
+        - http.html:"/wbm/" html:"wago"
     - platform: fofa
       queries:
-        - body="/wbm/" html:"wago"
         - body="wago"
+        - body="/wbm/" html:"wago"
 
 - name: wordpress_toolbar
   vendor: abhinavsingh
@@ -7571,9 +7571,9 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:papercut:papercut_mf"
         - http.html:"papercut"
         - http.html:"content=\"papercut\""
+        - cpe:"cpe:2.3:a:papercut:papercut_mf"
     - platform: fofa
       queries:
         - body="content=\"papercut\""
@@ -7832,13 +7832,13 @@
         - craftcms
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:craftcms
         - http.favicon.hash:-47932290
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
     - platform: fofa
       queries:
-        - icon_hash=-47932290
         - body=craftcms
+        - icon_hash=-47932290
 
 - name: companion_sitemap_generator
   vendor: codeermeneer
@@ -8023,9 +8023,9 @@
   engines:
     - platform: shodan
       queries:
+        - cpe:"cpe:2.3:a:alkacon:opencms"
         - http.title:"opencms"
         - /opencms/
-        - cpe:"cpe:2.3:a:alkacon:opencms"
     - platform: fofa
       queries:
         - title="opencms"
@@ -8154,10 +8154,10 @@
         - intext:"powered by vbulletin"
     - platform: shodan
       queries:
-        - http.component:"vbulletin"
-        - http.html:"powered by vbulletin"
         - http.title:"powered by vbulletin"
         - cpe:"cpe:2.3:a:vbulletin:vbulletin"
+        - http.component:"vbulletin"
+        - http.html:"powered by vbulletin"
     - platform: fofa
       queries:
         - body="powered by vbulletin"
@@ -8384,8 +8384,8 @@
         - http.favicon.hash:688609340
     - platform: fofa
       queries:
-        - icon_hash=688609340
         - body="cockpit"
+        - icon_hash=688609340
 
 - name: intercom_broadcast_system
   vendor: hikvision
@@ -8550,9 +8550,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"icewarp"
         - cpe:"cpe:2.3:a:icewarp:mail_server"
         - http.title:"icewarp server administration"
+        - http.title:"icewarp"
     - platform: fofa
       queries:
         - title="icewarp server administration"
@@ -8625,8 +8625,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:requires a local sentry administrative user"
         - 'http.html:"note: requires a local sentry administrative user"'
+        - http.html:requires a local sentry administrative user"
     - platform: fofa
       queries:
         - 'body="note: requires a local sentry administrative user"'
@@ -8638,8 +8638,8 @@
   engines:
     - platform: fofa
       queries:
-        - app="kubeoperator"
         - body="kubeoperator"
+        - app="kubeoperator"
     - platform: shodan
       queries:
         - http.html:"kubeoperator"
@@ -8702,8 +8702,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"home assistant"
         - cpe:"cpe:2.3:a:home-assistant:home-assistant"
+        - http.title:"home assistant"
     - platform: fofa
       queries:
         - title="home assistant"
@@ -8755,8 +8755,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:o:microsoft:windows_7"
         - '"microsoft-iis" "2015"'
+        - cpe:"cpe:2.3:o:microsoft:windows_7"
 
 - name: tivoli_common_reporting
   vendor: ibm
@@ -8791,8 +8791,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:atlassian:confluence"
         - http.component:"atlassian confluence"
+        - cpe:"cpe:2.3:a:atlassian:confluence"
 
 - name: mypixs
   vendor: mypixs_project
@@ -9085,8 +9085,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"jboss"
         - cpe:"cpe:2.3:a:redhat:jboss_enterprise_application_platform"
+        - http.title:"jboss"
     - platform: fofa
       queries:
         - title="jboss"
@@ -9108,8 +9108,8 @@
         - title="icewarp"
     - platform: google
       queries:
-        - intitle:"icewarp"
         - intitle:"gotify"
+        - intitle:"icewarp"
 
 - name: twitter_button
   vendor: bestwebsoft
@@ -9202,8 +9202,8 @@
         - app="dedecms"
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:dedecms:dedecms"
         - http.html:"dedecms"
+        - cpe:"cpe:2.3:a:dedecms:dedecms"
 
 - name: custom_admin_page
   vendor: bestwebsoft
@@ -9293,8 +9293,8 @@
         - app="laravel-framework"
     - platform: shodan
       queries:
-        - laravel-framework
         - cpe:"cpe:2.3:a:laravel:laravel"
+        - laravel-framework
 
 - name: contact_form_multi
   vendor: bestwebsoft
@@ -9470,8 +9470,8 @@
   engines:
     - platform: fofa
       queries:
-        - amcrest
         - body="amcrest"
+        - amcrest
     - platform: shodan
       queries:
         - http.html:"amcrest"
@@ -9535,8 +9535,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"dokuwiki"
         - cpe:"cpe:2.3:a:dokuwiki:dokuwiki"
+        - http.title:"dokuwiki"
     - platform: fofa
       queries:
         - title="dokuwiki"
@@ -9744,8 +9744,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"revive adserver"
         - http.favicon.hash:106844876
+        - http.title:"revive adserver"
     - platform: fofa
       queries:
         - title="revive adserver"
@@ -9878,8 +9878,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"impresscms"
         - cpe:"cpe:2.3:a:impresscms:impresscms"
+        - http.html:"impresscms"
     - platform: fofa
       queries:
         - body="impresscms"
@@ -9984,12 +9984,11 @@
     - platform: shodan
       queries:
         - 'http.html:"powered by: fudforum"'
-        - http.html:fudforum"
         - http.html:"fudforum"
     - platform: fofa
       queries:
-        - 'body="powered by: fudforum"'
         - body="fudforum"
+        - 'body="powered by: fudforum"'
 
 - name: vigorconnect
   vendor: draytek
@@ -10405,8 +10404,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"resin"
         - cpe:"cpe:2.3:a:caucho:resin"
+        - http.html:"resin"
     - platform: fofa
       queries:
         - body="resin"
@@ -10417,12 +10416,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"jellyfin"
         - http.html:"jellyfin"
+        - http.title:"jellyfin"
     - platform: fofa
       queries:
-        - body="jellyfin"
         - title="jellyfin"
+        - body="jellyfin"
         - title="jellyfin" || body="http://jellyfin.media"
     - platform: google
       queries:
@@ -10470,8 +10469,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="jeecgboot 企业级低代码平台"
         - title="jeecg-boot"
+        - title="jeecgboot 企业级低代码平台"
     - platform: shodan
       queries:
         - http.title:"jeecg-boot"
@@ -10568,12 +10567,12 @@
   engines:
     - platform: fofa
       queries:
-        - body="/oam/pages/css/login_page.css"
         - title="oracle access management"
+        - body="/oam/pages/css/login_page.css"
     - platform: shodan
       queries:
-        - http.html:"/oam/pages/css/login_page.css"
         - http.title:"oracle access management"
+        - http.html:"/oam/pages/css/login_page.css"
     - platform: google
       queries:
         - intitle:"oracle access management"
@@ -10622,8 +10621,8 @@
   engines:
     - platform: fofa
       queries:
-        - body="74cms"
         - app="74cms"
+        - body="74cms"
     - platform: shodan
       queries:
         - http.html:"74cms"
@@ -10792,8 +10791,8 @@
         - http.html:"micollab"
     - platform: fofa
       queries:
-        - body="mitel" html:"micollab"
         - body="micollab"
+        - body="mitel" html:"micollab"
 
 - name: zzcms
   vendor: zzcms
@@ -10872,8 +10871,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:acme:mini-httpd"
         - 'server: mini_httpd && 200'
+        - cpe:"cpe:2.3:a:acme:mini-httpd"
 
 - name: avatar_uploader
   vendor: drupal
@@ -10893,8 +10892,8 @@
         - http.favicon.hash:-2032163853
     - platform: fofa
       queries:
-        - title="login - jorani"
         - icon_hash=-2032163853
+        - title="login - jorani"
     - platform: google
       queries:
         - intitle:"login - jorani"
@@ -15165,8 +15164,8 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:h:contec:solarview_compact"
-        - http.favicon.hash:"-244067125"
         - http.html:"solarview compact"
+        - http.favicon.hash:"-244067125"
     - platform: fofa
       queries:
         - body="solarview compact"
@@ -16074,8 +16073,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:h:dlink:dir-615"
         - http.title:"roteador wireless"
+        - cpe:"cpe:2.3:h:dlink:dir-615"
     - platform: fofa
       queries:
         - title="roteador wireless"
@@ -18273,8 +18272,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"aspera faspex"
         - cpe:"cpe:2.3:o:linux:linux_kernel"
+        - http.html:"aspera faspex"
     - platform: fofa
       queries:
         - body="aspera faspex"
@@ -18718,6 +18717,365 @@
       queries:
         - body="check point ssl network"
 
+- name: awstats
+  vendor: awstats
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - cpe:"cpe:2.3:a:laurent_destailleur:awstats"
+
+- name: elasticsearch
+  vendor: elasticsearch
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - index_not_found_exception
+
+- name: webtitan
+  vendor: spamtitan
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="webtitan"
+        - icon_hash=1090061843
+    - platform: shodan
+      queries:
+        - http.title:"webtitan"
+        - http.favicon.hash:1090061843
+    - platform: google
+      queries:
+        - intitle:"webtitan"
+
+- name: sdt-cs3b1
+  vendor: telesquare
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"sdt-cw3b1"
+    - platform: fofa
+      queries:
+        - body="sdt-cw3b1"
+
+- name: cobbler
+  vendor: cobbler_project
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="cobbler web interface"
+    - platform: google
+      queries:
+        - intitle:"cobbler web interface"
+    - platform: shodan
+      queries:
+        - http.title:"cobbler web interface"
+
+- name: web_server
+  vendor: zerof
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - cpe:"cpe:2.3:a:google:web_server"
+
+- name: tlr-2855ks6
+  vendor: telesquare
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - product=="telesquare-tlr-2855ks6"
+
+- name: tlr-2005ksh
+  vendor: telesquare
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"tlr-2005ksh"
+    - platform: fofa
+      queries:
+        - body="tlr-2005ksh"
+
+- name: nsa_2650
+  vendor: sonicwall
+  type: product
+  engines:
+    - platform: google
+      queries:
+        - inurl:"auth.html" intitle:"sonicwall"
+
+- name: contact_form
+  vendor: supsystic
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/contact-form-plugin/
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/contact-form-plugin/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/contact-form-plugin/
+
+- name: duplicator
+  vendor: awesomemotive
+  type: product
+  engines:
+    - platform: google
+      queries:
+        - inurl:"/wp-content/plugins/duplicator"
+
+- name: cph2_echarge
+  vendor: hardy-barth
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"salia plcc"
+    - platform: fofa
+      queries:
+        - body="salia plcc"
+
+- name: ur51
+  vendor: milesight
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:rt_title
+    - platform: fofa
+      queries:
+        - body=rt_title
+
+- name: sma1000
+  vendor: sonicwall
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="appliance management console login"
+    - platform: google
+      queries:
+        - intitle:"appliance management console login"
+    - platform: shodan
+      queries:
+        - http.title:"appliance management console login"
+
+- name: srx100
+  vendor: juniper
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"juniper web device manager"
+    - platform: fofa
+      queries:
+        - title="juniper web device manager"
+    - platform: google
+      queries:
+        - intitle:"juniper web device manager"
+
+- name: blogengine.net
+  vendor: blogengine
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="blogengine.net"
+    - platform: shodan
+      queries:
+        - http.html:"blogengine.net"
+
+- name: dns-320l_firmware
+  vendor: dlink
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="d_link-dns-sharecenter"
+
+- name: layerslider
+  vendor: layerslider
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/layerslider/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/layerslider/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/layerslider/
+
+- name: ninja_forms
+  vendor: ninjaforma
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/ninja-forms/
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/ninja-forms/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/ninja-forms/
+
+- name: dvr
+  vendor: argussurveillance
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="web viewer for samsung dvr"
+    - platform: google
+      queries:
+        - intitle:"web viewer for samsung dvr"
+    - platform: shodan
+      queries:
+        - http.title:"web viewer for samsung dvr"
+
+- name: eventum
+  vendor: eventum_project
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash=305412257
+    - platform: shodan
+      queries:
+        - http.favicon.hash:305412257
+
+- name: pandora_fms
+  vendor: artica
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="pandora fms"
+    - platform: google
+      queries:
+        - intitle:"pandora fms"
+    - platform: shodan
+      queries:
+        - http.title:"pandora fms"
+
+- name: hospital_management_system
+  vendor: phpgurukul
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="hospital management system"
+    - platform: shodan
+      queries:
+        - http.html:"hospital management system"
+
+- name: unified_threat_management
+  vendor: sophos
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="securepoint utm"
+    - platform: google
+      queries:
+        - intitle:"securepoint utm"
+    - platform: shodan
+      queries:
+        - http.title:"securepoint utm"
+
+- name: wn575a4
+  vendor: wavlink
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"wi-fi app login"
+    - platform: fofa
+      queries:
+        - title="wi-fi app login"
+    - platform: google
+      queries:
+        - intitle:"wi-fi app login"
+
+- name: caseaware
+  vendor: kmc_information_systems
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="caseaware"
+
+- name: my_calendar
+  vendor: my_calendar_project
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - '"wordpress" && body="wp-content/plugins/my-calendar"'
+
+- name: syncserver_s650
+  vendor: microchip
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"symmetricom syncserver"
+    - platform: fofa
+      queries:
+        - body="symmetricom syncserver"
+
+- name: wl-wn535k2
+  vendor: wavlink
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"wi-fi app login"
+    - platform: fofa
+      queries:
+        - title="wi-fi app login"
+    - platform: google
+      queries:
+        - intitle:"wi-fi app login"
+
+- name: openemr
+  vendor: openemr
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="openemr"
+        - title="openemr"
+        - icon_hash=1971268439
+    - platform: google
+      queries:
+        - intitle:"openemr"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:1971268439
+        - http.html:"openemr"
+        - http.title:"openemr"
+
+- name: download_monitor
+  vendor: mikejolley
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/download-monitor/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/download-monitor/"
+
 - name: data_protector
   vendor: hp
   type: product
@@ -18953,14 +19311,6 @@
   type: product
   engines: []
 
-- name: awstats
-  vendor: awstats
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - cpe:"cpe:2.3:a:laurent_destailleur:awstats"
-
 - name: ultraseek
   vendor: autonomy
   type: product
@@ -19010,14 +19360,6 @@
   vendor: domphp
   type: product
   engines: []
-
-- name: elasticsearch
-  vendor: elasticsearch
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - index_not_found_exception
 
 - name: simatic_s7_cpu_1200_firmware
   vendor: siemens
@@ -19078,17 +19420,6 @@
   vendor: orchardproject
   type: product
   engines: []
-
-- name: webtitan
-  vendor: spamtitan
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - icon_hash=1090061843
-    - platform: shodan
-      queries:
-        - http.title:"webtitan"
 
 - name: unified_ip_interactive_voice_response
   vendor: cisco
@@ -19379,14 +19710,6 @@
   vendor: sap
   type: product
   engines: []
-
-- name: sdt-cs3b1
-  vendor: telesquare
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"sdt-cw3b1"
 
 - name: seo_panel
   vendor: seopanel
@@ -19978,32 +20301,10 @@
   type: product
   engines: []
 
-- name: cobbler
-  vendor: cobbler_project
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="cobbler web interface"
-    - platform: google
-      queries:
-        - intitle:"cobbler web interface"
-    - platform: shodan
-      queries:
-        - http.title:"cobbler web interface"
-
 - name: dir-820l_firmware
   vendor: dlink
   type: product
   engines: []
-
-- name: web_server
-  vendor: zerof
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - cpe:"cpe:2.3:a:google:web_server"
 
 - name: win_300
   vendor: intelbras
@@ -20095,14 +20396,6 @@
   type: product
   engines: []
 
-- name: tlr-2855ks6
-  vendor: telesquare
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - product=="telesquare-tlr-2855ks6"
-
 - name: jive
   vendor: jivesoftware
   type: product
@@ -20112,14 +20405,6 @@
   vendor: express_handlebars_project
   type: product
   engines: []
-
-- name: tlr-2005ksh
-  vendor: telesquare
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"tlr-2005ksh"
 
 - name: button_generator
   vendor: wow-company
@@ -20185,28 +20470,6 @@
   vendor: jenzabar
   type: product
   engines: []
-
-- name: nsa_2650
-  vendor: sonicwall
-  type: product
-  engines:
-    - platform: google
-      queries:
-        - inurl:"auth.html" intitle:"sonicwall"
-
-- name: contact_form
-  vendor: supsystic
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body=/wp-content/plugins/contact-form-plugin/
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/contact-form-plugin/
-    - platform: shodan
-      queries:
-        - http.html:/wp-content/plugins/contact-form-plugin/
 
 - name: xn8024r_firmware
   vendor: qsan
@@ -20448,14 +20711,6 @@
   type: product
   engines: []
 
-- name: duplicator
-  vendor: awesomemotive
-  type: product
-  engines:
-    - platform: google
-      queries:
-        - inurl:"/wp-content/plugins/duplicator"
-
 - name: enrollment_system
   vendor: enrollment_system_project
   type: product
@@ -20530,14 +20785,6 @@
   vendor: wpwax
   type: product
   engines: []
-
-- name: cph2_echarge
-  vendor: hardy-barth
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"salia plcc"
 
 - name: manageengine_admanager_plus
   vendor: zohocorp
@@ -20624,14 +20871,6 @@
   type: product
   engines: []
 
-- name: ur51
-  vendor: milesight
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:rt_title
-
 - name: x5000r_firmware
   vendor: totolink
   type: product
@@ -20671,20 +20910,6 @@
   vendor: pretty_url_project
   type: product
   engines: []
-
-- name: sma1000
-  vendor: sonicwall
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="appliance management console login"
-    - platform: google
-      queries:
-        - intitle:"appliance management console login"
-    - platform: shodan
-      queries:
-        - http.title:"appliance management console login"
 
 - name: simple_urls
   vendor: getlasso
@@ -20746,25 +20971,6 @@
   type: product
   engines: []
 
-- name: srx100
-  vendor: juniper
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"juniper web device manager"
-
-- name: blogengine.net
-  vendor: blogengine
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="blogengine.net"
-    - platform: shodan
-      queries:
-        - http.html:"blogengine.net"
-
 - name: tablesome
   vendor: pauple
   type: product
@@ -20784,22 +20990,6 @@
   vendor: telaen_project
   type: product
   engines: []
-
-- name: dns-320l_firmware
-  vendor: dlink
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - app="d_link-dns-sharecenter"
-
-- name: layerslider
-  vendor: layerslider
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/layerslider/
 
 - name: aiohttp
   vendor: aiohttp
@@ -21071,20 +21261,6 @@
   type: product
   engines: []
 
-- name: ninja_forms
-  vendor: ninjaforma
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body=/wp-content/plugins/ninja-forms/
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/ninja-forms/
-    - platform: shodan
-      queries:
-        - http.html:/wp-content/plugins/ninja-forms/
-
 - name: localize_my_post
   vendor: localize_my_post_project
   type: product
@@ -21165,35 +21341,10 @@
   type: product
   engines: []
 
-- name: dvr
-  vendor: argussurveillance
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="web viewer for samsung dvr"
-    - platform: google
-      queries:
-        - intitle:"web viewer for samsung dvr"
-    - platform: shodan
-      queries:
-        - http.title:"web viewer for samsung dvr"
-
 - name: spring_data_commons
   vendor: pivotal_software
   type: product
   engines: []
-
-- name: eventum
-  vendor: eventum_project
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - icon_hash=305412257
-    - platform: shodan
-      queries:
-        - http.favicon.hash:305412257
 
 - name: wechat_brodcast
   vendor: wechat_brodcast_project
@@ -21394,20 +21545,6 @@
   vendor: joomlamo
   type: product
   engines: []
-
-- name: pandora_fms
-  vendor: artica
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="pandora fms"
-    - platform: google
-      queries:
-        - intitle:"pandora fms"
-    - platform: shodan
-      queries:
-        - http.title:"pandora fms"
 
 - name: if_surfalert
   vendor: if_surfalert_project
@@ -21844,31 +21981,6 @@
   type: product
   engines: []
 
-- name: hospital_management_system
-  vendor: phpgurukul
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="hospital management system"
-    - platform: shodan
-      queries:
-        - http.html:"hospital management system"
-
-- name: unified_threat_management
-  vendor: sophos
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="securepoint utm"
-    - platform: google
-      queries:
-        - intitle:"securepoint utm"
-    - platform: shodan
-      queries:
-        - http.title:"securepoint utm"
-
 - name: nedi
   vendor: nedi
   type: product
@@ -22083,14 +22195,6 @@
   vendor: puppet
   type: product
   engines: []
-
-- name: wn575a4
-  vendor: wavlink
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"wi-fi app login"
 
 - name: flink
   vendor: apache
@@ -22326,14 +22430,6 @@
   vendor: 2kblater
   type: product
   engines: []
-
-- name: caseaware
-  vendor: kmc_information_systems
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="caseaware"
 
 - name: ds-2cd2032-i_firmware
   vendor: hikvision
@@ -22760,14 +22856,6 @@
   type: product
   engines: []
 
-- name: my_calendar
-  vendor: my_calendar_project
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - '"wordpress" && body="wp-content/plugins/my-calendar"'
-
 - name: at-gs950\/8_firmware
   vendor: alliedtelesis
   type: product
@@ -23173,14 +23261,6 @@
   type: product
   engines: []
 
-- name: syncserver_s650
-  vendor: microchip
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"symmetricom syncserver"
-
 - name: ti_woocommerce_wishlist
   vendor: templateinvaders
   type: product
@@ -23275,14 +23355,6 @@
   vendor: wpvivid
   type: product
   engines: []
-
-- name: wl-wn535k2
-  vendor: wavlink
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"wi-fi app login"
 
 - name: unyson
   vendor: brizy
@@ -23727,35 +23799,10 @@
   type: product
   engines: []
 
-- name: openemr
-  vendor: openemr
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - icon_hash=1971268439
-    - platform: google
-      queries:
-        - intitle:"openemr"
-    - platform: shodan
-      queries:
-        - http.html:"openemr"
-
 - name: 11in1
   vendor: 11in1
   type: product
   engines: []
-
-- name: download_monitor
-  vendor: mikejolley
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/download-monitor/"
-    - platform: shodan
-      queries:
-        - http.html:"/wp-content/plugins/download-monitor/"
 
 - name: firebox_t15
   vendor: watchguard
