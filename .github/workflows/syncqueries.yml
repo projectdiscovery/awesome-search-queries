@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Clone nuclei-templates Repository
       run: git clone https://github.com/projectdiscovery/nuclei-templates
