@@ -305,6 +305,7 @@ def generate_queries_yaml(yaml_files, queries_yaml_path, ignore_list):
             if not first_entry:
                 file.write('\n')  # Add an empty newline before each entry, except the first
             # Dump to string and adjust the indentation
+            entry['name'] = str(entry['name']) # make sure this always is a string
             stream = io.StringIO()
             yaml.dump([entry], stream)
             yaml_str = stream.getvalue()
