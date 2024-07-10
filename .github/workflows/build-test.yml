@@ -33,6 +33,6 @@ jobs:
           go clean -modcache
           go mod tidy
 
-      - name: Build
+      - name: Run Tests
         run: go test -v ./...
         
