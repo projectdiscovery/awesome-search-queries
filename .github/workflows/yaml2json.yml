@@ -5,6 +5,10 @@ on:
     paths: ['QUERIES.yaml']
     branches: [main]
   workflow_dispatch:
+  workflow_run:
+    workflows: ["🌥 Sync queries from Public Templates"]
+    types:
+      - completed
 
 jobs:
   build:
