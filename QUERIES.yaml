@@ -3755,10 +3755,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:-1706783005
+        - http.favicon.hash:"-1706783005"
     - platform: fofa
       queries:
-        - icon_hash=-1706783005
+        - icon_hash="-1706783005"
 
 - name: commerce
   vendor: oracle
@@ -29113,7 +29113,16 @@
 - name: resourcespace
   vendor: montala
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - title="resourcespace"
+    - platform: shodan
+      queries:
+        - http.title:"resourcespace"
+    - platform: google
+      queries:
+        - intitle:"resourcespace"
 
 - name: umbraco
   vendor: umbraco
@@ -29499,6 +29508,14 @@
   vendor: lucee
   type: product
   engines: []
+
+- name: wl-wn531g3_firmware
+  vendor: wavlink
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="ac1200" && body="wavlink"
 
 - name: rax43_firmware
   vendor: netgear
@@ -30461,7 +30478,13 @@
 - name: atomcms
   vendor: thedigitalcraft
   type: product
-  engines: []
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"atomcms"
+    - platform: fofa
+      queries:
+        - body="atomcms"
 
 - name: oas_platform
   vendor: openautomationsoftware
