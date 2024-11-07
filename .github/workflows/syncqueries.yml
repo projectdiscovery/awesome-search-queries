@@ -39,7 +39,7 @@ jobs:
         git config user.name '[PDBot]'
         git config user.email 'bot@projectdiscovery.io'
         git add QUERIES.yaml
-        if [ -z "$(git status --porcelain)" ]; then
+        if git diff --cached --exit-code; then
           echo "No changes to commit in awesome-search-queries"
           exit 0
         fi
