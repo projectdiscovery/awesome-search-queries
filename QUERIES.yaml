@@ -28120,6 +28120,20 @@
       queries:
         - body="atomcms"
 
+- name: securelinx_spider_firmware
+  vendor: lantronix
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="lantronix"
+    - platform: shodan
+      queries:
+        - http.title:"lantronix"
+    - platform: google
+      queries:
+        - intitle:"lantronix"
+
 - name: spring_framework
   vendor: vmware
   type: product
@@ -31847,17 +31861,6 @@
   vendor: cisco
   type: product
   engines: []
-
-- name: securelinx_spider_firmware
-  vendor: lantronix
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="lantronix"
-    - platform: shodan
-      queries:
-        - http.title:"lantronix"
 
 - name: php-proxy
   vendor: php-proxy
