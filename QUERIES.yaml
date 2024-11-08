@@ -6627,9 +6627,11 @@
         - /wp-content/plugins/popup-builder/
     - platform: shodan
       queries:
+        - http.html:"/wp-content/plugins/popup-builder"
         - http.html:/wp-content/plugins/popup-builder/
     - platform: fofa
       queries:
+        - body="/wp-content/plugins/popup-builder"
         - body=/wp-content/plugins/popup-builder/
 
 - name: dir-816l_firmware
@@ -31845,6 +31847,17 @@
   vendor: cisco
   type: product
   engines: []
+
+- name: securelinx_spider_firmware
+  vendor: lantronix
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="lantronix"
+    - platform: shodan
+      queries:
+        - http.title:"lantronix"
 
 - name: php-proxy
   vendor: php-proxy
