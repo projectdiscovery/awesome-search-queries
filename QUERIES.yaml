@@ -1309,20 +1309,6 @@
       queries:
         - intitle:"geoserver"
 
-- name: mybb
-  vendor: mybb
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"mybb"
-    - platform: fofa
-      queries:
-        - title="mybb"
-    - platform: google
-      queries:
-        - intitle:"mybb"
-
 - name: metasploit
   vendor: rapid7
   type: product
@@ -3544,7 +3530,6 @@
         - http.title:"glpi"
     - platform: fofa
       queries:
-        - body="glpi"
         - body="setup glpi"
         - icon_hash="-1474875778"
         - title="glpi"
@@ -4253,17 +4238,6 @@
       queries:
         - body="content=\"papercut\""
         - body='content="papercut'
-
-- name: ilias
-  vendor: ilias
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"ilias"
-    - platform: fofa
-      queries:
-        - body="ilias"
 
 - name: seeddms
   vendor: seeddms
@@ -5644,17 +5618,6 @@
       queries:
         - body=/wp-content/plugins/photo-gallery
 
-- name: rpcms
-  vendor: rpcms
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"rpcms"
-    - platform: fofa
-      queries:
-        - body="rpcms"
-
 - name: jobsearch_wp_job_board
   vendor: eyecix
   type: product
@@ -6656,7 +6619,6 @@
     - platform: fofa
       queries:
         - body="ispy is running"
-        - body="ispy"
 
 - name: commonsbooking
   vendor: wielebenwir
@@ -7775,7 +7737,6 @@
     - platform: fofa
       queries:
         - body="/wbm/" html:"wago"
-        - body="wago"
 
 - name: wordpress_toolbar
   vendor: abhinavsingh
@@ -11447,17 +11408,6 @@
     - platform: fofa
       queries:
         - app="joomla!-网站安装"
-
-- name: sympa
-  vendor: sympa
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"sympa"
-    - platform: fofa
-      queries:
-        - body="sympa"
 
 - name: bibliopac
   vendor: bibliosoft
@@ -21778,17 +21728,6 @@
       queries:
         - intitle:"idemia"
 
-- name: cs141
-  vendor: generex
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"cs141"
-    - platform: fofa
-      queries:
-        - body="cs141"
-
 - name: netman_204_firmware
   vendor: riello-ups
   type: product
@@ -23564,7 +23503,6 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-2028554187
-        - http.html:"zenml"
 
 - name: nr8120a
   vendor: zte
@@ -26440,17 +26378,6 @@
       queries:
         - body="dxr.axd"
 
-- name: hugo
-  vendor: gohugo
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:'hugo'
-    - platform: fofa
-      queries:
-        - body='hugo'
-
 - name: nexus_repository_manager
   vendor: sonatype
   type: product
@@ -27183,17 +27110,6 @@
     - platform: google
       queries:
         - inurl:"xweb500.cgi"
-
-- name: senayan_library_management_system
-  vendor: slims
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"slims"
-    - platform: fofa
-      queries:
-        - body="slims"
 
 - name: logstash
   vendor: elastic
@@ -30697,6 +30613,17 @@
   type: product
   engines: []
 
+- name: rpcms
+  vendor: rpcms
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="rpcms"
+    - platform: shodan
+      queries:
+        - http.html:"rpcms"
+
 - name: payment_gateway
   vendor: paytm
   type: product
@@ -30776,6 +30703,17 @@
   vendor: wp_accessibility_helper_project
   type: product
   engines: []
+
+- name: ilias
+  vendor: ilias
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="ilias"
+    - platform: shodan
+      queries:
+        - http.html:"ilias"
 
 - name: sitemap
   vendor: sitemap_project
@@ -31852,6 +31790,17 @@
   type: product
   engines: []
 
+- name: sympa
+  vendor: sympa
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="sympa"
+    - platform: shodan
+      queries:
+        - http.html:"sympa"
+
 - name: rubedo
   vendor: rubedo_project
   type: product
@@ -32632,10 +32581,34 @@
   type: product
   engines: []
 
+- name: cs141
+  vendor: generex
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"cs141"
+
+- name: senayan_library_management_system
+  vendor: slims
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"slims"
+
 - name: readymade-unilevel-ecommerce
   vendor: i-netsolution
   type: product
   engines: []
+
+- name: hugo
+  vendor: gohugo
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:'hugo'
 
 - name: arcgis_engine
   vendor: esri
@@ -32716,6 +32689,20 @@
   vendor: sphider
   type: product
   engines: []
+
+- name: mybb
+  vendor: mybb
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="mybb"
+    - platform: google
+      queries:
+        - intitle:"mybb"
+    - platform: shodan
+      queries:
+        - http.title:"mybb"
 
 - name: pcoip_client
   vendor: teradici
