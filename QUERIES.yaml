@@ -1817,7 +1817,6 @@
     - platform: fofa
       queries:
         - app="onlyoffice" && (icon_hash="1928933157" || icon_hash="826083956" || icon_hash="-1380930248" || icon_hash="-285544629" || icon_hash="812741391")
-        - body="portal setup"
     - platform: shodan
       queries:
         - http.html:"portal setup"
@@ -6133,7 +6132,6 @@
     - platform: fofa
       queries:
         - avideo
-        - body="avideo"
         - title="avideo"
     - platform: google
       queries:
@@ -8498,7 +8496,6 @@
         - http.title:"web transfer client"
     - platform: fofa
       queries:
-        - body="human.aspx"
         - icon_hash=989289239
         - title="web transfer client"
     - platform: google
@@ -13054,9 +13051,6 @@
       queries:
         - cpe:"cpe:2.3:a:golang:go"
         - http.html:"go.mod"
-    - platform: fofa
-      queries:
-        - body="go.mod"
 
 - name: cloud_platform
   vendor: google
@@ -13825,9 +13819,6 @@
       queries:
         - cpe:"cpe:2.3:a:phpbb:phpbb"
         - http.html:"installation panel"
-    - platform: fofa
-      queries:
-        - body="installation panel"
 
 - name: pimcore
   vendor: pimcore
@@ -26069,17 +26060,6 @@
       queries:
         - intitle:"pi-hole"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-    - platform: fofa
-      queries:
-        - body="manifest.json"
-
 - name: identity_server
   vendor: wso2
   type: product
@@ -27266,17 +27246,6 @@
       queries:
         - body="mobileiron"
 
-- name: self_service
-  vendor: jamf
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"jamf"
-    - platform: fofa
-      queries:
-        - body="jamf"
-
 - name: next-gen_application_firewall
   vendor: sangfor
   type: product
@@ -28021,3 +27990,11 @@
     - platform: google
       queries:
         - intitle:"lantronix"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
