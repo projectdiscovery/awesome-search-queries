@@ -38,4 +38,7 @@ body="portal setup"
 http.html:"portal setup"
 body="avideo"
 http.html:"avideo"
-
+body="human.aspx"
+http.html:"human.aspx"
+body="go.mod"
+http.html:"go.mod"
