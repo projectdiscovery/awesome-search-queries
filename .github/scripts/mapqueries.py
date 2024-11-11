@@ -139,13 +139,17 @@ def generate_queries_yaml(yaml_files, queries_yaml_path, ignore_list):
                             queries = metadata[field]
                             if not isinstance(queries, list):
                                 queries = [queries]
-                            queries = [normalize_query(q) for q in queries]
-                            new_entry['engines'].append({
-                                'platform': platform,
-                                'queries': sorted(set(queries))
-                            })
-                    data_dict[key] = new_entry
-                    logger.info(f"Added new product/vendor entry: {vendor}:{product}")
+                            queries = [normalize_query(q) for q in queries if not should_ignore_query(platform, q, ignore_list)]
+                            if queries:  # Only add if there are queries left after filtering
+                                new_entry['engines'].append({
+                                    'platform': platform,
+                                    'queries': sorted(set(queries))
+                                })
+                    if new_entry['engines']:
+                        data_dict[key] = new_entry
+                        logger.info(f"Added new product/vendor entry: {vendor}:{product}")
+                    else:
+                        logger.info(f"No queries added for {vendor}:{product} after filtering ignored queries")
                 else:
                     # Existing entry, check for new queries
                     entry = data_dict[key]
@@ -155,7 +159,11 @@ def generate_queries_yaml(yaml_files, queries_yaml_path, ignore_list):
                             new_queries = metadata[field]
                             if not isinstance(new_queries, list):
                                 new_queries = [new_queries]
-                            new_queries = set(normalize_query(q) for q in new_queries)
+                            # Filter out ignored queries here
+                            new_queries = set(normalize_query(q) for q in new_queries if not should_ignore_query(platform, q, ignore_list))
+
+                            if not new_queries:
+                                continue  # Skip if all new queries are ignored
 
                             # Find or create engine entry
                             engine_entry = next((e for e in entry['engines'] if e['platform'] == platform), None)
@@ -172,39 +180,15 @@ def generate_queries_yaml(yaml_files, queries_yaml_path, ignore_list):
                             engine_entry['queries'] = sorted(updated_queries)
 
                             # Add mapped queries for other platforms
-                            for query in updated_queries:
+                            for query in new_queries:
                                 if should_ignore_query(platform, query, ignore_list):
                                     logger.info(f"Skipping ignored query: {platform}:{query}")
                                     continue
                                 if platform == "publicwww":
                                     mapped_queries = map_publicwww_query(query)
-                                    for other_platform, queries in mapped_queries.items():
-                                        for mapped_query in queries:
-                                            if should_ignore_query(other_platform, mapped_query, ignore_list):
-                                                logger.info(f"Skipping ignored mapped query: {other_platform}:{mapped_query}")
-                                                continue
-                                        other_engine_entry = next((e for e in entry['engines'] if e['platform'] == other_platform), None)
-                                        if other_engine_entry is None:
-                                            other_engine_entry = {'platform': other_platform, 'queries': []}
-                                            entry['engines'].append(other_engine_entry)
-                                        other_engine_entry['queries'].extend(queries)
-                                        other_engine_entry['queries'] = sorted(set(other_engine_entry['queries']))
                                 else:
                                     mapped_queries = map_query(query, existing_queries)
-                                    if mapped_queries:
-                                        for other_platform, queries in mapped_queries.items():
-                                            for mapped_query in queries:
-                                                if should_ignore_query(other_platform, mapped_query, ignore_list):
-                                                    logger.info(f"Skipping ignored mapped query: {other_platform}:{mapped_query}")
-                                                    continue
-                                            if other_platform != platform:
-                                                other_engine_entry = next((e for e in entry['engines'] if e['platform'] == other_platform), None)
-                                                if other_engine_entry is None:
-                                                    other_engine_entry = {'platform': other_platform, 'queries': []}
-                                                    entry['engines'].append(other_engine_entry)
-                                                other_engine_entry['queries'].extend(queries)
-                                                other_engine_entry['queries'] = sorted(set(other_engine_entry['queries']))
-                                    else:
+                                    if not mapped_queries:
                                         # Check if the query starts with "http.title:", "http.html:", "intitle:", or "intext:"
                                         if query.startswith("http.title:"):
                                             query_value = query.split(":", 1)[1].strip()
@@ -231,18 +215,18 @@ def generate_queries_yaml(yaml_files, queries_yaml_path, ignore_list):
                                             }
                                         else:
                                             continue
-
-                                        for other_platform, queries in mapped_queries.items():
-                                            for mapped_query in queries:
-                                                if should_ignore_query(other_platform, mapped_query, ignore_list):
-                                                    logger.info(f"Skipping ignored mapped query: {other_platform}:{mapped_query}")
-                                                    continue
-                                            other_engine_entry = next((e for e in entry['engines'] if e['platform'] == other_platform), None)
-                                            if other_engine_entry is None:
-                                                other_engine_entry = {'platform': other_platform, 'queries': []}
-                                                entry['engines'].append(other_engine_entry)
-                                            other_engine_entry['queries'].extend(queries)
-                                            other_engine_entry['queries'] = sorted(set(other_engine_entry['queries']))
+                                # Add mapped queries
+                                for other_platform, queries in mapped_queries.items():
+                                    filtered_mapped_queries = [q for q in queries if not should_ignore_query(other_platform, q, ignore_list)]
+                                    if not filtered_mapped_queries:
+                                        continue
+                                    other_engine_entry = next((e for e in entry['engines'] if e['platform'] == other_platform), None)
+                                    if other_engine_entry is None:
+                                        other_engine_entry = {'platform': other_platform, 'queries': []}
+                                        entry['engines'].append(other_engine_entry)
+                                    existing_other_queries = set(normalize_query(q) for q in other_engine_entry['queries'])
+                                    updated_other_queries = existing_other_queries.union(set(normalize_query(q) for q in filtered_mapped_queries))
+                                    other_engine_entry['queries'] = sorted(updated_other_queries)
 
     # Convert the modified data_dict back to list form
     updated_queries_data = list(data_dict.values())
