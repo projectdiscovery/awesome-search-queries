@@ -27783,20 +27783,6 @@
       queries:
         - body="aspnetcore_environment"
 
-- name: wcf
-  vendor: windows
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"service"
-    - platform: fofa
-      queries:
-        - title="service"
-    - platform: google
-      queries:
-        - intitle:"service"
-
 - name: store_locator
   vendor: agilelogix
   type: product
