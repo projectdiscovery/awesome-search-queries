@@ -311,13 +311,13 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:“citrix login”
+        - http.title:"citrix login”
     - platform: fofa
       queries:
-        - title=“citrix login”
+        - title="citrix login”
     - platform: google
       queries:
-        - intitle:“citrix login”
+        - intitle:"citrix login”
 
 - name: genieacs
   vendor: genieacs
@@ -10480,7 +10480,7 @@
   engines:
     - platform: google
       queries:
-        - inurl:“/wp-content/plugins/fancy-product-designer”
+        - inurl:"/wp-content/plugins/fancy-product-designer”
 
 - name: cachet
   vendor: chachethq
@@ -27031,13 +27031,13 @@
     - platform: fofa
       queries:
         - app="网康科技-ns-asg安全网关"
-        - title=“ns-asg”
+        - title="ns-asg”
     - platform: shodan
       queries:
-        - http.title:“ns-asg”
+        - http.title:"ns-asg”
     - platform: google
       queries:
-        - intitle:“ns-asg”
+        - intitle:"ns-asg”
 
 - name: flexnet_publisher
   vendor: flexera
