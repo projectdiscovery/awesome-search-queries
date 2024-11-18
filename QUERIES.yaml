@@ -28005,6 +28005,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/yellow-pencil-visual-theme-customizer
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/yellow-pencil-visual-theme-customizer
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/yellow-pencil-visual-theme-customizer
 
 - name: element
   vendor: matrix
