@@ -27998,6 +27998,14 @@
       queries:
         - intitle:"lantronix"
 
+- name: visual_css_style_editor
+  vendor: yellowpencil
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/yellow-pencil-visual-theme-customizer
+
 - name: element
   vendor: matrix
   type: product
