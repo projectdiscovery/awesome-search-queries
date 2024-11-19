@@ -11091,9 +11091,11 @@
     - platform: shodan
       queries:
         - http.html:"wavlink"
+        - http.html:"wn530hg4"
     - platform: fofa
       queries:
         - body="wavlink"
+        - body="wn530hg4"
 
 - name: opentsdb
   vendor: opentsdb
@@ -27972,6 +27974,10 @@
     - platform: fofa
       queries:
         - body="ac1200" && body="wavlink"
+        - body="wn531g3"
+    - platform: shodan
+      queries:
+        - http.html:"wn531g3"
 
 - name: atomcms
   vendor: thedigitalcraft
@@ -28011,6 +28017,17 @@
     - platform: fofa
       queries:
         - body=/wp-content/plugins/yellow-pencil-visual-theme-customizer
+
+- name: wl-wn533a8_firmware
+  vendor: wavlink
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wn533a8"
+    - platform: shodan
+      queries:
+        - http.html:"wn533a8"
 
 - name: element
   vendor: matrix
