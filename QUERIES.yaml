@@ -28036,6 +28036,9 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/pdf-generator-addon-for-elementor-page-builder/"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/pdf-generator-addon-for-elementor-page-builder/"
 
 - name: element
   vendor: matrix
