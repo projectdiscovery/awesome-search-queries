@@ -28029,6 +28029,14 @@
       queries:
         - http.html:"wn533a8"
 
+- name: pdf-generator-addon-for-elementor-page-builder
+  vendor: RedefiningTheWeb
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/pdf-generator-addon-for-elementor-page-builder/"
+
 - name: element
   vendor: matrix
   type: product
