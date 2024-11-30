@@ -1268,10 +1268,15 @@
       queries:
         - http.favicon.hash:"-1218152116"
         - http.html:"zm - login"
+        - http.title:"zoneminder"
     - platform: fofa
       queries:
         - body="zm - login"
         - icon_hash="-1218152116"
+        - title="zoneminder"
+    - platform: google
+      queries:
+        - intitle:"zoneminder"
 
 - name: qlik_sense
   vendor: qlik
