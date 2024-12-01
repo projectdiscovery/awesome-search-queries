@@ -28045,6 +28045,14 @@
       queries:
         - http.html:"wp-content/plugins/pdf-generator-addon-for-elementor-page-builder/"
 
+- name: wp-marketing-automations
+  vendor: funnelkit
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/wp-marketing-automations/"
+
 - name: element
   vendor: matrix
   type: product
@@ -28052,3 +28060,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: nios
+  vendor: infoblox
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"infoblox"
