@@ -28077,6 +28077,9 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/wp-query-console/"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/wp-query-console/"
 
 - name: yet_another_related_posts_plugin
   vendor: yarpp
@@ -28085,6 +28088,25 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/yet-another-related-posts-plugin/"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/yet-another-related-posts-plugin/"
+
+- name: gtranslate
+  vendor: gtranslate
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/gtranslate"
+
+- name: redirection_for_contact_form_7
+  vendor: redirection-for-contact-form7
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wpcf7-redirect"
 
 - name: element
   vendor: matrix
