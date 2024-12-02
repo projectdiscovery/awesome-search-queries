@@ -28052,14 +28052,9 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/wp-marketing-automations/"
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
     - platform: shodan
       queries:
-        - http.html:"manifest.json"
+        - http.html:"wp-content/plugins/wp-marketing-automations/"
 
 - name: nios
   vendor: infoblox
@@ -28068,3 +28063,33 @@
     - platform: shodan
       queries:
         - http.title:"infoblox"
+    - platform: fofa
+      queries:
+        - title="infoblox"
+    - platform: google
+      queries:
+        - intitle:"infoblox"
+
+- name: wp_query_console
+  vendor: lubus
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/wp-query-console/"
+
+- name: yet_another_related_posts_plugin
+  vendor: yarpp
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/yet-another-related-posts-plugin/"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
