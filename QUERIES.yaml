@@ -28099,6 +28099,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/gtranslate"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/gtranslate"
 
 - name: redirection_for_contact_form_7
   vendor: redirection-for-contact-form7
@@ -28107,6 +28110,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/wpcf7-redirect"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wpcf7-redirect"
 
 - name: element
   vendor: matrix
