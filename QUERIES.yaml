@@ -28118,6 +28118,17 @@
       queries:
         - http.html:"/wp-content/plugins/wpcf7-redirect"
 
+- name: really_simple_security
+  vendor: really-simple-plugins
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/really-simple-ssl"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/really-simple-ssl"
+
 - name: element
   vendor: matrix
   type: product
