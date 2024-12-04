@@ -269,6 +269,7 @@
         - http.html:"apache tomcat"
         - http.html:"jk status manager"
         - http.title:"apache tomcat"
+        - product:"tomcat"
     - platform: fofa
       queries:
         - body="apache tomcat"
@@ -28128,6 +28129,17 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/really-simple-ssl"
+
+- name: webmail
+  vendor: axigen
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="axigen"
+    - platform: shodan
+      queries:
+        - http.title:"axigen"
 
 - name: element
   vendor: matrix
