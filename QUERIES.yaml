@@ -28141,6 +28141,30 @@
       queries:
         - http.title:"axigen"
 
+- name: swift_performance_lite
+  vendor: swiftperformance
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/swift-performance-lite"
+
+- name: rengine
+  vendor: yogeshojha
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"rengine"
+
+- name: gl-ar300m_firmware
+  vendor: gl-inet
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"gl.inet admin panel"
+
 - name: element
   vendor: matrix
   type: product
