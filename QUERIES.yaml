@@ -28148,6 +28148,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/swift-performance-lite"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/swift-performance-lite"
 
 - name: rengine
   vendor: yogeshojha
