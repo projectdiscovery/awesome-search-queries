@@ -28168,6 +28168,17 @@
       queries:
         - http.title:"gl.inet admin panel"
 
+- name: issabel-pbx
+  vendor: issabel
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="issabel"
+    - platform: shodan
+      queries:
+        - http.title:"issabel"
+
 - name: element
   vendor: matrix
   type: product
