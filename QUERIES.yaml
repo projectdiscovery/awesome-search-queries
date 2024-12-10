@@ -28179,6 +28179,14 @@
       queries:
         - http.title:"issabel"
 
+- name: anyshare
+  vendor: aishu
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="aishu-anyshare"
+
 - name: element
   vendor: matrix
   type: product
