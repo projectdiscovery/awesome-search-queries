@@ -278,6 +278,7 @@
     - platform: google
       queries:
         - intitle:"apache tomcat"
+        - site:*/examples/jsp/snp/snoop.jsp
 
 - name: soplanning
   vendor: soplanning
@@ -4666,12 +4667,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:1582430156
+        - http.favicon.hash:"1582430156"
         - http.html:"apache superset"
     - platform: fofa
       queries:
         - body="apache superset"
-        - icon_hash=1582430156
+        - icon_hash="1582430156"
 
 - name: tew-827dru_firmware
   vendor: trendnet
@@ -7996,10 +7997,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:1380908726
+        - http.favicon.hash:"-250963920"
+        - http.favicon.hash:"1380908726"
     - platform: fofa
       queries:
-        - icon_hash=1380908726
+        - icon_hash="-250963920"
+        - icon_hash="1380908726"
         - title="jeecg-boot"
 
 - name: icewarp
@@ -26241,6 +26244,7 @@
         - http.title:"gitbook"
     - platform: fofa
       queries:
+        - app="introduction-gitbook"
         - title="gitbook"
     - platform: google
       queries:
@@ -28186,6 +28190,33 @@
     - platform: fofa
       queries:
         - app="aishu-anyshare"
+
+- name: tablepress
+  vendor: wordpress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/tablepress"
+    - platform: google
+      queries:
+        - inurl:"/wp-content/plugins/tablepress"
+
+- name: wp-umbrella
+  vendor: wp-umbrella
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-health"
+
+- name: asis
+  vendor: asis
+  type: product
+  engines:
+    - platform: google
+      queries:
+        - asis | aplikasi sistem sekolah
 
 - name: element
   vendor: matrix
