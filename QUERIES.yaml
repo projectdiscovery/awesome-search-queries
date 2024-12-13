@@ -28231,3 +28231,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: wp-optimize,srbtranslatin
+  vendor: wordpress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-optimize"
