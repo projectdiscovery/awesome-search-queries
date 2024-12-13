@@ -28201,6 +28201,9 @@
     - platform: google
       queries:
         - inurl:"/wp-content/plugins/tablepress"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/tablepress"
 
 - name: wp-umbrella
   vendor: wp-umbrella
@@ -28209,6 +28212,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/wp-health"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wp-health"
 
 - name: asis
   vendor: asis
