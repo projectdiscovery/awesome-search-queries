@@ -28224,14 +28224,6 @@
       queries:
         - asis | aplikasi sistem sekolah
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: wp-optimize,srbtranslatin
   vendor: wordpress
   type: product
@@ -28239,3 +28231,14 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/wp-optimize"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wp-optimize"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
