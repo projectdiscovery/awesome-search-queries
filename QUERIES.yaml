@@ -28242,3 +28242,27 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: wp_go_maps
+  vendor: codecabin
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-google-maps"
+
+- name: wp_go_maps
+  vendor: wpgmaps
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-google-maps"
+
+- name: wp_go_maps
+  vendor: snapcreek
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/duplicator"
