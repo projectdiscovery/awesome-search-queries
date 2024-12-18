@@ -28268,14 +28268,6 @@
       queries:
         - http.html:"/wp-content/plugins/duplicator"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: rg-nbs2009g-p, rg-nbs2009g-p_firmware
   vendor: ruijie
   type: product
@@ -28283,3 +28275,14 @@
     - platform: fofa
       queries:
         - body="ruijie.com.cn"
+    - platform: shodan
+      queries:
+        - http.html:"ruijie.com.cn"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
