@@ -28275,3 +28275,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: rg-nbs2009g-p, rg-nbs2009g-p_firmware
+  vendor: ruijie
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="ruijie.com.cn"
