@@ -8047,10 +8047,10 @@
         - /wp-content/plugins/tutor/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/tutor/
+        - http.html:"/wp-content/plugins/tutor/"
     - platform: fofa
       queries:
-        - body=/wp-content/plugins/tutor/
+        - body="/wp-content/plugins/tutor/"
 
 - name: shield_security
   vendor: getshieldsecurity
