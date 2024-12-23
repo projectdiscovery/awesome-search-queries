@@ -28286,3 +28286,33 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: kivicare
+  vendor: iqonic
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/kivicare-clinic-management-system"
+
+- name: onedev
+  vendor: onedev
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"onedev.io"
+
+- name: tiki
+  vendor: tiki
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="tiki wiki cms"
+    - platform: google
+      queries:
+        - intitle:"tiki wiki cms
+    - platform: shodan
+      queries:
+        - http.title:"tiki wiki cms"
