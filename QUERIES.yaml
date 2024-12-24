@@ -28279,14 +28279,6 @@
       queries:
         - http.html:"ruijie.com.cn"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: kivicare
   vendor: iqonic
   type: product
@@ -28294,6 +28286,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/kivicare-clinic-management-system"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/kivicare-clinic-management-system"
 
 - name: onedev
   vendor: onedev
@@ -28316,3 +28311,11 @@
     - platform: shodan
       queries:
         - http.title:"tiki wiki cms"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
