@@ -28319,3 +28319,19 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: cms
+  vendor: craftcms
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body=craftcms
+        - icon_hash=-47932290
+    - platform: publicwww
+      queries:
+        - craftcms
+    - platform: shodan
+      queries:
+        - http.favicon.hash:"-47932290"
+        - http.html:"craftcms"
