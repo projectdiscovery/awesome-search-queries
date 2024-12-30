@@ -28312,22 +28312,14 @@
       queries:
         - http.title:"tiki wiki cms"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: cms
   vendor: craftcms
   type: product
   engines:
     - platform: fofa
       queries:
-        - body=craftcms
-        - icon_hash=-47932290
+        - body="craftcms"
+        - icon_hash="-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -28335,3 +28327,11 @@
       queries:
         - http.favicon.hash:"-47932290"
         - http.html:"craftcms"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
