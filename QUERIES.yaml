@@ -28335,3 +28335,25 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: hurrakify
+  vendor: by_hep_hep_hurra
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/hurrakify"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/hurrakify"
+
+- name: crypto_tool
+  vendor: odude
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/crypto"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/crypto"
