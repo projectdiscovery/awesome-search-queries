@@ -28328,14 +28328,6 @@
         - http.favicon.hash:"-47932290"
         - http.html:"craftcms"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: hurrakify
   vendor: by_hep_hep_hurra
   type: product
@@ -28357,3 +28349,11 @@
     - platform: shodan
       queries:
         - http.html:"wp-content/plugins/crypto"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
