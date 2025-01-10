@@ -2886,12 +2886,19 @@
     - platform: shodan
       queries:
         - http.title:"aviatrix cloud controller"
+        - http.title:"aviatrix controller"
     - platform: fofa
       queries:
+        - app="aviatrix-controller"
         - title="aviatrix cloud controller"
+        - title="aviatrix controller"
     - platform: google
       queries:
         - intitle:"aviatrix cloud controller"
+        - intitle:"aviatrix controller"
+    - platform: zoomeye
+      queries:
+        - app="aviatrix controller"
 
 - name: nas_os
   vendor: seagate
@@ -8902,6 +8909,7 @@
       queries:
         - intitle:"icewarp server administration"
         - intitle:"icewarp"
+        - powered by icewarp 10.2.1
         - powered by icewarp 10.4.4
 
 - name: timekeeper
@@ -28357,3 +28365,25 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: error-log-viewer-wp
+  vendor: wp-guru
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/error-log-viewer-wp"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/error-log-viewer-wp"
+
+- name: radio-player
+  vendor: softLab
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/radio-player"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/radio-player"
