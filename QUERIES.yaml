@@ -28358,14 +28358,6 @@
       queries:
         - http.html:"wp-content/plugins/crypto"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: error-log-viewer-wp
   vendor: wp-guru
   type: product
@@ -28387,3 +28379,11 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/radio-player"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
