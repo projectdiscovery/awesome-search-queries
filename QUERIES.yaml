@@ -28380,14 +28380,6 @@
       queries:
         - http.html:"/wp-content/plugins/radio-player"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: wordpress-file-upload
   vendor: nickolas_bossinas
   type: product
@@ -28395,9 +28387,19 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/wp-file-upload"
+        - body="/wp-content/plugins/wp-file-upload/"
     - platform: publicwww
       queries:
         - /wp-content/plugins/wp-file-upload/
     - platform: shodan
       queries:
+        - http.html:"/wp-content/plugins/wp-file-upload"
         - http.html:"/wp-content/plugins/wp-file-upload/"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
