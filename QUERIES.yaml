@@ -28400,14 +28400,6 @@
         - http.html:"/wp-content/plugins/wp-file-upload"
         - http.html:"/wp-content/plugins/wp-file-upload/"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: pfblockerng
   vendor: pfsense
   type: product
@@ -28418,3 +28410,19 @@
     - platform: shodan
       queries:
         - pfblockerng
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: simplehelp
+  vendor: simple-help
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"simplehelp"
