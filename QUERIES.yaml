@@ -28411,14 +28411,6 @@
       queries:
         - pfblockerng
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: simplehelp
   vendor: simple-help
   type: product
@@ -28426,3 +28418,11 @@
     - platform: shodan
       queries:
         - http.html:"simplehelp"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
