@@ -28419,6 +28419,22 @@
       queries:
         - http.html:"simplehelp"
 
+- name: mindsdb
+  vendor: mindsdb
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"mindsdb"
+
+- name: senayan_library_management_system
+  vendor: slims
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"slims"
+
 - name: element
   vendor: matrix
   type: product
