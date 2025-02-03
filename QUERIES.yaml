@@ -28434,6 +28434,10 @@
     - platform: shodan
       queries:
         - http.html:"slims"
+        - http.html:'content="slims'
+    - platform: fofa
+      queries:
+        - body='content="slims'
 
 - name: element
   vendor: matrix
