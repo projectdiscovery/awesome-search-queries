@@ -10116,9 +10116,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"571240285"
         - http.favicon.hash:-1414548363
     - platform: fofa
       queries:
+        - icon_hash="571240285"
         - icon_hash=-1414548363
 
 - name: rv110w_firmware
@@ -28446,3 +28448,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: xwiki-platform
+  vendor: xwiki
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"data-xwiki-reference"
