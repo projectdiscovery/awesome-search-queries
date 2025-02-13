@@ -28441,14 +28441,6 @@
       queries:
         - body='content="slims'
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: xwiki-platform
   vendor: xwiki
   type: product
@@ -28456,3 +28448,14 @@
     - platform: shodan
       queries:
         - http.html:"data-xwiki-reference"
+    - platform: fofa
+      queries:
+        - body="data-xwiki-reference"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
