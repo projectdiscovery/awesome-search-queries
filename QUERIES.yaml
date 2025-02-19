@@ -2870,13 +2870,16 @@
   engines:
     - platform: shodan
       queries:
+        - http.title:"netdata console"
         - http.title:"netdata dashboard"
         - 'server: netdata embedded http server'
     - platform: fofa
       queries:
+        - title="netdata console"
         - title="netdata dashboard"
     - platform: google
       queries:
+        - intitle:"netdata console"
         - intitle:"netdata dashboard"
 
 - name: controller
@@ -28452,6 +28455,14 @@
       queries:
         - body="data-xwiki-reference"
 
+- name: netalertx
+  vendor: jokob-sk
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - netalert x
+
 - name: element
   vendor: matrix
   type: product
@@ -28459,3 +28470,19 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: dify
+  vendor: langgenius
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="97378986"
+
+- name: tc-ecommerce
+  vendor: themescoder
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/tc-ecommerce/"
