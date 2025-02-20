@@ -11969,6 +11969,7 @@
         - php.ini
         - the requested resource <code class="url">
         - 'x-powered-by: php'
+        - x-powered-by:"php"
     - platform: fofa
       queries:
         - title="php warning" || "fatal error"
@@ -28463,14 +28464,6 @@
       queries:
         - netalert x
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: dify
   vendor: langgenius
   type: product
@@ -28478,6 +28471,9 @@
     - platform: fofa
       queries:
         - icon_hash="97378986"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:"97378986"
 
 - name: tc-ecommerce
   vendor: themescoder
@@ -28486,3 +28482,14 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/tc-ecommerce/"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/tc-ecommerce/"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
