@@ -28493,3 +28493,22 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: event-monster
+  vendor: a-wp-life
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/event-monster"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/event-monster"
+
+- name: leantime
+  vendor: leantime
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"leantime"
