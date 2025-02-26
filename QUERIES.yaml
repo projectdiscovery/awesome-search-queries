@@ -28486,14 +28486,6 @@
       queries:
         - http.html:"wp-content/plugins/tc-ecommerce/"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: event-monster
   vendor: a-wp-life
   type: product
@@ -28512,3 +28504,11 @@
     - platform: shodan
       queries:
         - http.title:"leantime"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
