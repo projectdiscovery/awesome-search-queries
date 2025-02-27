@@ -28505,6 +28505,14 @@
       queries:
         - http.title:"leantime"
 
+- name: uptime-kuma
+  vendor: uptime-kuma
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"uptime kuma"
+
 - name: element
   vendor: matrix
   type: product
