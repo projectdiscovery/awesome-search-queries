@@ -28512,6 +28512,12 @@
     - platform: shodan
       queries:
         - http.title:"uptime kuma"
+    - platform: fofa
+      queries:
+        - title="uptime kuma"
+    - platform: google
+      queries:
+        - intitle:"uptime kuma"
 
 - name: element
   vendor: matrix
