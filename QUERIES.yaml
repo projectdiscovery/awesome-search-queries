@@ -28519,6 +28519,17 @@
       queries:
         - intitle:"uptime kuma"
 
+- name: wpappninja
+  vendor: amauri
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wpappninja"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/wpappninja
+
 - name: element
   vendor: matrix
   type: product
