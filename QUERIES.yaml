@@ -28529,6 +28529,17 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/wpappninja
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wpappninja"
+
+- name: navidrome
+  vendor: navidrome
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"content="navidrome""
 
 - name: element
   vendor: matrix
