@@ -28541,6 +28541,31 @@
       queries:
         - http.html:"content="navidrome""
 
+- name: DGN2200
+  vendor: Netgear
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="netgear dgn2200"
+    - platform: shodan
+      queries:
+        - http.title:"dgn2200"
+
+- name: A2004
+  vendor: ipTIME
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="iptime"
+    - platform: shodan
+      queries:
+        - http.title:"iptime"
+    - platform: google
+      queries:
+        - intitle:"iptime"
+
 - name: element
   vendor: matrix
   type: product
@@ -28548,3 +28573,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: WNR614
+  vendor: Netgear
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="netgear wnr614"
+    - platform: shodan
+      queries:
+        - http.title:"wnr614"
