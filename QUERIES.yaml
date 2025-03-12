@@ -28547,10 +28547,14 @@
   engines:
     - platform: fofa
       queries:
+        - title="dgn2200"
         - title="netgear dgn2200"
     - platform: shodan
       queries:
         - http.title:"dgn2200"
+    - platform: google
+      queries:
+        - intitle:"dgn2200"
 
 - name: A2004
   vendor: ipTIME
@@ -28566,14 +28570,6 @@
       queries:
         - intitle:"iptime"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: WNR614
   vendor: Netgear
   type: product
@@ -28581,6 +28577,48 @@
     - platform: fofa
       queries:
         - title="netgear wnr614"
+        - title="wnr614"
     - platform: shodan
       queries:
         - http.title:"wnr614"
+    - platform: google
+      queries:
+        - intitle:"wnr614"
+
+- name: seo-automatic-seo-tools
+  vendor: WordPress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/seo-automatic-seo-tools/"
+    - platform: shodan
+      queries:
+        - http.html:"seo-automatic-seo-tools"
+
+- name: journyx
+  vendor: journyx
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"journyx"
+
+- name: Flowise
+  vendor: FlowiseAI
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="flowise"
+    - platform: shodan
+      queries:
+        - http.title:"flowise"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
