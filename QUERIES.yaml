@@ -21383,10 +21383,10 @@
         - /wp-content/plugins/wp-recall/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/wp-recall/
+        - http.html:"/wp-content/plugins/wp-recall/"
     - platform: fofa
       queries:
-        - body=/wp-content/plugins/wp-recall/
+        - body="/wp-content/plugins/wp-recall/"
 
 - name: dns-320l
   vendor: dlink
@@ -28616,6 +28616,22 @@
     - platform: shodan
       queries:
         - http.title:"flowise"
+
+- name: wp-file-upload
+  vendor: WordPress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body='wp-content/plugins/wp-file-upload/'
+
+- name: wpb-show-core
+  vendor: wpb-show-core-project
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/wpb-show-core/"
 
 - name: element
   vendor: matrix
