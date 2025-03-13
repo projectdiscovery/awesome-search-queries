@@ -28591,10 +28591,12 @@
   engines:
     - platform: fofa
       queries:
+        - body="seo-automatic-seo-tools"
         - body="wp-content/plugins/seo-automatic-seo-tools/"
     - platform: shodan
       queries:
         - http.html:"seo-automatic-seo-tools"
+        - http.html:"wp-content/plugins/seo-automatic-seo-tools/"
 
 - name: journyx
   vendor: journyx
