@@ -28624,6 +28624,9 @@
     - platform: fofa
       queries:
         - body='wp-content/plugins/wp-file-upload/'
+    - platform: shodan
+      queries:
+        - http.html:'wp-content/plugins/wp-file-upload/'
 
 - name: wpb-show-core
   vendor: wpb-show-core-project
@@ -28632,6 +28635,17 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/wpb-show-core/"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/wpb-show-core/"
+
+- name: download_manager
+  vendor: wpdownloadmanager
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/download-manager/
 
 - name: element
   vendor: matrix
