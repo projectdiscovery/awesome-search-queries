@@ -28646,6 +28646,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/download-manager/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/download-manager/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/download-manager/
 
 - name: element
   vendor: matrix
