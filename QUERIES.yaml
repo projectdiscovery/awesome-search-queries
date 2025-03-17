@@ -3221,11 +3221,13 @@
     - platform: shodan
       queries:
         - http.html:"projectsend setup"
-        - http.html:provided by projectsend
+        - http.html:"projectsend"
+        - http.html:"provided by projectsend"
     - platform: fofa
       queries:
         - body="projectsend setup"
-        - body=provided by projectsend
+        - body="projectsend"
+        - body="provided by projectsend"
 
 - name: sysaid
   vendor: sysaid
@@ -28652,6 +28654,14 @@
     - platform: fofa
       queries:
         - body=/wp-content/plugins/download-manager/
+
+- name: cyberpanel
+  vendor: cyberpanel
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"cyberpanel"
 
 - name: element
   vendor: matrix
