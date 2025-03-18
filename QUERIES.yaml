@@ -4631,17 +4631,17 @@
       queries:
         - http.html:"sugarcrm inc. all rights reserved"
         - http.title:"sugar setup wizard"
-        - http.title:sugarcrm
+        - http.title:"sugarcrm"
     - platform: google
       queries:
         - intext:"sugarcrm inc. all rights reserved"
         - intitle:"sugar setup wizard"
-        - intitle:sugarcrm
+        - intitle:"sugarcrm"
     - platform: fofa
       queries:
         - body="sugarcrm inc. all rights reserved"
         - title="sugar setup wizard"
-        - title=sugarcrm
+        - title="sugarcrm"
 
 - name: code-server
   vendor: coder
@@ -28673,6 +28673,52 @@
     - platform: shodan
       queries:
         - http.title:'home - default site'
+    - platform: google
+      queries:
+        - intitle:'home - default site'
+
+- name: tradedoubler-affiliate-tracker
+  vendor: WordPress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/tradedoubler-affiliate-tracker/"
+
+- name: builder
+  vendor: themify
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/themify-builder/"
+
+- name: woocommerce-product-addon
+  vendor: WordPress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/woocommerce-product-addon/"
+
+- name: easy_forms_for_mailchimp
+  vendor: yikesinc
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/yikes-inc-easy-mailchimp-extender/"
+
+- name: post-timeline
+  vendor: agilelogix
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/post-timeline/"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/post-timeline/"
 
 - name: element
   vendor: matrix
