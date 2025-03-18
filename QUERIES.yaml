@@ -28663,6 +28663,17 @@
       queries:
         - http.html:"cyberpanel"
 
+- name: oqtane
+  vendor: oqtane
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="home - default site"
+    - platform: shodan
+      queries:
+        - http.title:'home - default site'
+
 - name: element
   vendor: matrix
   type: product
