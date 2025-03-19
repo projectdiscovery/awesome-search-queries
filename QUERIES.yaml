@@ -28684,6 +28684,9 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/tradedoubler-affiliate-tracker/"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/tradedoubler-affiliate-tracker/"
 
 - name: builder
   vendor: themify
@@ -28692,6 +28695,9 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/themify-builder/"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/themify-builder/"
 
 - name: woocommerce-product-addon
   vendor: WordPress
@@ -28700,6 +28706,9 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/woocommerce-product-addon/"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/woocommerce-product-addon/"
 
 - name: easy_forms_for_mailchimp
   vendor: yikesinc
@@ -28708,6 +28717,9 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/yikes-inc-easy-mailchimp-extender/"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/yikes-inc-easy-mailchimp-extender/"
 
 - name: post-timeline
   vendor: agilelogix
