@@ -28732,6 +28732,14 @@
       queries:
         - http.html:"wp-content/plugins/post-timeline/"
 
+- name: shoretel
+  vendor: mitel
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="shoretel" && icon_hash="268280373"
+
 - name: element
   vendor: matrix
   type: product
