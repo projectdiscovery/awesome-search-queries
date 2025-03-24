@@ -28751,3 +28751,19 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: hertzbeat
+  vendor: apache
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"hertzbeat"
+
+- name: Drupal
+  vendor: Drupal
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="drupal"
