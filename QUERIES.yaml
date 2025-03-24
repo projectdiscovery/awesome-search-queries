@@ -266,6 +266,7 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:apache:tomcat"
+        - http.component:"apache tomcat"
         - http.html:"apache tomcat"
         - http.html:"jk status manager"
         - http.title:"apache tomcat"
@@ -274,6 +275,7 @@
       queries:
         - body="apache tomcat"
         - body="jk status manager"
+        - server=="apache tomcat"
         - title="apache tomcat"
     - platform: google
       queries:
@@ -9708,9 +9710,11 @@
       queries:
         - cpe:"cpe:2.3:a:zeit:next.js"
         - http.html:"/_next/static"
+        - x-middleware-rewrite
     - platform: fofa
       queries:
         - body="/_next/static"
+        - x-middleware-rewrite
 
 - name: linkedin
   vendor: bestwebsoft
