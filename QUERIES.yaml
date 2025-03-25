@@ -28744,14 +28744,6 @@
       queries:
         - body="shoretel" && icon_hash="268280373"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: hertzbeat
   vendor: apache
   type: product
@@ -28767,3 +28759,11 @@
     - platform: fofa
       queries:
         - app="drupal"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
