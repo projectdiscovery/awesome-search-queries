@@ -28775,3 +28775,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: xphone
+  vendor: c4b
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="516202656"
