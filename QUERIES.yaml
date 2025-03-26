@@ -28760,6 +28760,14 @@
       queries:
         - app="drupal"
 
+- name: gl-s20_firmware
+  vendor: gl-inet
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"gl.inet admin panel"
+
 - name: element
   vendor: matrix
   type: product
