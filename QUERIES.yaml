@@ -28768,14 +28768,6 @@
       queries:
         - http.title:"gl.inet admin panel"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: xphone
   vendor: c4b
   type: product
@@ -28783,3 +28775,14 @@
     - platform: fofa
       queries:
         - icon_hash="516202656"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:"516202656"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
