@@ -28779,6 +28779,14 @@
       queries:
         - http.favicon.hash:"516202656"
 
+- name: Netgear R6850 Router
+  vendor: Netgear
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="netgear" && "r6850"
+
 - name: element
   vendor: matrix
   type: product
