@@ -3061,10 +3061,17 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-1022206565"
         - http.html:"crushftp"
+        - http.title:"crushftp webinterface"
     - platform: fofa
       queries:
         - body="crushftp"
+        - icon_hash="-1022206565"
+        - title="crushftp webinterface"
+    - platform: google
+      queries:
+        - intitle:"crushftp webinterface"
 
 - name: icewarp_server
   vendor: icewarp
