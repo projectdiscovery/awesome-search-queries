@@ -28794,6 +28794,17 @@
       queries:
         - app="netgear" && "r6850"
 
+- name: report
+  vendor: anji-plus
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="aj-report"
+    - platform: shodan
+      queries:
+        - http.title:"aj-report"
+
 - name: element
   vendor: matrix
   type: product
