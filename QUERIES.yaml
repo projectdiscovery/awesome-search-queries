@@ -28801,9 +28801,13 @@
     - platform: fofa
       queries:
         - app="aj-report"
+        - title="aj-report"
     - platform: shodan
       queries:
         - http.title:"aj-report"
+    - platform: google
+      queries:
+        - intitle:"aj-report"
 
 - name: element
   vendor: matrix
