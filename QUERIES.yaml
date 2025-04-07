@@ -28809,6 +28809,20 @@
       queries:
         - intitle:"aj-report"
 
+- name: download_manager
+  vendor: w3eden
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/download-manager/"
+    - platform: google
+      queries:
+        - inurl:"/wp-content/plugins/download-manager/"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/download-manager/"
+
 - name: element
   vendor: matrix
   type: product
