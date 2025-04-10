@@ -28823,6 +28823,14 @@
       queries:
         - http.html:"wp-content/plugins/download-manager/"
 
+- name: sante_pacs_server
+  vendor: santesoft
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:1185161484
+
 - name: element
   vendor: matrix
   type: product
@@ -28830,3 +28838,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: fortiswitch
+  vendor: fortinet
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="fortiswitch"
