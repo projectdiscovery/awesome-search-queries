@@ -28830,14 +28830,9 @@
     - platform: shodan
       queries:
         - http.favicon.hash:1185161484
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
+    - platform: fofa
       queries:
-        - http.html:"manifest.json"
+        - icon_hash=1185161484
 
 - name: fortiswitch
   vendor: fortinet
@@ -28846,3 +28841,11 @@
     - platform: fofa
       queries:
         - app="fortiswitch"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
