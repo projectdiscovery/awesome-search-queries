@@ -1749,6 +1749,7 @@
     - platform: zoomeye
       queries:
         - app:"screenconnect remote management software"
+        - app="screenconnect remote management software"
 
 - name: tableau_server
   vendor: tableausoftware
@@ -1854,6 +1855,7 @@
     - platform: zoomeye
       queries:
         - app:"pyload"
+        - app="pyload"
 
 - name: freepbx
   vendor: sangoma
@@ -6220,6 +6222,7 @@
     - platform: zoomeye
       queries:
         - app:"hytec inter hwl-2511-ss"
+        - app="hytec inter hwl-2511-ss"
 
 - name: download_monitor
   vendor: wpchill
@@ -7165,6 +7168,7 @@
     - platform: zoomeye
       queries:
         - app:"fortra goanywhere-mft"
+        - app="fortra goanywhere-mft"
 
 - name: nextgen_gallery
   vendor: imagely
@@ -7940,6 +7944,7 @@
     - platform: zoomeye
       queries:
         - app:"wordpress ultimate member plugin"
+        - app="wordpress ultimate member plugin"
 
 - name: skype_for_business_server
   vendor: microsoft
@@ -10677,6 +10682,7 @@
     - platform: zoomeye
       queries:
         - +app:"sap netweaver application server httpd
+        - app="sap netweaver application server httpd
     - platform: fofa
       queries:
         - icon_hash=-266008933
@@ -21362,6 +21368,7 @@
     - platform: zoomeye
       queries:
         - app:"ollama llm"
+        - app="ollama"
 
 - name: dir-845l
   vendor: dlink
@@ -27276,6 +27283,7 @@
     - platform: zoomeye
       queries:
         - app:"通达oa"
+        - app="通达oa"
 
 - name: office_anywhere_2017
   vendor: tongda2000
