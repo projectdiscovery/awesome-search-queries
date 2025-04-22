@@ -1327,6 +1327,7 @@
         - http.title:"metasploit"
     - platform: zoomeye
       queries:
+        - app="metasploit"
         - title:'metasploit'
     - platform: fofa
       queries:
@@ -4001,6 +4002,7 @@
     - platform: zoomeye
       queries:
         - title:"greenbone security assistant"
+        - title="greenbone security assistant"
     - platform: fofa
       queries:
         - title="greenbone security assistant"
@@ -7052,6 +7054,7 @@
     - platform: zoomeye
       queries:
         - title:"高清智能录播系统"
+        - title="高清智能录播系统"
     - platform: shodan
       queries:
         - http.title:"高清智能录播系统"
@@ -7341,6 +7344,7 @@
     - platform: zoomeye
       queries:
         - title:"verta ai"
+        - title="verta ai"
     - platform: fofa
       queries:
         - icon_hash=-2097033750
@@ -8102,6 +8106,7 @@
     - platform: zoomeye
       queries:
         - /wpms/asset
+        - app="大华智慧园区综合管理平台"
     - platform: fofa
       queries:
         - body="/wpms/asset"
@@ -8410,6 +8415,7 @@
         - intitle:'jumpserver'
     - platform: zoomeye
       queries:
+        - app="jumpserver bastion host"
         - title:'jumpserver'
 
 - name: citrix_storefront
@@ -22450,6 +22456,7 @@
         - intitle:"jupyter notebook"
     - platform: zoomeye
       queries:
+        - app="jupyter notebook"
         - title:"jupyter notebook"
 
 - name: powermedia_xms
@@ -23695,6 +23702,7 @@
         - http.title:"小米路由器"
     - platform: zoomeye
       queries:
+        - app="小米路由器"
         - title:'小米路由器'
     - platform: fofa
       queries:
@@ -26301,6 +26309,7 @@
     - platform: zoomeye
       queries:
         - title:cvsweb
+        - title="cvsweb"
     - platform: google
       queries:
         - intitle:"cvsweb"
@@ -28849,6 +28858,14 @@
     - platform: fofa
       queries:
         - app="fortiswitch"
+
+- name: proxmox_mail_gateway
+  vendor: proxmox
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"proxmox = {"
 
 - name: element
   vendor: matrix
