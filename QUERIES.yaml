@@ -5813,6 +5813,9 @@
     - platform: google
       queries:
         - intitle:"thinkphp"
+    - platform: zoomeye
+      queries:
+        - app="thinkphp"
 
 - name: emerge_e3_firmware
   vendor: nortekcontrol
@@ -20155,6 +20158,9 @@
       queries:
         - cpe:"cpe:2.3:a:zeit:next.js"
         - http.html:"/_next/static"
+    - platform: zoomeye
+      queries:
+        - app="next.js"
 
 - name: neodash
   vendor: neo4j
