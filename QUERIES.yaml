@@ -21480,9 +21480,11 @@
     - platform: shodan
       queries:
         - http.html:"installation" html:"itop"
+        - http.html:"itop login"
     - platform: fofa
       queries:
         - body="installation" html:"itop"
+        - body="itop login"
 
 - name: uwsgi
   vendor: unbit
