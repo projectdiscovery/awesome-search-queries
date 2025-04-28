@@ -13051,6 +13051,10 @@
     - platform: fofa
       queries:
         - body="install flarum"
+        - header="flarum_session="
+    - platform: zoomeye
+      queries:
+        - app="flarum"
 
 - name: fluxbb
   vendor: fluxbb
@@ -21479,10 +21483,12 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:" itop login"
         - http.html:"installation" html:"itop"
         - http.html:"itop login"
     - platform: fofa
       queries:
+        - body=" itop login"
         - body="installation" html:"itop"
         - body="itop login"
 
@@ -28882,3 +28888,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: retail_xstore_office
+  vendor: oracle
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"xstoremgwt"
