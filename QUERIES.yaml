@@ -28881,14 +28881,6 @@
       queries:
         - http.html:"proxmox = {"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: retail_xstore_office
   vendor: oracle
   type: product
@@ -28896,3 +28888,11 @@
     - platform: shodan
       queries:
         - http.html:"xstoremgwt"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
