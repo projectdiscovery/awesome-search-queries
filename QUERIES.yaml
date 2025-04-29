@@ -28896,3 +28896,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: craftcms
+  vendor: craftcms
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.component:"craft cms"
