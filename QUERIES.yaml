@@ -6839,9 +6839,12 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"zk.wpd" or http.html:"<!-- zk "
         - http.title:"server backup manager"
     - platform: fofa
       queries:
+        - body="zk.wpd" or http.html:"<!-- zk "
+        - body="zk.wpd" || body="<!-- zk "
         - title="server backup manager"
     - platform: google
       queries:
@@ -28889,14 +28892,6 @@
       queries:
         - http.html:"xstoremgwt"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: craftcms
   vendor: craftcms
   type: product
@@ -28904,3 +28899,11 @@
     - platform: shodan
       queries:
         - http.component:"craft cms"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
