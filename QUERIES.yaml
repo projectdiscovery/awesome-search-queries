@@ -2332,9 +2332,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"draw.io"
         - http.title:"flowchart maker"
     - platform: fofa
       queries:
+        - body="draw.io"
         - title="flowchart maker"
     - platform: google
       queries:
