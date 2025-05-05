@@ -3885,9 +3885,11 @@
       queries:
         - cpe:"cpe:2.3:a:liferay:liferay_portal"
         - http.favicon.hash:129457226
+        - http.html:"var liferay"
         - http.title:"liferay"
     - platform: fofa
       queries:
+        - body="var liferay"
         - icon_hash=129457226
         - title="liferay"
     - platform: google
