@@ -3249,10 +3249,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:1540720428
+        - http.favicon.hash:"1540720428"
     - platform: fofa
       queries:
-        - icon_hash=1540720428
+        - icon_hash="1540720428"
 
 - name: neo4j
   vendor: neo4j
