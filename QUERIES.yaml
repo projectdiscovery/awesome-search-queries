@@ -28911,3 +28911,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: loadmaster
+  vendor: kemptechnologies
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"kemp login screen"
