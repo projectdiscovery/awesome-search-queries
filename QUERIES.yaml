@@ -28904,14 +28904,6 @@
       queries:
         - http.component:"craft cms"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: loadmaster
   vendor: kemptechnologies
   type: product
@@ -28919,3 +28911,11 @@
     - platform: shodan
       queries:
         - http.html:"kemp login screen"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
