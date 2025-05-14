@@ -28919,3 +28919,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: jux_real_estate
+  vendor: joomlaux
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="joomlaux"
