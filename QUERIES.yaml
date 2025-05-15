@@ -28912,14 +28912,6 @@
       queries:
         - http.html:"kemp login screen"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: jux_real_estate
   vendor: joomlaux
   type: product
@@ -28927,3 +28919,14 @@
     - platform: fofa
       queries:
         - body="joomlaux"
+    - platform: shodan
+      queries:
+        - http.html:"joomlaux"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
