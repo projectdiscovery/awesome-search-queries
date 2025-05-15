@@ -28930,3 +28930,22 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: Pichome
+  vendor: zyx0814
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="pichome"
+    - platform: shodan
+      queries:
+        - http.title:"pichome"
+
+- name: wps-hide-login
+  vendor: wpserveur
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wps-hide-login"
