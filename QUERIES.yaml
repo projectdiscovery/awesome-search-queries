@@ -28923,14 +28923,6 @@
       queries:
         - http.html:"joomlaux"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: Pichome
   vendor: zyx0814
   type: product
@@ -28949,3 +28941,14 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/wps-hide-login"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wps-hide-login"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
