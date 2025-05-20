@@ -3544,6 +3544,7 @@
         - http.title:"wazuh"
     - platform: fofa
       queries:
+        - app="wazuh"
         - title="wazuh"
     - platform: google
       queries:
@@ -28945,14 +28946,6 @@
       queries:
         - http.html:"/wp-content/plugins/wps-hide-login"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: nonecms
   vendor: 5none
   type: product
@@ -28968,3 +28961,11 @@
     - platform: fofa
       queries:
         - '"excanvas.js" && "lang == \"zh-cn\"" && "detectlang" && server=="dws"'
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
