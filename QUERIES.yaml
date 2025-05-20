@@ -28952,3 +28952,19 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: nonecms
+  vendor: 5none
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="thinkphp"
+
+- name: vigor
+  vendor: draytek
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - '"excanvas.js" && "lang == \"zh-cn\"" && "detectlang" && server=="dws"'
