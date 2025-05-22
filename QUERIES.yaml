@@ -9558,9 +9558,11 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-266008933
+        - location:"/irj/portal"
     - platform: fofa
       queries:
         - icon_hash=-266008933
+        - header="/irj/portal"
 
 - name: contact_form_to_db
   vendor: bestwebsoft
