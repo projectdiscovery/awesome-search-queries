@@ -28969,3 +28969,33 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: kod-explorer
+  vendor: kalcaddle
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="powered-by-kodexplorer"
+
+- name: aruba-instant-access-point
+  vendor: aruba
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="jscripts/third_party/raphael-treemap.min.js" || body="jscripts/third_party/highcharts.src.js"
+    - platform: shodan
+      queries:
+        - http.title:"aruba"
+
+- name: concerto
+  vendor: versa-networks
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-534530225
+    - platform: fofa
+      queries:
+        - icon_hash=-534530225
