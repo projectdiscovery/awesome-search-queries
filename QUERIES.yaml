@@ -4820,12 +4820,15 @@
     - platform: shodan
       queries:
         - http.title:"opmanager plus"
+        - http.title:"opmanager"
     - platform: fofa
       queries:
         - title="opmanager plus"
+        - title="opmanager"
     - platform: google
       queries:
         - intitle:"opmanager plus"
+        - intitle:"opmanager"
 
 - name: manageengine_analytics_plus
   vendor: zohocorp
@@ -11315,11 +11318,11 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:-655683626
+        - http.favicon.hash:"-655683626"
         - http.title:"prtg"
     - platform: fofa
       queries:
-        - icon_hash=-655683626
+        - icon_hash="-655683626"
         - title="prtg"
     - platform: google
       queries:
@@ -28962,14 +28965,6 @@
       queries:
         - '"excanvas.js" && "lang == \"zh-cn\"" && "detectlang" && server=="dws"'
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: kod-explorer
   vendor: kalcaddle
   type: product
@@ -28999,3 +28994,65 @@
     - platform: fofa
       queries:
         - icon_hash=-534530225
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: mapsvg
+  vendor: mapsvg
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/mapsvg/"
+
+- name: youzify
+  vendor: kainelabs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/youzify"
+
+- name: usermin
+  vendor: webmin
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="usermin"
+    - platform: shodan
+      queries:
+        - http.title:"usermin"
+
+- name: Vigor300B
+  vendor: DrayTek
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - '"excanvas.js" && "lang == \"zh-cn\"" && "detectlang" && server=="dws"'
+
+- name: archer-ax21
+  vendor: tp-link
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="tp-link"
+
+- name: youphptube_encoder
+  vendor: youphptube
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-276846707"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:"-276846707"
