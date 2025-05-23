@@ -28995,14 +28995,6 @@
       queries:
         - icon_hash=-534530225
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: mapsvg
   vendor: mapsvg
   type: product
@@ -29010,6 +29002,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/mapsvg/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/mapsvg/"
 
 - name: youzify
   vendor: kainelabs
@@ -29018,6 +29013,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/youzify"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/youzify"
 
 - name: usermin
   vendor: webmin
@@ -29045,6 +29043,9 @@
     - platform: fofa
       queries:
         - body="tp-link"
+    - platform: shodan
+      queries:
+        - http.html:"tp-link"
 
 - name: youphptube_encoder
   vendor: youphptube
@@ -29056,3 +29057,11 @@
     - platform: shodan
       queries:
         - http.favicon.hash:"-276846707"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
