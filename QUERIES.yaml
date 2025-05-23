@@ -19802,12 +19802,14 @@
   engines:
     - platform: fofa
       queries:
+        - body="pandora fms - installation wizard"
         - title="pandora fms"
     - platform: google
       queries:
         - intitle:"pandora fms"
     - platform: shodan
       queries:
+        - http.html:"pandora fms - installation wizard"
         - http.title:"pandora fms"
 
 - name: hospital_management_system
@@ -29065,3 +29067,27 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: openmrs
+  vendor: openmrs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"openmrs"
+
+- name: ai_engine
+  vendor: meowapps
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/ai-engine/
+
+- name: kace_systems_management
+  vendor: quest
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"k1000 logo"
