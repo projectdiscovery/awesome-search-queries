@@ -29060,14 +29060,6 @@
       queries:
         - http.favicon.hash:"-276846707"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: openmrs
   vendor: openmrs
   type: product
@@ -29083,6 +29075,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/ai-engine/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/ai-engine/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/ai-engine/
 
 - name: kace_systems_management
   vendor: quest
@@ -29091,3 +29089,11 @@
     - platform: shodan
       queries:
         - http.html:"k1000 logo"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
