@@ -8525,6 +8525,7 @@
         - http.title:"vbulletin"
     - platform: fofa
       queries:
+        - app="vbulletin"
         - body="powered by vbulletin"
         - title="powered by vbulletin"
         - title="vbulletin"
