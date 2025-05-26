@@ -6274,9 +6274,11 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/learnpress"
+        - http.html:"wp-content/plugins/learnpress"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/learnpress"
+        - body="wp-content/plugins/learnpress"
 
 - name: searchwp_live_ajax_search
   vendor: searchwp
