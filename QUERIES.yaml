@@ -29100,3 +29100,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: eventin
+  vendor: themewinter
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/eventin"
