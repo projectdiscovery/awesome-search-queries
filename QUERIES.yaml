@@ -29093,6 +29093,17 @@
       queries:
         - http.html:"k1000 logo"
 
+- name: eventin
+  vendor: themewinter
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/eventin"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/eventin"
+
 - name: element
   vendor: matrix
   type: product
@@ -29101,10 +29112,10 @@
       queries:
         - http.html:"manifest.json"
 
-- name: eventin
-  vendor: themewinter
+- name: instawp_connect
+  vendor: instawp
   type: product
   engines:
     - platform: fofa
       queries:
-        - body="/wp-content/plugins/eventin"
+        - body="/wp-content/plugins/instawp-connect/"
