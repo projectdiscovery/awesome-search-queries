@@ -29104,14 +29104,6 @@
       queries:
         - http.html:"/wp-content/plugins/eventin"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: instawp_connect
   vendor: instawp
   type: product
@@ -29119,3 +29111,14 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/instawp-connect/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/instawp-connect/"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
