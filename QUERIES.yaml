@@ -29115,6 +29115,25 @@
       queries:
         - http.html:"/wp-content/plugins/instawp-connect/"
 
+- name: tip200
+  vendor: intelbras
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/cgi-bin/cgiserver.exx"
+    - platform: shodan
+      queries:
+        - http.html:"/cgi-bin/cgiserver.exx"
+
+- name: multiple_shipping_addresses_for_woocommerce
+  vendor: themehigh
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/multiple-shipping-address-woocommerce"
+
 - name: element
   vendor: matrix
   type: product
