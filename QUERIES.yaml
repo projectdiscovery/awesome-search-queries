@@ -7704,6 +7704,9 @@
     - platform: google
       queries:
         - inurl:"/tshirtecommerce/"
+    - platform: fofa
+      queries:
+        - body="prestashop" && body="tshirtecommerce"
 
 - name: d-copia253mf_plus_firmware
   vendor: kyocera
@@ -29133,6 +29136,9 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/multiple-shipping-address-woocommerce"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/multiple-shipping-address-woocommerce"
 
 - name: element
   vendor: matrix
