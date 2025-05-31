@@ -6868,6 +6868,15 @@
       queries:
         - inurl:"/wp-content/plugins/duplicator"
         - inurl:/backups-dup-lite/dup-installer/
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/duplicator
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/duplicator
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/duplicator
 
 - name: dogtagpki
   vendor: dogtagpki
@@ -7403,8 +7412,10 @@
         - cpe:"cpe:2.3:a:chamilo:chamilo"
         - http.component:"chamilo"
         - http.title:"chamilo has not been installed"
+        - 'x-powered-by: chamilo'
     - platform: fofa
       queries:
+        - 'banner="x-powered-by: chamilo"'
         - title="chamilo has not been installed"
     - platform: google
       queries:
@@ -8769,6 +8780,7 @@
         - http.html:"cockpit"
     - platform: fofa
       queries:
+        - app="cockpit"
         - body="cockpit"
         - icon_hash=688609340
 
@@ -29139,6 +29151,92 @@
     - platform: shodan
       queries:
         - http.html:"wp-content/plugins/multiple-shipping-address-woocommerce"
+
+- name: adning_advertising
+  vendor: tunasite
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="served by adning"
+
+- name: wp_hotel_booking
+  vendor: thimpress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/wp-hotel-booking"
+
+- name: tip300
+  vendor: intelbras
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="intelbras"
+    - platform: shodan
+      queries:
+        - http.title:"intelbras"
+
+- name: usualtoolcms
+  vendor: usualtool
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="usualtool"
+
+- name: ips_community_suite
+  vendor: invision
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="invision community"
+    - platform: shodan
+      queries:
+        - http.html:"invision community"
+
+- name: chartify
+  vendor: ays-pro
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/chart-builder/
+
+- name: magicinfo_9_server
+  vendor: samsung
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - 'server: magicinfo premium server'
+
+- name: hunk_companion
+  vendor: themehunk
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/hunk-companion/"
+
+- name: easy_wp_smtp
+  vendor: wp-ecommerce
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/easy-wp-smtp/
+
+- name: prestashop
+  vendor: tshirtecommerce
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="prestashop" && body="tshirtecommerce"
 
 - name: element
   vendor: matrix
