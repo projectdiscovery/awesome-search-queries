@@ -29159,6 +29159,9 @@
     - platform: fofa
       queries:
         - body="served by adning"
+    - platform: shodan
+      queries:
+        - http.html:"served by adning"
 
 - name: wp_hotel_booking
   vendor: thimpress
@@ -29167,6 +29170,9 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/wp-hotel-booking"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/wp-hotel-booking"
 
 - name: tip300
   vendor: intelbras
@@ -29186,6 +29192,9 @@
     - platform: fofa
       queries:
         - body="usualtool"
+    - platform: shodan
+      queries:
+        - http.html:"usualtool"
 
 - name: ips_community_suite
   vendor: invision
@@ -29205,6 +29214,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/chart-builder/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/chart-builder/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/chart-builder/
 
 - name: magicinfo_9_server
   vendor: samsung
@@ -29221,6 +29236,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/hunk-companion/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/hunk-companion/"
 
 - name: easy_wp_smtp
   vendor: wp-ecommerce
@@ -29229,6 +29247,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/easy-wp-smtp/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/easy-wp-smtp/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/easy-wp-smtp/
 
 - name: prestashop
   vendor: tshirtecommerce
