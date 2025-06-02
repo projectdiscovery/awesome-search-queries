@@ -29262,6 +29262,14 @@
       queries:
         - body="prestashop" && body="tshirtecommerce"
 
+- name: a3300r_firmware
+  vendor: totolink
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="totolink"
+
 - name: element
   vendor: matrix
   type: product
