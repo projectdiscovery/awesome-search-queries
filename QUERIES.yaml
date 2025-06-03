@@ -24000,9 +24000,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"craftercms"
         - http.title:"craftercms"
     - platform: fofa
       queries:
+        - body="craftercms"
         - title="craftercms"
     - platform: google
       queries:
@@ -29269,6 +29271,25 @@
     - platform: fofa
       queries:
         - title="totolink"
+
+- name: capabilities
+  vendor: publishpress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/capability-manager-enhanced"
+
+- name: ax8
+  vendor: flir
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="flir-ax8"
+    - platform: shodan
+      queries:
+        - http.title:"flir"
 
 - name: element
   vendor: matrix
