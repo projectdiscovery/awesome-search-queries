@@ -29279,6 +29279,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/capability-manager-enhanced"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/capability-manager-enhanced"
 
 - name: ax8
   vendor: flir
