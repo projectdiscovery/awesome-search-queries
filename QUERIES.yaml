@@ -29294,6 +29294,44 @@
       queries:
         - http.title:"flir"
 
+- name: wrn150
+  vendor: intelbras
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="wrn150"
+    - platform: shodan
+      queries:
+        - http.html:"wrn150"
+
+- name: nplug
+  vendor: intelbras
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="nplug"
+    - platform: shodan
+      queries:
+        - http.html:"nplug"
+
+- name: nextcloudpi
+  vendor: nextcloud
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="nextcloudpi panel"
+        - title="nextcloudpi"
+    - platform: shodan
+      queries:
+        - http.title:"nextcloudpi panel"
+        - http.title:"nextcloudpi"
+    - platform: google
+      queries:
+        - intitle:"nextcloudpi panel"
+
 - name: element
   vendor: matrix
   type: product
