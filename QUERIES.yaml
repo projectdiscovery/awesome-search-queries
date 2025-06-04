@@ -29332,6 +29332,22 @@
       queries:
         - intitle:"nextcloudpi panel"
 
+- name: mw5360_firmware
+  vendor: netis-systems
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"netis router"
+
+- name: tl-wr840n_firmware
+  vendor: tp-link
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"tl-wr840n"
+
 - name: element
   vendor: matrix
   type: product
