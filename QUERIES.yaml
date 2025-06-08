@@ -29363,6 +29363,9 @@
     - platform: fofa
       queries:
         - body="l_tb>dir-605"
+    - platform: shodan
+      queries:
+        - http.html:"l_tb>dir-605"
 
 - name: element
   vendor: matrix
