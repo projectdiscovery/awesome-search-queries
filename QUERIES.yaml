@@ -29348,6 +29348,22 @@
       queries:
         - http.title:"tl-wr840n"
 
+- name: security_event_manager
+  vendor: solarwinds
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="solarwinds security event manager"
+
+- name: dir-605l_firmware
+  vendor: dlink
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="l_tb>dir-605"
+
 - name: element
   vendor: matrix
   type: product
