@@ -29374,6 +29374,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/srs-simple-hits-counter/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/srs-simple-hits-counter/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/srs-simple-hits-counter/
 
 - name: element
   vendor: matrix
