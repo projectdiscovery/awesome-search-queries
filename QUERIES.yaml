@@ -29367,6 +29367,14 @@
       queries:
         - http.html:"l_tb>dir-605"
 
+- name: srs_simple_hits_counter
+  vendor: srs_simple_hits_counter_project
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/srs-simple-hits-counter/
+
 - name: element
   vendor: matrix
   type: product
