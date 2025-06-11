@@ -846,13 +846,16 @@
   engines:
     - platform: shodan
       queries:
+        - http.title:"labkey"
         - 'http.title:"sign in: /home"'
         - 'server: labkey'
     - platform: fofa
       queries:
+        - title="labkey"
         - 'title="sign in: /home"'
     - platform: google
       queries:
+        - intitle:"labkey"
         - 'intitle:"sign in: /home"'
 
 - name: planet_estream
@@ -5578,6 +5581,7 @@
       queries:
         - http.favicon.hash:2124459909
         - http.title:"hfs /"
+        - 'set-cookie: hfs_sid_='
     - platform: fofa
       queries:
         - icon_hash=2124459909
@@ -20881,6 +20885,10 @@
     - platform: shodan
       queries:
         - 'server: boa/'
+        - 'server: boa/0.94.13'
+    - platform: fofa
+      queries:
+        - 'server: boa/0.94.13'
 
 - name: phpunit
   vendor: phpunit_project
@@ -29380,6 +29388,51 @@
     - platform: fofa
       queries:
         - body=/wp-content/plugins/srs-simple-hits-counter/
+
+- name: ruckus_vriot
+  vendor: commscope
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"riot controller"
+
+- name: central_wifimanager
+  vendor: dlink
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"d-link central wifimanager"
+
+- name: wpgraphql
+  vendor: wpengine
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-graphql/"
+
+- name: net_viewer
+  vendor: kyocera
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"kyocera printer panel"
+
+- name: manageengine_exchange_reporter_plus
+  vendor: zohocorp
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="230963457"
+        - title="manageengine - exchange reporter plus"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:230963457
+        - http.title:"manageengine - exchange reporter plus"
 
 - name: element
   vendor: matrix
