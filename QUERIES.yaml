@@ -29412,6 +29412,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/wp-graphql/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wp-graphql/"
 
 - name: net_viewer
   vendor: kyocera
@@ -29431,8 +29434,19 @@
         - title="manageengine - exchange reporter plus"
     - platform: shodan
       queries:
-        - http.favicon.hash:230963457
+        - http.favicon.hash:"230963457"
         - http.title:"manageengine - exchange reporter plus"
+
+- name: apc-network-management-card
+  vendor: schneider-electric
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="apc | log on"
+    - platform: shodan
+      queries:
+        - http.title:"apc | log on"
 
 - name: element
   vendor: matrix
