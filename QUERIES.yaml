@@ -29448,6 +29448,49 @@
       queries:
         - http.title:"apc | log on"
 
+- name: aura_device_services
+  vendor: avaya
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="avaya aura&reg;&nbsp;utility services"
+    - platform: shodan
+      queries:
+        - http.html:"avaya aura&reg;&nbsp;utility services"
+
+- name: abandoned_cart_lite_for_woocommerce
+  vendor: tychesoftwares
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/woocommerce-abandoned-cart/"
+
+- name: phpshe
+  vendor: phpshe
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="phpshe"
+
+- name: optinmonster
+  vendor: optinmonster
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/optinmonster
+
+- name: sonlogger
+  vendor: sfcyazilim
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="sonlogger"
+
 - name: element
   vendor: matrix
   type: product
@@ -29455,3 +29498,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: photos
+  vendor: synology
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"beestation"
