@@ -29466,6 +29466,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/woocommerce-abandoned-cart/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/woocommerce-abandoned-cart/"
 
 - name: phpshe
   vendor: phpshe
@@ -29482,6 +29485,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/optinmonster
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/optinmonster
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/optinmonster
 
 - name: sonlogger
   vendor: sfcyazilim
@@ -29490,14 +29499,9 @@
     - platform: fofa
       queries:
         - body="sonlogger"
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
     - platform: shodan
       queries:
-        - http.html:"manifest.json"
+        - http.html:"sonlogger"
 
 - name: photos
   vendor: synology
@@ -29506,3 +29510,19 @@
     - platform: shodan
       queries:
         - http.html:"beestation"
+
+- name: kace_system_management_appliance
+  vendor: quest
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"kace systems management"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
