@@ -29519,6 +29519,38 @@
       queries:
         - http.title:"kace systems management"
 
+- name: rocket-lms
+  vendor: rocketsoft
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"rocket lms"
+
+- name: joplin
+  vendor: joplin_project
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"joplin server"
+
+- name: jan
+  vendor: homebrew
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-165268926"
+
+- name: ac15_firmware
+  vendor: tenda
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"tenda wifi"
+
 - name: element
   vendor: matrix
   type: product
