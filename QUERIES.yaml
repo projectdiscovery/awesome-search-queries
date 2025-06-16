@@ -29542,6 +29542,9 @@
     - platform: fofa
       queries:
         - icon_hash="-165268926"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:"-165268926"
 
 - name: ac15_firmware
   vendor: tenda
@@ -29550,6 +29553,12 @@
     - platform: shodan
       queries:
         - http.title:"tenda wifi"
+    - platform: fofa
+      queries:
+        - title="tenda wifi"
+    - platform: google
+      queries:
+        - intitle:"tenda wifi"
 
 - name: element
   vendor: matrix
