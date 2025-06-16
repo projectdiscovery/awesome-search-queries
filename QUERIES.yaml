@@ -253,11 +253,16 @@
       queries:
         - cpe:"cpe:2.3:a:jenkins:jenkins"
         - http.favicon.hash:"81586312"
+        - http.title:"jenkins"
         - product:"jenkins"
         - x-jenkins
     - platform: fofa
       queries:
         - icon_hash="81586312"
+        - title="jenkins"
+    - platform: google
+      queries:
+        - intitle:"jenkins"
 
 - name: tomcat
   vendor: apache
