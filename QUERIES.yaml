@@ -29575,6 +29575,17 @@
         - inurl:"eid-management"
         - inurl:"eid-management-new"
 
+- name: nvrmini_firmware
+  vendor: nuuo
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="nuuo"
+    - platform: shodan
+      queries:
+        - http.title:"nuuo"
+
 - name: element
   vendor: matrix
   type: product
