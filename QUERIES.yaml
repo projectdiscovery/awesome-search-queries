@@ -29565,6 +29565,16 @@
       queries:
         - intitle:"tenda wifi"
 
+- name: motive_esim
+  vendor: motive_software_solutions
+  type: product
+  engines:
+    - platform: google
+      queries:
+        - inurl:"bulk-profile-operation"
+        - inurl:"eid-management"
+        - inurl:"eid-management-new"
+
 - name: element
   vendor: matrix
   type: product
