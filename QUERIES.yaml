@@ -126,6 +126,7 @@
         - http.html:"apache airflow"
         - http.title:"airflow - dags"
         - http.title:"airflow - dags" || http.html:"apache airflow"
+        - http.title:"airflow"
         - http.title:"sign in - airflow"
         - product:"redis"
     - platform: fofa
@@ -134,11 +135,13 @@
         - body="apache airflow"
         - title="airflow - dags"
         - title="airflow - dags" || http.html:"apache airflow"
+        - title="airflow"
         - title="sign in - airflow"
     - platform: google
       queries:
         - intitle:"airflow - dags"
         - intitle:"airflow - dags" || http.html:"apache airflow"
+        - intitle:"airflow"
         - intitle:"sign in - airflow"
 
 - name: geode
