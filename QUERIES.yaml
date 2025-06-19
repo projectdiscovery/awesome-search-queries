@@ -24327,13 +24327,18 @@
       queries:
         - http.html:"versa networks"
         - http.title:"versa director login"
+        - http.title:"versa director"
+        - 'set-cookie: vd-csrf-token'
     - platform: fofa
       queries:
         - body="versa networks"
+        - 'set-cookie: vd-csrf-token'
         - title="versa director login"
+        - title="versa director"
     - platform: google
       queries:
         - intitle:"versa director login"
+        - intitle:"versa director"
 
 - name: zywall_vpn50_firmware
   vendor: zyxel
