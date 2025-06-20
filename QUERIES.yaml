@@ -29608,9 +29608,17 @@
         - 'set-cookie: .ssrpmformsauth=;'
     - platform: shodan
       queries:
-        - http.favicon.hash:-916902413
-        - http.favicon.hash:-948009664
+        - http.favicon.hash:"-916902413"
+        - http.favicon.hash:"-948009664"
         - 'set-cookie: .ssrpmformsauth=;'
+
+- name: wp-gdpr-compliance
+  vendor: van-ons
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - wp-content/plugins/wp-gdpr-compliance/
 
 - name: element
   vendor: matrix
