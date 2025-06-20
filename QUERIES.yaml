@@ -3648,13 +3648,16 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:apache:activemq"
+        - http.title:"activemq artemis console"
         - http.title:"apache activemq"
         - product:"activemq openwire transport"
     - platform: fofa
       queries:
+        - title="activemq artemis console"
         - title="apache activemq"
     - platform: google
       queries:
+        - intitle:"activemq artemis console"
         - intitle:"apache activemq"
 
 - name: pandora_fms
@@ -29593,6 +29596,21 @@
     - platform: shodan
       queries:
         - http.title:"nuuo"
+
+- name: self_service_reset_password_management
+  vendor: tools4ever
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-916902413"
+        - icon_hash="-948009664"
+        - 'set-cookie: .ssrpmformsauth=;'
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-916902413
+        - http.favicon.hash:-948009664
+        - 'set-cookie: .ssrpmformsauth=;'
 
 - name: element
   vendor: matrix
