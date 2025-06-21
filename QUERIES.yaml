@@ -1044,12 +1044,17 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-137577333"
+        - http.title:"errors - misp"
         - http.title:"users - misp"
     - platform: fofa
       queries:
+        - icon_hash="-137577333"
+        - title="errors - misp"
         - title="users - misp"
     - platform: google
       queries:
+        - intitle:"errors - misp"
         - intitle:"users - misp"
 
 - name: drupal
@@ -9597,8 +9602,8 @@
         - location:"/irj/portal"
     - platform: fofa
       queries:
-        - icon_hash=-266008933
         - header="/irj/portal"
+        - icon_hash=-266008933
 
 - name: contact_form_to_db
   vendor: bestwebsoft
@@ -22377,10 +22382,13 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-1922044295"
         - http.html:"micollab end user portal"
     - platform: fofa
       queries:
+        - '"micollab end user portal" && title=="redirecting..."'
         - body="micollab end user portal"
+        - icon_hash="-1922044295"
 
 - name: footprints_service_core
   vendor: bmc
@@ -26515,9 +26523,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"1358855492"
         - http.title:"privatebin"
     - platform: fofa
       queries:
+        - icon_hash="1358855492"
         - title="privatebin"
     - platform: google
       queries:
@@ -27205,12 +27215,14 @@
         - intext:"beyondtrust" "redistribution prohibited"
     - platform: shodan
       queries:
+        - http.favicon.hash:"-694003434"
         - http.html:"beyondtrust"
         - http.html:"beyondtrust" "redistribution prohibited"
     - platform: fofa
       queries:
         - body="beyondtrust"
         - body="beyondtrust" "redistribution prohibited"
+        - icon_hash="-694003434"
 
 - name: dixell_xweb-500
   vendor: emerson
@@ -29640,10 +29652,25 @@
         - title="pterodactyl"
     - platform: shodan
       queries:
-        - http.favicon.hash:-456405319
-        - http.favicon.hash:846001371
+        - http.favicon.hash:"-456405319"
+        - http.favicon.hash:"846001371"
         - http.title:"pterodactyl"
         - 'set-cookie: pterodactyl_session='
+
+- name: cryptshare
+  vendor: pointsharp
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-1059646869"
+        - icon_hash="-672476364"
+        - 'set-cookie: cs-ui-session='
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-1059646869
+        - http.favicon.hash:-672476364
+        - 'set-cookie: cs-ui-session='
 
 - name: element
   vendor: matrix
