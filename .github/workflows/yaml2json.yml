@@ -13,6 +13,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@master
         with:
@@ -26,9 +28,6 @@ jobs:
       - name: Commit and push changes
         run: |
           [[ "$(git status -s | wc -l)" == 0 ]] && exit 0
-
-          git config --local user.email "ghost@users.noreply.github.com"
-          git config --local user.name "ghost"
 
           COMMIT_MSG="build: "
           [[ "${{ github.event_name }}" == "workflow_dispatch" ]] && COMMIT_MSG+="[force] "
