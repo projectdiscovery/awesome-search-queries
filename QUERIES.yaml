@@ -29619,6 +29619,29 @@
     - platform: publicwww
       queries:
         - wp-content/plugins/wp-gdpr-compliance/
+    - platform: shodan
+      queries:
+        - http.html:wp-content/plugins/wp-gdpr-compliance/
+    - platform: fofa
+      queries:
+        - body=wp-content/plugins/wp-gdpr-compliance/
+
+- name: panel
+  vendor: pterodactyl
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-456405319"
+        - icon_hash="846001371"
+        - 'set-cookie: pterodactyl_session='
+        - title="pterodactyl"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-456405319
+        - http.favicon.hash:846001371
+        - http.title:"pterodactyl"
+        - 'set-cookie: pterodactyl_session='
 
 - name: element
   vendor: matrix
