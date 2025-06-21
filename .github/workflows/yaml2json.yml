@@ -29,6 +29,9 @@ jobs:
         run: |
           [[ "$(git status -s | wc -l)" == 0 ]] && exit 0
 
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
           COMMIT_MSG="build: "
           [[ "${{ github.event_name }}" == "workflow_dispatch" ]] && COMMIT_MSG+="[force] "
           COMMIT_MSG+="compile JSON [$(date "+%d/%m/%Y %T")] :robot:"
