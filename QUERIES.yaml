@@ -29668,8 +29668,8 @@
         - 'set-cookie: cs-ui-session='
     - platform: shodan
       queries:
-        - http.favicon.hash:-1059646869
-        - http.favicon.hash:-672476364
+        - http.favicon.hash:"-1059646869"
+        - http.favicon.hash:"-672476364"
         - 'set-cookie: cs-ui-session='
 
 - name: element
