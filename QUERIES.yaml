@@ -29672,6 +29672,25 @@
         - http.favicon.hash:"-672476364"
         - 'set-cookie: cs-ui-session='
 
+- name: flowpaper
+  vendor: flowpaper
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="flexpaper"
+    - platform: shodan
+      queries:
+        - http.title:"flexpaper"
+
+- name: themegrill-demo-importer
+  vendor: themegrill
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/plugins/themegrill-demo-importer"
+
 - name: element
   vendor: matrix
   type: product
