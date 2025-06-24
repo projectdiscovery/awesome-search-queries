@@ -29690,6 +29690,9 @@
     - platform: fofa
       queries:
         - body="/plugins/themegrill-demo-importer"
+    - platform: shodan
+      queries:
+        - http.html:"/plugins/themegrill-demo-importer"
 
 - name: element
   vendor: matrix
