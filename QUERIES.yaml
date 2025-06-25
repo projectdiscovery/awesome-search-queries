@@ -1717,10 +1717,18 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:gogs:gogs"
+        - http.favicon.hash:"-449283196"
+        - http.favicon.hash:"1935513730"
+        - http.favicon.hash:"917966895"
         - http.title:"installation - gogs"
         - http.title:"sign in - gogs"
+        - 'set-cookie: i_like_gogs='
     - platform: fofa
       queries:
+        - icon_hash="-449283196"
+        - icon_hash="1935513730"
+        - icon_hash="917966895"
+        - 'set-cookie: i_like_gogs='
         - title="installation - gogs"
         - title="sign in - gogs"
 
