@@ -7268,6 +7268,7 @@
     - platform: shodan
       queries:
         - 'server: ms .net remoting'
+        - server:"ms .net remoting"
 
 - name: apollo vx20
   vendor: wyrestorm
@@ -29701,6 +29702,14 @@
     - platform: shodan
       queries:
         - http.html:"/plugins/themegrill-demo-importer"
+
+- name: sharepoint
+  vendor: microsoft
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - cpe:"cpe:2.3:a:microsoft:sharepoint_server"
 
 - name: element
   vendor: matrix
