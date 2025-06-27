@@ -29718,6 +29718,12 @@
     - platform: shodan
       queries:
         - http.title:"elfinder"
+    - platform: fofa
+      queries:
+        - title="elfinder"
+    - platform: google
+      queries:
+        - intitle:"elfinder"
 
 - name: element
   vendor: matrix
