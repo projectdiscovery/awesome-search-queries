@@ -29711,6 +29711,14 @@
       queries:
         - cpe:"cpe:2.3:a:microsoft:sharepoint_server"
 
+- name: elfinder
+  vendor: studio-42
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"elfinder"
+
 - name: element
   vendor: matrix
   type: product
