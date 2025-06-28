@@ -5010,6 +5010,7 @@
     - platform: shodan
       queries:
         - 'content-length: 580 "http server 1.0"'
+        - content-length:"580 "http server 1.0""
         - http.title:"photo station"
         - http.title:"qnap"
     - platform: fofa
@@ -27222,16 +27223,21 @@
     - platform: google
       queries:
         - intext:"beyondtrust" "redistribution prohibited"
+        - intitle:"remote support portal"
     - platform: shodan
       queries:
         - http.favicon.hash:"-694003434"
+        - http.html:"beyondtrust remote support"
         - http.html:"beyondtrust"
         - http.html:"beyondtrust" "redistribution prohibited"
+        - http.title:"remote support portal"
     - platform: fofa
       queries:
+        - body="beyondtrust remote support"
         - body="beyondtrust"
         - body="beyondtrust" "redistribution prohibited"
         - icon_hash="-694003434"
+        - title="remote support portal"
 
 - name: dixell_xweb-500
   vendor: emerson
