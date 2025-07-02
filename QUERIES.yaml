@@ -29731,6 +29731,47 @@
       queries:
         - intitle:"elfinder"
 
+- name: wingftp
+  vendor: wingftp
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="963565804"
+        - 'server: wing ftp server'
+        - title="wing ftp server"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:963565804
+        - http.html_hash:2121146066
+        - http.title:"wing ftp server"
+        - 'server: wing ftp server'
+    - platform: zoomeye
+      queries:
+        - app="wing ftp server"
+
+- name: wftpserver
+  vendor: wing_ftp_server
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="963565804"
+        - 'server: wing ftp server'
+        - title="wing ftp server"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:"963565804"
+        - http.html_hash:2121146066
+        - http.title:"wing ftp server"
+        - 'server: wing ftp server'
+    - platform: zoomeye
+      queries:
+        - app="wing ftp server"
+    - platform: google
+      queries:
+        - intitle:"wing ftp server"
+
 - name: element
   vendor: matrix
   type: product
