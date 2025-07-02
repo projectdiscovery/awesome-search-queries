@@ -29742,7 +29742,7 @@
         - title="wing ftp server"
     - platform: shodan
       queries:
-        - http.favicon.hash:963565804
+        - http.favicon.hash:"963565804"
         - http.html_hash:2121146066
         - http.title:"wing ftp server"
         - 'server: wing ftp server'
