@@ -29772,6 +29772,14 @@
       queries:
         - intitle:"wing ftp server"
 
+- name: scoold
+  vendor: erudika
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"scoold-wrapper"
+
 - name: element
   vendor: matrix
   type: product
