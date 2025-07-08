@@ -29780,6 +29780,14 @@
       queries:
         - http.html:"scoold-wrapper"
 
+- name: revpi_status
+  vendor: kunbus
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"revpi"
+
 - name: element
   vendor: matrix
   type: product
