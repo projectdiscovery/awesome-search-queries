@@ -29788,6 +29788,14 @@
       queries:
         - http.title:"revpi"
 
+- name: netmri
+  vendor: infoblox
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - infoblox netmri
+
 - name: element
   vendor: matrix
   type: product
