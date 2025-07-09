@@ -29796,6 +29796,22 @@
       queries:
         - infoblox netmri
 
+- name: balance_two_firmware
+  vendor: peplink
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"peplink"
+
+- name: ads_pro
+  vendor: scripteo
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/ap-plugin-scripteo"
+
 - name: element
   vendor: matrix
   type: product
