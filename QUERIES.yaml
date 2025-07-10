@@ -29794,7 +29794,11 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="-319724102"
         - infoblox netmri
+    - platform: shodan
+      queries:
+        - http.favicon.hash:"-319724102"
 
 - name: balance_two_firmware
   vendor: peplink
