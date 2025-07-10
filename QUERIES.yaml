@@ -29811,6 +29811,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ap-plugin-scripteo"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/ap-plugin-scripteo"
 
 - name: element
   vendor: matrix
