@@ -29819,6 +29819,17 @@
       queries:
         - http.html:"/wp-content/plugins/ap-plugin-scripteo"
 
+- name: docusaurus_plugin_content_gists
+  vendor: webbertakken
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="docusaurus"
+    - platform: shodan
+      queries:
+        - http.html:"docusaurus"
+
 - name: element
   vendor: matrix
   type: product
