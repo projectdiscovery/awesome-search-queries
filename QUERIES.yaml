@@ -29837,3 +29837,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: cloudtest
+  vendor: akamai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"akamai cloudtest"
