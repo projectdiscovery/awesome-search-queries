@@ -29800,9 +29800,14 @@
       queries:
         - icon_hash="-319724102"
         - infoblox netmri
+        - title="netmri"
     - platform: shodan
       queries:
         - http.favicon.hash:"-319724102"
+        - http.title:"netmri"
+    - platform: google
+      queries:
+        - intitle:"netmri"
 
 - name: balance_two_firmware
   vendor: peplink
@@ -29849,3 +29854,25 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: ez-net_portal
+  vendor: cedargate
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - eznet_
+    - platform: shodan
+      queries:
+        - eznet_
+
+- name: allegra
+  vendor: alltena
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="284403119"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:"284403119"
