@@ -12097,9 +12097,13 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:dnnsoftware:dotnetnuke"
+        - http.favicon.hash:"-1465479343"
+        - 'set-cookie: dnn_ismobile'
     - platform: fofa
       queries:
         - app="dotnetnuke"
+        - icon_hash="-1465479343"
+        - 'set-cookie: dnn_ismobile'
 
 - name: glassfish_server
   vendor: oracle
