@@ -29847,14 +29847,6 @@
       queries:
         - http.html:"akamai cloudtest"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: ez-net_portal
   vendor: cedargate
   type: product
@@ -29876,3 +29868,11 @@
     - platform: shodan
       queries:
         - http.favicon.hash:"284403119"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
