@@ -29869,6 +29869,14 @@
       queries:
         - http.favicon.hash:"284403119"
 
+- name: ninja-tables
+  vendor: wpxpo
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/ninja-tables/"
+
 - name: element
   vendor: matrix
   type: product
@@ -29876,3 +29884,22 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: broken_link_notifier
+  vendor: broken_link_notifier_project
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="blnotifier_front_end"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/broken-link-notifier/
+
+- name: larecipe
+  vendor: binarytorch
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/binarytorch/larecipe/"
