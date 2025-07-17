@@ -29122,9 +29122,14 @@
     - platform: fofa
       queries:
         - body="tp-link"
+        - title="tp-link router"
     - platform: shodan
       queries:
         - http.html:"tp-link"
+        - http.title:"tp-link router"
+    - platform: google
+      queries:
+        - intitle:"tp-link router"
 
 - name: youphptube_encoder
   vendor: youphptube
@@ -29907,6 +29912,29 @@
       queries:
         - http.html:"/binarytorch/larecipe/"
 
+- name: printer
+  vendor: generic
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - port:9100
+
+- name: zpan
+  vendor: saltbo
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="zpan"
+        - title="zpan"
+    - platform: shodan
+      queries:
+        - http.title:"zpan"
+    - platform: google
+      queries:
+        - intitle:"zpan"
+
 - name: element
   vendor: matrix
   type: product
@@ -29915,10 +29943,51 @@
       queries:
         - http.html:"manifest.json"
 
-- name: printer
-  vendor: generic
+- name: 123solar
+  vendor: 123solar
   type: product
   engines:
+    - platform: fofa
+      queries:
+        - title="123solar"
     - platform: shodan
       queries:
-        - port:9100
+        - http.title:"123solar"
+
+- name: acutoweb
+  vendor: opentext
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="acutoweb"
+    - platform: shodan
+      queries:
+        - http.title:"acutoweb"
+
+- name: idccms
+  vendor: idccms
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="idccms"
+    - platform: shodan
+      queries:
+        - http.title:"idccms"
+
+- name: ufida_erp-nc
+  vendor: yonyou
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="1085941792"
+        - title="用友"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:"1085941792"
+        - http.title:"用友"
+    - platform: google
+      queries:
+        - intitle:"用友"
