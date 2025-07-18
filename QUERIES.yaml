@@ -1325,6 +1325,7 @@
       queries:
         - http.title:"geoserver"
         - 'server: geohttpserver'
+        - server:"geohttpserver"
     - platform: fofa
       queries:
         - app="geoserver"
@@ -21426,6 +21427,7 @@
     - platform: fofa
       queries:
         - icon_hash="-282504889"
+        - title="lylme spage"
     - platform: shodan
       queries:
         - http.favicon.hash:"-282504889"
@@ -29930,18 +29932,11 @@
         - title="zpan"
     - platform: shodan
       queries:
+        - http.html:"zpan"
         - http.title:"zpan"
     - platform: google
       queries:
         - intitle:"zpan"
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
 
 - name: 123solar
   vendor: 123solar
@@ -29991,3 +29986,19 @@
     - platform: google
       queries:
         - intitle:"用友"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: events_manager
+  vendor: wp-events-plugin
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/events-manager/
