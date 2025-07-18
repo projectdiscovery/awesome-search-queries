@@ -29987,14 +29987,6 @@
       queries:
         - intitle:"用友"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: events_manager
   vendor: wp-events-plugin
   type: product
@@ -30002,3 +29994,17 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/events-manager/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/events-manager/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/events-manager/
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
