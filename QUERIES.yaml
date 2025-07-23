@@ -30008,3 +30008,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: yii
+  vendor: yiisoft
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="yii"
+    - platform: shodan
+      queries:
+        - http.title:"yii"
