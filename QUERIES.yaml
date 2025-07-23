@@ -30001,14 +30001,6 @@
       queries:
         - body=/wp-content/plugins/events-manager/
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: yii
   vendor: yiisoft
   type: product
@@ -30019,3 +30011,11 @@
     - platform: shodan
       queries:
         - http.title:"yii"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
