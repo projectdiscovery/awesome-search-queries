@@ -30019,3 +30019,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: reliance
+  vendor: etq
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="etq reliance"
+    - platform: shodan
+      queries:
+        - http.html:"etq reliance"
