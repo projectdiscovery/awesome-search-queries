@@ -30012,14 +30012,6 @@
       queries:
         - http.title:"yii"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: reliance
   vendor: etq
   type: product
@@ -30030,3 +30022,11 @@
     - platform: shodan
       queries:
         - http.html:"etq reliance"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
