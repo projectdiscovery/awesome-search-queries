@@ -30047,6 +30047,20 @@
       queries:
         - http.html:"etq reliance"
 
+- name: openmetadata
+  vendor: open-metadata
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="openmetadata"
+    - platform: shodan
+      queries:
+        - http.title:"openmetadata"
+    - platform: google
+      queries:
+        - intitle:"openmetadata"
+
 - name: element
   vendor: matrix
   type: product
@@ -30054,3 +30068,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: bonita
+  vendor: bonitasoft
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - 'title="bonita" || header="server: bonita"'
+    - platform: shodan
+      queries:
+        - 'http.title:"bonita" || "server: bonita"'
