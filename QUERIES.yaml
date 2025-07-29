@@ -4291,15 +4291,24 @@
     - platform: google
       queries:
         - html:'content="papercut'
+        - intitle:"papercut login"
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:papercut:papercut_ng"
+        - http.favicon.hash:"-1142586156"
         - http.html:"content=\"papercut\""
         - http.html:'content="papercut'
+        - http.title:"papercut login"
+        - product:"papercut mf"
     - platform: fofa
       queries:
         - body="content=\"papercut\""
         - body='content="papercut'
+        - icon_hash="-1142586156"
+        - title="papercut login"
+    - platform: zoomeye
+      queries:
+        - app:"papercut"
 
 - name: seeddms
   vendor: seeddms
@@ -6409,11 +6418,16 @@
       queries:
         - app="apache_ofbiz"
         - body="apache ofbiz"
+        - title="ofbiz"
     - platform: shodan
       queries:
         - http.html:"apache ofbiz"
         - http.html:"ofbiz"
+        - http.title:"ofbiz"
         - ofbiz.visitor=
+    - platform: google
+      queries:
+        - intitle:"ofbiz"
 
 - name: flatpress
   vendor: flatpress
@@ -23735,10 +23749,20 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:-1849398868
         - http.favicon.hash:1011076161
+        - http.html:'src="libjs/pngfix.js"'
+        - http.title:"aspect control panel"
+        - ssl.cert.subject.cn:"aspect.local"
     - platform: fofa
       queries:
+        - body='src="libjs/pngfix.js"'
+        - icon_hash=-1849398868
         - icon_hash=1011076161
+        - title="aspect control panel"
+    - platform: google
+      queries:
+        - intitle:"aspect control panel"
 
 - name: tiny_tiny_rss
   vendor: tt-rss
