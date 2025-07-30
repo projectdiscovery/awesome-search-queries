@@ -30061,6 +30061,35 @@
       queries:
         - intitle:"openmetadata"
 
+- name: bonita
+  vendor: bonitasoft
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - 'title="bonita" || "server: bonita"'
+        - 'title="bonita" || header="server: bonita"'
+    - platform: shodan
+      queries:
+        - 'http.title:"bonita" || "server: bonita"'
+    - platform: google
+      queries:
+        - 'intitle:"bonita" || "server: bonita"'
+
+- name: scalar
+  vendor: scalar
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="scalar api reference"
+    - platform: google
+      queries:
+        - intitle:"scalar api reference"
+    - platform: shodan
+      queries:
+        - http.title:"scalar api reference"
+
 - name: element
   vendor: matrix
   type: product
@@ -30068,14 +30097,3 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
-
-- name: bonita
-  vendor: bonitasoft
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - 'title="bonita" || header="server: bonita"'
-    - platform: shodan
-      queries:
-        - 'http.title:"bonita" || "server: bonita"'
