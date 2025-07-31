@@ -30090,6 +30090,17 @@
       queries:
         - http.title:"scalar api reference"
 
+- name: inlong
+  vendor: apache
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="1155196680"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:"1155196680"
+
 - name: element
   vendor: matrix
   type: product
@@ -30097,3 +30108,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: protop
+  vendor: white-star-software
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"<title>protop"
