@@ -30101,14 +30101,6 @@
       queries:
         - http.favicon.hash:"1155196680"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: protop
   vendor: white-star-software
   type: product
@@ -30116,3 +30108,11 @@
     - platform: shodan
       queries:
         - http.html:"<title>protop"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
