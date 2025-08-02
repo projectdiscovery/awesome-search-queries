@@ -30116,3 +30116,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: simple-user-registration
+  vendor: lifeisincredible
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.component:"wordpress" && http.html:"/wp-content/plugins/simple-user-registration/"
