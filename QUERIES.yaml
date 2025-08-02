@@ -30109,14 +30109,6 @@
       queries:
         - http.html:"<title>protop"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: simple-user-registration
   vendor: lifeisincredible
   type: product
@@ -30124,3 +30116,11 @@
     - platform: shodan
       queries:
         - http.component:"wordpress" && http.html:"/wp-content/plugins/simple-user-registration/"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
