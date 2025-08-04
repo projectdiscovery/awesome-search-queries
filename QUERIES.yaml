@@ -30124,3 +30124,22 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: tableau_server
+  vendor: salesforce
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-1441956789"
+        - server=="tableau"
+        - 'x-tableau: tableau server'
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-1441956789
+        - product:"tableau server"
+        - 'server: tableau'
+        - 'x-tableau: tableau server'
+    - platform: zoomeye
+      queries:
+        - app:"tableau server"
