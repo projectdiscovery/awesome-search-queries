@@ -19561,6 +19561,7 @@
     - platform: shodan
       queries:
         - http.title:"fortiweb - "
+        - ssl:"cn=fortiweb"
     - platform: fofa
       queries:
         - title="fortiweb - "
