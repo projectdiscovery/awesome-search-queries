@@ -11833,6 +11833,9 @@
       queries:
         - http.component:"swagger"
         - http.favicon.hash:"-1180440057"
+    - platform: zoomeye
+      queries:
+        - app:"swagger ui"
 
 - name: openssh
   vendor: openbsd
@@ -30136,6 +30139,20 @@
     - platform: zoomeye
       queries:
         - app:"tableau server"
+
+- name: dicom-viewer
+  vendor: meddream
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - 'set-cookie: meddreamsessid'
+    - platform: shodan
+      queries:
+        - 'set-cookie: meddreamsessid'
+    - platform: zoomeye
+      queries:
+        - app:"meddream"
 
 - name: element
   vendor: matrix
