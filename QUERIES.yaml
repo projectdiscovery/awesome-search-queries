@@ -30161,3 +30161,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: fmus_series_seismic_monitoring_devices
+  vendor: guralp_systems
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - '"welcome to " && "list of available commands" && port="4244"'
+    - platform: shodan
+      queries:
+        - '"welcome to " "list of available commands" port:4244'
