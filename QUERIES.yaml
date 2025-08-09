@@ -30154,14 +30154,6 @@
       queries:
         - app:"meddream"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: fmus_series_seismic_monitoring_devices
   vendor: guralp_systems
   type: product
@@ -30172,3 +30164,11 @@
     - platform: shodan
       queries:
         - '"welcome to " "list of available commands" port:4244'
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
