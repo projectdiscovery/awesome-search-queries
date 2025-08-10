@@ -30165,6 +30165,27 @@
       queries:
         - '"welcome to " "list of available commands" port:4244'
 
+- name: holosense_sdc
+  vendor: huawei
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - '"server: sdc server" && protocol="https"'
+        - '"server: webserver/1.0.0" && port="1443"'
+    - platform: shodan
+      queries:
+        - http.html_hash:-968212412
+        - 'server: sdc server'
+
+- name: zipline
+  vendor: diced
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"zipline"
+
 - name: element
   vendor: matrix
   type: product
