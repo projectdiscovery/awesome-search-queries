@@ -30199,19 +30199,13 @@
     - platform: fofa
       queries:
         - icon_hash="1190353375"
+        - icon_hash=529766441
         - title="espec web controller"
     - platform: shodan
       queries:
+        - http.favicon.hash:"1190353375"
         - http.favicon.hash:529766441
         - http.title:"espec web controller"
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
 
 - name: opal-estate-pro
   vendor: themeforest
@@ -30220,3 +30214,17 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/opal-estate-pro/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/opal-estate-pro/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/opal-estate-pro/
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
