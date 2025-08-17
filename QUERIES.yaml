@@ -30221,6 +30221,17 @@
       queries:
         - body=/wp-content/plugins/opal-estate-pro/
 
+- name: fortimanager
+  vendor: fortinet
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="fortimanager-"
+    - platform: shodan
+      queries:
+        - 'http.html_hash:-1527157728 "model: fmg-vm"'
+
 - name: element
   vendor: matrix
   type: product
