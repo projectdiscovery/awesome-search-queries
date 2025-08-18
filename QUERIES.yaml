@@ -24363,10 +24363,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:-1341442175
+        - http.favicon.hash:"-1341442175"
+        - http.html:"var hst = location.hostname"
     - platform: fofa
       queries:
-        - icon_hash=-1341442175
+        - body="var hst = location.hostname"
+        - icon_hash="-1341442175"
 
 - name: scriptcase
   vendor: scriptcase
@@ -30232,6 +30234,29 @@
       queries:
         - 'http.html_hash:-1527157728 "model: fmg-vm"'
 
+- name: secure_firewall_management_center
+  vendor: cisco
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="cisco firepower management center"
+        - body="secure firewall management center"
+        - body="ua-110054821-1"
+    - platform: shodan
+      queries:
+        - http.html:"cisco firepower management center"
+        - http.html:"secure firewall management center"
+        - http.html:"ua-110054821-1"
+
+- name: mapproxy
+  vendor: mapproxy
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"mapproxy"
+
 - name: element
   vendor: matrix
   type: product
@@ -30239,3 +30264,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: contact-form-generator
+  vendor: creative-solutions
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/contact-form-generator"
