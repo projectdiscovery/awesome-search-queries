@@ -13743,6 +13743,13 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:mozilla:bugzilla"
+        - http.title:"bugzilla"
+    - platform: fofa
+      queries:
+        - title="bugzilla"
+    - platform: google
+      queries:
+        - intitle:"bugzilla"
 
 - name: mysql_community_server
   vendor: mysql
