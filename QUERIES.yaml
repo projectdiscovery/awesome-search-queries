@@ -30257,14 +30257,6 @@
       queries:
         - http.html:"mapproxy"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: contact-form-generator
   vendor: creative-solutions
   type: product
@@ -30272,3 +30264,14 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/contact-form-generator"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/contact-form-generator"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
