@@ -30285,14 +30285,9 @@
     - platform: shodan
       queries:
         - http.title:"zammad helpdesk"
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
+    - platform: google
       queries:
-        - http.html:"manifest.json"
+        - intitle:"zammad helpdesk"
 
 - name: roadiz
   vendor: roadiz
@@ -30304,3 +30299,11 @@
     - platform: shodan
       queries:
         - http.html:"roadiz"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
