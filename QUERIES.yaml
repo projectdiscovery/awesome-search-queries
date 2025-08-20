@@ -30275,6 +30275,17 @@
       queries:
         - http.html:"/wp-content/plugins/contact-form-generator"
 
+- name: zammad
+  vendor: zammad
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="zammad helpdesk"
+    - platform: shodan
+      queries:
+        - http.title:"zammad helpdesk"
+
 - name: element
   vendor: matrix
   type: product
@@ -30282,3 +30293,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: roadiz
+  vendor: roadiz
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="roadiz"
+    - platform: shodan
+      queries:
+        - http.html:"roadiz"
