@@ -30307,3 +30307,25 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: request-baskets
+  vendor: darklynx
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="request-baskets"
+    - platform: shodan
+      queries:
+        - http.html:"request-baskets"
+
+- name: phpcms-2008
+  vendor: phpcms
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="powered by phpcms"
+    - platform: shodan
+      queries:
+        - http.html:"powered by phpcms"
