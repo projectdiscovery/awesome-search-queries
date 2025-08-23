@@ -3202,12 +3202,15 @@
     - platform: shodan
       queries:
         - http.title:"parse dashboard"
+        - http.title:"parse server" || "parse-server"
     - platform: fofa
       queries:
         - title="parse dashboard"
+        - title="parse server" || "parse-server"
     - platform: google
       queries:
         - intitle:"parse dashboard"
+        - intitle:"parse server" || "parse-server"
 
 - name: cobranca
   vendor: virtuasoftware
@@ -5661,10 +5664,15 @@
       queries:
         - http.favicon.hash:780351152
         - http.html:"microweber"
+        - http.title:"microweber"
     - platform: fofa
       queries:
         - body="microweber"
         - icon_hash=780351152
+        - title="microweber"
+    - platform: google
+      queries:
+        - intitle:"microweber"
 
 - name: stock_ticker
   vendor: urosevic
@@ -29336,7 +29344,15 @@
   engines:
     - platform: shodan
       queries:
+        - http.title:"magicinfo"
         - 'server: magicinfo premium server'
+    - platform: fofa
+      queries:
+        - title:"magicinfo"
+        - title="magicinfo"
+    - platform: google
+      queries:
+        - intitle:"magicinfo"
 
 - name: hunk_companion
   vendor: themehunk
@@ -30335,6 +30351,17 @@
     - platform: google
       queries:
         - intitle:"apache unomi"
+
+- name: magicinfo
+  vendor: samsung
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title:"magicinfo"
+    - platform: shodan
+      queries:
+        - http.title:"magicinfo"
 
 - name: element
   vendor: matrix
