@@ -30322,14 +30322,6 @@
       queries:
         - http.html:"powered by phpcms"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: unomi
   vendor: apache
   type: product
@@ -30340,3 +30332,14 @@
     - platform: shodan
       queries:
         - http.title:"apache unomi"
+    - platform: google
+      queries:
+        - intitle:"apache unomi"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
