@@ -30359,9 +30359,13 @@
     - platform: fofa
       queries:
         - title:"magicinfo"
+        - title="magicinfo"
     - platform: shodan
       queries:
         - http.title:"magicinfo"
+    - platform: google
+      queries:
+        - intitle:"magicinfo"
 
 - name: element
   vendor: matrix
