@@ -30367,14 +30367,6 @@
       queries:
         - intitle:"magicinfo"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: u.motion_builder
   vendor: schneider-electric
   type: product
@@ -30382,3 +30374,11 @@
     - platform: shodan
       queries:
         - http.headers_hash:1985490094
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
