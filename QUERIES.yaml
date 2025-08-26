@@ -30382,3 +30382,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: meshery
+  vendor: meshery
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="meshery"
+    - platform: shodan
+      queries:
+        - http.title:"meshery"
