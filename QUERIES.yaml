@@ -1323,12 +1323,17 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"97540678"
+        - http.html:"/geoserver/"
+        - 'http.html_hash:1093634893 "content-disposition: inline"'
         - http.title:"geoserver"
         - 'server: geohttpserver'
         - server:"geohttpserver"
     - platform: fofa
       queries:
         - app="geoserver"
+        - body="/geoserver/"
+        - icon_hash="97540678"
         - title="geoserver"
     - platform: google
       queries:
@@ -30375,14 +30380,6 @@
       queries:
         - http.headers_hash:1985490094
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: meshery
   vendor: meshery
   type: product
@@ -30393,3 +30390,14 @@
     - platform: shodan
       queries:
         - http.title:"meshery"
+    - platform: google
+      queries:
+        - intitle:"meshery"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
