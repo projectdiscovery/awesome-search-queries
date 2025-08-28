@@ -3099,14 +3099,20 @@
         - http.favicon.hash:"-1022206565"
         - http.html:"crushftp"
         - http.title:"crushftp webinterface"
+        - http.title:"crushftp"
     - platform: fofa
       queries:
         - body="crushftp"
         - icon_hash="-1022206565"
         - title="crushftp webinterface"
+        - title="crushftp"
     - platform: google
       queries:
         - intitle:"crushftp webinterface"
+        - intitle:"crushftp"
+    - platform: zoomeye
+      queries:
+        - title:"crushftp"
 
 - name: icewarp_server
   vendor: icewarp
@@ -9044,13 +9050,22 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-1068289244"
+        - http.favicon.hash:"-1148190371"
         - http.title:"opnsense"
+        - http.title:"| opnsense"
+        - 'server: opnsense'
     - platform: fofa
       queries:
+        - icon_hash="-1068289244"
+        - icon_hash="-1148190371"
+        - server=="opnsense"
         - title="opnsense"
+        - title="| opnsense"
     - platform: google
       queries:
         - intitle:"opnsense"
+        - intitle:"| opnsense"
 
 - name: kubepi
   vendor: fit2cloud
