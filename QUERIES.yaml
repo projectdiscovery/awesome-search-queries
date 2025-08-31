@@ -1012,6 +1012,9 @@
     - platform: google
       queries:
         - intitle:"ivanti connect secure"
+    - platform: zoomeye
+      queries:
+        - title:"ivanti connect secure"
 
 - name: emby
   vendor: emby
@@ -11054,6 +11057,10 @@
     - platform: fofa
       queries:
         - banner="/airwatch/default.aspx" || header="/airwatch/default.aspx"
+        - body="/airwatch/default.aspx"
+    - platform: shodan
+      queries:
+        - http.html:"/airwatch/default.aspx"
 
 - name: bludit
   vendor: bludit
