@@ -28874,6 +28874,10 @@
     - platform: shodan
       queries:
         - http.html:"cyberpanel"
+        - http.html:"login to your cyberpanel account"
+    - platform: fofa
+      queries:
+        - body="login to your cyberpanel account"
 
 - name: oqtane
   vendor: oqtane
