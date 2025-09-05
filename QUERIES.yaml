@@ -30429,6 +30429,12 @@
     - platform: publicwww
       queries:
         - wp-content/plugins/drag-and-drop-multiple-file-upload-contact-form-7/
+    - platform: shodan
+      queries:
+        - http.html:wp-content/plugins/drag-and-drop-multiple-file-upload-contact-form-7/
+    - platform: fofa
+      queries:
+        - body=wp-content/plugins/drag-and-drop-multiple-file-upload-contact-form-7/
 
 - name: element
   vendor: matrix
