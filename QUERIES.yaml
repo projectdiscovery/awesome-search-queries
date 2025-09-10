@@ -1897,13 +1897,20 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-1908328911"
+        - http.favicon.hash:"1574423538"
         - http.title:"freepbx administration"
+        - http.title:"freepbx"
     - platform: fofa
       queries:
+        - icon_hash="-1908328911"
+        - icon_hash="1574423538"
         - title="freepbx administration"
+        - title="freepbx"
     - platform: google
       queries:
         - intitle:"freepbx administration"
+        - intitle:"freepbx"
 
 - name: clearpass_policy_manager
   vendor: arubanetworks
@@ -22471,10 +22478,12 @@
       queries:
         - http.favicon.hash:"-1922044295"
         - http.html:"micollab end user portal"
+        - http.html:"mitel networks"
     - platform: fofa
       queries:
         - '"micollab end user portal" && title=="redirecting..."'
         - body="micollab end user portal"
+        - body="mitel networks"
         - icon_hash="-1922044295"
 
 - name: footprints_service_core
@@ -30447,6 +30456,22 @@
       queries:
         - body=wp-content/plugins/drag-and-drop-multiple-file-upload-contact-form-7/
 
+- name: woocommerce_ultimate_gift_card
+  vendor: wpswings
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/woocommerce-ultimate-gift-card"
+
+- name: netalertx
+  vendor: netalertx
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="netalertx"
+
 - name: element
   vendor: matrix
   type: product
@@ -30454,3 +30479,17 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: streampark
+  vendor: apache
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"apache streampark"
+    - platform: fofa
+      queries:
+        - title="apache streampark"
+    - platform: google
+      queries:
+        - intitle:"apache streampark"
