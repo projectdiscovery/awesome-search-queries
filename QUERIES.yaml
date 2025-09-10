@@ -10564,6 +10564,17 @@
     - platform: google
       queries:
         - inurl:"/wp-content/plugins/sassy-social-share"
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/sassy-social-share"
+        - body=/wp-content/plugins/sassy-social-share/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/sassy-social-share"
+        - http.html:/wp-content/plugins/sassy-social-share/
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/sassy-social-share/
 
 - name: kentharadio
   vendor: qantumthemes
