@@ -30463,6 +30463,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/woocommerce-ultimate-gift-card"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/woocommerce-ultimate-gift-card"
 
 - name: netalertx
   vendor: netalertx
@@ -30471,14 +30474,6 @@
     - platform: fofa
       queries:
         - title="netalertx"
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
 
 - name: streampark
   vendor: apache
@@ -30493,3 +30488,11 @@
     - platform: google
       queries:
         - intitle:"apache streampark"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
