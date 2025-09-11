@@ -5381,13 +5381,13 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:o:fortinet:fortios"
-        - http.favicon.hash:945408572
+        - http.favicon.hash:"945408572"
         - http.html:"/remote/login" "xxxxxxxx"
         - port:10443 http.favicon.hash:945408572
     - platform: fofa
       queries:
         - body="/remote/login" "xxxxxxxx"
-        - icon_hash=945408572
+        - icon_hash="945408572"
 
 - name: fortiap
   vendor: fortinet
