@@ -3028,11 +3028,13 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:1691956220
+        - http.favicon.hash:"1691956220"
+        - http.html:"/xxl-job-admin/static/favicon.ico"
     - platform: fofa
       queries:
         - app="xxl-job"
-        - icon_hash=1691956220
+        - body="/xxl-job-admin/static/favicon.ico"
+        - icon_hash="1691956220"
 
 - name: sharefile
   vendor: citrix
@@ -20814,10 +20816,10 @@
         - /wp-content/plugins/give/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/give/
+        - http.html:"/wp-content/plugins/give/"
     - platform: fofa
       queries:
-        - body=/wp-content/plugins/give/
+        - body="/wp-content/plugins/give/"
 
 - name: essential_grid
   vendor: themepunch
@@ -30488,6 +30490,14 @@
     - platform: google
       queries:
         - intitle:"apache streampark"
+
+- name: creative_contact_form
+  vendor: creative-solutions
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/sexy-contact-form/
 
 - name: element
   vendor: matrix
