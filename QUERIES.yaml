@@ -30498,6 +30498,59 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/sexy-contact-form/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/sexy-contact-form/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/sexy-contact-form/
+
+- name: protect_wp_admin
+  vendor: wp-experts
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/protect-wp-admin/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/protect-wp-admin/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/protect-wp-admin"
+
+- name: contact_form
+  vendor: fluentforms
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/fluentform/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/fluentform/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/fluentform/"
+
+- name: user_profile_picture
+  vendor: cozmoslabs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/metronet-profile-picture"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/metronet-profile-picture
+
+- name: images_to_webp
+  vendor: imagestowebp_project
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/images-to-webp/
 
 - name: element
   vendor: matrix
@@ -30506,3 +30559,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: cyber_infrastructure
+  vendor: acronis
+  type: product
+  engines:
+    - platform: censys
+      queries:
+        - services.http.response.html_title:"acronis cyber infrastructure" and services.port:6432
