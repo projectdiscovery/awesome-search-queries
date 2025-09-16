@@ -10957,10 +10957,10 @@
         - /wp-content/plugins/registrations-for-the-events-calendar/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/registrations-for-the-events-calendar/
+        - http.html:"/wp-content/plugins/registrations-for-the-events-calendar/"
     - platform: fofa
       queries:
-        - body=/wp-content/plugins/registrations-for-the-events-calendar/
+        - body="/wp-content/plugins/registrations-for-the-events-calendar/"
 
 - name: endpoint_manager_cloud_services_appliance
   vendor: ivanti
@@ -29301,6 +29301,9 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/instawp-connect/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/instawp-connect/
 
 - name: tip200
   vendor: intelbras
@@ -29582,9 +29585,17 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/wp-graphql/"
+        - title="wordpress" "graphql"
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/wp-graphql/"
+        - http.title:"wordpress" "graphql"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/wp-graphql/
+    - platform: google
+      queries:
+        - intitle:"wordpress" "graphql"
 
 - name: net_viewer
   vendor: kyocera
@@ -30511,6 +30522,7 @@
   engines:
     - platform: fofa
       queries:
+        - body="/wp-content/plugins/protect-wp-admin"
         - body="/wp-content/plugins/protect-wp-admin/"
     - platform: publicwww
       queries:
@@ -30518,6 +30530,7 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/protect-wp-admin"
+        - http.html:"/wp-content/plugins/protect-wp-admin/"
 
 - name: contact_form
   vendor: fluentforms
@@ -30543,6 +30556,9 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/metronet-profile-picture
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/metronet-profile-picture"
 
 - name: images_to_webp
   vendor: imagestowebp_project
@@ -30551,14 +30567,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/images-to-webp/
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
     - platform: shodan
       queries:
-        - http.html:"manifest.json"
+        - http.html:/wp-content/plugins/images-to-webp/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/images-to-webp/
 
 - name: cyber_infrastructure
   vendor: acronis
@@ -30567,3 +30581,68 @@
     - platform: censys
       queries:
         - services.http.response.html_title:"acronis cyber infrastructure" and services.port:6432
+
+- name: map_builder_for_google_maps
+  vendor: 10web
+  type: product
+  engines:
+    - platform: zoomeye
+      queries:
+        - http.body="wp-content/plugins/wd-google-maps"
+
+- name: wp_meta_seo
+  vendor: joomunited
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-meta-seo/"
+
+- name: transposh_wordpress_translation
+  vendor: transposh
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/transposh-translation-filter-for-wordpress/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/transposh-translation-filter-for-wordpress/
+
+- name: frontend_file_manager
+  vendor: najeebmedia
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/nmedia-user-file-uploader/
+
+- name: loginizer
+  vendor: loginizer
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/loginizer
+
+- name: seo
+  vendor: rankmath
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/seo-by-rank-math/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/seo-by-rank-math/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/seo-by-rank-math/
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
