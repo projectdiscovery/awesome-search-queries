@@ -30597,6 +30597,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/wp-meta-seo/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wp-meta-seo/"
 
 - name: transposh_wordpress_translation
   vendor: transposh
@@ -30608,6 +30611,9 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/transposh-translation-filter-for-wordpress/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/transposh-translation-filter-for-wordpress/"
 
 - name: frontend_file_manager
   vendor: najeebmedia
@@ -30616,6 +30622,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/nmedia-user-file-uploader/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/nmedia-user-file-uploader/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/nmedia-user-file-uploader/
 
 - name: loginizer
   vendor: loginizer
@@ -30624,6 +30636,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/loginizer
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/loginizer
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/loginizer
 
 - name: seo
   vendor: rankmath
