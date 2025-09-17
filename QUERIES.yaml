@@ -30657,6 +30657,56 @@
       queries:
         - body=/wp-content/plugins/seo-by-rank-math/
 
+- name: wp_child_theme_generator
+  vendor: wensolutions
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/wp-child-theme-generator/
+
+- name: litespeed_cache
+  vendor: litespeedtech
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - wp-content/plugins/litespeed-cache/
+    - platform: google
+      queries:
+        - inurl:"/wp-content/plugins/litespeed-cache/"
+    - platform: shodan
+      queries:
+        - vuln:cve-2023-40000
+
+- name: secure_web_gateway
+  vendor: iboss
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="iboss-font.css"
+    - platform: google
+      queries:
+        - intext:"iboss-font.css"
+    - platform: shodan
+      queries:
+        - http.html:"iboss-font.css"
+
+- name: profilepress
+  vendor: properfraction
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-user-avatar/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/wp-user-avatar/
+    - platform: shodan
+      queries:
+        - http.component:"profilepress"
+
 - name: element
   vendor: matrix
   type: product
