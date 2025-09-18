@@ -30664,6 +30664,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/wp-child-theme-generator/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/wp-child-theme-generator/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/wp-child-theme-generator/
 
 - name: litespeed_cache
   vendor: litespeedtech
@@ -30706,6 +30712,21 @@
     - platform: shodan
       queries:
         - http.component:"profilepress"
+        - http.html:"/wp-content/plugins/wp-user-avatar/"
+
+- name: onetone
+  vendor: mageewp
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/themes/onetone
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/themes/onetone
+    - platform: fofa
+      queries:
+        - body=/wp-content/themes/onetone
 
 - name: element
   vendor: matrix
