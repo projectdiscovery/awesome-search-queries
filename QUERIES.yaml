@@ -30677,13 +30677,18 @@
   engines:
     - platform: fofa
       queries:
+        - body=/wp-content/plugins/litespeed-cache/
         - wp-content/plugins/litespeed-cache/
     - platform: google
       queries:
         - inurl:"/wp-content/plugins/litespeed-cache/"
     - platform: shodan
       queries:
+        - http.html:/wp-content/plugins/litespeed-cache/
         - vuln:cve-2023-40000
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/litespeed-cache/
 
 - name: secure_web_gateway
   vendor: iboss
@@ -30728,6 +30733,85 @@
       queries:
         - body=/wp-content/themes/onetone
 
+- name: motors_-_car_dealer\,_classifieds_\&_listing
+  vendor: stylemixthemes
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/motors-car-dealership-classified-listings/" && body="wp-"
+
+- name: booking
+  vendor: booking_project
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/nd-booking/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/nd-booking/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/nd-booking"
+
+- name: ultimate_faq
+  vendor: etoilewebdesign
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/ultimate-faqs
+
+- name: mikopbx
+  vendor: miko
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="8309143"
+        - title="mikopbx"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:8309143
+        - http.title:"mikopbx"
+        - product:"mikopbx"
+
+- name: hugegraph
+  vendor: apache
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="hugegraph"
+
+- name: uix_shortcodes
+  vendor: uiux
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/uix-shortcodes/
+
+- name: profile-builder
+  vendor: cozmoslabs
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/profile-builder/
+
+- name: supportcandy
+  vendor: supportcandy
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/supportcandy/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/supportcandy/
+
 - name: element
   vendor: matrix
   type: product
@@ -30735,3 +30819,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: officeconnect_1820_j9979a_firmware
+  vendor: hpe
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"hpe officeconnect"
