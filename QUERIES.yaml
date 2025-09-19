@@ -30747,6 +30747,7 @@
   engines:
     - platform: fofa
       queries:
+        - body="/wp-content/plugins/nd-booking"
         - body="/wp-content/plugins/nd-booking/"
     - platform: publicwww
       queries:
@@ -30754,6 +30755,7 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/nd-booking"
+        - http.html:"/wp-content/plugins/nd-booking/"
 
 - name: ultimate_faq
   vendor: etoilewebdesign
@@ -30762,6 +30764,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/ultimate-faqs
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/ultimate-faqs
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/ultimate-faqs
 
 - name: mikopbx
   vendor: miko
@@ -30773,7 +30781,7 @@
         - title="mikopbx"
     - platform: shodan
       queries:
-        - http.favicon.hash:8309143
+        - http.favicon.hash:"8309143"
         - http.title:"mikopbx"
         - product:"mikopbx"
 
@@ -30792,6 +30800,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/uix-shortcodes/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/uix-shortcodes/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/uix-shortcodes/
 
 - name: profile-builder
   vendor: cozmoslabs
@@ -30800,6 +30814,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/profile-builder/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/profile-builder/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/profile-builder/
 
 - name: supportcandy
   vendor: supportcandy
@@ -30811,14 +30831,9 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/supportcandy/
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
     - platform: shodan
       queries:
-        - http.html:"manifest.json"
+        - http.html:"/wp-content/plugins/supportcandy/"
 
 - name: officeconnect_1820_j9979a_firmware
   vendor: hpe
@@ -30827,3 +30842,11 @@
     - platform: shodan
       queries:
         - http.html:"hpe officeconnect"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
