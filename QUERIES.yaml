@@ -30843,6 +30843,17 @@
       queries:
         - http.html:"hpe officeconnect"
 
+- name: wp_dsgvo_tools
+  vendor: legalweb
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/shapepress-dsgvo/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/shapepress-dsgvo/
+
 - name: element
   vendor: matrix
   type: product
