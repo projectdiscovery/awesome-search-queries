@@ -30853,6 +30853,9 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/shapepress-dsgvo/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/shapepress-dsgvo/"
 
 - name: element
   vendor: matrix
