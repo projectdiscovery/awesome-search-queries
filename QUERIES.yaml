@@ -30857,6 +30857,22 @@
       queries:
         - http.html:"/wp-content/plugins/shapepress-dsgvo/"
 
+- name: enterprise,proton
+  vendor: optergy
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"optergy"
+
+- name: yellow_pencil_visual_theme_customizer
+  vendor: waspthemes
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/yellow-pencil-visual-theme-customizer/" && body="wp-"
+
 - name: element
   vendor: matrix
   type: product
