@@ -30710,6 +30710,7 @@
   engines:
     - platform: fofa
       queries:
+        - body="/wp-content/plugins/profilepress"
         - body="/wp-content/plugins/wp-user-avatar/"
     - platform: publicwww
       queries:
@@ -30717,6 +30718,7 @@
     - platform: shodan
       queries:
         - http.component:"profilepress"
+        - http.html:"/wp-content/plugins/profilepress"
         - http.html:"/wp-content/plugins/wp-user-avatar/"
 
 - name: onetone
@@ -30766,10 +30768,10 @@
         - /wp-content/plugins/ultimate-faqs
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/ultimate-faqs
+        - http.html:"/wp-content/plugins/ultimate-faqs"
     - platform: fofa
       queries:
-        - body=/wp-content/plugins/ultimate-faqs
+        - body="/wp-content/plugins/ultimate-faqs"
 
 - name: mikopbx
   vendor: miko
