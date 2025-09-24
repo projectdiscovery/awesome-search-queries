@@ -30888,6 +30888,9 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/flexible-checkout-fields/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/flexible-checkout-fields/"
 
 - name: eyesofnetwork
   vendor: eyesofnetwork
@@ -30899,6 +30902,14 @@
     - platform: shodan
       queries:
         - http.html:"eyesofnetwork"
+
+- name: 10web_booster
+  vendor: 10web
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/tenweb-speed-optimizer
 
 - name: element
   vendor: matrix
