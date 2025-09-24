@@ -19757,6 +19757,7 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:google:web_server"
+        - 'server: zerof web server'
 
 - name: tlr-2855ks6
   vendor: telesquare
@@ -29337,9 +29338,14 @@
     - platform: fofa
       queries:
         - body="served by adning"
+        - body=/wp-content/plugins/angwp
     - platform: shodan
       queries:
         - http.html:"served by adning"
+        - http.html:/wp-content/plugins/angwp
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/angwp
 
 - name: wp_hotel_booking
   vendor: thimpress
@@ -30910,6 +30916,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/tenweb-speed-optimizer
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/tenweb-speed-optimizer
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/tenweb-speed-optimizer
 
 - name: element
   vendor: matrix
@@ -30918,3 +30930,27 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: form_maker
+  vendor: 10web
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/form-maker/"
+
+- name: mtheme-unus
+  vendor: mtheme-unus_project
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/themes/mtheme-unus/"
+
+- name: spam_protection\,_antispam\,_firewall
+  vendor: cleantalk
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/plugin/cleantalk-spam-protect/"
