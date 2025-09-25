@@ -30965,6 +30965,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/better-search-replace/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/better-search-replace/"
 
 - name: tagdiv_composer
   vendor: tagdiv
@@ -30973,6 +30976,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/td-composer"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/td-composer"
 
 - name: the_plus_addons_for_elementor
   vendor: posimyth
@@ -30981,6 +30987,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/the-plus-addons-for-elementor-page-builder/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/the-plus-addons-for-elementor-page-builder/"
 
 - name: listingpro
   vendor: cridio
@@ -30992,6 +31001,14 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/listingpro"
+
+- name: wpdiscuz
+  vendor: gvectors
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wpdiscuz"
 
 - name: element
   vendor: matrix
