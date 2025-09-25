@@ -6090,9 +6090,11 @@
         - /wp-content/themes/newspaper
     - platform: shodan
       queries:
+        - http.html:"wp-content/themes/mtheme-unus/"
         - http.html:/wp-content/themes/newspaper
     - platform: fofa
       queries:
+        - body="wp-content/themes/mtheme-unus/"
         - body=/wp-content/themes/newspaper
 
 - name: git
@@ -30923,14 +30925,6 @@
       queries:
         - body=/wp-content/plugins/tenweb-speed-optimizer
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: form_maker
   vendor: 10web
   type: product
@@ -30938,6 +30932,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/form-maker/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/form-maker/"
 
 - name: mtheme-unus
   vendor: mtheme-unus_project
@@ -30946,6 +30943,9 @@
     - platform: fofa
       queries:
         - body="wp-content/themes/mtheme-unus/"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/themes/mtheme-unus/"
 
 - name: spam_protection\,_antispam\,_firewall
   vendor: cleantalk
@@ -30954,3 +30954,49 @@
     - platform: fofa
       queries:
         - body="/plugin/cleantalk-spam-protect/"
+    - platform: shodan
+      queries:
+        - http.html:"/plugin/cleantalk-spam-protect/"
+
+- name: better_search_replace
+  vendor: wpengine
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/better-search-replace/"
+
+- name: tagdiv_composer
+  vendor: tagdiv
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/td-composer"
+
+- name: the_plus_addons_for_elementor
+  vendor: posimyth
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/the-plus-addons-for-elementor-page-builder/"
+
+- name: listingpro
+  vendor: cridio
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/listingpro"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/listingpro"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
