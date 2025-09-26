@@ -31013,6 +31013,52 @@
       queries:
         - http.html:"/wp-content/plugins/wpdiscuz"
 
+- name: man-eam-0003
+  vendor: guralp
+  type: product
+  engines:
+    - platform: google
+      queries:
+        - webconfig menu.cgi
+
+- name: jeg_elementor_kit
+  vendor: jegtheme
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/jeg-elementor-kit/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/jeg-elementor-kit/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/jeg-elementor-kit"
+
+- name: email_security
+  vendor: sonicwall
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"sonicwall email security"
+
+- name: collaboration_server
+  vendor: zimbra
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"zimbra collaboration suite web client"
+
+- name: nvt_web_server
+  vendor: cellinx
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/viewer/viewer.html" && header="lighttpd" && country="kr"
+
 - name: element
   vendor: matrix
   type: product
