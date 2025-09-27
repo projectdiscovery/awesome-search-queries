@@ -31027,6 +31027,7 @@
   engines:
     - platform: fofa
       queries:
+        - body="/wp-content/plugins/jeg-elementor-kit"
         - body="/wp-content/plugins/jeg-elementor-kit/"
     - platform: publicwww
       queries:
@@ -31034,6 +31035,7 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/jeg-elementor-kit"
+        - http.html:"/wp-content/plugins/jeg-elementor-kit/"
 
 - name: email_security
   vendor: sonicwall
@@ -31058,6 +31060,14 @@
     - platform: fofa
       queries:
         - body="/viewer/viewer.html" && header="lighttpd" && country="kr"
+
+- name: debian
+  vendor: debian
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - port:22 "debian"
 
 - name: element
   vendor: matrix
