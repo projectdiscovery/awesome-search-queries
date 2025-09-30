@@ -31071,6 +31071,30 @@
       queries:
         - port:22 "debian"
 
+- name: emc_avamar,emc_integrated_data_protection_appliance
+  vendor: dell
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"avamar"
+
+- name: xfilesharing
+  vendor: sibsoft
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"/?op=registration" "openssl"
+
+- name: bj_lazy_load
+  vendor: angrycreative
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/bj-lazy-load"
+
 - name: element
   vendor: matrix
   type: product
@@ -31078,3 +31102,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: churchcrm
+  vendor: churchcrm
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="churchcrm"
+    - platform: shodan
+      queries:
+        - http.title:"churchcrm"
