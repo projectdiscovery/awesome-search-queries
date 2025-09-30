@@ -5196,9 +5196,11 @@
       queries:
         - cpe:"cpe:2.3:a:adobe:experience_manager"
         - http.component:"adobe experience manager"
+        - http.html:"/libs/granite/core/content/login.html"
         - http.title:"aem sign in"
     - platform: fofa
       queries:
+        - body="/libs/granite/core/content/login.html"
         - title="aem sign in"
     - platform: google
       queries:
