@@ -31094,14 +31094,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/bj-lazy-load"
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
     - platform: shodan
       queries:
-        - http.html:"manifest.json"
+        - http.html:"/wp-content/plugins/bj-lazy-load"
 
 - name: churchcrm
   vendor: churchcrm
@@ -31113,3 +31108,11 @@
     - platform: shodan
       queries:
         - http.title:"churchcrm"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
