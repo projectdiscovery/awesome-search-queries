@@ -1610,6 +1610,7 @@
     - platform: fofa
       queries:
         - body="/apps/imt/html/"
+        - port="6066" && banner="spark master"
         - title="spark master at"
     - platform: google
       queries:
