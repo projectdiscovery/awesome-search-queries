@@ -31110,6 +31110,17 @@
       queries:
         - http.title:"churchcrm"
 
+- name: command_center_agent
+  vendor: ncr
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - mynodename
+    - platform: shodan
+      queries:
+        - mynodename
+
 - name: element
   vendor: matrix
   type: product
@@ -31117,3 +31128,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: gocontrol
+  vendor: go-control
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="go.control"
+    - platform: zoomeye
+      queries:
+        - title="go.control"
