@@ -31132,6 +31132,14 @@
       queries:
         - title="go.control"
 
+- name: simple_job_board
+  vendor: awsm
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/simple-job-board"
+
 - name: element
   vendor: matrix
   type: product
