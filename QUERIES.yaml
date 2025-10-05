@@ -31139,6 +31139,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/simple-job-board"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/simple-job-board"
 
 - name: element
   vendor: matrix
