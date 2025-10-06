@@ -31143,6 +31143,33 @@
       queries:
         - http.html:"/wp-content/plugins/simple-job-board"
 
+- name: crestron-device
+  vendor: crestron
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"airmedia"
+
+- name: asustor-data-master
+  vendor: asustor
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="asustor" && icon_hash="1678170702"
+    - platform: shodan
+      queries:
+        - http.html:"asustor"
+
+- name: adaptive-security-appliance-software
+  vendor: cisco
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"/+cscoe+/logon.html"
+
 - name: element
   vendor: matrix
   type: product
