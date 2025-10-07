@@ -31157,6 +31157,7 @@
   engines:
     - platform: fofa
       queries:
+        - body="asustor"
         - body="asustor" && icon_hash="1678170702"
     - platform: shodan
       queries:
