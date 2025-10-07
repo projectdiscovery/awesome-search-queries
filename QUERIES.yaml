@@ -181,6 +181,7 @@
     - platform: shodan
       queries:
         - product:"vsftpd"
+        - vsftpd
 
 - name: owncloud
   vendor: owncloud
@@ -11928,6 +11929,7 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:proftpd:proftpd"
+        - product:"proftpd"
 
 - name: cassandra
   vendor: apache
@@ -14121,6 +14123,10 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:pureftpd:pure-ftpd"
+        - product:"pure-ftpd"
+        - product:"pure-ftpd" version:"1.0.14"
+        - product:"pure-ftpd" version:"1.0.45"
+        - product:"pure-ftpd" version:"1.0.49"
 
 - name: pygments
   vendor: pygments
@@ -31170,6 +31176,56 @@
     - platform: shodan
       queries:
         - http.html:"/+cscoe+/logon.html"
+
+- name: filezilla_server
+  vendor: filezilla-project
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"filezilla"
+
+- name: titan_ftp_server
+  vendor: south_river_technologies
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"titan ftp"
+        - product:"titan ftpd"
+        - product:"titan ftpd" version:"16.00.2672"
+
+- name: pureftpd
+  vendor: pureftpd
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"pure-ftpd" version:"1.0.14"
+
+- name: titan_ftp_server
+  vendor: southrivertech
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"titan ftpd"
+
+- name: opensuse
+  vendor: opensuse
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - vsftpd
+
+- name: filezilla_server
+  vendor: filezilla
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"filezilla"
 
 - name: element
   vendor: matrix
