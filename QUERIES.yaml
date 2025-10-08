@@ -10637,10 +10637,14 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"sitecore experience platform"
+        - http.html:"sitecositecore experience platform"
         - http.title:"sitecore"
         - http.title:"welcome to sitecore"
     - platform: fofa
       queries:
+        - body="sitecore experience platform"
+        - body="sitecositecore experience platform"
         - title="sitecore"
         - title="welcome to sitecore"
     - platform: google
@@ -31234,6 +31238,25 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/total-donations/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/total-donations/"
+
+- name: webp_server_go
+  vendor: webp
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"webp"
+
+- name: controller
+  vendor: aquatronica
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"aquatronica"
 
 - name: element
   vendor: matrix
