@@ -31227,6 +31227,14 @@
       queries:
         - product:"filezilla"
 
+- name: total_donations
+  vendor: calmar-webmedia
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/total-donations/"
+
 - name: element
   vendor: matrix
   type: product
