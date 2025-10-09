@@ -31249,6 +31249,9 @@
     - platform: shodan
       queries:
         - http.html:"webp"
+    - platform: fofa
+      queries:
+        - body="webp"
 
 - name: controller
   vendor: aquatronica
