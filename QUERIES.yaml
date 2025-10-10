@@ -19973,6 +19973,7 @@
     - platform: fofa
       queries:
         - body="hospital management system"
+        - title="hospital management system" && body="hms"
     - platform: shodan
       queries:
         - http.html:"hospital management system"
@@ -31260,6 +31261,14 @@
     - platform: shodan
       queries:
         - http.html:"aquatronica"
+
+- name: system_dashboard
+  vendor: bowo
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/system-dashboard/"
 
 - name: element
   vendor: matrix
