@@ -31269,6 +31269,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/system-dashboard/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/system-dashboard/"
 
 - name: element
   vendor: matrix
