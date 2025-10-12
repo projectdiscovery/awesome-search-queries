@@ -22501,11 +22501,13 @@
         - http.favicon.hash:"-1922044295"
         - http.html:"micollab end user portal"
         - http.html:"mitel networks"
+        - http.html:"mitel" html:"micollab"
     - platform: fofa
       queries:
         - '"micollab end user portal" && title=="redirecting..."'
         - body="micollab end user portal"
         - body="mitel networks"
+        - body="mitel" html:"micollab"
         - icon_hash="-1922044295"
 
 - name: footprints_service_core
@@ -31288,6 +31290,9 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-1445519482
+    - platform: fofa
+      queries:
+        - icon_hash=-1445519482
 
 - name: poststaticfooter
   vendor: prestashop
@@ -31296,6 +31301,38 @@
     - platform: shodan
       queries:
         - http.html:"posstaticfooter"
+
+- name: data_risk_manager
+  vendor: ibm
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"ibm data risk manager"
+
+- name: viaware
+  vendor: kramerav
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="1521468900"
+
+- name: jquery-bbq
+  vendor: jquery-bbq_project
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"odoo"
+
+- name: nordex_control_2_scada
+  vendor: nordex
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"nordex control - wind farm portal"
 
 - name: element
   vendor: matrix
