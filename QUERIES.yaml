@@ -31273,6 +31273,30 @@
       queries:
         - http.html:"/wp-content/plugins/system-dashboard/"
 
+- name: fms
+  vendor: myfactory
+  type: product
+  engines:
+    - platform: google
+      queries:
+        - inurl:ie50/system/ intitle:"myfactory"
+
+- name: vsa
+  vendor: kaseya
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-1445519482
+
+- name: poststaticfooter
+  vendor: prestashop
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"posstaticfooter"
+
 - name: element
   vendor: matrix
   type: product
