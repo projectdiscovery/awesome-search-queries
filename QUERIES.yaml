@@ -31317,6 +31317,9 @@
     - platform: fofa
       queries:
         - icon_hash="1521468900"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:"1521468900"
 
 - name: jquery-bbq
   vendor: jquery-bbq_project
@@ -31333,6 +31336,12 @@
     - platform: shodan
       queries:
         - http.title:"nordex control - wind farm portal"
+    - platform: fofa
+      queries:
+        - title="nordex control - wind farm portal"
+    - platform: google
+      queries:
+        - intitle:"nordex control - wind farm portal"
 
 - name: element
   vendor: matrix
