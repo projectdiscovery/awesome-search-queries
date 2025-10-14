@@ -8955,10 +8955,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:-1381126564
+        - http.favicon.hash:"-1381126564"
     - platform: fofa
       queries:
-        - icon_hash=-1381126564
+        - icon_hash="-1381126564"
 
 - name: aria_operations_for_logs
   vendor: vmware
@@ -31342,6 +31342,14 @@
     - platform: google
       queries:
         - intitle:"nordex control - wind farm portal"
+
+- name: kace_systems_management_appliance
+  vendor: quest
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-463230636" && body="setup"
 
 - name: element
   vendor: matrix
