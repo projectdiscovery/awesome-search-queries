@@ -6671,10 +6671,10 @@
     - platform: fofa
       queries:
         - app="vmware-workspace-one-access" || app="vmware-identity-manager" || app="vmware-vrealize"
-        - icon_hash=-1250474341
+        - icon_hash="-1250474341"
     - platform: shodan
       queries:
-        - http.favicon.hash:-1250474341
+        - http.favicon.hash:"-1250474341"
 
 - name: metform_elementor_contact_form_builder
   vendor: wpmet
@@ -29725,7 +29725,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-463230636"
         - http.title:"kace systems management"
+    - platform: fofa
+      queries:
+        - icon_hash="-463230636"
 
 - name: rocket-lms
   vendor: rocketsoft
@@ -31350,6 +31354,30 @@
     - platform: fofa
       queries:
         - icon_hash="-463230636" && body="setup"
+
+- name: supersign_cms
+  vendor: lg
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="lg supersign"
+
+- name: trinity-audio
+  vendor: sergiotrinity
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/trinity-audio"
+
+- name: hypercomments
+  vendor: wordpress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/hypercomments"
 
 - name: element
   vendor: matrix
