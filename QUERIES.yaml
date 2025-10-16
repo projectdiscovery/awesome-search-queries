@@ -102,6 +102,7 @@
       queries:
         - http.title:"rocketmq"
         - http.title:"rocketmq-console-ng"
+        - rocketmq port:"9876"
     - platform: google
       queries:
         - intitle:"rocketmq"
@@ -31394,14 +31395,6 @@
       queries:
         - body="ipeak" && body="3.5"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: telecontrol_server_basic
   vendor: siemens
   type: product
@@ -31409,3 +31402,11 @@
     - platform: fofa
       queries:
         - title=="logon - telecontrol server basic"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
