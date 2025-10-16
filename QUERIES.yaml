@@ -3271,6 +3271,7 @@
   engines:
     - platform: shodan
       queries:
+        - '"set-cookie: appsessionid=" "path=/admin"'
         - http.title:"identity services engine"
     - platform: fofa
       queries:
@@ -31370,6 +31371,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/trinity-audio"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/trinity-audio"
 
 - name: hypercomments
   vendor: wordpress
@@ -31378,6 +31382,17 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/hypercomments"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/hypercomments"
+
+- name: ipeakcms
+  vendor: ipeak
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="ipeak" && body="3.5"
 
 - name: element
   vendor: matrix
@@ -31386,3 +31401,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: telecontrol_server_basic
+  vendor: siemens
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title=="logon - telecontrol server basic"
