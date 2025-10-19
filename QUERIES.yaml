@@ -7368,6 +7368,7 @@
     - platform: fofa
       queries:
         - title="citrix gateway" || title:"netscaler gateway"
+        - title="netscaler aaa"
     - platform: google
       queries:
         - intitle:"citrix gateway" || title:"netscaler gateway"
@@ -31410,3 +31411,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: e-hr
+  vendor: hrp2000
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="人力资源信息管理系统"
