@@ -31404,14 +31404,6 @@
       queries:
         - title=="logon - telecontrol server basic"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: e-hr
   vendor: hrp2000
   type: product
@@ -31419,3 +31411,11 @@
     - platform: fofa
       queries:
         - title="人力资源信息管理系统"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
