@@ -31419,3 +31419,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: virtual_system_administrator
+  vendor: kaseya
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-1445519482
