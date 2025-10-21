@@ -31412,14 +31412,6 @@
       queries:
         - title="人力资源信息管理系统"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: virtual_system_administrator
   vendor: kaseya
   type: product
@@ -31427,3 +31419,14 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-1445519482
+    - platform: fofa
+      queries:
+        - icon_hash=-1445519482
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
