@@ -31423,6 +31423,14 @@
       queries:
         - icon_hash=-1445519482
 
+- name: backup_exec
+  vendor: veritas
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"veritas backup exec"
+
 - name: element
   vendor: matrix
   type: product
