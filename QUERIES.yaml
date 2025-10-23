@@ -10202,6 +10202,7 @@
         - http.title:"citrix sd-wan"
     - platform: fofa
       queries:
+        - (title="citrix sd-wan") && icon_hash="177980953"
         - title="citrix sd-wan"
     - platform: google
       queries:
@@ -31430,6 +31431,22 @@
     - platform: shodan
       queries:
         - product:"veritas backup exec"
+
+- name: planning_analytics
+  vendor: ibm
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"arc for tm1"
+
+- name: ws_ftp_server
+  vendor: progress
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"ad hoc transfer"
 
 - name: element
   vendor: matrix
