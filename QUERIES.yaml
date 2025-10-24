@@ -31448,6 +31448,22 @@
       queries:
         - http.title:"ad hoc transfer"
 
+- name: commerce
+  vendor: adobe
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - x-magento-tags
+
+- name: help_scout
+  vendor: woocommerce
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/woocommerce-help-scout"
+
 - name: element
   vendor: matrix
   type: product
