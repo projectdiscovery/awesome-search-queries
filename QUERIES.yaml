@@ -8132,6 +8132,7 @@
   engines:
     - platform: shodan
       queries:
+        - /bitrix/p3p.xml
         - http.favicon.hash:-2115208104
         - http.html:"/bitrix/"
     - platform: fofa
@@ -31463,6 +31464,17 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/woocommerce-help-scout"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/woocommerce-help-scout"
+
+- name: experience_commerce,experience_platform
+  vendor: sitecore
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"sitecore"
 
 - name: element
   vendor: matrix
