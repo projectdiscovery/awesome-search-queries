@@ -31476,6 +31476,22 @@
       queries:
         - http.title:"sitecore"
 
+- name: r6850_firmware
+  vendor: netgear
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="netgear" && "r6850"
+
+- name: webpanel
+  vendor: control_webpanel
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-356182173"
+
 - name: element
   vendor: matrix
   type: product
