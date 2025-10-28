@@ -31491,6 +31491,9 @@
     - platform: fofa
       queries:
         - icon_hash="-356182173"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:"-356182173"
 
 - name: element
   vendor: matrix
