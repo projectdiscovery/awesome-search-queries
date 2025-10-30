@@ -24458,6 +24458,7 @@
       queries:
         - http.favicon.hash:"-1341442175"
         - http.html:"var hst = location.hostname"
+        - port:"7900"
     - platform: fofa
       queries:
         - body="var hst = location.hostname"
@@ -31494,6 +31495,14 @@
     - platform: shodan
       queries:
         - http.favicon.hash:"-356182173"
+
+- name: windows_server_update_service
+  vendor: microsoft
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - cpe:"cpe:2.3:o:microsoft:windows_server_2012"
 
 - name: element
   vendor: matrix
