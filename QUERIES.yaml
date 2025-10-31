@@ -31504,6 +31504,52 @@
       queries:
         - cpe:"cpe:2.3:o:microsoft:windows_server_2012"
 
+- name: ritecms
+  vendor: ritecms
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="ritecms"
+
+- name: landray_ekp
+  vendor: landray
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:831854882
+
+- name: simple_file_list
+  vendor: simplefilelist
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - wp-content/plugins/simple-file-list/
+    - platform: google
+      queries:
+        - inurl:"/wp-content/plugins/simple-file-list/"
+
+- name: the_events_calendar
+  vendor: stellarwp
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/the-events-calendar/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/the-events-calendar/
+
+- name: userpro
+  vendor: userproplugin
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/userpro/"
+
 - name: element
   vendor: matrix
   type: product
