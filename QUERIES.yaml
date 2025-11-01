@@ -31519,6 +31519,9 @@
     - platform: shodan
       queries:
         - http.favicon.hash:831854882
+    - platform: fofa
+      queries:
+        - icon_hash=831854882
 
 - name: simple_file_list
   vendor: simplefilelist
@@ -31538,9 +31541,14 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/the-events-calendar/"
+        - body=/wp-content/plugins/the-events-calendar/
     - platform: publicwww
       queries:
         - /wp-content/plugins/the-events-calendar/
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/the-events-calendar/"
+        - http.html:/wp-content/plugins/the-events-calendar/
 
 - name: userpro
   vendor: userproplugin
@@ -31549,6 +31557,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/userpro/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/userpro/"
 
 - name: element
   vendor: matrix
