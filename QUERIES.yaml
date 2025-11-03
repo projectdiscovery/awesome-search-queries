@@ -31561,6 +31561,22 @@
       queries:
         - http.html:"/wp-content/plugins/userpro/"
 
+- name: ntpsec
+  vendor: ntpsec
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - ntpsec
+
+- name: letta
+  vendor: letta
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="letta"
+
 - name: element
   vendor: matrix
   type: product
