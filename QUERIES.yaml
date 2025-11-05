@@ -31129,9 +31129,13 @@
     - platform: fofa
       queries:
         - app="churchcrm"
+        - title="churchcrm"
     - platform: shodan
       queries:
         - http.title:"churchcrm"
+    - platform: google
+      queries:
+        - intitle:"churchcrm"
 
 - name: command_center_agent
   vendor: ncr
