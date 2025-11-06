@@ -2753,9 +2753,11 @@
     - platform: fofa
       queries:
         - icon_hash="-1889244460"
+        - icon_hash="1015186617"
     - platform: shodan
       queries:
         - http.favicon.hash:"-1889244460"
+        - http.favicon.hash:"1015186617"
 
 - name: horizon_daas
   vendor: vmware
@@ -31580,6 +31582,20 @@
     - platform: fofa
       queries:
         - title="letta"
+
+- name: oracle_weblogic_server
+  vendor: oracle
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - product="weblogic" || header="weblogic server"
+    - platform: shodan
+      queries:
+        - cpe:"cpe:2.3:a:oracle:weblogic_server"
+        - http.server:"weblogic"
+        - port:7001
+        - product:"weblogic"
 
 - name: element
   vendor: matrix
