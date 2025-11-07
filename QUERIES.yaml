@@ -31597,14 +31597,6 @@
         - port:7001
         - product:"weblogic"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: gradio
   vendor: gradio_app
   type: product
@@ -31620,3 +31612,22 @@
       queries:
         - http.html:"__gradio_mode__"
         - http.title:"gradio"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: bentoml
+  vendor: bentoml
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="bentoml"
+    - platform: shodan
+      queries:
+        - http.html:"bentoml"
