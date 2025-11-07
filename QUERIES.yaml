@@ -31604,3 +31604,19 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: gradio
+  vendor: gradio_app
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="__gradio_mode__"
+        - title="gradio"
+    - platform: google
+      queries:
+        - intitle:"gradio"
+    - platform: shodan
+      queries:
+        - http.html:"__gradio_mode__"
+        - http.title:"gradio"
