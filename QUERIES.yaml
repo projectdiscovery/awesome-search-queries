@@ -31624,6 +31624,20 @@
       queries:
         - http.html:"bentoml"
 
+- name: stop-user-enumeration
+  vendor: fullworks
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/stop-user-enumeration/
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/stop-user-enumeration/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/stop-user-enumeration/"
+
 - name: element
   vendor: matrix
   type: product
