@@ -31630,13 +31630,21 @@
   engines:
     - platform: fofa
       queries:
-        - body=/wp-content/plugins/stop-user-enumeration/
+        - body="/wp-content/plugins/stop-user-enumeration/"
     - platform: publicwww
       queries:
         - /wp-content/plugins/stop-user-enumeration/
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/stop-user-enumeration/"
+
+- name: flowise
+  vendor: flowiseai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"flowise"
 
 - name: element
   vendor: matrix
