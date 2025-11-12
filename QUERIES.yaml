@@ -20896,6 +20896,12 @@
     - platform: fofa
       queries:
         - title="emlog"
+    - platform: google
+      queries:
+        - intitle:"emlog"
+    - platform: shodan
+      queries:
+        - http.title:"emlog"
 
 - name: idsecure
   vendor: controlid
@@ -31645,6 +31651,12 @@
     - platform: shodan
       queries:
         - http.title:"flowise"
+    - platform: fofa
+      queries:
+        - title="flowise"
+    - platform: google
+      queries:
+        - intitle:"flowise"
 
 - name: element
   vendor: matrix
