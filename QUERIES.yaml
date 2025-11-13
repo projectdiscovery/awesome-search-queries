@@ -7366,13 +7366,16 @@
   engines:
     - platform: shodan
       queries:
+        - http.title:"citrix gateway"
         - http.title:"citrix gateway" || title:"netscaler gateway"
     - platform: fofa
       queries:
+        - title="citrix gateway"
         - title="citrix gateway" || title:"netscaler gateway"
         - title="netscaler aaa"
     - platform: google
       queries:
+        - intitle:"citrix gateway"
         - intitle:"citrix gateway" || title:"netscaler gateway"
 
 - name: atutor
