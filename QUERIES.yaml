@@ -31661,6 +31661,20 @@
       queries:
         - intitle:"flowise"
 
+- name: wp-automatic
+  vendor: valvepress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - wp-content/plugins/wp-automatic/
+    - platform: google
+      queries:
+        - inurl:"/wp-content/plugins/wp-automatic/"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/wp-automatic/"
+
 - name: element
   vendor: matrix
   type: product
