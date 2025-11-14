@@ -31676,6 +31676,25 @@
       queries:
         - http.html:"wp-content/plugins/wp-automatic/"
 
+- name: erpnext
+  vendor: frappe
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"login to frappe"
+
+- name: ai-engine
+  vendor: wordpress
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/ai-engine/"
+    - platform: zoomeye
+      queries:
+        - app:"wordpress" +web.body:"/wp-content/plugins/ai-engine/"
+
 - name: element
   vendor: matrix
   type: product
