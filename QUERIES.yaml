@@ -31667,6 +31667,7 @@
   engines:
     - platform: fofa
       queries:
+        - body="wp-content/plugins/wp-automatic/"
         - wp-content/plugins/wp-automatic/
     - platform: google
       queries:
