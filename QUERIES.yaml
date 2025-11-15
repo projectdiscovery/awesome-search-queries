@@ -31694,6 +31694,9 @@
     - platform: zoomeye
       queries:
         - app:"wordpress" +web.body:"/wp-content/plugins/ai-engine/"
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/ai-engine/"
 
 - name: element
   vendor: matrix
