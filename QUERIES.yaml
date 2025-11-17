@@ -31705,3 +31705,18 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: celonis
+  vendor: celonis
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="amazing insights. better results."
+    - platform: google
+      queries:
+        - intitle:"celonis" "welcome"
+    - platform: shodan
+      queries:
+        - http.html:"amazing insights. better results."
+        - http.title:"celonis"
