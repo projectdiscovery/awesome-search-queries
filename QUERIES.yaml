@@ -31717,6 +31717,28 @@
         - http.title:"celonis"
         - http.title:"celonis" "welcome"
 
+- name: gnuboard
+  vendor: sir
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body:"gnuboard5"
+    - platform: shodan
+      queries:
+        - http.html:"gnuboard5"
+
+- name: hedgedoc
+  vendor: hedgedoc
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="powered by <a href=\"https://hedgedoc.org\">hedgedoc"
+    - platform: shodan
+      queries:
+        - http.title:"hedgedoc - ideas grow better together"
+
 - name: element
   vendor: matrix
   type: product
