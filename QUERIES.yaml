@@ -31698,14 +31698,6 @@
       queries:
         - body="/wp-content/plugins/ai-engine/"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: celonis
   vendor: celonis
   type: product
@@ -31713,10 +31705,22 @@
     - platform: fofa
       queries:
         - body="amazing insights. better results."
+        - title="celonis"
+        - title="celonis" "welcome"
     - platform: google
       queries:
+        - intitle:"celonis"
         - intitle:"celonis" "welcome"
     - platform: shodan
       queries:
         - http.html:"amazing insights. better results."
         - http.title:"celonis"
+        - http.title:"celonis" "welcome"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
