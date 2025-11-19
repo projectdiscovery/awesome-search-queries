@@ -31753,6 +31753,12 @@
     - platform: shodan
       queries:
         - http.title:"eclipse birt home"
+    - platform: fofa
+      queries:
+        - title="eclipse birt home"
+    - platform: google
+      queries:
+        - intitle:"eclipse birt home"
 
 - name: flowweb
   vendor: flowweb
