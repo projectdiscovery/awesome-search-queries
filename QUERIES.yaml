@@ -13395,6 +13395,7 @@
     - platform: fofa
       queries:
         - body="ibm websphere portal"
+        - websphere-application-server
 
 - name: uptime_infrastructure_monitor
   vendor: idera
@@ -31735,9 +31736,31 @@
     - platform: fofa
       queries:
         - body="powered by <a href=\"https://hedgedoc.org\">hedgedoc"
+        - body=//hedgedoc.org\">hedgedoc"
+        - title="hedgedoc - ideas grow better together"
     - platform: shodan
       queries:
+        - http.html://hedgedoc.org\">hedgedoc"
         - http.title:"hedgedoc - ideas grow better together"
+    - platform: google
+      queries:
+        - intitle:"hedgedoc - ideas grow better together"
+
+- name: business_intelligence_and_reporting_tools
+  vendor: vendor
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"eclipse birt home"
+
+- name: flowweb
+  vendor: flowweb
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - 'server: flowweb'
 
 - name: element
   vendor: matrix
