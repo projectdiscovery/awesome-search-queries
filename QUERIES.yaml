@@ -31768,6 +31768,44 @@
       queries:
         - 'server: flowweb'
 
+- name: a3002ru
+  vendor: totolink
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="totolink"
+
+- name: totolink-router
+  vendor: totolink
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="totolink"
+    - platform: shodan
+      queries:
+        - http.html:"totolink"
+
+- name: identity_manager
+  vendor: oracle
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="oracle access management"
+    - platform: shodan
+      queries:
+        - http.title:"oracle access management"
+
+- name: zoomsounds
+  vendor: digitalzoomstudio
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/dzs-zoomsounds/"
+
 - name: element
   vendor: matrix
   type: product
