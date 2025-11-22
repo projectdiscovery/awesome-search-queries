@@ -31782,6 +31782,7 @@
   engines:
     - platform: fofa
       queries:
+        - body="totolink"
         - title="totolink"
     - platform: shodan
       queries:
@@ -31805,6 +31806,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/dzs-zoomsounds/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/dzs-zoomsounds/"
 
 - name: element
   vendor: matrix
