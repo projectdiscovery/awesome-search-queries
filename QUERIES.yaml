@@ -230,12 +230,15 @@
         - http.component:"atlassian confluence"
         - http.component:"atlassian jira"
         - http.title:"jira - jira setup"
+        - http.title:"system dashboard - jira"
     - platform: fofa
       queries:
         - title="jira - jira setup"
+        - title="system dashboard - jira"
     - platform: google
       queries:
         - intitle:"jira - jira setup"
+        - intitle:"system dashboard - jira"
 
 - name: arcgis_server
   vendor: esri
