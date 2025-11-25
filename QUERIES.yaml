@@ -6635,11 +6635,16 @@
         - body="zimbra collaboration suite web client"
         - icon_hash="1624375939"
         - icon_hash="475145467"
+        - title="zimbra collaboration suite"
     - platform: shodan
       queries:
         - http.favicon.hash:"1624375939"
         - http.favicon.hash:"475145467"
         - http.html:"zimbra collaboration suite web client"
+        - http.title:"zimbra collaboration suite"
+    - platform: google
+      queries:
+        - intitle:"zimbra collaboration suite"
 
 - name: basic_pdu_firmware
   vendor: powertekpdus
