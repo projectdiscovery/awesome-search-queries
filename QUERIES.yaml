@@ -208,8 +208,10 @@
       queries:
         - cpe:"cpe:2.3:a:wordpress:wordpress"
         - http.component:"wordpress"
+        - http.html:"/wp-includes/functions.php"
     - platform: fofa
       queries:
+        - body="/wp-includes/functions.php"
         - body="oembed" && body="wp-"
 
 - name: confluence_server
@@ -29909,6 +29911,9 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:microsoft:sharepoint_server"
+    - platform: fofa
+      queries:
+        - app="microsoft-sharepoint"
 
 - name: elfinder
   vendor: studio-42
