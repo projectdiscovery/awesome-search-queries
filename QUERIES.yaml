@@ -31823,6 +31823,17 @@
       queries:
         - http.html:"/wp-content/plugins/dzs-zoomsounds/"
 
+- name: php-login-system
+  vendor: msaad1999
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="klik_loginsystem"
+    - platform: shodan
+      queries:
+        - http.html:"klik_loginsystem"
+
 - name: element
   vendor: matrix
   type: product
