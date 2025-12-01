@@ -7439,13 +7439,16 @@
   engines:
     - platform: publicwww
       queries:
+        - /wp-content/plugins/media-library-assistant/
         - wp-content/plugins/media-library-assistant
     - platform: shodan
       queries:
-        - http.html:wp-content/plugins/media-library-assistant
+        - http.html:"wp-content/plugins/media-library-assistant"
+        - http.html:/wp-content/plugins/media-library-assistant/
     - platform: fofa
       queries:
-        - body=wp-content/plugins/media-library-assistant
+        - body="wp-content/plugins/media-library-assistant"
+        - body=/wp-content/plugins/media-library-assistant/
 
 - name: ur5x_firmware
   vendor: milesight
@@ -19682,10 +19685,10 @@
         - /wp-content/plugins/mstore-api/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/mstore-api/
+        - http.html:"/wp-content/plugins/mstore-api/"
     - platform: fofa
       queries:
-        - body=/wp-content/plugins/mstore-api/
+        - body="/wp-content/plugins/mstore-api/"
     - platform: google
       queries:
         - inurl:/wp-content/plugins/mstore-api/
@@ -30714,10 +30717,10 @@
         - /wp-content/plugins/seo-by-rank-math/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/seo-by-rank-math/
+        - http.html:"/wp-content/plugins/seo-by-rank-math/"
     - platform: fofa
       queries:
-        - body=/wp-content/plugins/seo-by-rank-math/
+        - body="/wp-content/plugins/seo-by-rank-math/"
 
 - name: wp_child_theme_generator
   vendor: wensolutions
@@ -31834,6 +31837,14 @@
       queries:
         - http.html:"klik_loginsystem"
 
+- name: easy_digital_downloads
+  vendor: awesomemotive
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/easy-digital-downloads/
+
 - name: element
   vendor: matrix
   type: product
@@ -31841,3 +31852,17 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: hive
+  vendor: apache
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"hiveserver2"
+    - platform: fofa
+      queries:
+        - title="hiveserver2"
+    - platform: google
+      queries:
+        - intitle:"hiveserver2"
