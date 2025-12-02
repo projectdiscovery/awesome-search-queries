@@ -31844,14 +31844,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/easy-digital-downloads/
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
     - platform: shodan
       queries:
-        - http.html:"manifest.json"
+        - http.html:/wp-content/plugins/easy-digital-downloads/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/easy-digital-downloads/
 
 - name: hive
   vendor: apache
@@ -31866,3 +31864,11 @@
     - platform: google
       queries:
         - intitle:"hiveserver2"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
