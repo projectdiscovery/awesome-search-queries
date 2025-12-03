@@ -9831,6 +9831,7 @@
         - http.title:"apache+default","apache+http+server+test","apache2+it+works"
         - http.title:"apache2 debian default page:"
         - http.title:"test page for the ssl/tls-aware apache installation on web site"
+        - 'server: apache/'
     - platform: fofa
       queries:
         - title="apache http server test page powered by centos"
@@ -9851,6 +9852,7 @@
     - platform: fofa
       queries:
         - app="laravel-framework"
+        - x-laravel-version
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:laravel:laravel"
@@ -31878,6 +31880,14 @@
     - platform: fofa
       queries:
         - body=/wp-content/plugins/blog-designer-pack/
+
+- name: live_chat
+  vendor: 3cx
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/wp-live-chat-support
 
 - name: element
   vendor: matrix
