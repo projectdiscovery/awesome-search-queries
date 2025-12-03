@@ -31872,6 +31872,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/blog-designer-pack/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/blog-designer-pack/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/blog-designer-pack/
 
 - name: element
   vendor: matrix
