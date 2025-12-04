@@ -31900,6 +31900,36 @@
       queries:
         - body=/wp-content/plugins/wp-live-chat-support
 
+- name: wp-google-maps
+  vendor: wpgmaps
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-google-maps"
+    - platform: shodan
+      queries:
+        - http.html:"wp-google-maps"
+
+- name: ht_mega
+  vendor: hasthemes
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/ht-mega-for-elementor
+
+- name: post_grid_combo
+  vendor: pickplugins
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/post-grid-combo/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/post-grid-combo/
+
 - name: element
   vendor: matrix
   type: product
