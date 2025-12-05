@@ -31918,6 +31918,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/ht-mega-for-elementor
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/ht-mega-for-elementor
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/ht-mega-for-elementor
 
 - name: post_grid_combo
   vendor: pickplugins
@@ -31929,6 +31935,9 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/post-grid-combo/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/post-grid-combo/"
 
 - name: element
   vendor: matrix
