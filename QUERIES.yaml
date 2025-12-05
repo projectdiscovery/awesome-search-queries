@@ -13192,6 +13192,7 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:nginx:nginx"
+        - 'server: nginx/'
 
 - name: hhvm
   vendor: facebook
