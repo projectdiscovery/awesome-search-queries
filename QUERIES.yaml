@@ -20866,12 +20866,15 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/give/
+        - wp-content/plugins/give
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/give/"
+        - http.html:wp-content/plugins/give
     - platform: fofa
       queries:
         - body="/wp-content/plugins/give/"
+        - body=wp-content/plugins/give
 
 - name: essential_grid
   vendor: themepunch
@@ -31958,6 +31961,14 @@
     - platform: shodan
       queries:
         - http.title:"qnap"
+
+- name: bigfix_platform
+  vendor: ibm
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - port:52311 "bigfixhttpserver"
 
 - name: element
   vendor: matrix
