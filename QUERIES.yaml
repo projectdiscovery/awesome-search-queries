@@ -166,10 +166,15 @@
   engines:
     - platform: shodan
       queries:
+        - cpe:"cpe:2.3:a:oracle:weblogic_server"
+        - http.server:"weblogic"
         - http.title:"oracle peoplesoft sign-in"
+        - port:7001
         - product:"oracle weblogic"
+        - product:"weblogic"
     - platform: fofa
       queries:
+        - product="weblogic" || header="weblogic server"
         - title="oracle peoplesoft sign-in"
     - platform: google
       queries:
@@ -31939,6 +31944,20 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/post-grid-combo/"
+
+- name: music_station
+  vendor: qnap
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="qnap"
+    - platform: google
+      queries:
+        - intitle:"qnap"
+    - platform: shodan
+      queries:
+        - http.title:"qnap"
 
 - name: element
   vendor: matrix
