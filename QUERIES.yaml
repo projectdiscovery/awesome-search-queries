@@ -30235,9 +30235,11 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="733091897"
         - title="openmetadata"
     - platform: shodan
       queries:
+        - http.favicon.hash:"733091897"
         - http.title:"openmetadata"
     - platform: google
       queries:
@@ -31969,6 +31971,14 @@
     - platform: shodan
       queries:
         - port:52311 "bigfixhttpserver"
+
+- name: simple_mobile_url_redirect
+  vendor: ozette
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"simple-mobile-url-redirect"
 
 - name: element
   vendor: matrix
