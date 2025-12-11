@@ -31980,6 +31980,17 @@
       queries:
         - http.html:"simple-mobile-url-redirect"
 
+- name: monsta_ftp
+  vendor: monstaftp
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="monsta ftp"
+    - platform: shodan
+      queries:
+        - http.title:"monsta ftp"
+
 - name: element
   vendor: matrix
   type: product
