@@ -31990,6 +31990,9 @@
     - platform: shodan
       queries:
         - http.title:"monsta ftp"
+    - platform: google
+      queries:
+        - intitle:"monsta ftp"
 
 - name: element
   vendor: matrix
