@@ -31994,6 +31994,14 @@
       queries:
         - intitle:"monsta ftp"
 
+- name: shortcodes-ultimate
+  vendor: developer_developer
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/shortcodes-ultimate/
+
 - name: element
   vendor: matrix
   type: product
