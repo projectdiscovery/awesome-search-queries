@@ -32001,6 +32001,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/shortcodes-ultimate/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/shortcodes-ultimate/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/shortcodes-ultimate/
 
 - name: element
   vendor: matrix
