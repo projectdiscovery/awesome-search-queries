@@ -32008,6 +32008,20 @@
       queries:
         - body=/wp-content/plugins/shortcodes-ultimate/
 
+- name: wpmobile.app
+  vendor: wpmobile.app
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wpappninja"
+    - platform: google
+      queries:
+        - inurl:"/wp-content/plugins/wpappninja"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wpappninja"
+
 - name: element
   vendor: matrix
   type: product
