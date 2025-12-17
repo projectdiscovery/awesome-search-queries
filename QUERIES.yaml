@@ -32022,6 +32022,20 @@
       queries:
         - http.html:"/wp-content/plugins/wpappninja"
 
+- name: datart
+  vendor: datart
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="datart"
+    - platform: hunter
+      queries:
+        - web.title="datart"
+    - platform: shodan
+      queries:
+        - http.title:"datart"
+
 - name: element
   vendor: matrix
   type: product
