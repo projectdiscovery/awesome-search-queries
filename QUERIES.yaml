@@ -32036,6 +32036,22 @@
       queries:
         - http.title:"datart"
 
+- name: members
+  vendor: developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/members/"
+
+- name: cookie-law-info
+  vendor: developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/cookie-law-info/"
+
 - name: element
   vendor: matrix
   type: product
