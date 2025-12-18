@@ -23754,9 +23754,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"zkteco security"
         - http.title:"biotime"
     - platform: fofa
       queries:
+        - body="zkteco security"
         - title="biotime"
     - platform: google
       queries:
@@ -32043,6 +32045,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/members/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/members/"
 
 - name: cookie-law-info
   vendor: developer
@@ -32051,6 +32056,25 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/cookie-law-info/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/cookie-law-info/"
+
+- name: wp-maintenance-mode
+  vendor: developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-maintenance-mode/"
+
+- name: cmb2
+  vendor: developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/cmb2/"
 
 - name: element
   vendor: matrix
