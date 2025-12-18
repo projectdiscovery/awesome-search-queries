@@ -8492,9 +8492,11 @@
         - /wp-content/plugins/backup-backup/
     - platform: shodan
       queries:
+        - http.html:"backup-migration"
         - http.html:/wp-content/plugins/backup-backup/
     - platform: fofa
       queries:
+        - body="backup-migration"
         - body=/wp-content/plugins/backup-backup/
 
 - name: opencms
@@ -13122,9 +13124,11 @@
       queries:
         - cpe:"cpe:2.3:a:episerver:episerver"
         - http.html:"epihash"
+        - http.html:"episerver"
     - platform: fofa
       queries:
         - body="epihash"
+        - body="episerver"
 
 - name: nod32
   vendor: eset
@@ -32067,6 +32071,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/wp-maintenance-mode/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wp-maintenance-mode/"
 
 - name: cmb2
   vendor: developer
@@ -32075,6 +32082,56 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/cmb2/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/cmb2/"
+
+- name: safe-svg
+  vendor: developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/safe-svg/"
+
+- name: oceanwp
+  vendor: developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/themes/oceanwp/"
+
+- name: seo-by-rank-math
+  vendor: developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/seo-by-rank-math/"
+
+- name: the-events-calendar
+  vendor: developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/the-events-calendar/"
+
+- name: FortiWeb
+  vendor: Fortinet
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="fortinet-fortiweb"
+    - platform: google
+      queries:
+        - intitle:"fortiweb" "login"
+    - platform: shodan
+      queries:
+        - http.title:"fortinet"
+        - http.title:"fortiweb"
 
 - name: element
   vendor: matrix
