@@ -32158,6 +32158,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/imsanity/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/imsanity/"
 
 - name: astra-sites
   vendor: developer
@@ -32166,6 +32169,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/astra-sites/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/astra-sites/"
 
 - name: wordpress-seo
   vendor: yoast
@@ -32174,6 +32180,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/wordpress-seo/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wordpress-seo/"
 
 - name: wp-mail-smtp
   vendor: developer
@@ -32182,6 +32191,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/wp-mail-smtp/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wp-mail-smtp/"
 
 - name: acmailer,acmailer_db
   vendor: acmailer
@@ -32193,6 +32205,25 @@
     - platform: shodan
       queries:
         - title="acmailer4.0"
+
+- name: table-of-contents-plus
+  vendor: michael
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/table-of-contents-plus"
+
+- name: 12-step-meeting-list
+  vendor: code4recovery
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/12-step-meeting-list/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/12-step-meeting-list/
 
 - name: element
   vendor: matrix
