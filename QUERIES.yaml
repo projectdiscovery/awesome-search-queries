@@ -32093,6 +32093,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/safe-svg/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/safe-svg/"
 
 - name: oceanwp
   vendor: developer
@@ -32101,6 +32104,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/themes/oceanwp/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/themes/oceanwp/"
 
 - name: seo-by-rank-math
   vendor: developer
@@ -32109,6 +32115,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/seo-by-rank-math/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/seo-by-rank-math/"
 
 - name: the-events-calendar
   vendor: developer
@@ -32117,6 +32126,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/the-events-calendar/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/the-events-calendar/"
 
 - name: FortiWeb
   vendor: Fortinet
@@ -32125,13 +32137,62 @@
     - platform: fofa
       queries:
         - app="fortinet-fortiweb"
+        - title="fortinet"
+        - title="fortiweb"
+        - title="fortiweb" "login"
     - platform: google
       queries:
+        - intitle:"fortinet"
+        - intitle:"fortiweb"
         - intitle:"fortiweb" "login"
     - platform: shodan
       queries:
         - http.title:"fortinet"
         - http.title:"fortiweb"
+        - http.title:"fortiweb" "login"
+
+- name: imsanity
+  vendor: developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/imsanity/"
+
+- name: astra-sites
+  vendor: developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/astra-sites/"
+
+- name: wordpress-seo
+  vendor: yoast
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wordpress-seo/"
+
+- name: wp-mail-smtp
+  vendor: developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-mail-smtp/"
+
+- name: acmailer,acmailer_db
+  vendor: acmailer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="acmailer4.0"
+    - platform: shodan
+      queries:
+        - title="acmailer4.0"
 
 - name: element
   vendor: matrix
