@@ -32238,6 +32238,9 @@
     - platform: shodan
       queries:
         - http.html:"laminas"
+    - platform: fofa
+      queries:
+        - body="laminas"
 
 - name: element
   vendor: matrix
