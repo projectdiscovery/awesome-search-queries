@@ -32213,6 +32213,9 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/table-of-contents-plus"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/table-of-contents-plus"
 
 - name: 12-step-meeting-list
   vendor: code4recovery
@@ -32224,6 +32227,17 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/12-step-meeting-list/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/12-step-meeting-list/"
+
+- name: laminas-http
+  vendor: getlaminas
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"laminas"
 
 - name: element
   vendor: matrix
