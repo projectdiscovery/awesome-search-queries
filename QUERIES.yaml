@@ -32242,6 +32242,14 @@
       queries:
         - body="laminas"
 
+- name: fortigate
+  vendor: fortinet
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - cpe:"cpe:2.3:o:fortinet:fortios"
+
 - name: element
   vendor: matrix
   type: product
@@ -32249,3 +32257,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: panorama_viewer
+  vendor: krpano
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"embedpano"
