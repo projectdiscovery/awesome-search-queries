@@ -1415,6 +1415,7 @@
         - http.title:"gitlab"
     - platform: fofa
       queries:
+        - app="gitlab"
         - body="gitlab enterprise edition"
         - body="gitlab-ci.yml"
         - title="gitlab"
@@ -32260,6 +32261,62 @@
     - platform: fofa
       queries:
         - body="embedpano"
+
+- name: storefront
+  vendor: wordpress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/themes/storefront/"
+
+- name: accelerated-mobile-pages
+  vendor: wordpress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/accelerated-mobile-pages"
+
+- name: table-of-contents-plus
+  vendor: developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/table-of-contents-plus/"
+
+- name: add-to-any
+  vendor: wordpress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/add-to-any/"
+
+- name: pretty-link
+  vendor: developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/pretty-link/"
+
+- name: yith-woocommerce-wishlist
+  vendor: yithemes
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/yith-woocommerce-wishlist/"
+
+- name: iwp-client
+  vendor: developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/iwp-client/"
 
 - name: element
   vendor: matrix
