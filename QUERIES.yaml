@@ -32250,14 +32250,6 @@
       queries:
         - cpe:"cpe:2.3:o:fortinet:fortios"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: panorama_viewer
   vendor: krpano
   type: product
@@ -32265,3 +32257,14 @@
     - platform: shodan
       queries:
         - http.html:"embedpano"
+    - platform: fofa
+      queries:
+        - body="embedpano"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
