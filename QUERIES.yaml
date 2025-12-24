@@ -32269,6 +32269,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/themes/storefront/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/themes/storefront/"
 
 - name: accelerated-mobile-pages
   vendor: wordpress
@@ -32277,6 +32280,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/accelerated-mobile-pages"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/accelerated-mobile-pages"
 
 - name: table-of-contents-plus
   vendor: developer
@@ -32285,6 +32291,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/table-of-contents-plus/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/table-of-contents-plus/"
 
 - name: add-to-any
   vendor: wordpress
@@ -32293,6 +32302,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/add-to-any/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/add-to-any/"
 
 - name: pretty-link
   vendor: developer
@@ -32301,6 +32313,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/pretty-link/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/pretty-link/"
 
 - name: yith-woocommerce-wishlist
   vendor: yithemes
@@ -32309,6 +32324,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/yith-woocommerce-wishlist/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/yith-woocommerce-wishlist/"
 
 - name: iwp-client
   vendor: developer
@@ -32317,6 +32335,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/iwp-client/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/iwp-client/"
 
 - name: element
   vendor: matrix
