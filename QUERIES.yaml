@@ -32339,6 +32339,25 @@
       queries:
         - http.html:"/wp-content/plugins/iwp-client/"
 
+- name: digital_experience_platform,liferay_portal
+  vendor: liferay
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash=129457226
+    - platform: shodan
+      queries:
+        - http.favicon.hash:129457226
+
+- name: N-central
+  vendor: N-able
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"n-central login"
+
 - name: element
   vendor: matrix
   type: product
