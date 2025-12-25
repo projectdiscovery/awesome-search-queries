@@ -32371,3 +32371,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: oneview
+  vendor: hp
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-1569311459
