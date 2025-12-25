@@ -32357,6 +32357,12 @@
     - platform: shodan
       queries:
         - http.title:"n-central login"
+    - platform: fofa
+      queries:
+        - title="n-central login"
+    - platform: google
+      queries:
+        - intitle:"n-central login"
 
 - name: element
   vendor: matrix
