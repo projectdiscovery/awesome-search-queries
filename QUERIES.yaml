@@ -32375,6 +32375,36 @@
       queries:
         - icon_hash=-1569311459
 
+- name: members
+  vendor: wordpress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/members"
+
+- name: gp-premium
+  vendor: generatepress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/gp-premium/"
+
+- name: papercut_mf,papercut_ng
+  vendor: papercut
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="content=\"papercut\""
+        - body="papercut"
+    - platform: shodan
+      queries:
+        - cpe:"cpe:2.3:a:papercut:papercut_mf"
+        - http.html:"content=\"papercut\""
+        - http.html:"papercut"
+
 - name: element
   vendor: matrix
   type: product
