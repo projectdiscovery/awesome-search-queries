@@ -32364,14 +32364,6 @@
       queries:
         - intitle:"n-central login"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: oneview
   vendor: hp
   type: product
@@ -32379,3 +32371,14 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-1569311459
+    - platform: fofa
+      queries:
+        - icon_hash=-1569311459
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
