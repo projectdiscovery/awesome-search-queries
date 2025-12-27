@@ -32382,6 +32382,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/members"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/members"
 
 - name: gp-premium
   vendor: generatepress
@@ -32390,6 +32393,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/gp-premium/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/gp-premium/"
 
 - name: papercut_mf,papercut_ng
   vendor: papercut
