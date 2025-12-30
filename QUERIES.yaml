@@ -32413,6 +32413,18 @@
         - http.html:"content=\"papercut\""
         - http.html:"papercut"
 
+- name: prettier
+  vendor: prettier
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body=".prettierignore"
+        - body=".prettierignore" || body="prettier"
+    - platform: shodan
+      queries:
+        - http.html:".prettierignore"
+
 - name: element
   vendor: matrix
   type: product
@@ -32420,14 +32432,3 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
-
-- name: prettier
-  vendor: prettier
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body=".prettierignore" || body="prettier"
-    - platform: shodan
-      queries:
-        - http.html:".prettierignore"
