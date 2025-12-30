@@ -4120,10 +4120,12 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-847792508"
         - http.title:"kubernetes web view"
     - platform: fofa
       queries:
         - app="kubernetes-enterprise-manager"
+        - icon_hash="-847792508"
         - title="kubernetes web view"
     - platform: google
       queries:
@@ -32418,3 +32420,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: prettier
+  vendor: prettier
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body=".prettierignore" || body="prettier"
+    - platform: shodan
+      queries:
+        - http.html:".prettierignore"
