@@ -32433,6 +32433,14 @@
       queries:
         - http.html:"kaswara"
 
+- name: web_help_desk
+  vendor: SolarWinds
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:"1895809524"
+
 - name: element
   vendor: matrix
   type: product
