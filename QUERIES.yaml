@@ -32425,6 +32425,14 @@
       queries:
         - http.html:".prettierignore"
 
+- name: kaswara
+  vendor: kaswara_project
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"kaswara"
+
 - name: element
   vendor: matrix
   type: product
