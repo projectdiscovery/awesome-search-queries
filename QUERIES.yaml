@@ -7086,11 +7086,22 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:atlassian:bitbucket"
+        - http.component:"atlassian bitbucket"
         - http.component:"bitbucket"
+        - http.html:"atlassian-token"
         - http.html:"bitbucket-pipelines.yml"
+        - http.title:"bitbucket"
+        - http.title:"bitbucket" inurl:"/login"
     - platform: fofa
       queries:
+        - body="atlassian-token"
         - body="bitbucket-pipelines.yml"
+        - title="bitbucket"
+        - title="bitbucket" inurl:"/login"
+    - platform: google
+      queries:
+        - intitle:"bitbucket"
+        - intitle:"bitbucket" inurl:"/login"
 
 - name: lin-cms-spring-boot
   vendor: talelin
@@ -32451,3 +32462,15 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: woodpecker
+  vendor: woodpecker-ci
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/web-config.js"
+        - title="woodpecker"
+    - platform: google
+      queries:
+        - intitle:"woodpecker ci"
