@@ -32455,14 +32455,6 @@
       queries:
         - icon_hash="1895809524"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: woodpecker
   vendor: woodpecker-ci
   type: product
@@ -32470,7 +32462,20 @@
     - platform: fofa
       queries:
         - body="/web-config.js"
+        - title="woodpecker ci"
         - title="woodpecker"
     - platform: google
       queries:
         - intitle:"woodpecker ci"
+    - platform: shodan
+      queries:
+        - http.html:"/web-config.js"
+        - http.title:"woodpecker ci"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
