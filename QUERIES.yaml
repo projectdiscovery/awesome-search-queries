@@ -32479,3 +32479,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: xspeeder_router
+  vendor: Changsha Tongxun Computer Technology Co., Ltd
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="神行者路由"
+    - platform: shodan
+      queries:
+        - http.title:"神行者路由"
