@@ -32472,14 +32472,6 @@
         - http.html:"/web-config.js"
         - http.title:"woodpecker ci"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: xspeeder_router
   vendor: Changsha Tongxun Computer Technology Co., Ltd
   type: product
@@ -32490,3 +32482,14 @@
     - platform: shodan
       queries:
         - http.title:"神行者路由"
+    - platform: google
+      queries:
+        - intitle:"神行者路由"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
