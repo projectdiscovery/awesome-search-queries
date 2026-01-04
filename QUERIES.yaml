@@ -32496,6 +32496,9 @@
     - platform: shodan
       queries:
         - http.html:"wc-multivendor-membership"
+    - platform: fofa
+      queries:
+        - body="wc-multivendor-membership"
 
 - name: langflow
   vendor: langflow-ai
