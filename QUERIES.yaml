@@ -32486,6 +32486,28 @@
       queries:
         - intitle:"神行者路由"
 
+- name: wcfm_membership
+  vendor: wclovers
+  type: product
+  engines:
+    - platform: google
+      queries:
+        - inurl:"/wp-content/plugins/wc-multivendor-membership/"
+    - platform: shodan
+      queries:
+        - http.html:"wc-multivendor-membership"
+
+- name: langflow
+  vendor: langflow-ai
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="langflow"
+    - platform: shodan
+      queries:
+        - http.html:"langflow"
+
 - name: element
   vendor: matrix
   type: product
