@@ -32511,6 +32511,17 @@
       queries:
         - http.html:"langflow"
 
+- name: nsx_sd-wan_edge
+  vendor: vmware
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="velocloud"
+    - platform: shodan
+      queries:
+        - http.title:"velocloud"
+
 - name: element
   vendor: matrix
   type: product
