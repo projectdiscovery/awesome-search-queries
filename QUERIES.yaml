@@ -32522,6 +32522,14 @@
       queries:
         - http.title:"velocloud"
 
+- name: adonisjs
+  vendor: adonisjs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - 'x-powered-by: adonisjs'
+
 - name: element
   vendor: matrix
   type: product
