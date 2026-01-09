@@ -4782,9 +4782,11 @@
       queries:
         - http.favicon.hash:"1582430156"
         - http.html:"apache superset"
+        - http.html:"superset"
     - platform: fofa
       queries:
         - body="apache superset"
+        - body="superset"
         - icon_hash="1582430156"
 
 - name: tew-827dru_firmware
@@ -32540,6 +32542,9 @@
     - platform: google
       queries:
         - inurl:"/wp-content/plugins/learning-management-system/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/learning-management-system/"
 
 - name: element
   vendor: matrix
