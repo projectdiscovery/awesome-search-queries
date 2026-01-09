@@ -32530,6 +32530,17 @@
       queries:
         - 'x-powered-by: adonisjs'
 
+- name: masteriyo
+  vendor: themegrill
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/learning-management-system/"
+    - platform: google
+      queries:
+        - inurl:"/wp-content/plugins/learning-management-system/"
+
 - name: element
   vendor: matrix
   type: product
