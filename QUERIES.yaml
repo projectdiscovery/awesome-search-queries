@@ -9164,10 +9164,15 @@
     - platform: shodan
       queries:
         - http.html:"phpmyfaq"
+        - http.title:"phpmyfaq"
     - platform: fofa
       queries:
         - body="phpmyfaq"
         - phpmyfaq-setup
+        - title="phpmyfaq"
+    - platform: google
+      queries:
+        - intitle:"phpmyfaq"
 
 - name: mobileiron_sentry
   vendor: ivanti
@@ -32545,6 +32550,14 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/learning-management-system/"
+
+- name: hybrid_backup_sync
+  vendor: qnap
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"qnap"
 
 - name: element
   vendor: matrix
