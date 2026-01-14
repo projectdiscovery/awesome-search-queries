@@ -32559,6 +32559,17 @@
       queries:
         - product:"qnap"
 
+- name: tourfic
+  vendor: themefic
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/tourfic/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/tourfic/
+
 - name: element
   vendor: matrix
   type: product
