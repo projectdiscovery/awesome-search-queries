@@ -32580,3 +32580,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: orbeon-forms
+  vendor: orbeon
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:1253194620
