@@ -32569,6 +32569,9 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/tourfic/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/tourfic/"
 
 - name: element
   vendor: matrix
