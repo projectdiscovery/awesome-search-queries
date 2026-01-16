@@ -32573,14 +32573,6 @@
       queries:
         - http.html:"/wp-content/plugins/tourfic/"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: orbeon-forms
   vendor: orbeon
   type: product
@@ -32588,3 +32580,25 @@
     - platform: shodan
       queries:
         - http.favicon.hash:1253194620
+    - platform: fofa
+      queries:
+        - icon_hash=1253194620
+
+- name: filecatalyst
+  vendor: fortra
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="filecatalyst"
+    - platform: shodan
+      queries:
+        - http.title:"filecatalyst"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
