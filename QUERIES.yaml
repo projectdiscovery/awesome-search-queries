@@ -32603,6 +32603,22 @@
       queries:
         - http.html:"cdn.firstpromoter.com"
         - http.html:"fpr.js"
+    - platform: fofa
+      queries:
+        - body="cdn.firstpromoter.com"
+        - body="fpr.js"
+
+- name: payload
+  vendor: payloadcms
+  type: product
+  engines:
+    - platform: google
+      queries:
+        - intitle:"payload" inurl:"/admin"
+    - platform: shodan
+      queries:
+        - http.html:"@layer payload-default"
+        - http.html:"payload__modal"
 
 - name: element
   vendor: matrix
