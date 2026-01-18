@@ -32595,6 +32595,15 @@
       queries:
         - http.title:"filecatalyst"
 
+- name: firstpromoter
+  vendor: firstpromoter
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"cdn.firstpromoter.com"
+        - http.html:"fpr.js"
+
 - name: element
   vendor: matrix
   type: product
