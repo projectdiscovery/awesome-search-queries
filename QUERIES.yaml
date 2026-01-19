@@ -32619,6 +32619,12 @@
       queries:
         - http.html:"@layer payload-default"
         - http.html:"payload__modal"
+        - http.title:"payload" inurl:"/admin"
+    - platform: fofa
+      queries:
+        - body="@layer payload-default"
+        - body="payload__modal"
+        - title="payload" inurl:"/admin"
 
 - name: element
   vendor: matrix
