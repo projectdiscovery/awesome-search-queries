@@ -8021,9 +8021,14 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-2017596142
+        - http.title:"nocodb"
     - platform: fofa
       queries:
         - icon_hash=-2017596142
+        - title="nocodb"
+    - platform: google
+      queries:
+        - intitle:"nocodb"
 
 - name: filemage
   vendor: filemage
@@ -32625,6 +32630,17 @@
         - body="@layer payload-default"
         - body="payload__modal"
         - title="payload" inurl:"/admin"
+
+- name: ocean_extra
+  vendor: oceanwp
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="oceanwp" && body="woocommerce"
+    - platform: shodan
+      queries:
+        - http.html:"oceanwp" http.html:"woocommerce"
 
 - name: element
   vendor: matrix
