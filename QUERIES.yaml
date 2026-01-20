@@ -29957,6 +29957,7 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:microsoft:sharepoint_server"
+        - http.component:"microsoft sharepoint"
         - http.title:"sharepoint"
     - platform: fofa
       queries:
@@ -32643,6 +32644,14 @@
       queries:
         - http.html:"oceanwp" http.html:"woocommerce"
 
+- name: vaadin
+  vendor: vaadin
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"/vaadin/"
+
 - name: element
   vendor: matrix
   type: product
@@ -32650,3 +32659,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: raygun4js
+  vendor: raygun
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="cdn.raygun.io/raygun4js" || body="raygunobject"
+    - platform: shodan
+      queries:
+        - http.html:"cdn.raygun.io"
