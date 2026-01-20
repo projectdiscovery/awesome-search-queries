@@ -32638,6 +32638,7 @@
     - platform: fofa
       queries:
         - body="oceanwp" && body="woocommerce"
+        - body="oceanwp" http.html:"woocommerce"
     - platform: shodan
       queries:
         - http.html:"oceanwp" http.html:"woocommerce"
