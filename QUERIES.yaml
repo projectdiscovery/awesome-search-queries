@@ -32651,6 +32651,21 @@
     - platform: shodan
       queries:
         - http.html:"/vaadin/"
+    - platform: fofa
+      queries:
+        - body="/vaadin/"
+
+- name: raygun4js
+  vendor: raygun
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="cdn.raygun.io"
+        - body="cdn.raygun.io/raygun4js" || body="raygunobject"
+    - platform: shodan
+      queries:
+        - http.html:"cdn.raygun.io"
 
 - name: element
   vendor: matrix
@@ -32659,14 +32674,3 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
-
-- name: raygun4js
-  vendor: raygun
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="cdn.raygun.io/raygun4js" || body="raygunobject"
-    - platform: shodan
-      queries:
-        - http.html:"cdn.raygun.io"
