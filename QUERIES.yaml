@@ -32667,6 +32667,25 @@
       queries:
         - http.html:"cdn.raygun.io"
 
+- name: remotely
+  vendor: lucent-sea
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"remotely"
+
+- name: logrocket
+  vendor: logrocket
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="logrocket.init" || body="cdn.logrocket.io"
+    - platform: shodan
+      queries:
+        - http.html:"logrocket.init"
+
 - name: element
   vendor: matrix
   type: product
