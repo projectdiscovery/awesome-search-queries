@@ -12385,6 +12385,7 @@
         - http.title:"prestashop installation assistant"
     - platform: fofa
       queries:
+        - app="prestashop"
         - title="prestashop installation assistant"
     - platform: google
       queries:
@@ -32681,10 +32682,36 @@
   engines:
     - platform: fofa
       queries:
+        - body="logrocket.init"
         - body="logrocket.init" || body="cdn.logrocket.io"
     - platform: shodan
       queries:
         - http.html:"logrocket.init"
+
+- name: header-footer-elementor
+  vendor: brainstormforce
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/header-footer-elementor/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/header-footer-elementor/
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/header-footer-elementor/"
+
+- name: mailpit
+  vendor: axllent
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="mailpit"
+    - platform: shodan
+      queries:
+        - http.title:"mailpit"
 
 - name: element
   vendor: matrix
@@ -32693,3 +32720,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: symfony
+  vendor: symfony
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="symfony.lock"
+    - platform: shodan
+      queries:
+        - http.component:"symfony"
