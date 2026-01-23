@@ -32700,6 +32700,7 @@
         - /wp-content/plugins/header-footer-elementor/
     - platform: shodan
       queries:
+        - http.html:"/wp-content/plugins/header-footer-elementor/"
         - http.html:"wp-content/plugins/header-footer-elementor/"
 
 - name: mailpit
@@ -32713,14 +32714,6 @@
       queries:
         - http.title:"mailpit"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: symfony
   vendor: symfony
   type: product
@@ -32731,3 +32724,12 @@
     - platform: shodan
       queries:
         - http.component:"symfony"
+        - http.html:"symfony.lock"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
