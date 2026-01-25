@@ -32792,6 +32792,28 @@
       queries:
         - http.title:"cheat.sh"
 
+- name: blackbox_exporter
+  vendor: prometheus
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="blackbox exporter"
+    - platform: shodan
+      queries:
+        - http.title:"blackbox exporter"
+
+- name: liquidfiles
+  vendor: liquidfiles
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="liquidfiles"
+    - platform: shodan
+      queries:
+        - http.title:"liquidfiles"
+
 - name: element
   vendor: matrix
   type: product
