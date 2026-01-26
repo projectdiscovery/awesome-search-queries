@@ -32813,6 +32813,9 @@
     - platform: shodan
       queries:
         - http.title:"liquidfiles"
+    - platform: google
+      queries:
+        - intitle:"liquidfiles"
 
 - name: element
   vendor: matrix
