@@ -32817,6 +32817,17 @@
       queries:
         - intitle:"liquidfiles"
 
+- name: inetutils
+  vendor: gnu
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - port="23" && protocol="telnet"
+    - platform: shodan
+      queries:
+        - port:23 telnet
+
 - name: element
   vendor: matrix
   type: product
@@ -32824,3 +32835,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: bulma
+  vendor: bulma
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"cdnjs.cloudflare.com/ajax/libs/bulma" || html:"unpkg.com/bulma" || html:"bulma.css" country:"de"
