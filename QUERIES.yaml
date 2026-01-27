@@ -2405,12 +2405,14 @@
   engines:
     - platform: fofa
       queries:
+        - body="graph_view.php" html:"cacti"
         - icon_hash="-1797138069"
         - title="cacti"
         - title="login to cacti"
     - platform: shodan
       queries:
         - http.favicon.hash:"-1797138069"
+        - http.html:"graph_view.php" html:"cacti"
         - http.title:"cacti"
         - http.title:"login to cacti"
     - platform: google
@@ -32836,6 +32838,25 @@
       queries:
         - http.html:"cdnjs.cloudflare.com/ajax/libs/bulma" || html:"unpkg.com/bulma" || html:"bulma.css" country:"de"
 
+- name: tika
+  vendor: apache
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"welcome to the apache tika"
+
+- name: daenetip4_meto
+  vendor: denkovi
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="daenetip4"
+    - platform: shodan
+      queries:
+        - http.title:"daenetip4"
+
 - name: element
   vendor: matrix
   type: product
@@ -32844,10 +32865,16 @@
       queries:
         - http.html:"manifest.json"
 
-- name: tika
-  vendor: apache
+- name: laserjet
+  vendor: hp
   type: product
   engines:
+    - platform: fofa
+      queries:
+        - title="hp laserjet"
+    - platform: google
+      queries:
+        - intitle:"hp laserjet" inurl:info_configuration
     - platform: shodan
       queries:
-        - http.title:"welcome to the apache tika"
+        - http.title:"hp laserjet"
