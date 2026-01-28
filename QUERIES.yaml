@@ -32857,14 +32857,6 @@
       queries:
         - http.title:"daenetip4"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: laserjet
   vendor: hp
   type: product
@@ -32872,9 +32864,28 @@
     - platform: fofa
       queries:
         - title="hp laserjet"
+        - title="hp laserjet" inurl:info_configuration
     - platform: google
       queries:
+        - intitle:"hp laserjet"
         - intitle:"hp laserjet" inurl:info_configuration
     - platform: shodan
       queries:
         - http.title:"hp laserjet"
+        - http.title:"hp laserjet" inurl:info_configuration
+
+- name: browser-rum
+  vendor: datadog
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"dd_rum.init"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
