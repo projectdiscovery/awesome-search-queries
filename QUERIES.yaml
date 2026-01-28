@@ -32882,6 +32882,33 @@
       queries:
         - http.html:"dd_rum.init"
 
+- name: storefront_server
+  vendor: citrix
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - /citrix/storeweb
+    - platform: shodan
+      queries:
+        - /citrix/storeweb
+
+- name: unified_communications_manager
+  vendor: cisco
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/ucmuser/"
+        - title="unified communications self care portal"
+    - platform: shodan
+      queries:
+        - http.html:"/ucmuser/"
+        - http.title:"unified communications self care portal"
+    - platform: google
+      queries:
+        - intitle:"unified communications self care portal"
+
 - name: element
   vendor: matrix
   type: product
@@ -32889,3 +32916,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: smartermail
+  vendor: smartertools
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"smartermail"
