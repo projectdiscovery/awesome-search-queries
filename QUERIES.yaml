@@ -32909,6 +32909,39 @@
       queries:
         - intitle:"unified communications self care portal"
 
+- name: smartermail
+  vendor: smartertools
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"smartermail"
+    - platform: fofa
+      queries:
+        - title="smartermail"
+    - platform: google
+      queries:
+        - intitle:"smartermail"
+
+- name: n8n
+  vendor: n8n-io
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-831756631"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-831756631
+
+- name: download_monitor
+  vendor: download_monitor_project
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/download-monitor/
+
 - name: element
   vendor: matrix
   type: product
@@ -32917,10 +32950,10 @@
       queries:
         - http.html:"manifest.json"
 
-- name: smartermail
-  vendor: smartertools
+- name: livewire
+  vendor: laravel
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.title:"smartermail"
+        - http.html:"wire:id"
