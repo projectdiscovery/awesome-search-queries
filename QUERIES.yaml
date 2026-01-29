@@ -5746,12 +5746,15 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/photo-gallery
+        - bwg_container
     - platform: shodan
       queries:
         - http.html:/wp-content/plugins/photo-gallery
+        - http.html:bwg_container
     - platform: fofa
       queries:
         - body=/wp-content/plugins/photo-gallery
+        - body=bwg_container
 
 - name: jobsearch_wp_job_board
   vendor: eyecix
@@ -9363,6 +9366,10 @@
       queries:
         - cpe:"cpe:2.3:a:atlassian:confluence"
         - http.component:"atlassian confluence"
+        - http.favicon.hash:"-305179312"
+    - platform: fofa
+      queries:
+        - icon_hash="-305179312"
 
 - name: mypixs
   vendor: mypixs_project
@@ -31629,15 +31636,15 @@
   engines:
     - platform: fofa
       queries:
+        - body="/wp-content/plugins/the-events-calendar/"
         - body="wp-content/plugins/the-events-calendar/"
-        - body=/wp-content/plugins/the-events-calendar/
     - platform: publicwww
       queries:
         - /wp-content/plugins/the-events-calendar/
     - platform: shodan
       queries:
+        - http.html:"/wp-content/plugins/the-events-calendar/"
         - http.html:"wp-content/plugins/the-events-calendar/"
-        - http.html:/wp-content/plugins/the-events-calendar/
 
 - name: userpro
   vendor: userproplugin
@@ -32932,7 +32939,7 @@
         - icon_hash="-831756631"
     - platform: shodan
       queries:
-        - http.favicon.hash:-831756631
+        - http.favicon.hash:"-831756631"
 
 - name: download_monitor
   vendor: download_monitor_project
@@ -32941,14 +32948,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/download-monitor/
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
     - platform: shodan
       queries:
-        - http.html:"manifest.json"
+        - http.html:/wp-content/plugins/download-monitor/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/download-monitor/
 
 - name: livewire
   vendor: laravel
@@ -32957,3 +32962,19 @@
     - platform: shodan
       queries:
         - http.html:"wire:id"
+
+- name: path
+  vendor: aurelia
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.component:"aurelia"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
