@@ -32978,3 +32978,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: dokploy
+  vendor: dokploy
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:dokploy
