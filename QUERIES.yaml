@@ -32979,6 +32979,14 @@
       queries:
         - http.title:dokploy
 
+- name: xwiki-platform-distribution-flavor-main
+  vendor: XWiki
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"data-xwiki-reference"
+
 - name: element
   vendor: matrix
   type: product
