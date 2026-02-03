@@ -32987,6 +32987,14 @@
       queries:
         - http.html:"data-xwiki-reference"
 
+- name: whodb
+  vendor: clidey
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="whodb"
+
 - name: element
   vendor: matrix
   type: product
