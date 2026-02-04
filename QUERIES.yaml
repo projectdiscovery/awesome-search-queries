@@ -21875,12 +21875,15 @@
   engines:
     - platform: shodan
       queries:
+        - http.title:"vmware appliance management"
         - http.title:"vmware cloud"
     - platform: fofa
       queries:
+        - title="vmware appliance management"
         - title="vmware cloud"
     - platform: google
       queries:
+        - intitle:"vmware appliance management"
         - intitle:"vmware cloud"
 
 - name: nacos
@@ -33005,6 +33008,9 @@
     - platform: shodan
       queries:
         - http.html:"opencode"
+    - platform: fofa
+      queries:
+        - body="opencode"
 
 - name: element
   vendor: matrix
