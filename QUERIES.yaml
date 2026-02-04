@@ -32994,6 +32994,17 @@
     - platform: fofa
       queries:
         - body="whodb"
+    - platform: shodan
+      queries:
+        - http.html:"whodb"
+
+- name: opencode
+  vendor: opencode
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"opencode"
 
 - name: element
   vendor: matrix
