@@ -21909,6 +21909,7 @@
     - platform: shodan
       queries:
         - http.title:"vmware vcenter"
+        - vmware vcenter server
     - platform: fofa
       queries:
         - title="vmware vcenter"
