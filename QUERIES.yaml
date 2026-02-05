@@ -33013,6 +33013,17 @@
       queries:
         - body="opencode"
 
+- name: melis-platform
+  vendor: melis-technology
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/melis/meliscms" || body="melisdemocms"
+    - platform: shodan
+      queries:
+        - http.html:"/melis/meliscms"
+
 - name: element
   vendor: matrix
   type: product
