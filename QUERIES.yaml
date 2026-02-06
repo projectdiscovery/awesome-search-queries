@@ -33019,6 +33019,7 @@
   engines:
     - platform: fofa
       queries:
+        - body="/melis/meliscms"
         - body="/melis/meliscms" || body="melisdemocms"
     - platform: shodan
       queries:
