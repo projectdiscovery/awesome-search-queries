@@ -33025,6 +33025,17 @@
       queries:
         - http.html:"/melis/meliscms"
 
+- name: perfect-images
+  vendor: meowapps
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-retina-2x/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/wp-retina-2x/
+
 - name: element
   vendor: matrix
   type: product
