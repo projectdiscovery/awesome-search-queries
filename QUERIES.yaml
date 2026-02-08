@@ -33035,6 +33035,17 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/wp-retina-2x/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wp-retina-2x/"
+
+- name: wordpress_email_newsletter
+  vendor: megamindstechnologies
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /plugins/wp-email-newsletter/
 
 - name: element
   vendor: matrix
