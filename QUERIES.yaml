@@ -6374,13 +6374,16 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/learnpress
+        - /wp-content/plugins/learnpress/
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/learnpress"
+        - http.html:"/wp-content/plugins/learnpress/"
         - http.html:"wp-content/plugins/learnpress"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/learnpress"
+        - body="/wp-content/plugins/learnpress/"
         - body="wp-content/plugins/learnpress"
 
 - name: searchwp_live_ajax_search
@@ -33046,6 +33049,20 @@
     - platform: publicwww
       queries:
         - /plugins/wp-email-newsletter/
+    - platform: shodan
+      queries:
+        - http.html:/plugins/wp-email-newsletter/
+    - platform: fofa
+      queries:
+        - body=/plugins/wp-email-newsletter/
+
+- name: web_help_desk
+  vendor: solarwinds
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:1895809524
 
 - name: element
   vendor: matrix
