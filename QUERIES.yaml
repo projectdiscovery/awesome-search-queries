@@ -33063,6 +33063,9 @@
     - platform: shodan
       queries:
         - http.favicon.hash:1895809524
+    - platform: fofa
+      queries:
+        - icon_hash=1895809524
 
 - name: element
   vendor: matrix
