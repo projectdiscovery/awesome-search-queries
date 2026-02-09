@@ -12059,10 +12059,12 @@
       queries:
         - cpe:"cpe:2.3:a:djangoproject:django"
         - cpe:"cpe:2.3:a:djangoproject:django" || http.title:"django administration"
+        - django
         - http.html:settings.py
         - http.title:"the install worked successfully! congratulations!"
     - platform: fofa
       queries:
+        - app="django"
         - body=settings.py
         - title="the install worked successfully! congratulations!"
     - platform: google
