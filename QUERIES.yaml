@@ -33069,6 +33069,14 @@
       queries:
         - icon_hash=1895809524
 
+- name: wp_dream_carousel
+  vendor: neoloki
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /plugins/wp-dream-carousel/
+
 - name: element
   vendor: matrix
   type: product
