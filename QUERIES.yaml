@@ -33076,6 +33076,61 @@
     - platform: publicwww
       queries:
         - /plugins/wp-dream-carousel/
+    - platform: shodan
+      queries:
+        - http.html:/plugins/wp-dream-carousel/
+    - platform: fofa
+      queries:
+        - body=/plugins/wp-dream-carousel/
+
+- name: newsticker
+  vendor: mahinsha
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="news-ticker"
+    - platform: shodan
+      queries:
+        - http.component:"wordpress"
+
+- name: justrows_free
+  vendor: canaveralstudio
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /plugins/justrows-free/
+
+- name: firewall
+  vendor: sophos
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="sophos"
+    - platform: shodan
+      queries:
+        - http.title:"sophos"
+
+- name: 1-click-migration
+  vendor: 1-click-migration
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/1-click-migration/"
+
+- name: site-reviews
+  vendor: geminilabs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="site-reviews" || body="glsr-form"
+    - platform: shodan
+      queries:
+        - http.component:"wordpress"
 
 - name: element
   vendor: matrix
