@@ -33093,6 +33093,7 @@
     - platform: shodan
       queries:
         - http.component:"wordpress"
+        - http.html:"news-ticker"
 
 - name: justrows_free
   vendor: canaveralstudio
@@ -33101,6 +33102,12 @@
     - platform: publicwww
       queries:
         - /plugins/justrows-free/
+    - platform: shodan
+      queries:
+        - http.html:/plugins/justrows-free/
+    - platform: fofa
+      queries:
+        - body=/plugins/justrows-free/
 
 - name: firewall
   vendor: sophos
@@ -33112,6 +33119,9 @@
     - platform: shodan
       queries:
         - http.title:"sophos"
+    - platform: google
+      queries:
+        - intitle:"sophos"
 
 - name: 1-click-migration
   vendor: 1-click-migration
@@ -33120,6 +33130,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/1-click-migration/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/1-click-migration/"
 
 - name: site-reviews
   vendor: geminilabs
@@ -33131,6 +33144,14 @@
     - platform: shodan
       queries:
         - http.component:"wordpress"
+
+- name: premium_addons_for_elementor
+  vendor: leap13
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/premium-addons-for-elementor/
 
 - name: element
   vendor: matrix
