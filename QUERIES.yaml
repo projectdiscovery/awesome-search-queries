@@ -33152,6 +33152,23 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/premium-addons-for-elementor/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/premium-addons-for-elementor/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/premium-addons-for-elementor/
+
+- name: dtale
+  vendor: man-group
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="d-tale"
+    - platform: shodan
+      queries:
+        - http.title:"d-tale"
 
 - name: element
   vendor: matrix
