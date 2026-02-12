@@ -32278,12 +32278,15 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/12-step-meeting-list/"
+        - body=/plugins/12-step-meeting-list/
     - platform: publicwww
       queries:
+        - /plugins/12-step-meeting-list/
         - /wp-content/plugins/12-step-meeting-list/
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/12-step-meeting-list/"
+        - http.html:/plugins/12-step-meeting-list/
 
 - name: laminas-http
   vendor: getlaminas
@@ -33182,6 +33185,20 @@
     - platform: publicwww
       queries:
         - /plugins/policy-genius/
+    - platform: shodan
+      queries:
+        - http.html:/plugins/policy-genius/
+    - platform: fofa
+      queries:
+        - body=/plugins/policy-genius/
+
+- name: zimaos
+  vendor: zimaspace
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"zimaos"
 
 - name: element
   vendor: matrix
