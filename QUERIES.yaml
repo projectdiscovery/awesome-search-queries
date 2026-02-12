@@ -294,6 +294,7 @@
         - product:"tomcat"
     - platform: fofa
       queries:
+        - app="apache-tomcat"
         - body="apache tomcat"
         - body="jk status manager"
         - server=="apache tomcat"
@@ -815,16 +816,20 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:adminer:adminer"
+        - http.title:"adminer"
         - http.title:"login - adminer"
     - platform: fofa
       queries:
         - app="adminer" && body="4.7.8"
+        - title="adminer"
+        - title="adminer" || body="adminer"
         - title="login - adminer"
     - platform: hunter
       queries:
         - app.name="adminer"&&web.body="4.7.8"
     - platform: google
       queries:
+        - intitle:"adminer"
         - intitle:"login - adminer"
 
 - name: thinfinity_virtualui
@@ -33169,6 +33174,14 @@
     - platform: shodan
       queries:
         - http.title:"d-tale"
+
+- name: privacy_policy_genius
+  vendor: waelhassan
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /plugins/policy-genius/
 
 - name: element
   vendor: matrix
