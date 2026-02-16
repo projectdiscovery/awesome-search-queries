@@ -33207,3 +33207,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: headlamp
+  vendor: kubernetes-sigs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="headlampbaseurl" && body="headlamp"
