@@ -8159,6 +8159,12 @@
     - platform: fofa
       queries:
         - title="fuxa"
+    - platform: shodan
+      queries:
+        - http.title:"fuxa"
+    - platform: google
+      queries:
+        - intitle:"fuxa"
 
 - name: d-view_8
   vendor: dlink
@@ -33200,14 +33206,6 @@
       queries:
         - http.html:"zimaos"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: headlamp
   vendor: kubernetes-sigs
   type: product
@@ -33215,3 +33213,11 @@
     - platform: fofa
       queries:
         - body="headlampbaseurl" && body="headlamp"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
