@@ -33221,3 +33221,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: f3x36
+  vendor: four-faith
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="four-faith"
+    - platform: shodan
+      queries:
+        - four-faith
