@@ -33078,10 +33078,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:1895809524
+        - http.favicon.hash:"1895809524"
     - platform: fofa
       queries:
-        - icon_hash=1895809524
+        - icon_hash="1895809524"
 
 - name: wp_dream_carousel
   vendor: neoloki
@@ -33214,14 +33214,6 @@
       queries:
         - body="headlampbaseurl" && body="headlamp"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: f3x36
   vendor: four-faith
   type: product
@@ -33232,3 +33224,12 @@
     - platform: shodan
       queries:
         - four-faith
+        - http.html:"four-faith"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
