@@ -33226,14 +33226,6 @@
         - four-faith
         - http.html:"four-faith"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: emc_recoverpoint
   vendor: dell
   type: product
@@ -33241,3 +33233,22 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-742276344
+    - platform: fofa
+      queries:
+        - icon_hash=-742276344
+
+- name: pocketbase
+  vendor: pocketbase
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:981081715
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
