@@ -33233,3 +33233,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: emc_recoverpoint
+  vendor: dell
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-742276344
