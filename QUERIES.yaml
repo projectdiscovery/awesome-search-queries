@@ -33248,14 +33248,6 @@
       queries:
         - icon_hash=981081715
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: dagu
   vendor: dagu-org
   type: product
@@ -33277,3 +33269,11 @@
     - platform: shodan
       queries:
         - http.title:"group-office"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
