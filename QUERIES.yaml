@@ -33255,3 +33255,25 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: dagu
+  vendor: dagu-org
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="dagu"
+    - platform: shodan
+      queries:
+        - http.title:"dagu"
+
+- name: group-office
+  vendor: intermesh
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="group-office"
+    - platform: shodan
+      queries:
+        - http.title:"group-office"
