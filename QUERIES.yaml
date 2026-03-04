@@ -33270,6 +33270,22 @@
       queries:
         - http.title:"group-office"
 
+- name: feast
+  vendor: feast
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"feast feature store"
+
+- name: comfyui
+  vendor: comfyanonymous
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"comfyui"
+
 - name: element
   vendor: matrix
   type: product
