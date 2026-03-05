@@ -33277,6 +33277,12 @@
     - platform: shodan
       queries:
         - http.title:"feast feature store"
+    - platform: fofa
+      queries:
+        - title="feast feature store"
+    - platform: google
+      queries:
+        - intitle:"feast feature store"
 
 - name: comfyui
   vendor: comfyanonymous
@@ -33285,6 +33291,12 @@
     - platform: shodan
       queries:
         - http.title:"comfyui"
+    - platform: fofa
+      queries:
+        - title="comfyui"
+    - platform: google
+      queries:
+        - intitle:"comfyui"
 
 - name: element
   vendor: matrix
