@@ -33305,3 +33305,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: nginx-ui
+  vendor: 0xjacky
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="nginx ui"
+    - platform: shodan
+      queries:
+        - http.title:"nginx ui"
