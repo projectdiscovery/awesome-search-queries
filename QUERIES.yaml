@@ -33319,3 +33319,36 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: line-tcprs1
+  vendor: circutor
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="line-tcprs1"
+    - platform: shodan
+      queries:
+        - http.html:"line-tcprs1"
+
+- name: boss-mini
+  vendor: carel
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash=="1092427843"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:="1092427843"
+
+- name: saisies
+  vendor: spip
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="spip"
+    - platform: shodan
+      queries:
+        - http.html:"spip"
