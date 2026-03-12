@@ -12552,9 +12552,11 @@
       queries:
         - cpe:"cpe:2.3:a:mongodb:mongodb"
         - http.html:"mongod"
+        - product:"mongodb"
     - platform: fofa
       queries:
         - body="mongod"
+        - protocol="mongodb"
 
 - name: mysql
   vendor: mysql
@@ -33353,3 +33355,25 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: vlife
+  vendor: vlife
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - http.title:"vlife"
+    - platform: shodan
+      queries:
+        - http.title:"vlife"
+
+- name: wpvivid-backuprestore
+  vendor: wpvivid
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/wpvivid-backuprestore"
+    - platform: shodan
+      queries:
+        - http.component:"wordpress"
