@@ -33312,14 +33312,6 @@
       queries:
         - intitle:"nginx ui"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: line-tcprs1
   vendor: circutor
   type: product
@@ -33349,6 +33341,15 @@
     - platform: fofa
       queries:
         - app="spip"
+        - body="spip"
     - platform: shodan
       queries:
         - http.html:"spip"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
