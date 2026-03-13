@@ -33348,14 +33348,6 @@
       queries:
         - http.html:"spip"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: vlife
   vendor: vlife
   type: product
@@ -33363,9 +33355,13 @@
     - platform: fofa
       queries:
         - http.title:"vlife"
+        - title="vlife"
     - platform: shodan
       queries:
         - http.title:"vlife"
+    - platform: google
+      queries:
+        - intitle:"vlife"
 
 - name: wpvivid-backuprestore
   vendor: wpvivid
@@ -33377,3 +33373,12 @@
     - platform: shodan
       queries:
         - http.component:"wordpress"
+        - http.html:"wp-content/plugins/wpvivid-backuprestore"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
