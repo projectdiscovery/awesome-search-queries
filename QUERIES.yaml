@@ -33382,3 +33382,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: social-icons-widget-by-wpzoom
+  vendor: wpzoom
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /plugins/social-icons-widget-by-wpzoom/
