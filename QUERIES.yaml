@@ -33375,6 +33375,20 @@
         - http.component:"wordpress"
         - http.html:"wp-content/plugins/wpvivid-backuprestore"
 
+- name: social-icons-widget-by-wpzoom
+  vendor: wpzoom
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /plugins/social-icons-widget-by-wpzoom/
+    - platform: shodan
+      queries:
+        - http.html:/plugins/social-icons-widget-by-wpzoom/
+    - platform: fofa
+      queries:
+        - body=/plugins/social-icons-widget-by-wpzoom/
+
 - name: element
   vendor: matrix
   type: product
@@ -33383,10 +33397,18 @@
       queries:
         - http.html:"manifest.json"
 
-- name: social-icons-widget-by-wpzoom
-  vendor: wpzoom
+- name: MindsDB
+  vendor: MindsDB
   type: product
   engines:
-    - platform: publicwww
+    - platform: shodan
       queries:
-        - /plugins/social-icons-widget-by-wpzoom/
+        - http.title:"mindsdb"
+
+- name: mail-mint
+  vendor: mail-mint
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/mail-mint/"
