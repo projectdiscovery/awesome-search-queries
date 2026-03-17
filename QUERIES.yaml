@@ -33389,14 +33389,6 @@
       queries:
         - body=/plugins/social-icons-widget-by-wpzoom/
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: MindsDB
   vendor: MindsDB
   type: product
@@ -33404,6 +33396,12 @@
     - platform: shodan
       queries:
         - http.title:"mindsdb"
+    - platform: fofa
+      queries:
+        - title="mindsdb"
+    - platform: google
+      queries:
+        - intitle:"mindsdb"
 
 - name: mail-mint
   vendor: mail-mint
@@ -33412,3 +33410,14 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/mail-mint/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/mail-mint/"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
