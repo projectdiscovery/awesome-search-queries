@@ -33421,3 +33421,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: wpdirectorykit
+  vendor: wpdirectorykit
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wpdirectorykit/"
