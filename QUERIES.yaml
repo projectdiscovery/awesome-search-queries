@@ -6363,13 +6363,17 @@
     - platform: shodan
       queries:
         - http.html:"oracle uix"
+        - http.title:"login" "x-oracle-dms-ecid"
         - http.title:"login" "x-oracle-dms-ecid" 200
     - platform: fofa
       queries:
         - body="oracle uix"
+        - title="login" "x-oracle-dms-ecid"
         - title="login" "x-oracle-dms-ecid" 200
+        - title="login" && header="x-oracle-dms-ecid"
     - platform: google
       queries:
+        - intitle:"login" "x-oracle-dms-ecid"
         - intitle:"login" "x-oracle-dms-ecid" 200
 
 - name: learnpress
