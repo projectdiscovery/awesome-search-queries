@@ -33414,14 +33414,6 @@
       queries:
         - http.html:"/wp-content/plugins/mail-mint/"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: wpdirectorykit
   vendor: wpdirectorykit
   type: product
@@ -33429,3 +33421,14 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/wpdirectorykit/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wpdirectorykit/"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
