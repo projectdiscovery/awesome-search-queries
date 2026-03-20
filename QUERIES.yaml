@@ -33429,14 +33429,6 @@
       queries:
         - http.html:"/wp-content/plugins/wpdirectorykit/"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: polaris
   vendor: apache
   type: product
@@ -33447,7 +33439,29 @@
         - http.title:"apache polaris"
     - platform: fofa
       queries:
+        - body="org.apache.polaris"
         - title="apache polaris"
     - platform: google
       queries:
         - intitle:"apache polaris"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: footprints
+  vendor: bmc
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/footprints/servicedesk/"
+        - body="bmc software"
+    - platform: shodan
+      queries:
+        - http.html:"/footprints/servicedesk/"
+        - http.html:"bmc software"
