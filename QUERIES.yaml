@@ -33436,3 +33436,18 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: polaris
+  vendor: apache
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"org.apache.polaris"
+        - http.title:"apache polaris"
+    - platform: fofa
+      queries:
+        - title="apache polaris"
+    - platform: google
+      queries:
+        - intitle:"apache polaris"
