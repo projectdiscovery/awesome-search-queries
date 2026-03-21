@@ -33445,14 +33445,6 @@
       queries:
         - intitle:"apache polaris"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: footprints
   vendor: bmc
   type: product
@@ -33465,3 +33457,11 @@
       queries:
         - http.html:"/footprints/servicedesk/"
         - http.html:"bmc software"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
