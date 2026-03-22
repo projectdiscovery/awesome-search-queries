@@ -14430,6 +14430,10 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:synology:diskstation_manager"
+        - http.html:"synology&nbsp;diskstation"
+    - platform: fofa
+      queries:
+        - body="synology&nbsp;diskstation"
 
 - name: mailchimp
   vendor: thinkshout
