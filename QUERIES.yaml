@@ -25196,16 +25196,20 @@
       queries:
         - http.title:"configure ntop"
         - http.title:"ntopng - traffic dashboard"
+        - http.title:"ntopng" port:3000
         - http.title:"welcome to ntop"
     - platform: fofa
       queries:
         - title="configure ntop"
         - title="ntopng - traffic dashboard"
+        - title="ntopng" && port="3000"
+        - title="ntopng" port:3000
         - title="welcome to ntop"
     - platform: google
       queries:
         - intitle:"configure ntop"
         - intitle:"ntopng - traffic dashboard"
+        - intitle:"ntopng" port:3000
         - intitle:"welcome to ntop"
 
 - name: bitbucket_data_center
@@ -33462,6 +33466,14 @@
         - http.html:"/footprints/servicedesk/"
         - http.html:"bmc software"
 
+- name: rustfs
+  vendor: rustfs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"rustfs"
+
 - name: element
   vendor: matrix
   type: product
@@ -33469,3 +33481,33 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: rosariosis
+  vendor: rosariosis
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"rosariosis"
+
+- name: harbor
+  vendor: goharbor
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="harbor"
+    - platform: shodan
+      queries:
+        - http.title:"harbor"
+
+- name: doccano
+  vendor: doccano
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="doccano"
+    - platform: shodan
+      queries:
+        - http.title:"doccano"
