@@ -33474,14 +33474,6 @@
       queries:
         - http.title:"rustfs"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: rosariosis
   vendor: rosariosis
   type: product
@@ -33489,6 +33481,9 @@
     - platform: shodan
       queries:
         - http.html:"rosariosis"
+    - platform: fofa
+      queries:
+        - body="rosariosis"
 
 - name: harbor
   vendor: goharbor
@@ -33500,6 +33495,9 @@
     - platform: shodan
       queries:
         - http.title:"harbor"
+    - platform: google
+      queries:
+        - intitle:"harbor"
 
 - name: doccano
   vendor: doccano
@@ -33511,3 +33509,14 @@
     - platform: shodan
       queries:
         - http.title:"doccano"
+    - platform: google
+      queries:
+        - intitle:"doccano"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
