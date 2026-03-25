@@ -1096,6 +1096,7 @@
     - platform: fofa
       queries:
         - body="- installation"
+        - body="piwigo"
         - body="piwigo" html:"- installation"
         - icon_hash=540706145
         - title="piwigo"
@@ -1106,6 +1107,7 @@
       queries:
         - http.favicon.hash:540706145
         - http.html:"- installation"
+        - http.html:"piwigo"
         - http.html:"piwigo" html:"- installation"
 
 - name: x3
@@ -21340,10 +21342,15 @@
       queries:
         - http.favicon.hash:1781653957
         - http.html:"limesurvey installer"
+        - http.title:"limesurvey"
     - platform: fofa
       queries:
         - body="limesurvey installer"
         - icon_hash=1781653957
+        - title="limesurvey"
+    - platform: google
+      queries:
+        - intitle:"limesurvey"
 
 - name: clusterengine
   vendor: inspur
@@ -33520,3 +33527,25 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: mistserver
+  vendor: ddvtech
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="mistserver"
+    - platform: shodan
+      queries:
+        - http.title:"mistserver"
+
+- name: ilias
+  vendor: ilias
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="login to ilias"
+    - platform: shodan
+      queries:
+        - http.title:"login to ilias"
