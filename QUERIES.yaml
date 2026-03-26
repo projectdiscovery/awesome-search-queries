@@ -8598,9 +8598,11 @@
   engines:
     - platform: fofa
       queries:
+        - body="jumpserver 开源堡垒机"
         - title="jumpserver"
     - platform: shodan
       queries:
+        - http.html:"jumpserver 开源堡垒机"
         - http.title:'jumpserver'
     - platform: google
       queries:
@@ -33548,14 +33550,6 @@
       queries:
         - intitle:"login to ilias"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: mastodon
   vendor: mastodon
   type: product
@@ -33574,3 +33568,41 @@
     - platform: shodan
       queries:
         - http.component:"astro"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: casdoor
+  vendor: casdoor
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="casdoor" || body="casdoor"
+    - platform: shodan
+      queries:
+        - http.title:"casdoor"
+
+- name: budibase
+  vendor: budibase
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"budibase"
+
+- name: guests
+  vendor: owncloud
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="owncloud"
+    - platform: shodan
+      queries:
+        - http.title:"owncloud"
