@@ -33520,14 +33520,6 @@
       queries:
         - intitle:"doccano"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: mistserver
   vendor: ddvtech
   type: product
@@ -33538,6 +33530,9 @@
     - platform: shodan
       queries:
         - http.title:"mistserver"
+    - platform: google
+      queries:
+        - intitle:"mistserver"
 
 - name: ilias
   vendor: ilias
@@ -33549,3 +33544,33 @@
     - platform: shodan
       queries:
         - http.title:"login to ilias"
+    - platform: google
+      queries:
+        - intitle:"login to ilias"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: mastodon
+  vendor: mastodon
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"mastodon-"
+
+- name: astro
+  vendor: withastro
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="astro"
+    - platform: shodan
+      queries:
+        - http.component:"astro"
