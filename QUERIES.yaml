@@ -33569,24 +33569,20 @@
       queries:
         - http.component:"astro"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: casdoor
   vendor: casdoor
   type: product
   engines:
     - platform: fofa
       queries:
+        - title="casdoor"
         - title="casdoor" || body="casdoor"
     - platform: shodan
       queries:
         - http.title:"casdoor"
+    - platform: google
+      queries:
+        - intitle:"casdoor"
 
 - name: budibase
   vendor: budibase
@@ -33595,6 +33591,12 @@
     - platform: shodan
       queries:
         - http.title:"budibase"
+    - platform: fofa
+      queries:
+        - title="budibase"
+    - platform: google
+      queries:
+        - intitle:"budibase"
 
 - name: guests
   vendor: owncloud
@@ -33606,3 +33608,14 @@
     - platform: shodan
       queries:
         - http.title:"owncloud"
+    - platform: google
+      queries:
+        - intitle:"owncloud"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
