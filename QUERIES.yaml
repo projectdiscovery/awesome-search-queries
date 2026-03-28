@@ -14295,15 +14295,18 @@
         - http.html:'content="redmine'
         - http.title:"index of" "settings.yml"
         - http.title:"index of" configuration.yml
+        - http.title:"redmine"
     - platform: fofa
       queries:
         - body='content="redmine'
         - title="index of" "settings.yml"
         - title="index of" configuration.yml
+        - title="redmine"
     - platform: google
       queries:
         - intitle:"index of" "settings.yml"
         - intitle:"index of" configuration.yml
+        - intitle:"redmine"
 
 - name: webmail
   vendor: roundcube
@@ -33611,6 +33614,17 @@
     - platform: google
       queries:
         - intitle:"owncloud"
+
+- name: alfresco-content-services
+  vendor: alfresco
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="alfresco" || body="/share/res/js/alfresco"
+    - platform: shodan
+      queries:
+        - http.title:"alfresco" http.html:"alfresco"
 
 - name: element
   vendor: matrix
