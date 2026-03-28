@@ -33621,10 +33621,14 @@
   engines:
     - platform: fofa
       queries:
+        - title="alfresco" http.html:"alfresco"
         - title="alfresco" || body="/share/res/js/alfresco"
     - platform: shodan
       queries:
         - http.title:"alfresco" http.html:"alfresco"
+    - platform: google
+      queries:
+        - intitle:"alfresco" http.html:"alfresco"
 
 - name: element
   vendor: matrix
