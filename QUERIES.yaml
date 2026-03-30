@@ -9803,16 +9803,20 @@
       queries:
         - app="dedecms"
         - body="dedecms"
+        - body="dedecms" || body="/plus/download.php"
         - body="power by dedecms" || title:"dedecms"
+        - title="dedecms"
         - title="dedecms" || http.html:"power by dedecms"
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:dedecms:dedecms"
         - http.html:"dedecms"
         - http.html:"power by dedecms" || title:"dedecms"
+        - http.title:"dedecms"
         - http.title:"dedecms" || http.html:"power by dedecms"
     - platform: google
       queries:
+        - intitle:"dedecms"
         - intitle:"dedecms" || http.html:"power by dedecms"
 
 - name: custom_admin_page
@@ -33629,6 +33633,50 @@
     - platform: google
       queries:
         - intitle:"alfresco" http.html:"alfresco"
+
+- name: pfsense
+  vendor: netgate
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="pfsense"
+    - platform: shodan
+      queries:
+        - http.title:"pfsense"
+
+- name: homebridge-config-ui-x
+  vendor: homebridge
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="homebridge"
+    - platform: shodan
+      queries:
+        - http.title:"homebridge"
+
+- name: hummingbird-performance
+  vendor: wpmudev
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/hummingbird-performance"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/hummingbird-performance"
+
+- name: spring_cloud_config
+  vendor: vmware
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="propertysources" && body="profiles" && body="label"
+    - platform: shodan
+      queries:
+        - http.html:"propertysources"
 
 - name: element
   vendor: matrix
