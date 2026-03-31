@@ -33644,6 +33644,9 @@
     - platform: shodan
       queries:
         - http.title:"pfsense"
+    - platform: google
+      queries:
+        - intitle:"pfsense"
 
 - name: homebridge-config-ui-x
   vendor: homebridge
@@ -33655,6 +33658,9 @@
     - platform: shodan
       queries:
         - http.title:"homebridge"
+    - platform: google
+      queries:
+        - intitle:"homebridge"
 
 - name: hummingbird-performance
   vendor: wpmudev
@@ -33673,6 +33679,7 @@
   engines:
     - platform: fofa
       queries:
+        - body="propertysources"
         - body="propertysources" && body="profiles" && body="label"
     - platform: shodan
       queries:
