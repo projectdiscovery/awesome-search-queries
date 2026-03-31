@@ -33685,6 +33685,14 @@
       queries:
         - http.html:"propertysources"
 
+- name: service-finder-bookings
+  vendor: sf-booking
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/sf-booking/
+
 - name: element
   vendor: matrix
   type: product
