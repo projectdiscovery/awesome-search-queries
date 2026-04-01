@@ -23275,6 +23275,7 @@
         - http.title:"graylog web interface"
     - platform: fofa
       queries:
+        - app="graylog" || title="graylog web interface"
         - title="graylog web interface"
     - platform: google
       queries:
@@ -33717,10 +33718,14 @@
   engines:
     - platform: fofa
       queries:
+        - title="gradio"
         - title="gradio" || body="gradio-app"
     - platform: shodan
       queries:
         - http.title:"gradio"
+    - platform: google
+      queries:
+        - intitle:"gradio"
 
 - name: nocobase
   vendor: nocobase
@@ -33729,9 +33734,36 @@
     - platform: fofa
       queries:
         - body="__nocobase_public_path__"
+        - title="nocobase"
     - platform: shodan
       queries:
+        - http.html:"__nocobase_public_path__"
         - http.title:"nocobase"
+    - platform: google
+      queries:
+        - intitle:"nocobase"
+
+- name: netbox
+  vendor: netbox-community
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="netbox" || body="netbox-community"
+    - platform: shodan
+      queries:
+        - http.title:"netbox"
+
+- name: siyuan
+  vendor: siyuan-note
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-1450125239
+    - platform: fofa
+      queries:
+        - icon_hash=-1450125239
 
 - name: element
   vendor: matrix
