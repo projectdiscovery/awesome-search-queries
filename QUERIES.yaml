@@ -19930,6 +19930,7 @@
         - /wp-content/plugins/contact-form-plugin/
     - platform: shodan
       queries:
+        - http.component:"wordpress"
         - http.html:/wp-content/plugins/contact-form-plugin/
 
 - name: duplicator
@@ -33692,6 +33693,45 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/sf-booking/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/sf-booking/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/sf-booking/
+
+- name: heimdall
+  vendor: linuxserver
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="heimdall-application-dashboard"
+    - platform: shodan
+      queries:
+        - http.title:"heimdall"
+
+- name: gradio
+  vendor: gradio-app
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="gradio" || body="gradio-app"
+    - platform: shodan
+      queries:
+        - http.title:"gradio"
+
+- name: nocobase
+  vendor: nocobase
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="__nocobase_public_path__"
+    - platform: shodan
+      queries:
+        - http.title:"nocobase"
 
 - name: element
   vendor: matrix
