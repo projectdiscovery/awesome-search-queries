@@ -33749,10 +33749,14 @@
   engines:
     - platform: fofa
       queries:
+        - title="netbox"
         - title="netbox" || body="netbox-community"
     - platform: shodan
       queries:
         - http.title:"netbox"
+    - platform: google
+      queries:
+        - intitle:"netbox"
 
 - name: siyuan
   vendor: siyuan-note
@@ -33764,6 +33768,20 @@
     - platform: fofa
       queries:
         - icon_hash=-1450125239
+
+- name: photoprism
+  vendor: photoprism
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="photoprism"
+    - platform: google
+      queries:
+        - intitle:"photoprism" inurl:"/library/browse"
+    - platform: shodan
+      queries:
+        - http.title:"photoprism"
 
 - name: element
   vendor: matrix
