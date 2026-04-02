@@ -33776,12 +33776,25 @@
     - platform: fofa
       queries:
         - title="photoprism"
+        - title="photoprism" inurl:"/library/browse"
     - platform: google
       queries:
         - intitle:"photoprism" inurl:"/library/browse"
     - platform: shodan
       queries:
         - http.title:"photoprism"
+        - http.title:"photoprism" inurl:"/library/browse"
+
+- name: grocy
+  vendor: grocy
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="grocy" || body="grocy-version"
+    - platform: shodan
+      queries:
+        - http.title:"grocy"
 
 - name: element
   vendor: matrix
