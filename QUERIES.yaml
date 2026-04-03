@@ -33791,10 +33791,22 @@
   engines:
     - platform: fofa
       queries:
+        - title="grocy"
         - title="grocy" || body="grocy-version"
     - platform: shodan
       queries:
         - http.title:"grocy"
+    - platform: google
+      queries:
+        - intitle:"grocy"
+
+- name: web_interface
+  vendor: pi-hole
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"pi-hole"
 
 - name: element
   vendor: matrix
