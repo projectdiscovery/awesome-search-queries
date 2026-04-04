@@ -33811,6 +33811,17 @@
       queries:
         - http.title:"pi-hole"
 
+- name: mirth-connect
+  vendor: nextgen
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="mirth connect"
+    - platform: shodan
+      queries:
+        - http.title:"mirth connect"
+
 - name: element
   vendor: matrix
   type: product
