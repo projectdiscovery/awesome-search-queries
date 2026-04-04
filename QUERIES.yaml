@@ -2619,13 +2619,16 @@
         - cpe:"cpe:2.3:a:matomo:matomo"
         - http.favicon.hash:-2023266783
         - http.title:"matomo"
+        - http.title:"piwik"
     - platform: fofa
       queries:
         - icon_hash=-2023266783
         - title="matomo"
+        - title="piwik"
     - platform: google
       queries:
         - intitle:"matomo"
+        - intitle:"piwik"
 
 - name: remote_desktop
   vendor: microsoft
