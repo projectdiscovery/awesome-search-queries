@@ -33821,6 +33821,9 @@
     - platform: shodan
       queries:
         - http.title:"mirth connect"
+    - platform: google
+      queries:
+        - intitle:"mirth connect"
 
 - name: element
   vendor: matrix
