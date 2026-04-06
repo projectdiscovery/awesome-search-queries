@@ -3480,15 +3480,20 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"welcome to the configuration of icinga web 2"
         - http.title:"icinga web 2 login"
+        - http.title:"icinga web 2"
         - http.title:"icinga"
     - platform: fofa
       queries:
+        - body="welcome to the configuration of icinga web 2"
         - title="icinga web 2 login"
+        - title="icinga web 2"
         - title="icinga"
     - platform: google
       queries:
         - intitle:"icinga web 2 login"
+        - intitle:"icinga web 2"
         - intitle:"icinga"
 
 - name: successfactors
@@ -33824,6 +33829,14 @@
     - platform: google
       queries:
         - intitle:"mirth connect"
+
+- name: zimaos
+  vendor: zimaos
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - zimaos
 
 - name: element
   vendor: matrix
