@@ -33838,6 +33838,14 @@
       queries:
         - zimaos
 
+- name: filr
+  vendor: opentext
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"opentext filr"
+
 - name: element
   vendor: matrix
   type: product
