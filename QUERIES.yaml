@@ -4802,11 +4802,18 @@
         - http.favicon.hash:"1582430156"
         - http.html:"apache superset"
         - http.html:"superset"
+        - http.title:"superset"
+        - product:"apache superset"
     - platform: fofa
       queries:
+        - app="apache-superset" || title="superset"
         - body="apache superset"
         - body="superset"
         - icon_hash="1582430156"
+        - title="superset"
+    - platform: google
+      queries:
+        - intitle:"superset"
 
 - name: tew-827dru_firmware
   vendor: trendnet
@@ -13675,6 +13682,11 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:lodash:lodash"
+        - http.component:"lodash"
+        - http.html:"lodash"
+    - platform: fofa
+      queries:
+        - body="lodash"
 
 - name: lua
   vendor: lua
@@ -33845,6 +33857,45 @@
     - platform: shodan
       queries:
         - http.html:"opentext filr"
+
+- name: sling
+  vendor: apache
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"apache sling"
+    - platform: fofa
+      queries:
+        - title="apache sling"
+    - platform: google
+      queries:
+        - intitle:"apache sling"
+
+- name: sureforms
+  vendor: brainstormforce
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/sureforms/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/sureforms/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/sureforms/"
+
+- name: sharefile_storage_zones_controller
+  vendor: progress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title=="sharefile storage server"
+    - platform: shodan
+      queries:
+        - http.title:"sharefile storage server"
 
 - name: element
   vendor: matrix
