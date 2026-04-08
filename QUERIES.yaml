@@ -3726,15 +3726,19 @@
       queries:
         - cpe:"cpe:2.3:a:apache:activemq"
         - http.title:"activemq artemis console"
+        - http.title:"activemq" port:8161
         - http.title:"apache activemq"
         - product:"activemq openwire transport"
     - platform: fofa
       queries:
         - title="activemq artemis console"
+        - title="activemq" && port="8161"
+        - title="activemq" port:8161
         - title="apache activemq"
     - platform: google
       queries:
         - intitle:"activemq artemis console"
+        - intitle:"activemq" port:8161
         - intitle:"apache activemq"
 
 - name: pandora_fms
@@ -33896,6 +33900,14 @@
     - platform: shodan
       queries:
         - http.title:"sharefile storage server"
+
+- name: openclaw
+  vendor: openclaw
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"openclaw control"
 
 - name: element
   vendor: matrix
