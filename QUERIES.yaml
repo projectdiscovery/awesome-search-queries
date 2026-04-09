@@ -33915,6 +33915,83 @@
       queries:
         - intitle:"openclaw control"
 
+- name: clean-login
+  vendor: codection
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.component:"wordpress"
+
+- name: forticlientems
+  vendor: fortinet
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-800551065"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-800551065
+
+- name: forticlient_ems
+  vendor: fortinet
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-800551065
+
+- name: tinacms
+  vendor: tinacms
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="tinacms" || body="tinacms"
+    - platform: shodan
+      queries:
+        - http.title:"tinacms"
+
+- name: jetbackup
+  vendor: jetbackup
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/backup/"
+    - platform: google
+      queries:
+        - inurl:"/wp-content/uploads/jetbackup/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/backup/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/backup/"
+
+- name: marimo
+  vendor: marimo-team
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-1864630356
+    - platform: fofa
+      queries:
+        - icon_hash=-1864630356
+
+- name: chanjet CRM
+  vendor: chanjet
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="畅捷crm"
+    - platform: shodan
+      queries:
+        - http.title:"畅捷crm"
+
 - name: element
   vendor: matrix
   type: product
