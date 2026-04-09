@@ -33908,6 +33908,12 @@
     - platform: shodan
       queries:
         - http.title:"openclaw control"
+    - platform: fofa
+      queries:
+        - title="openclaw control"
+    - platform: google
+      queries:
+        - intitle:"openclaw control"
 
 - name: element
   vendor: matrix
