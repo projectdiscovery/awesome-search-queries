@@ -28926,7 +28926,12 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"leantime" http.title:"leantime"
         - http.title:"leantime"
+    - platform: fofa
+      queries:
+        - body="leantime" http.title:"leantime"
+        - title="leantime" && body="leantime-version"
 
 - name: uptime-kuma
   vendor: uptime-kuma
@@ -33999,14 +34004,6 @@
       queries:
         - http.title:"畅捷crm"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: file-manager
   vendor: mndpsingh287
   type: product
@@ -34017,6 +34014,7 @@
     - platform: shodan
       queries:
         - http.component:"wordpress"
+        - http.html:"wp-file-manager"
 
 - name: the-wound
   vendor: developer
@@ -34036,3 +34034,36 @@
     - platform: shodan
       queries:
         - http.title:"stirling pdf"
+    - platform: google
+      queries:
+        - intitle:"stirling pdf"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: antd-admin
+  vendor: zuiidea
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/@@/devscripts.js" && body="//! umi version:" && body="/umi.js"
+    - platform: shodan
+      queries:
+        - http.html:"/umi.js" html:"@@/devscripts.js"
+
+- name: devtron
+  vendor: devtron-labs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="devtron"
+    - platform: shodan
+      queries:
+        - http.title:"devtron"
