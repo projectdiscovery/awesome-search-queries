@@ -33932,7 +33932,7 @@
         - icon_hash="-800551065"
     - platform: shodan
       queries:
-        - http.favicon.hash:-800551065
+        - http.favicon.hash:"-800551065"
 
 - name: forticlient_ems
   vendor: fortinet
@@ -33941,6 +33941,9 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-800551065
+    - platform: fofa
+      queries:
+        - icon_hash=-800551065
 
 - name: tinacms
   vendor: tinacms
@@ -33949,9 +33952,13 @@
     - platform: fofa
       queries:
         - body="tinacms" || body="tinacms"
+        - title="tinacms"
     - platform: shodan
       queries:
         - http.title:"tinacms"
+    - platform: google
+      queries:
+        - intitle:"tinacms"
 
 - name: jetbackup
   vendor: jetbackup
@@ -33999,3 +34006,33 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: file-manager
+  vendor: mndpsingh287
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-file-manager"
+    - platform: shodan
+      queries:
+        - http.component:"wordpress"
+
+- name: the-wound
+  vendor: developer
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.component:"wordpress"
+
+- name: stirling_pdf
+  vendor: stirlingpdf
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="stirling pdf"
+    - platform: shodan
+      queries:
+        - http.title:"stirling pdf"
