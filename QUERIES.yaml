@@ -34038,14 +34038,6 @@
       queries:
         - intitle:"stirling pdf"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: antd-admin
   vendor: zuiidea
   type: product
@@ -34067,3 +34059,14 @@
     - platform: shodan
       queries:
         - http.title:"devtron"
+    - platform: google
+      queries:
+        - intitle:"devtron"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
