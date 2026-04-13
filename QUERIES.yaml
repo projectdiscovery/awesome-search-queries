@@ -605,11 +605,14 @@
     - platform: shodan
       queries:
         - http.favicon.hash:1398055326
+        - http.title:"wso2 management console"
     - platform: fofa
       queries:
         - icon_hash=1398055326
+        - title="wso2 management console"
     - platform: google
       queries:
+        - intitle:"wso2 management console"
         - inurl:"carbon/admin/login"
 
 - name: movable_type
@@ -34070,3 +34073,57 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: ht-mega-for-elementor
+  vendor: hastech
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /plugins/ht-mega-for-elementor/
+
+- name: flavor
+  vendor: flavor
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/eventon-lite/
+
+- name: wpcom-member
+  vendor: Bastien Ho
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wpcom-member"
+    - platform: shodan
+      queries:
+        - http.component:"wordpress"
+
+- name: cbx-bookmark-favorite
+  vendor: codeboxr
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="cbxwpbookmark"
+    - platform: shodan
+      queries:
+        - http.html:"cbxwpbookmark"
+
+- name: spring_framework
+  vendor: vmware
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:116323821
+
+- name: freescout
+  vendor: freescout
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"freescout installer"
