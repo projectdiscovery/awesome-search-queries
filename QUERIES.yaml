@@ -32620,9 +32620,14 @@
     - platform: fofa
       queries:
         - body="langflow"
+        - title="langflow"
     - platform: shodan
       queries:
         - http.html:"langflow"
+        - http.title:"langflow"
+    - platform: google
+      queries:
+        - intitle:"langflow"
 
 - name: nsx_sd-wan_edge
   vendor: vmware
@@ -34142,6 +34147,41 @@
       queries:
         - intitle:"freescout installer"
 
+- name: chromadb
+  vendor: chroma-core
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="nanosecond heartbeat"
+    - platform: shodan
+      queries:
+        - http.html:"nanosecond heartbeat"
+
+- name: marqo
+  vendor: marqo-ai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"welcome to marqo"
+
+- name: xinference
+  vendor: xorbitsai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - port:9997 http.html:"xinference"
+
+- name: weights-and-biases
+  vendor: wandb
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"wandb" http.title:"weights & biases"
+
 - name: element
   vendor: matrix
   type: product
@@ -34149,3 +34189,148 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: stable-diffusion-webui
+  vendor: AUTOMATIC1111
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"hires_fix.js"
+
+- name: llama.cpp
+  vendor: ggerganov
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - server="llama.cpp"
+    - platform: shodan
+      queries:
+        - http.headers.server:"llama.cpp"
+
+- name: astrbot
+  vendor: soulter
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="<title>astrbot"
+    - platform: shodan
+      queries:
+        - http.html:"<title>astrbot"
+
+- name: comfyui-manager
+  vendor: comfy-org
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"comfyui"
+
+- name: koboldai
+  vendor: KoboldAI
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"koboldai lite"
+
+- name: cvat
+  vendor: cvat-ai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"computer vision annotation tool"
+
+- name: anything-llm
+  vendor: mintplex-labs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"anythingllm | your personal llm trained on anything"
+
+- name: agentgpt
+  vendor: reworkd
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"agentgpt"
+
+- name: wave
+  vendor: h2oai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"h2o wave"
+
+- name: superagi
+  vendor: TransformerOptimus
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-2056571568"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-2056571568
+
+- name: openhands
+  vendor: All-Hands-AI
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"openhands"
+
+- name: clearml
+  vendor: allegro
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"clearml"
+
+- name: flowise
+  vendor: FlowiseAI
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"flowise - build ai agents, visually"
+
+- name: showdoc
+  vendor: showdoc
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"showdoc"
+
+- name: easydiffusion
+  vendor: easydiffusion
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"easy diffusion"
+
+- name: activepieces
+  vendor: Activepieces
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"activepieces"
+
+- name: sillytavern
+  vendor: SillyTavern
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"sillytavern"
