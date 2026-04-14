@@ -34066,14 +34066,6 @@
       queries:
         - intitle:"devtron"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: ht-mega-for-elementor
   vendor: hastech
   type: product
@@ -34081,6 +34073,12 @@
     - platform: publicwww
       queries:
         - /plugins/ht-mega-for-elementor/
+    - platform: shodan
+      queries:
+        - http.html:/plugins/ht-mega-for-elementor/
+    - platform: fofa
+      queries:
+        - body=/plugins/ht-mega-for-elementor/
 
 - name: flavor
   vendor: flavor
@@ -34089,6 +34087,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/eventon-lite/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/eventon-lite/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/eventon-lite/
 
 - name: wpcom-member
   vendor: Bastien Ho
@@ -34100,6 +34104,7 @@
     - platform: shodan
       queries:
         - http.component:"wordpress"
+        - http.html:"wpcom-member"
 
 - name: cbx-bookmark-favorite
   vendor: codeboxr
@@ -34119,6 +34124,9 @@
     - platform: shodan
       queries:
         - http.favicon.hash:116323821
+    - platform: fofa
+      queries:
+        - icon_hash=116323821
 
 - name: freescout
   vendor: freescout
@@ -34127,3 +34135,17 @@
     - platform: shodan
       queries:
         - http.title:"freescout installer"
+    - platform: fofa
+      queries:
+        - title="freescout installer"
+    - platform: google
+      queries:
+        - intitle:"freescout installer"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
