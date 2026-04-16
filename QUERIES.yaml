@@ -34454,3 +34454,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: cockpit
+  vendor: cockpit-project
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="cockpit"
+    - platform: shodan
+      queries:
+        - http.title:"cockpit"
