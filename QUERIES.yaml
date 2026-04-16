@@ -34431,14 +34431,6 @@
       queries:
         - http.html:"tlp-team"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: dbgate
   vendor: dbgate
   type: product
@@ -34447,3 +34439,18 @@
       queries:
         - http.favicon.hash:-1320884137,1198579728,361029891,-1421367029,1377130137,-1258062033
         - http.title:"dbgate"
+    - platform: fofa
+      queries:
+        - icon_hash=-1320884137,1198579728,361029891,-1421367029,1377130137,-1258062033
+        - title="dbgate"
+    - platform: google
+      queries:
+        - intitle:"dbgate"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
