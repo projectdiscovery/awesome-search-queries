@@ -34156,6 +34156,7 @@
         - body="nanosecond heartbeat"
     - platform: shodan
       queries:
+        - '"chromadb"'
         - http.html:"nanosecond heartbeat"
 
 - name: marqo
@@ -34269,9 +34270,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:-1279687529
         - http.title:"anythingllm | your personal llm trained on anything"
     - platform: fofa
       queries:
+        - icon_hash=-1279687529
         - title="anythingllm | your personal llm trained on anything"
     - platform: google
       queries:
@@ -34465,3 +34468,30 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: openam
+  vendor: openidentityplatform
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="openam"
+    - platform: shodan
+      queries:
+        - http.title:"openam"
+
+- name: arcane
+  vendor: getarcaneapp
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"arcane"
+
+- name: esm.sh
+  vendor: esm-dev
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"esm.sh"
