@@ -34461,14 +34461,6 @@
       queries:
         - http.title:"cockpit"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: openam
   vendor: openidentityplatform
   type: product
@@ -34479,6 +34471,9 @@
     - platform: shodan
       queries:
         - http.title:"openam"
+    - platform: google
+      queries:
+        - intitle:"openam"
 
 - name: arcane
   vendor: getarcaneapp
@@ -34487,6 +34482,9 @@
     - platform: shodan
       queries:
         - http.html:"arcane"
+    - platform: fofa
+      queries:
+        - body="arcane"
 
 - name: esm.sh
   vendor: esm-dev
@@ -34495,3 +34493,14 @@
     - platform: shodan
       queries:
         - http.html:"esm.sh"
+    - platform: fofa
+      queries:
+        - body="esm.sh"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
