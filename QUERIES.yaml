@@ -34523,3 +34523,17 @@
     - platform: shodan
       queries:
         - http.title:"fortisandbox"
+
+- name: fortisandbox
+  vendor: fortinet
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - title:"FortiSandbox"
+    - platform: fofa
+      queries:
+        - title="FortiSandbox"
+    - platform: censys
+      queries:
+        - services.http.response.html_title: "FortiSandbox"
