@@ -34504,3 +34504,22 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: chatwoot
+  vendor: chatwoot
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="superadmin | chatwoot"
+    - platform: shodan
+      queries:
+        - http.title:"superadmin | chatwoot"
+
+- name: fortisandbox
+  vendor: fortinet
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"fortisandbox"
