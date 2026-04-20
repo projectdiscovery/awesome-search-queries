@@ -34497,14 +34497,6 @@
       queries:
         - body="esm.sh"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: chatwoot
   vendor: chatwoot
   type: product
@@ -34515,6 +34507,9 @@
     - platform: shodan
       queries:
         - http.title:"superadmin | chatwoot"
+    - platform: google
+      queries:
+        - intitle:"superadmin | chatwoot"
 
 - name: fortisandbox
   vendor: fortinet
@@ -34523,3 +34518,17 @@
     - platform: shodan
       queries:
         - http.title:"fortisandbox"
+    - platform: fofa
+      queries:
+        - title="fortisandbox"
+    - platform: google
+      queries:
+        - intitle:"fortisandbox"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
