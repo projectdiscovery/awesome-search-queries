@@ -34532,3 +34532,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: skywalking
+  vendor: apache
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"apache skywalking"
