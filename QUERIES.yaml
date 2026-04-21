@@ -34533,6 +34533,26 @@
       queries:
         - http.title:"apache skywalking"
 
+- name: dataease
+  vendor: fit2cloud
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="fit2cloud-dataease"
+        - body="dataease"
+    - platform: shodan
+      queries:
+        - http.html:"dataease"
+
+- name: inertia
+  vendor: inertiajs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"&quot;component&quot;" html:"data-page"
+
 - name: element
   vendor: matrix
   type: product
@@ -34541,13 +34561,13 @@
       queries:
         - http.html:"manifest.json"
 
-- name: dataease
-  vendor: fit2cloud
+- name: majordomo
+  vendor: sergejey
   type: product
   engines:
     - platform: fofa
       queries:
-        - app="fit2cloud-dataease"
+        - body="templates/application.html"
     - platform: shodan
       queries:
-        - http.html:"dataease"
+        - http.html:"templates/application.html"
