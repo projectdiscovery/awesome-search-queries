@@ -34525,6 +34525,14 @@
       queries:
         - intitle:"fortisandbox"
 
+- name: skywalking
+  vendor: apache
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"apache skywalking"
+
 - name: element
   vendor: matrix
   type: product
@@ -34533,10 +34541,13 @@
       queries:
         - http.html:"manifest.json"
 
-- name: skywalking
-  vendor: apache
+- name: dataease
+  vendor: fit2cloud
   type: product
   engines:
+    - platform: fofa
+      queries:
+        - app="fit2cloud-dataease"
     - platform: shodan
       queries:
-        - http.title:"apache skywalking"
+        - http.html:"dataease"
