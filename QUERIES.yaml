@@ -34553,14 +34553,6 @@
       queries:
         - http.html:"&quot;component&quot;" html:"data-page"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: majordomo
   vendor: sergejey
   type: product
@@ -34571,3 +34563,33 @@
     - platform: shodan
       queries:
         - http.html:"templates/application.html"
+
+- name: wegia
+  vendor: labredescefetRJ
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wegia"
+    - platform: shodan
+      queries:
+        - http.html:"wegia"
+
+- name: interactive_3d_flipbook
+  vendor: iberezansky
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/interactive-3d-flipbook-powered-physics-engine/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/interactive-3d-flipbook-powered-physics-engine/"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
