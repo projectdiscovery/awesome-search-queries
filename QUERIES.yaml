@@ -34593,3 +34593,22 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: lollms
+  vendor: parisneo
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"lollms"
+
+- name: helix_core
+  vendor: perforce
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - port="1666" && protocol="unknown"
+    - platform: shodan
+      queries:
+        - port:1666 "p4d"
