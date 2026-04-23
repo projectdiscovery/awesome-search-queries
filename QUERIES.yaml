@@ -34613,20 +34613,13 @@
       queries:
         - port:1666 "p4d"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: my-calendar
   vendor: joedolson
   type: product
   engines:
     - platform: fofa
       queries:
+        - body="/wp-content/plugins/my-calendar/"
         - body="/wp-content/plugins/my-calendar/" && title="wordpress"
     - platform: shodan
       queries:
@@ -34639,3 +34632,25 @@
     - platform: fofa
       queries:
         - body="avid nexis"
+    - platform: shodan
+      queries:
+        - http.html:"avid nexis"
+
+- name: integration
+  vendor: hacs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="home assistant"
+    - platform: shodan
+      queries:
+        - http.title:"home assistant"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
