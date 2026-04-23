@@ -25025,9 +25025,11 @@
     - platform: shodan
       queries:
         - http.html:"<title>admin console</title>"
+        - http.html:"admin console" html:"component-loader"
     - platform: fofa
       queries:
         - body="<title>admin console</title>"
+        - body="admin console" html:"component-loader"
 
 - name: dompdf
   vendor: dompdf_project
@@ -34586,14 +34588,6 @@
       queries:
         - http.html:"/wp-content/plugins/interactive-3d-flipbook-powered-physics-engine/"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: lollms
   vendor: parisneo
   type: product
@@ -34601,6 +34595,12 @@
     - platform: shodan
       queries:
         - http.title:"lollms"
+    - platform: fofa
+      queries:
+        - title="lollms"
+    - platform: google
+      queries:
+        - intitle:"lollms"
 
 - name: helix_core
   vendor: perforce
@@ -34612,3 +34612,30 @@
     - platform: shodan
       queries:
         - port:1666 "p4d"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: my-calendar
+  vendor: joedolson
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/my-calendar/" && title="wordpress"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/my-calendar/"
+
+- name: nexis
+  vendor: avid
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="avid nexis"
