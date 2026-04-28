@@ -34647,6 +34647,31 @@
       queries:
         - http.title:"home assistant"
 
+- name: blinko
+  vendor: blinkospace
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="blinko"
+    - platform: shodan
+      queries:
+        - http.title:"blinko"
+
+- name: filemaker_server
+  vendor: claris
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="claris filemaker"
+    - platform: google
+      queries:
+        - intitle:"claris filemaker"
+    - platform: shodan
+      queries:
+        - http.title:"claris filemaker "
+
 - name: element
   vendor: matrix
   type: product
