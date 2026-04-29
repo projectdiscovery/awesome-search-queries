@@ -34657,6 +34657,9 @@
     - platform: shodan
       queries:
         - http.title:"blinko"
+    - platform: google
+      queries:
+        - intitle:"blinko"
 
 - name: filemaker_server
   vendor: claris
@@ -34671,6 +34674,7 @@
     - platform: shodan
       queries:
         - http.title:"claris filemaker "
+        - http.title:"claris filemaker"
 
 - name: element
   vendor: matrix
