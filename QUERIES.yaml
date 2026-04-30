@@ -12049,6 +12049,7 @@
   engines:
     - platform: shodan
       queries:
+        - 220 proftpd
         - cpe:"cpe:2.3:a:proftpd:proftpd"
         - product:"proftpd"
 
@@ -34683,3 +34684,27 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: langflow
+  vendor: langflow
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:1727196746
+
+- name: blinko
+  vendor: blinko-space
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-1446811182" || icon_hash="-717082057"
+
+- name: mesop
+  vendor: mesop-dev
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"mesop"
