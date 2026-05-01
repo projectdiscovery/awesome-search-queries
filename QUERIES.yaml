@@ -34677,14 +34677,6 @@
         - http.title:"claris filemaker "
         - http.title:"claris filemaker"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: langflow
   vendor: langflow
   type: product
@@ -34692,6 +34684,9 @@
     - platform: shodan
       queries:
         - http.favicon.hash:1727196746
+    - platform: fofa
+      queries:
+        - icon_hash=1727196746
 
 - name: blinko
   vendor: blinko-space
@@ -34708,3 +34703,11 @@
     - platform: shodan
       queries:
         - http.html:"mesop"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
