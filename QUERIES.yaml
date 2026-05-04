@@ -28881,9 +28881,14 @@
     - platform: shodan
       queries:
         - http.html:"data-xwiki-reference"
+        - http.title:"xwiki"
     - platform: fofa
       queries:
         - body="data-xwiki-reference"
+        - title="xwiki"
+    - platform: google
+      queries:
+        - intitle:"xwiki"
 
 - name: netalertx
   vendor: jokob-sk
@@ -34711,3 +34716,25 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: supabase
+  vendor: supabase
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="supabase studio"
+    - platform: shodan
+      queries:
+        - http.title:"supabase studio"
+
+- name: outline
+  vendor: outline
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="outline"
+    - platform: shodan
+      queries:
+        - http.title:"outline"
