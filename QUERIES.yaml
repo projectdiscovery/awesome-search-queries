@@ -34745,3 +34745,47 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: supabase-studio
+  vendor: supabase
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="supabase studio"
+    - platform: shodan
+      queries:
+        - http.html:"supabase studio"
+
+- name: mealie
+  vendor: mealie-recipes
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="mealie"
+    - platform: shodan
+      queries:
+        - http.title:"mealie"
+
+- name: typesense
+  vendor: typesense
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - header="x-typesense"
+    - platform: shodan
+      queries:
+        - '"x-typesense"'
+
+- name: paperless-ngx
+  vendor: paperless-ngx
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="paperless-ngx"
+    - platform: shodan
+      queries:
+        - http.title:"paperless-ngx"
