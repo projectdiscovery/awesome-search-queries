@@ -3732,6 +3732,7 @@
         - http.title:"activemq" port:8161
         - http.title:"apache activemq"
         - product:"activemq openwire transport"
+        - product:"activemq"
     - platform: fofa
       queries:
         - title="activemq artemis console"
@@ -34709,14 +34710,6 @@
       queries:
         - http.html:"mesop"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: supabase
   vendor: supabase
   type: product
@@ -34727,6 +34720,9 @@
     - platform: shodan
       queries:
         - http.title:"supabase studio"
+    - platform: google
+      queries:
+        - intitle:"supabase studio"
 
 - name: outline
   vendor: outline
@@ -34738,3 +34734,14 @@
     - platform: shodan
       queries:
         - http.title:"outline"
+    - platform: google
+      queries:
+        - intitle:"outline"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
