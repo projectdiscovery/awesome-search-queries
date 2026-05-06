@@ -34738,14 +34738,6 @@
       queries:
         - intitle:"outline"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: supabase-studio
   vendor: supabase
   type: product
@@ -34767,6 +34759,9 @@
     - platform: shodan
       queries:
         - http.title:"mealie"
+    - platform: google
+      queries:
+        - intitle:"mealie"
 
 - name: typesense
   vendor: typesense
@@ -34789,3 +34784,58 @@
     - platform: shodan
       queries:
         - http.title:"paperless-ngx"
+    - platform: google
+      queries:
+        - intitle:"paperless-ngx"
+
+- name: localstack
+  vendor: localstack
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="localstack"
+    - platform: shodan
+      queries:
+        - '"localstack"'
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: mlflow
+  vendor: mlflow
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="mlflow"
+    - platform: shodan
+      queries:
+        - http.title:"mlflow"
+
+- name: airbyte
+  vendor: airbyte
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="airbyte"
+    - platform: shodan
+      queries:
+        - http.title:"airbyte"
+
+- name: zitadel
+  vendor: zitadel
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="zitadel"
+    - platform: shodan
+      queries:
+        - '"x-zitadel"'
