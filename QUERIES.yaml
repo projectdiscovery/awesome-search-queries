@@ -3729,6 +3729,7 @@
       queries:
         - cpe:"cpe:2.3:a:apache:activemq"
         - http.title:"activemq artemis console"
+        - http.title:"activemq"
         - http.title:"activemq" port:8161
         - http.title:"apache activemq"
         - product:"activemq openwire transport"
@@ -3736,12 +3737,14 @@
     - platform: fofa
       queries:
         - title="activemq artemis console"
+        - title="activemq"
         - title="activemq" && port="8161"
         - title="activemq" port:8161
         - title="apache activemq"
     - platform: google
       queries:
         - intitle:"activemq artemis console"
+        - intitle:"activemq"
         - intitle:"activemq" port:8161
         - intitle:"apache activemq"
 
@@ -34798,14 +34801,7 @@
     - platform: shodan
       queries:
         - '"localstack"'
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
+        - http.html:"localstack"
 
 - name: mlflow
   vendor: mlflow
@@ -34828,6 +34824,9 @@
     - platform: shodan
       queries:
         - http.title:"airbyte"
+    - platform: google
+      queries:
+        - intitle:"airbyte"
 
 - name: zitadel
   vendor: zitadel
@@ -34839,3 +34838,33 @@
     - platform: shodan
       queries:
         - '"x-zitadel"'
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: linkwarden
+  vendor: linkwarden
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="linkwarden"
+    - platform: shodan
+      queries:
+        - http.title:"linkwarden"
+
+- name: windmill
+  vendor: windmill_labs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="windmill"
+    - platform: shodan
+      queries:
+        - http.title:"windmill"
