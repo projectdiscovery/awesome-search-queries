@@ -34839,14 +34839,6 @@
       queries:
         - '"x-zitadel"'
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: linkwarden
   vendor: linkwarden
   type: product
@@ -34857,6 +34849,9 @@
     - platform: shodan
       queries:
         - http.title:"linkwarden"
+    - platform: google
+      queries:
+        - intitle:"linkwarden"
 
 - name: windmill
   vendor: windmill_labs
@@ -34868,3 +34863,33 @@
     - platform: shodan
       queries:
         - http.title:"windmill"
+    - platform: google
+      queries:
+        - intitle:"windmill"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: adk-python
+  vendor: google
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="adk" && header="uvicorn"
+    - platform: shodan
+      queries:
+        - http.title:"adk" http.component:"uvicorn"
+
+- name: astro
+  vendor: astro
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.component:"astro"
