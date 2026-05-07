@@ -34867,14 +34867,6 @@
       queries:
         - intitle:"windmill"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: adk-python
   vendor: google
   type: product
@@ -34893,3 +34885,22 @@
     - platform: shodan
       queries:
         - http.component:"astro"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: mailcow-dockerized
+  vendor: mailcow
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="mailcow"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:2146763496
