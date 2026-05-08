@@ -34905,3 +34905,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: hoppscotch
+  vendor: hoppscotch
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="hoppscotch"
+    - platform: shodan
+      queries:
+        - http.title:"hoppscotch"
