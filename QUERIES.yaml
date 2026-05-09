@@ -34898,14 +34898,6 @@
       queries:
         - http.favicon.hash:2146763496
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: hoppscotch
   vendor: hoppscotch
   type: product
@@ -34916,3 +34908,25 @@
     - platform: shodan
       queries:
         - http.title:"hoppscotch"
+    - platform: google
+      queries:
+        - intitle:"hoppscotch"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: mobilefirst-foundation
+  vendor: ibm
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="mobilefirst operations console"
+    - platform: shodan
+      queries:
+        - http.title:"mobilefirst operations console"
