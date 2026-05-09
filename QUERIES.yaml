@@ -34912,14 +34912,6 @@
       queries:
         - intitle:"hoppscotch"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: mobilefirst-foundation
   vendor: ibm
   type: product
@@ -34930,3 +34922,14 @@
     - platform: shodan
       queries:
         - http.title:"mobilefirst operations console"
+    - platform: google
+      queries:
+        - intitle:"mobilefirst operations console"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
