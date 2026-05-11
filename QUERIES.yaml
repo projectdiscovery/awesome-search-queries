@@ -34933,3 +34933,19 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: ti-woocommerce-wishlist
+  vendor: templateinvaders
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/ti-woocommerce-wishlist/
+
+- name: cloudlog
+  vendor: magicbug
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - login - cloudlog
