@@ -34926,14 +34926,6 @@
       queries:
         - intitle:"mobilefirst operations console"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: ti-woocommerce-wishlist
   vendor: templateinvaders
   type: product
@@ -34941,6 +34933,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/ti-woocommerce-wishlist/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/ti-woocommerce-wishlist/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/ti-woocommerce-wishlist/
 
 - name: cloudlog
   vendor: magicbug
@@ -34949,3 +34947,11 @@
     - platform: fofa
       queries:
         - login - cloudlog
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
