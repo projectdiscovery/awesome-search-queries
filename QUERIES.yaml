@@ -26372,9 +26372,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"powered by espocrm"
         - http.html:"welcome to espocrm"
     - platform: fofa
       queries:
+        - body="powered by espocrm"
         - body="welcome to espocrm"
 
 - name: simple_machine_forum
@@ -34955,3 +34957,25 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: dash-uploader
+  vendor: fohrloop
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="_dash-undo-redo"
+    - platform: shodan
+      queries:
+        - http.html:"_dash-undo-redo"
+
+- name: vllm
+  vendor: vllm-project
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="vllm" && body="/v1/models"
+    - platform: shodan
+      queries:
+        - '"served-model-name"'
