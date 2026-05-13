@@ -1026,11 +1026,13 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-1439222863"
         - http.html:"welcome.cgi?p=logo"
         - http.title:"ivanti connect secure"
     - platform: fofa
       queries:
         - body="welcome.cgi?p=logo"
+        - icon_hash="-1439222863"
         - title="ivanti connect secure"
     - platform: google
       queries:
@@ -7206,11 +7208,18 @@
   engines:
     - platform: fofa
       queries:
+        - body="PAN-OS"
         - icon_hash="-631559155"
+        - title="GlobalProtect Login"
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:o:paloaltonetworks:pan-os"
         - http.favicon.hash:"-631559155"
+        - http.html:"PAN-OS"
+        - http.title:"GlobalProtect Login"
+    - platform: google
+      queries:
+        - intitle:"GlobalProtect Login"
 
 - name: User Meta
   vendor: User Meta
@@ -7444,15 +7453,20 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-1166125415"
+        - http.title:"NetScaler Gateway"
         - http.title:"citrix gateway"
         - http.title:"citrix gateway" || title:"netscaler gateway"
     - platform: fofa
       queries:
+        - icon_hash="-1166125415"
+        - title="NetScaler Gateway"
         - title="citrix gateway"
         - title="citrix gateway" || title:"netscaler gateway"
         - title="netscaler aaa"
     - platform: google
       queries:
+        - intitle:"NetScaler Gateway"
         - intitle:"citrix gateway"
         - intitle:"citrix gateway" || title:"netscaler gateway"
 
@@ -24607,8 +24621,12 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-800551065
+        - http.html:"FCTEMS"
+        - http.html:"Model: FCTEMS"
     - platform: fofa
       queries:
+        - body="FCTEMS"
+        - body="Model: FCTEMS"
         - icon_hash=-800551065
 
 - name: fortisiem
@@ -34011,9 +34029,16 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-1864630356
+        - http.html:"marimo-runtime"
+        - http.title:"marimo"
     - platform: fofa
       queries:
+        - body="marimo-runtime"
         - icon_hash=-1864630356
+        - title="marimo"
+    - platform: google
+      queries:
+        - intitle:"marimo"
 
 - name: chanjet CRM
   vendor: chanjet
@@ -34979,3 +35004,181 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: globalprotect
+  vendor: paloaltonetworks
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"Global Protect"
+        - http.title:"GlobalProtect Portal"
+    - platform: fofa
+      queries:
+        - body="Global Protect"
+        - title="GlobalProtect Portal"
+    - platform: google
+      queries:
+        - intitle:"GlobalProtect Portal"
+
+- name: panorama
+  vendor: paloaltonetworks
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"panorama"
+    - platform: fofa
+      queries:
+        - title="panorama"
+    - platform: google
+      queries:
+        - intitle:"panorama"
+
+- name: sonicwall_sslvpn
+  vendor: sonicwall
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"sonicwall sslvpn"
+        - http.title:"SonicWall - Authentication"
+    - platform: fofa
+      queries:
+        - body="sonicwall sslvpn"
+        - title="SonicWall - Authentication"
+    - platform: google
+      queries:
+        - intitle:"SonicWall - Authentication"
+
+- name: cisco_secure_firewall_management_center
+  vendor: cisco
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"cisco secure firewall management center"
+        - http.title:"firepower management center"
+    - platform: fofa
+      queries:
+        - title="cisco secure firewall management center"
+        - title="firepower management center"
+    - platform: google
+      queries:
+        - intitle:"firepower management center"
+
+- name: catalyst_sd-wan_manager
+  vendor: cisco
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"sd-wan vmanage"
+        - http.title:"cisco vmanage"
+    - platform: fofa
+      queries:
+        - body="sd-wan vmanage"
+        - title="cisco vmanage"
+    - platform: google
+      queries:
+        - intitle:"cisco vmanage"
+
+- name: veeam_backup_and_replication
+  vendor: veeam
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"veeam.backup"
+        - http.title:"veeam backup enterprise manager"
+    - platform: fofa
+      queries:
+        - body="veeam.backup"
+        - title="veeam backup enterprise manager"
+    - platform: google
+      queries:
+        - intitle:"veeam backup enterprise manager"
+
+- name: industrial_edge_device_kit
+  vendor: siemens
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"siemens industrial edge"
+        - http.title:"industrial edge"
+    - platform: fofa
+      queries:
+        - body="siemens industrial edge"
+        - title="industrial edge"
+    - platform: google
+      queries:
+        - intitle:"industrial edge"
+
+- name: vite
+  vendor: vitejs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"/@vite/client"
+        - http.title:"vite app"
+    - platform: fofa
+      queries:
+        - body="/@vite/client"
+        - title="vite app"
+    - platform: google
+      queries:
+        - intitle:"vite app"
+
+- name: open-webui
+  vendor: open-webui
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"open-webui"
+        - http.title:"open webui"
+    - platform: fofa
+      queries:
+        - body="open-webui"
+        - title="open webui"
+    - platform: google
+      queries:
+        - intitle:"open webui"
+
+- name: jupyter_server
+  vendor: project_jupyter
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"jupyter-notebook"
+        - http.title:"jupyter notebook"
+        - http.title:"jupyterlab"
+    - platform: fofa
+      queries:
+        - body="jupyter-notebook"
+        - title="jupyter notebook"
+        - title="jupyterlab"
+    - platform: google
+      queries:
+        - intitle:"jupyter notebook"
+        - intitle:"jupyterlab"
+
+- name: big-ip
+  vendor: f5
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - cpe:"cpe:2.3:h:f5:big-ip"
+        - http.favicon.hash:"-335242539"
+        - http.title:"BIG-IP®- Redirect"
+    - platform: fofa
+      queries:
+        - icon_hash="-335242539"
+        - title="BIG-IP®- Redirect"
+    - platform: google
+      queries:
+        - intitle:"BIG-IP®- Redirect"
