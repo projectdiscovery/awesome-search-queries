@@ -34950,14 +34950,6 @@
       queries:
         - login - cloudlog
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: dash-uploader
   vendor: fohrloop
   type: product
@@ -34979,3 +34971,11 @@
     - platform: shodan
       queries:
         - '"served-model-name"'
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
