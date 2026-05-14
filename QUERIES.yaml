@@ -34979,3 +34979,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: langfuse
+  vendor: langfuse
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="langfuse"
+    - platform: shodan
+      queries:
+        - http.title:"langfuse"
