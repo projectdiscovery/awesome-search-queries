@@ -291,6 +291,7 @@
         - http.html:"apache tomcat"
         - http.html:"jk status manager"
         - http.title:"apache tomcat"
+        - product:"apache tomcat tribes"
         - product:"tomcat"
     - platform: fofa
       queries:
@@ -25825,9 +25826,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:116323821
         - http.title:"eureka"
     - platform: fofa
       queries:
+        - icon_hash=116323821
         - title="eureka"
     - platform: google
       queries:
@@ -34972,14 +34975,6 @@
       queries:
         - '"served-model-name"'
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: langfuse
   vendor: langfuse
   type: product
@@ -34990,3 +34985,69 @@
     - platform: shodan
       queries:
         - http.title:"langfuse"
+    - platform: google
+      queries:
+        - intitle:"langfuse"
+
+- name: phpvms
+  vendor: phpvms
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="phpvms"
+    - platform: shodan
+      queries:
+        - http.html:"phpvms"
+
+- name: magicmirror
+  vendor: magicmirrororg
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"magicmirror"
+
+- name: ninja_forms_file_uploads
+  vendor: ninjaforms
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="nfpluginsettings.js?ver="
+    - platform: shodan
+      queries:
+        - http.html:"nfpluginsettings.js?ver="
+
+- name: infinispan
+  vendor: redhat
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash=647951307
+        - title="infinispan" || body="/console/main.bundle.js"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:647951307
+        - http.title:"infinispan"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: litellm
+  vendor: berriai
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="litellm api"
+    - platform: shodan
+      queries:
+        - http.html:"litellm"
+        - http.title:"litellm api - swagger ui"
