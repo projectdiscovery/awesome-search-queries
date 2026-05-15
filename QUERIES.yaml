@@ -35063,3 +35063,22 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: drag-and-drop-multiple-file-upload-contact-form-7
+  vendor: codedropz
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/drag-and-drop-multiple-file-upload-contact-form-7/
+
+- name: mage-ai
+  vendor: mage_ai
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="mage"
+    - platform: shodan
+      queries:
+        - http.title:"mage"
