@@ -34996,6 +34996,7 @@
     - platform: fofa
       queries:
         - app="phpvms"
+        - body="phpvms"
     - platform: shodan
       queries:
         - http.html:"phpvms"
@@ -35007,6 +35008,12 @@
     - platform: shodan
       queries:
         - http.title:"magicmirror"
+    - platform: fofa
+      queries:
+        - title="magicmirror"
+    - platform: google
+      queries:
+        - intitle:"magicmirror"
 
 - name: ninja_forms_file_uploads
   vendor: ninjaforms
@@ -35032,6 +35039,23 @@
         - http.favicon.hash:647951307
         - http.title:"infinispan"
 
+- name: litellm
+  vendor: berriai
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="litellm"
+        - title="litellm api - swagger ui"
+        - title="litellm api"
+    - platform: shodan
+      queries:
+        - http.html:"litellm"
+        - http.title:"litellm api - swagger ui"
+    - platform: google
+      queries:
+        - intitle:"litellm api - swagger ui"
+
 - name: element
   vendor: matrix
   type: product
@@ -35039,15 +35063,3 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
-
-- name: litellm
-  vendor: berriai
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="litellm api"
-    - platform: shodan
-      queries:
-        - http.html:"litellm"
-        - http.title:"litellm api - swagger ui"
