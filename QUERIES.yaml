@@ -35056,14 +35056,6 @@
       queries:
         - intitle:"litellm api - swagger ui"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: drag-and-drop-multiple-file-upload-contact-form-7
   vendor: codedropz
   type: product
@@ -35071,6 +35063,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/drag-and-drop-multiple-file-upload-contact-form-7/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/drag-and-drop-multiple-file-upload-contact-form-7/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/drag-and-drop-multiple-file-upload-contact-form-7/
 
 - name: mage-ai
   vendor: mage_ai
@@ -35082,3 +35080,22 @@
     - platform: shodan
       queries:
         - http.title:"mage"
+    - platform: google
+      queries:
+        - intitle:"mage"
+
+- name: nextjs
+  vendor: vercel
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.component:"next.js"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
