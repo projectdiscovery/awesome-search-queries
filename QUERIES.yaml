@@ -35092,6 +35092,14 @@
       queries:
         - http.component:"next.js"
 
+- name: event-booking-calendar
+  vendor: phpjabbers
+  type: product
+  engines:
+    - platform: google
+      queries:
+        - inurl:"event-booking-calendar" inurl:"preview.php"
+
 - name: element
   vendor: matrix
   type: product
