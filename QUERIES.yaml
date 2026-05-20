@@ -35100,6 +35100,17 @@
       queries:
         - inurl:"event-booking-calendar" inurl:"preview.php"
 
+- name: qubely
+  vendor: themeum
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="qubely_urls"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/qubely/
+
 - name: element
   vendor: matrix
   type: product
