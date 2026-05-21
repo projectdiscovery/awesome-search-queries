@@ -35116,14 +35116,6 @@
         - http.html:"qubely_urls"
         - http.html:/wp-content/plugins/qubely/
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: catalyst_sd-wan_controller
   vendor: cisco
   type: product
@@ -35134,3 +35126,11 @@
     - platform: shodan
       queries:
         - port:12346 product:"cisco sd-wan"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
