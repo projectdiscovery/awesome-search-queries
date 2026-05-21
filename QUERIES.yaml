@@ -35107,9 +35107,14 @@
     - platform: fofa
       queries:
         - body="qubely_urls"
+        - body=/wp-content/plugins/qubely/
     - platform: publicwww
       queries:
         - /wp-content/plugins/qubely/
+    - platform: shodan
+      queries:
+        - http.html:"qubely_urls"
+        - http.html:/wp-content/plugins/qubely/
 
 - name: element
   vendor: matrix
@@ -35118,3 +35123,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: catalyst_sd-wan_controller
+  vendor: cisco
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - port="12346" && product="cisco sd-wan"
+    - platform: shodan
+      queries:
+        - port:12346 product:"cisco sd-wan"
