@@ -35127,6 +35127,17 @@
       queries:
         - port:12346 product:"cisco sd-wan"
 
+- name: camel
+  vendor: apache
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - protocol="coap"
+    - platform: shodan
+      queries:
+        - port:5683
+
 - name: element
   vendor: matrix
   type: product
