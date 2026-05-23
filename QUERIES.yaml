@@ -35148,3 +35148,25 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: uptime-kuma
+  vendor: louislam
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="uptime-kuma"
+    - platform: shodan
+      queries:
+        - http.title:"uptime kuma"
+
+- name: aapanel
+  vendor: aapanel
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="aapanel linux panel"
+    - platform: shodan
+      queries:
+        - http.html:"aapanel linux panel"
