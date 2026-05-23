@@ -1092,6 +1092,9 @@
       queries:
         - cpe:"cpe:2.3:a:drupal:drupal"
         - http.component:"drupal"
+    - platform: fofa
+      queries:
+        - app="drupal"
 
 - name: piwigo
   vendor: piwigo
