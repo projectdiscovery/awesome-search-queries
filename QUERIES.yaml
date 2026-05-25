@@ -34017,9 +34017,14 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-1864630356
+        - http.title:"marimo"
     - platform: fofa
       queries:
         - icon_hash=-1864630356
+        - title="marimo"
+    - platform: google
+      queries:
+        - intitle:"marimo"
 
 - name: chanjet CRM
   vendor: chanjet
@@ -34196,7 +34201,14 @@
   engines:
     - platform: shodan
       queries:
+        - http.title:"xinference"
         - port:9997 http.html:"xinference"
+    - platform: fofa
+      queries:
+        - title="xinference"
+    - platform: google
+      queries:
+        - intitle:"xinference"
 
 - name: weights-and-biases
   vendor: wandb
@@ -35149,12 +35161,15 @@
       queries:
         - app="uptime-kuma"
         - title="uptime kuma"
+        - title="uptime-kuma"
     - platform: shodan
       queries:
         - http.title:"uptime kuma"
+        - http.title:"uptime-kuma"
     - platform: google
       queries:
         - intitle:"uptime kuma"
+        - intitle:"uptime-kuma"
 
 - name: aapanel
   vendor: aapanel
@@ -35167,6 +35182,17 @@
       queries:
         - http.html:"aapanel linux panel"
 
+- name: web-check
+  vendor: lissy93
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="web-check"
+    - platform: shodan
+      queries:
+        - http.title:"web-check"
+
 - name: element
   vendor: matrix
   type: product
@@ -35174,3 +35200,246 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: kong-gateway
+  vendor: konghq
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - 'header="server: kong"'
+    - platform: shodan
+      queries:
+        - 'http.title:"kong" || "server: kong"'
+
+- name: SwarmUI
+  vendor: mcmonkeyprojects
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"swarmui"
+
+- name: skyvern
+  vendor: skyvern-ai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"skyvern"
+
+- name: OpenLLM
+  vendor: BentoML
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"openllm"
+
+- name: Kubeflow Pipelines
+  vendor: Kubeflow
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"kubeflow pipelines"
+
+- name: Metaflow UI
+  vendor: Netflix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"metaflow ui"
+
+- name: chatbot-ui
+  vendor: mckaywrigley
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"chatbot ui"
+
+- name: mlflow
+  vendor: databricks
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"mlflow"
+
+- name: tensorboard
+  vendor: tensorflow
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"tensorboard"
+
+- name: facefusion
+  vendor: facefusion
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"facefusion"
+
+- name: langsmith
+  vendor: langchain
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"langsmith"
+
+- name: phoenix
+  vendor: Arize-ai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"phoenix" port:6006 http.html:"arize"
+
+- name: lmstudio
+  vendor: lmstudio
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"lm studio chat"
+
+- name: chainlit
+  vendor: chainlit
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"chainlit"
+
+- name: cognita
+  vendor: truefoundry
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"cognita"
+
+- name: fastgpt
+  vendor: labring
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"fastgpt"
+
+- name: Letta
+  vendor: Letta AI
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"letta"
+
+- name: big-agi
+  vendor: big-agi
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"big-agi"
+
+- name: evidently
+  vendor: evidently-ai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"evidently"
+
+- name: perplexica
+  vendor: perplexica
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"perplexica"
+
+- name: typebot
+  vendor: typebot
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"typebot"
+
+- name: polynote
+  vendor: polynote
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"polynote"
+
+- name: localgpt
+  vendor: promptengineer
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"localgpt"
+
+- name: ragflow
+  vendor: infiniflow
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"ragflow"
+
+- name: vanna
+  vendor: vanna-ai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"vanna"
+
+- name: botpress
+  vendor: botpress
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"@botpress/ui-admin"
+
+- name: Voilà
+  vendor: Voilà
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"/voila/"
+
+- name: serge
+  vendor: serge-chat
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"serge" port:8008
+
+- name: Argilla
+  vendor: Argilla
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"argilla"
+
+- name: taskingai
+  vendor: taskingai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"taskingai | console"
