@@ -35192,14 +35192,9 @@
     - platform: shodan
       queries:
         - http.title:"web-check"
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
+    - platform: google
       queries:
-        - http.html:"manifest.json"
+        - intitle:"web-check"
 
 - name: kong-gateway
   vendor: konghq
@@ -35208,9 +35203,13 @@
     - platform: fofa
       queries:
         - 'header="server: kong"'
+        - 'title="kong" || "server: kong"'
     - platform: shodan
       queries:
         - 'http.title:"kong" || "server: kong"'
+    - platform: google
+      queries:
+        - 'intitle:"kong" || "server: kong"'
 
 - name: SwarmUI
   vendor: mcmonkeyprojects
@@ -35219,6 +35218,12 @@
     - platform: shodan
       queries:
         - http.title:"swarmui"
+    - platform: fofa
+      queries:
+        - title="swarmui"
+    - platform: google
+      queries:
+        - intitle:"swarmui"
 
 - name: skyvern
   vendor: skyvern-ai
@@ -35227,6 +35232,12 @@
     - platform: shodan
       queries:
         - http.title:"skyvern"
+    - platform: fofa
+      queries:
+        - title="skyvern"
+    - platform: google
+      queries:
+        - intitle:"skyvern"
 
 - name: OpenLLM
   vendor: BentoML
@@ -35235,6 +35246,12 @@
     - platform: shodan
       queries:
         - http.title:"openllm"
+    - platform: fofa
+      queries:
+        - title="openllm"
+    - platform: google
+      queries:
+        - intitle:"openllm"
 
 - name: Kubeflow Pipelines
   vendor: Kubeflow
@@ -35243,6 +35260,12 @@
     - platform: shodan
       queries:
         - http.title:"kubeflow pipelines"
+    - platform: fofa
+      queries:
+        - title="kubeflow pipelines"
+    - platform: google
+      queries:
+        - intitle:"kubeflow pipelines"
 
 - name: Metaflow UI
   vendor: Netflix
@@ -35251,6 +35274,12 @@
     - platform: shodan
       queries:
         - http.title:"metaflow ui"
+    - platform: fofa
+      queries:
+        - title="metaflow ui"
+    - platform: google
+      queries:
+        - intitle:"metaflow ui"
 
 - name: chatbot-ui
   vendor: mckaywrigley
@@ -35259,6 +35288,12 @@
     - platform: shodan
       queries:
         - http.title:"chatbot ui"
+    - platform: fofa
+      queries:
+        - title="chatbot ui"
+    - platform: google
+      queries:
+        - intitle:"chatbot ui"
 
 - name: mlflow
   vendor: databricks
@@ -35267,6 +35302,12 @@
     - platform: shodan
       queries:
         - http.title:"mlflow"
+    - platform: fofa
+      queries:
+        - title="mlflow"
+    - platform: google
+      queries:
+        - intitle:"mlflow"
 
 - name: tensorboard
   vendor: tensorflow
@@ -35275,6 +35316,12 @@
     - platform: shodan
       queries:
         - http.title:"tensorboard"
+    - platform: fofa
+      queries:
+        - title="tensorboard"
+    - platform: google
+      queries:
+        - intitle:"tensorboard"
 
 - name: facefusion
   vendor: facefusion
@@ -35283,6 +35330,12 @@
     - platform: shodan
       queries:
         - http.title:"facefusion"
+    - platform: fofa
+      queries:
+        - title="facefusion"
+    - platform: google
+      queries:
+        - intitle:"facefusion"
 
 - name: langsmith
   vendor: langchain
@@ -35291,6 +35344,12 @@
     - platform: shodan
       queries:
         - http.title:"langsmith"
+    - platform: fofa
+      queries:
+        - title="langsmith"
+    - platform: google
+      queries:
+        - intitle:"langsmith"
 
 - name: phoenix
   vendor: Arize-ai
@@ -35299,6 +35358,12 @@
     - platform: shodan
       queries:
         - http.title:"phoenix" port:6006 http.html:"arize"
+    - platform: fofa
+      queries:
+        - title="phoenix" port:6006 http.html:"arize"
+    - platform: google
+      queries:
+        - intitle:"phoenix" port:6006 http.html:"arize"
 
 - name: lmstudio
   vendor: lmstudio
@@ -35307,6 +35372,12 @@
     - platform: shodan
       queries:
         - http.title:"lm studio chat"
+    - platform: fofa
+      queries:
+        - title="lm studio chat"
+    - platform: google
+      queries:
+        - intitle:"lm studio chat"
 
 - name: chainlit
   vendor: chainlit
@@ -35315,6 +35386,9 @@
     - platform: shodan
       queries:
         - http.html:"chainlit"
+    - platform: fofa
+      queries:
+        - body="chainlit"
 
 - name: cognita
   vendor: truefoundry
@@ -35323,6 +35397,12 @@
     - platform: shodan
       queries:
         - http.title:"cognita"
+    - platform: fofa
+      queries:
+        - title="cognita"
+    - platform: google
+      queries:
+        - intitle:"cognita"
 
 - name: fastgpt
   vendor: labring
@@ -35331,6 +35411,12 @@
     - platform: shodan
       queries:
         - http.title:"fastgpt"
+    - platform: fofa
+      queries:
+        - title="fastgpt"
+    - platform: google
+      queries:
+        - intitle:"fastgpt"
 
 - name: Letta
   vendor: Letta AI
@@ -35339,6 +35425,12 @@
     - platform: shodan
       queries:
         - http.title:"letta"
+    - platform: fofa
+      queries:
+        - title="letta"
+    - platform: google
+      queries:
+        - intitle:"letta"
 
 - name: big-agi
   vendor: big-agi
@@ -35347,6 +35439,12 @@
     - platform: shodan
       queries:
         - http.title:"big-agi"
+    - platform: fofa
+      queries:
+        - title="big-agi"
+    - platform: google
+      queries:
+        - intitle:"big-agi"
 
 - name: evidently
   vendor: evidently-ai
@@ -35355,6 +35453,12 @@
     - platform: shodan
       queries:
         - http.title:"evidently"
+    - platform: fofa
+      queries:
+        - title="evidently"
+    - platform: google
+      queries:
+        - intitle:"evidently"
 
 - name: perplexica
   vendor: perplexica
@@ -35363,6 +35467,12 @@
     - platform: shodan
       queries:
         - http.title:"perplexica"
+    - platform: fofa
+      queries:
+        - title="perplexica"
+    - platform: google
+      queries:
+        - intitle:"perplexica"
 
 - name: typebot
   vendor: typebot
@@ -35371,6 +35481,12 @@
     - platform: shodan
       queries:
         - http.title:"typebot"
+    - platform: fofa
+      queries:
+        - title="typebot"
+    - platform: google
+      queries:
+        - intitle:"typebot"
 
 - name: polynote
   vendor: polynote
@@ -35379,6 +35495,12 @@
     - platform: shodan
       queries:
         - http.title:"polynote"
+    - platform: fofa
+      queries:
+        - title="polynote"
+    - platform: google
+      queries:
+        - intitle:"polynote"
 
 - name: localgpt
   vendor: promptengineer
@@ -35387,6 +35509,12 @@
     - platform: shodan
       queries:
         - http.title:"localgpt"
+    - platform: fofa
+      queries:
+        - title="localgpt"
+    - platform: google
+      queries:
+        - intitle:"localgpt"
 
 - name: ragflow
   vendor: infiniflow
@@ -35395,6 +35523,12 @@
     - platform: shodan
       queries:
         - http.title:"ragflow"
+    - platform: fofa
+      queries:
+        - title="ragflow"
+    - platform: google
+      queries:
+        - intitle:"ragflow"
 
 - name: vanna
   vendor: vanna-ai
@@ -35403,6 +35537,12 @@
     - platform: shodan
       queries:
         - http.title:"vanna"
+    - platform: fofa
+      queries:
+        - title="vanna"
+    - platform: google
+      queries:
+        - intitle:"vanna"
 
 - name: botpress
   vendor: botpress
@@ -35411,6 +35551,9 @@
     - platform: shodan
       queries:
         - http.html:"@botpress/ui-admin"
+    - platform: fofa
+      queries:
+        - body="@botpress/ui-admin"
 
 - name: Voilà
   vendor: Voilà
@@ -35427,6 +35570,12 @@
     - platform: shodan
       queries:
         - http.title:"serge" port:8008
+    - platform: fofa
+      queries:
+        - title="serge" port:8008
+    - platform: google
+      queries:
+        - intitle:"serge" port:8008
 
 - name: Argilla
   vendor: Argilla
@@ -35435,6 +35584,12 @@
     - platform: shodan
       queries:
         - http.title:"argilla"
+    - platform: fofa
+      queries:
+        - title="argilla"
+    - platform: google
+      queries:
+        - intitle:"argilla"
 
 - name: taskingai
   vendor: taskingai
@@ -35443,3 +35598,345 @@
     - platform: shodan
       queries:
         - http.title:"taskingai | console"
+    - platform: fofa
+      queries:
+        - title="taskingai | console"
+    - platform: google
+      queries:
+        - intitle:"taskingai | console"
+
+- name: ceselector
+  vendor: mmc
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.component:"typo3 cms"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: cogent-datahub
+  vendor: Cogent Real-Time Systems
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"datahub web server"
+
+- name: proficy-webspace
+  vendor: GE
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"proficy webspace"
+
+- name: ignition
+  vendor: Inductive Automation
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"ignition gateway"
+
+- name: lynx-router
+  vendor: Westermo
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"westermo"
+
+- name: thingworx
+  vendor: PTC
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"thingworx"
+
+- name: solaredge-telematics
+  vendor: SolarEdge
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"solaredge"
+
+- name: tac-vista
+  vendor: Schneider Electric
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"tac vista"
+
+- name: zenon
+  vendor: COPA-DATA
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - 'http.title:"copa-data :: zenon"'
+
+- name: shinelink
+  vendor: Growatt
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"growatt shinelink"
+
+- name: solar-inverter
+  vendor: kaco
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"kaco new energy"
+
+- name: mach-system
+  vendor: Reliable Controls
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"reliable controls"
+
+- name: ilon-smartserver
+  vendor: Echelon
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"i.lon smartserver"
+
+- name: solar-log
+  vendor: Solar-Log
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"solar-log"
+
+- name: twincat-hmi
+  vendor: Beckhoff
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"twincat" http.html:"beckhoff"
+
+- name: mate3s
+  vendor: outback-power
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"outback power"
+
+- name: aveva-edge
+  vendor: AVEVA
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"aveva edge"
+
+- name: scadabr
+  vendor: ScadaBR
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"scadabr"
+
+- name: pdu
+  vendor: Raritan
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"raritan" http.html:"pdu"
+
+- name: plc
+  vendor: Unitronics
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"unitronics"
+
+- name: umg
+  vendor: Janitza
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"janitza"
+
+- name: groov
+  vendor: Opto 22
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"groov"
+
+- name: gridvis
+  vendor: janitza
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"gridvis"
+
+- name: fronius-inverter
+  vendor: Fronius
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"fronius inverter"
+
+- name: fronius-datalogger-web
+  vendor: Fronius
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"fronius datalogger web"
+
+- name: hmi
+  vendor: Red Lion Controls
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"red lion"
+
+- name: promotic
+  vendor: MicroSys
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"promotic"
+
+- name: clearscada
+  vendor: Schneider Electric
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"clearscada"
+
+- name: prostar-mppt
+  vendor: morningstar
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"prostar mppt - live data"
+
+- name: andover-continuum
+  vendor: Andover
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"andover continuum"
+
+- name: factorytalk-viewpoint
+  vendor: Rockwell Automation
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"factorytalk viewpoint"
+
+- name: digi-router
+  vendor: Digi International
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"digi router"
+
+- name: mxview
+  vendor: Moxa
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"mxview one central manager"
+
+- name: sel-rtac
+  vendor: Schweitzer Engineering Laboratories
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"sel-rtac"
+
+- name: emoncms
+  vendor: OpenEnergyMonitor
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"emoncms - user login"
+
+- name: aveva-intouch-access-anywhere
+  vendor: AVEVA
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"intouch access anywhere"
+
+- name: dse855
+  vendor: deep-sea-electronics
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"dse 855"
+
+- name: openscada
+  vendor: OpenSCADA
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"openscada" port:10002
+
+- name: pi-vision
+  vendor: OSIsoft
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"pi vision"
+
+- name: webvisu
+  vendor: CODESYS
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"webvisu login"
+
+- name: vtscada
+  vendor: Trihedral
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"vtscada internet client from trihedral"
