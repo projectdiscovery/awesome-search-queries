@@ -35613,14 +35613,6 @@
       queries:
         - http.component:"typo3 cms"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: cogent-datahub
   vendor: Cogent Real-Time Systems
   type: product
@@ -35628,6 +35620,12 @@
     - platform: shodan
       queries:
         - http.title:"datahub web server"
+    - platform: fofa
+      queries:
+        - title="datahub web server"
+    - platform: google
+      queries:
+        - intitle:"datahub web server"
 
 - name: proficy-webspace
   vendor: GE
@@ -35636,6 +35634,12 @@
     - platform: shodan
       queries:
         - http.title:"proficy webspace"
+    - platform: fofa
+      queries:
+        - title="proficy webspace"
+    - platform: google
+      queries:
+        - intitle:"proficy webspace"
 
 - name: ignition
   vendor: Inductive Automation
@@ -35644,6 +35648,12 @@
     - platform: shodan
       queries:
         - http.title:"ignition gateway"
+    - platform: fofa
+      queries:
+        - title="ignition gateway"
+    - platform: google
+      queries:
+        - intitle:"ignition gateway"
 
 - name: lynx-router
   vendor: Westermo
@@ -35652,6 +35662,9 @@
     - platform: shodan
       queries:
         - http.html:"westermo"
+    - platform: fofa
+      queries:
+        - body="westermo"
 
 - name: thingworx
   vendor: PTC
@@ -35660,6 +35673,12 @@
     - platform: shodan
       queries:
         - http.title:"thingworx"
+    - platform: fofa
+      queries:
+        - title="thingworx"
+    - platform: google
+      queries:
+        - intitle:"thingworx"
 
 - name: solaredge-telematics
   vendor: SolarEdge
@@ -35668,6 +35687,12 @@
     - platform: shodan
       queries:
         - http.title:"solaredge"
+    - platform: fofa
+      queries:
+        - title="solaredge"
+    - platform: google
+      queries:
+        - intitle:"solaredge"
 
 - name: tac-vista
   vendor: Schneider Electric
@@ -35676,6 +35701,12 @@
     - platform: shodan
       queries:
         - http.title:"tac vista"
+    - platform: fofa
+      queries:
+        - title="tac vista"
+    - platform: google
+      queries:
+        - intitle:"tac vista"
 
 - name: zenon
   vendor: COPA-DATA
@@ -35684,6 +35715,12 @@
     - platform: shodan
       queries:
         - 'http.title:"copa-data :: zenon"'
+    - platform: fofa
+      queries:
+        - 'title="copa-data :: zenon"'
+    - platform: google
+      queries:
+        - 'intitle:"copa-data :: zenon"'
 
 - name: shinelink
   vendor: Growatt
@@ -35692,6 +35729,12 @@
     - platform: shodan
       queries:
         - http.title:"growatt shinelink"
+    - platform: fofa
+      queries:
+        - title="growatt shinelink"
+    - platform: google
+      queries:
+        - intitle:"growatt shinelink"
 
 - name: solar-inverter
   vendor: kaco
@@ -35700,6 +35743,12 @@
     - platform: shodan
       queries:
         - http.title:"kaco new energy"
+    - platform: fofa
+      queries:
+        - title="kaco new energy"
+    - platform: google
+      queries:
+        - intitle:"kaco new energy"
 
 - name: mach-system
   vendor: Reliable Controls
@@ -35708,6 +35757,12 @@
     - platform: shodan
       queries:
         - http.title:"reliable controls"
+    - platform: fofa
+      queries:
+        - title="reliable controls"
+    - platform: google
+      queries:
+        - intitle:"reliable controls"
 
 - name: ilon-smartserver
   vendor: Echelon
@@ -35716,6 +35771,12 @@
     - platform: shodan
       queries:
         - http.title:"i.lon smartserver"
+    - platform: fofa
+      queries:
+        - title="i.lon smartserver"
+    - platform: google
+      queries:
+        - intitle:"i.lon smartserver"
 
 - name: solar-log
   vendor: Solar-Log
@@ -35724,6 +35785,12 @@
     - platform: shodan
       queries:
         - http.title:"solar-log"
+    - platform: fofa
+      queries:
+        - title="solar-log"
+    - platform: google
+      queries:
+        - intitle:"solar-log"
 
 - name: twincat-hmi
   vendor: Beckhoff
@@ -35732,6 +35799,9 @@
     - platform: shodan
       queries:
         - http.html:"twincat" http.html:"beckhoff"
+    - platform: fofa
+      queries:
+        - body="twincat" http.html:"beckhoff"
 
 - name: mate3s
   vendor: outback-power
@@ -35740,6 +35810,12 @@
     - platform: shodan
       queries:
         - http.title:"outback power"
+    - platform: fofa
+      queries:
+        - title="outback power"
+    - platform: google
+      queries:
+        - intitle:"outback power"
 
 - name: aveva-edge
   vendor: AVEVA
@@ -35748,6 +35824,9 @@
     - platform: shodan
       queries:
         - http.html:"aveva edge"
+    - platform: fofa
+      queries:
+        - body="aveva edge"
 
 - name: scadabr
   vendor: ScadaBR
@@ -35756,6 +35835,12 @@
     - platform: shodan
       queries:
         - http.title:"scadabr"
+    - platform: fofa
+      queries:
+        - title="scadabr"
+    - platform: google
+      queries:
+        - intitle:"scadabr"
 
 - name: pdu
   vendor: Raritan
@@ -35764,6 +35849,9 @@
     - platform: shodan
       queries:
         - http.html:"raritan" http.html:"pdu"
+    - platform: fofa
+      queries:
+        - body="raritan" http.html:"pdu"
 
 - name: plc
   vendor: Unitronics
@@ -35772,6 +35860,9 @@
     - platform: shodan
       queries:
         - http.html:"unitronics"
+    - platform: fofa
+      queries:
+        - body="unitronics"
 
 - name: umg
   vendor: Janitza
@@ -35780,6 +35871,12 @@
     - platform: shodan
       queries:
         - http.title:"janitza"
+    - platform: fofa
+      queries:
+        - title="janitza"
+    - platform: google
+      queries:
+        - intitle:"janitza"
 
 - name: groov
   vendor: Opto 22
@@ -35788,6 +35885,12 @@
     - platform: shodan
       queries:
         - http.title:"groov"
+    - platform: fofa
+      queries:
+        - title="groov"
+    - platform: google
+      queries:
+        - intitle:"groov"
 
 - name: gridvis
   vendor: janitza
@@ -35796,6 +35899,12 @@
     - platform: shodan
       queries:
         - http.title:"gridvis"
+    - platform: fofa
+      queries:
+        - title="gridvis"
+    - platform: google
+      queries:
+        - intitle:"gridvis"
 
 - name: fronius-inverter
   vendor: Fronius
@@ -35804,6 +35913,12 @@
     - platform: shodan
       queries:
         - http.title:"fronius inverter"
+    - platform: fofa
+      queries:
+        - title="fronius inverter"
+    - platform: google
+      queries:
+        - intitle:"fronius inverter"
 
 - name: fronius-datalogger-web
   vendor: Fronius
@@ -35812,6 +35927,12 @@
     - platform: shodan
       queries:
         - http.title:"fronius datalogger web"
+    - platform: fofa
+      queries:
+        - title="fronius datalogger web"
+    - platform: google
+      queries:
+        - intitle:"fronius datalogger web"
 
 - name: hmi
   vendor: Red Lion Controls
@@ -35820,6 +35941,9 @@
     - platform: shodan
       queries:
         - http.html:"red lion"
+    - platform: fofa
+      queries:
+        - body="red lion"
 
 - name: promotic
   vendor: MicroSys
@@ -35828,6 +35952,12 @@
     - platform: shodan
       queries:
         - http.title:"promotic"
+    - platform: fofa
+      queries:
+        - title="promotic"
+    - platform: google
+      queries:
+        - intitle:"promotic"
 
 - name: clearscada
   vendor: Schneider Electric
@@ -35836,6 +35966,12 @@
     - platform: shodan
       queries:
         - http.title:"clearscada"
+    - platform: fofa
+      queries:
+        - title="clearscada"
+    - platform: google
+      queries:
+        - intitle:"clearscada"
 
 - name: prostar-mppt
   vendor: morningstar
@@ -35844,6 +35980,12 @@
     - platform: shodan
       queries:
         - http.title:"prostar mppt - live data"
+    - platform: fofa
+      queries:
+        - title="prostar mppt - live data"
+    - platform: google
+      queries:
+        - intitle:"prostar mppt - live data"
 
 - name: andover-continuum
   vendor: Andover
@@ -35852,6 +35994,9 @@
     - platform: shodan
       queries:
         - http.html:"andover continuum"
+    - platform: fofa
+      queries:
+        - body="andover continuum"
 
 - name: factorytalk-viewpoint
   vendor: Rockwell Automation
@@ -35860,6 +36005,12 @@
     - platform: shodan
       queries:
         - http.title:"factorytalk viewpoint"
+    - platform: fofa
+      queries:
+        - title="factorytalk viewpoint"
+    - platform: google
+      queries:
+        - intitle:"factorytalk viewpoint"
 
 - name: digi-router
   vendor: Digi International
@@ -35868,6 +36019,12 @@
     - platform: shodan
       queries:
         - http.title:"digi router"
+    - platform: fofa
+      queries:
+        - title="digi router"
+    - platform: google
+      queries:
+        - intitle:"digi router"
 
 - name: mxview
   vendor: Moxa
@@ -35876,6 +36033,12 @@
     - platform: shodan
       queries:
         - http.title:"mxview one central manager"
+    - platform: fofa
+      queries:
+        - title="mxview one central manager"
+    - platform: google
+      queries:
+        - intitle:"mxview one central manager"
 
 - name: sel-rtac
   vendor: Schweitzer Engineering Laboratories
@@ -35884,6 +36047,12 @@
     - platform: shodan
       queries:
         - http.title:"sel-rtac"
+    - platform: fofa
+      queries:
+        - title="sel-rtac"
+    - platform: google
+      queries:
+        - intitle:"sel-rtac"
 
 - name: emoncms
   vendor: OpenEnergyMonitor
@@ -35892,6 +36061,12 @@
     - platform: shodan
       queries:
         - http.title:"emoncms - user login"
+    - platform: fofa
+      queries:
+        - title="emoncms - user login"
+    - platform: google
+      queries:
+        - intitle:"emoncms - user login"
 
 - name: aveva-intouch-access-anywhere
   vendor: AVEVA
@@ -35900,6 +36075,9 @@
     - platform: shodan
       queries:
         - http.html:"intouch access anywhere"
+    - platform: fofa
+      queries:
+        - body="intouch access anywhere"
 
 - name: dse855
   vendor: deep-sea-electronics
@@ -35908,6 +36086,12 @@
     - platform: shodan
       queries:
         - http.title:"dse 855"
+    - platform: fofa
+      queries:
+        - title="dse 855"
+    - platform: google
+      queries:
+        - intitle:"dse 855"
 
 - name: openscada
   vendor: OpenSCADA
@@ -35916,6 +36100,12 @@
     - platform: shodan
       queries:
         - http.title:"openscada" port:10002
+    - platform: fofa
+      queries:
+        - title="openscada" port:10002
+    - platform: google
+      queries:
+        - intitle:"openscada" port:10002
 
 - name: pi-vision
   vendor: OSIsoft
@@ -35924,6 +36114,12 @@
     - platform: shodan
       queries:
         - http.title:"pi vision"
+    - platform: fofa
+      queries:
+        - title="pi vision"
+    - platform: google
+      queries:
+        - intitle:"pi vision"
 
 - name: webvisu
   vendor: CODESYS
@@ -35940,3 +36136,17 @@
     - platform: shodan
       queries:
         - http.title:"vtscada internet client from trihedral"
+    - platform: fofa
+      queries:
+        - title="vtscada internet client from trihedral"
+    - platform: google
+      queries:
+        - intitle:"vtscada internet client from trihedral"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
