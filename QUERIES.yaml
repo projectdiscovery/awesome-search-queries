@@ -36143,6 +36143,44 @@
       queries:
         - intitle:"vtscada internet client from trihedral"
 
+- name: burst-statistics
+  vendor: really-simple-plugins
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/burst-statistics/
+
+- name: frappe
+  vendor: frappe
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="login" && body="frappe"
+    - platform: shodan
+      queries:
+        - http.title:"login" http.html:"frappe"
+
+- name: custom-css-js-php
+  vendor: flippercode
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.component:"wordpress"
+
+- name: bubble
+  vendor: bubble
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - header="x-bubble"
+    - platform: shodan
+      queries:
+        - x-bubble-perf
+
 - name: element
   vendor: matrix
   type: product
