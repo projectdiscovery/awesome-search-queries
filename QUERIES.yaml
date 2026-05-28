@@ -36198,3 +36198,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: librechat
+  vendor: librechat
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"librechat"
