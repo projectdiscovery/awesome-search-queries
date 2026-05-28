@@ -36150,6 +36150,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/burst-statistics/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/burst-statistics/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/burst-statistics/
 
 - name: frappe
   vendor: frappe
@@ -36158,9 +36164,13 @@
     - platform: fofa
       queries:
         - title="login" && body="frappe"
+        - title="login" http.html:"frappe"
     - platform: shodan
       queries:
         - http.title:"login" http.html:"frappe"
+    - platform: google
+      queries:
+        - intitle:"login" http.html:"frappe"
 
 - name: custom-css-js-php
   vendor: flippercode
