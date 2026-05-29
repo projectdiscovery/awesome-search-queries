@@ -36199,6 +36199,17 @@
       queries:
         - http.title:"librechat"
 
+- name: webaccess_scada
+  vendor: advantech
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="advantech webaccess" || body="broadweb"
+    - platform: shodan
+      queries:
+        - http.title:"advantech webaccess"
+
 - name: element
   vendor: matrix
   type: product
