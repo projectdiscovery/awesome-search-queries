@@ -36191,14 +36191,6 @@
       queries:
         - x-bubble-perf
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: librechat
   vendor: librechat
   type: product
@@ -36206,3 +36198,11 @@
     - platform: shodan
       queries:
         - http.title:"librechat"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
