@@ -36205,10 +36205,14 @@
   engines:
     - platform: fofa
       queries:
+        - title="advantech webaccess"
         - title="advantech webaccess" || body="broadweb"
     - platform: shodan
       queries:
         - http.title:"advantech webaccess"
+    - platform: google
+      queries:
+        - intitle:"advantech webaccess"
 
 - name: element
   vendor: matrix
