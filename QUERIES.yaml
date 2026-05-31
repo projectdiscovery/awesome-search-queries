@@ -857,12 +857,15 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:gitea:gitea"
+        - http.html:"gitea"
         - http.html:"powered by gitea version"
         - http.html:"powered by gitea"
         - http.title:"gitea"
         - 'http.title:"installation -  gitea: git with a cup of tea"'
     - platform: fofa
       queries:
+        - app="gitea"
+        - body="gitea"
         - body="powered by gitea version"
         - body="powered by gitea"
         - title="gitea"
