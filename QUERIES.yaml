@@ -36217,6 +36217,14 @@
       queries:
         - intitle:"advantech webaccess"
 
+- name: LiteLLM
+  vendor: BerriAI
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"litellm"
+
 - name: element
   vendor: matrix
   type: product
