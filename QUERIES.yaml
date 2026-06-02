@@ -7214,10 +7214,16 @@
     - platform: fofa
       queries:
         - icon_hash="-631559155"
+        - title="globalprotect"
+        - title="globalprotect" port:443
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:o:paloaltonetworks:pan-os"
         - http.favicon.hash:"-631559155"
+        - http.title:"globalprotect" port:443
+    - platform: google
+      queries:
+        - intitle:"globalprotect" port:443
 
 - name: User Meta
   vendor: User Meta
@@ -36224,6 +36230,12 @@
     - platform: shodan
       queries:
         - http.title:"litellm"
+    - platform: fofa
+      queries:
+        - title="litellm"
+    - platform: google
+      queries:
+        - intitle:"litellm"
 
 - name: element
   vendor: matrix
