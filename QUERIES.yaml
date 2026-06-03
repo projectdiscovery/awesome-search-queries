@@ -36237,6 +36237,14 @@
       queries:
         - intitle:"litellm"
 
+- name: woocommerce-delivery-notes
+  vendor: tychesoftwares
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/woocommerce-delivery-notes/"
+
 - name: element
   vendor: matrix
   type: product
