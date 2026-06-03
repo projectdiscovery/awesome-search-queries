@@ -4653,9 +4653,14 @@
     - platform: shodan
       queries:
         - http.html:"dataease"
+        - http.title:"dataease"
     - platform: fofa
       queries:
         - body="dataease"
+        - title="dataease"
+    - platform: google
+      queries:
+        - intitle:"dataease"
 
 - name: securetrack
   vendor: tufin
@@ -36244,6 +36249,39 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/woocommerce-delivery-notes/"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/woocommerce-delivery-notes/"
+
+- name: site_management
+  vendor: bitrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"/bitrix/"
+
+- name: windmill
+  vendor: windmill
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="windmill"
+    - platform: shodan
+      queries:
+        - http.html:"windmill" http.html:"svelte-global-loader"
+
+- name: open-webui
+  vendor: openwebui
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="open webui"
+    - platform: shodan
+      queries:
+        - http.title:"open webui"
 
 - name: element
   vendor: matrix
