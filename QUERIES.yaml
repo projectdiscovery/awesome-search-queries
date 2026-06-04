@@ -36268,6 +36268,7 @@
     - platform: fofa
       queries:
         - app="windmill"
+        - body="windmill" http.html:"svelte-global-loader"
     - platform: shodan
       queries:
         - http.html:"windmill" http.html:"svelte-global-loader"
@@ -36282,6 +36283,17 @@
     - platform: shodan
       queries:
         - http.title:"open webui"
+
+- name: vikunja
+  vendor: vikunja
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="vikunja"
+    - platform: shodan
+      queries:
+        - http.title:"vikunja"
 
 - name: element
   vendor: matrix
