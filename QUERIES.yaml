@@ -36294,6 +36294,31 @@
     - platform: shodan
       queries:
         - http.title:"vikunja"
+    - platform: google
+      queries:
+        - intitle:"vikunja"
+
+- name: label-studio
+  vendor: humansignal
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="label studio"
+    - platform: shodan
+      queries:
+        - http.title:"label studio"
+
+- name: starlette
+  vendor: Kludex
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="starlette"
+    - platform: shodan
+      queries:
+        - http.html:"starlette"
 
 - name: element
   vendor: matrix
