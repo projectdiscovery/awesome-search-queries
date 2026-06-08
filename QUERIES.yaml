@@ -12467,13 +12467,16 @@
         - cpe:"cpe:2.3:a:prestashop:prestashop"
         - http.component:"prestashop"
         - http.title:"prestashop installation assistant"
+        - http.title:"prestashop"
     - platform: fofa
       queries:
         - app="prestashop"
         - title="prestashop installation assistant"
+        - title="prestashop"
     - platform: google
       queries:
         - intitle:"prestashop installation assistant"
+        - intitle:"prestashop"
 
 - name: iplanet_web_server
   vendor: oracle
@@ -36319,6 +36322,22 @@
     - platform: shodan
       queries:
         - http.html:"starlette"
+
+- name: eu_cookie_law_gdpr
+  vendor: lineagrafica
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.component:"prestashop"
+
+- name: milvus
+  vendor: milvus
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"404 page not found" port:"9091"
 
 - name: element
   vendor: matrix
