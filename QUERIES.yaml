@@ -36349,6 +36349,9 @@
     - platform: shodan
       queries:
         - http.html:"changedetection.io"
+    - platform: fofa
+      queries:
+        - body="changedetection.io"
 
 - name: ligolo-ng
   vendor: ligolo-ng
@@ -36360,6 +36363,31 @@
     - platform: shodan
       queries:
         - http.title:"ligolo-ng"
+    - platform: google
+      queries:
+        - intitle:"ligolo-ng"
+
+- name: armember
+  vendor: reputeinfosystems
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/armember-membership/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/armember-membership/"
+
+- name: homarr
+  vendor: homarr
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="homarr"
+    - platform: shodan
+      queries:
+        - http.title:"homarr"
 
 - name: element
   vendor: matrix
