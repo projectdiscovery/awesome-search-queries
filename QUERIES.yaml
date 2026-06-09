@@ -36338,6 +36338,28 @@
     - platform: shodan
       queries:
         - http.html:"404 page not found" port:"9091"
+    - platform: fofa
+      queries:
+        - body="404 page not found" port:"9091"
+
+- name: changedetection.io
+  vendor: dgtlmoon
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"changedetection.io"
+
+- name: ligolo-ng
+  vendor: ligolo-ng
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="ligolo-ng"
+    - platform: shodan
+      queries:
+        - http.title:"ligolo-ng"
 
 - name: element
   vendor: matrix
