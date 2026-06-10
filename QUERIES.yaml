@@ -36388,6 +36388,9 @@
     - platform: shodan
       queries:
         - http.title:"homarr"
+    - platform: google
+      queries:
+        - intitle:"homarr"
 
 - name: element
   vendor: matrix
