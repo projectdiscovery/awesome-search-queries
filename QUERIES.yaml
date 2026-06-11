@@ -25363,6 +25363,7 @@
   engines:
     - platform: shodan
       queries:
+        - dgraph
         - http.title:"dgraph ratel dashboard"
     - platform: fofa
       queries:
@@ -33676,6 +33677,7 @@
         - http.title:"budibase"
     - platform: fofa
       queries:
+        - app="budibase"
         - title="budibase"
     - platform: google
       queries:
@@ -36391,6 +36393,64 @@
     - platform: google
       queries:
         - intitle:"homarr"
+
+- name: hippoo-mobile-app-for-woocommerce
+  vendor: hippoo
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="hippoo"
+    - platform: shodan
+      queries:
+        - http.component:"wordpress"
+        - http.html:"hippoo"
+
+- name: newsletters
+  vendor: tribulant
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/newsletters-lite/
+
+- name: praisonai
+  vendor: praison
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="praisonai app"
+    - platform: shodan
+      queries:
+        - http.html:"praisonai app"
+
+- name: product_slider_pro_for_woocommerce
+  vendor: shapedplugin
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/woo-product-slider-pro"
+    - platform: shodan
+      queries:
+        - http.component:"wordpress"
+
+- name: everest-forms-pro
+  vendor: wpeverest
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/everest-forms-pro/"
+
+- name: hexstrike-ai
+  vendor: hexstrike-ai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"hexstrike"
 
 - name: element
   vendor: matrix
