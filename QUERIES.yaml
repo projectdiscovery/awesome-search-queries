@@ -36413,6 +36413,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/newsletters-lite/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/newsletters-lite/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/newsletters-lite/
 
 - name: praisonai
   vendor: praison
@@ -36435,6 +36441,7 @@
     - platform: shodan
       queries:
         - http.component:"wordpress"
+        - http.html:"wp-content/plugins/woo-product-slider-pro"
 
 - name: everest-forms-pro
   vendor: wpeverest
@@ -36443,6 +36450,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/everest-forms-pro/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/everest-forms-pro/"
 
 - name: hexstrike-ai
   vendor: hexstrike-ai
@@ -36451,6 +36461,9 @@
     - platform: shodan
       queries:
         - http.html:"hexstrike"
+    - platform: fofa
+      queries:
+        - body="hexstrike"
 
 - name: element
   vendor: matrix
