@@ -36476,14 +36476,6 @@
       queries:
         - http.component:"wordpress" http.component:"w3 total cache"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: jce
   vendor: joomlacontenteditor
   type: product
@@ -36494,3 +36486,11 @@
     - platform: shodan
       queries:
         - http.component:"joomla"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
