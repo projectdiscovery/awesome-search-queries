@@ -36465,14 +36465,6 @@
       queries:
         - body="hexstrike"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: w3-total-cache
   vendor: boldgrid
   type: product
@@ -36483,3 +36475,22 @@
     - platform: shodan
       queries:
         - http.component:"wordpress" http.component:"w3 total cache"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: jce
+  vendor: joomlacontenteditor
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="joomla"
+    - platform: shodan
+      queries:
+        - http.component:"joomla"
