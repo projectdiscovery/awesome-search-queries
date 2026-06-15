@@ -1109,6 +1109,7 @@
         - body="piwigo"
         - body="piwigo" html:"- installation"
         - icon_hash=540706145
+        - icon_hash=="540706145"
         - title="piwigo"
     - platform: google
       queries:
@@ -1116,6 +1117,7 @@
     - platform: shodan
       queries:
         - http.favicon.hash:540706145
+        - http.favicon.hash:="540706145"
         - http.html:"- installation"
         - http.html:"piwigo"
         - http.html:"piwigo" html:"- installation"
@@ -22418,6 +22420,10 @@
     - platform: fofa
       queries:
         - app="stackstorm"
+        - body="stackstorm web ui"
+    - platform: shodan
+      queries:
+        - http.html:"stackstorm web ui"
 
 - name: data_science_studio
   vendor: dataiku
@@ -36486,6 +36492,14 @@
     - platform: shodan
       queries:
         - http.component:"joomla"
+
+- name: kargo
+  vendor: akuity
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"kargo"
 
 - name: element
   vendor: matrix
