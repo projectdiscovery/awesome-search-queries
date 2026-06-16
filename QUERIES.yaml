@@ -36500,6 +36500,12 @@
     - platform: shodan
       queries:
         - http.title:"kargo"
+    - platform: fofa
+      queries:
+        - title="kargo"
+    - platform: google
+      queries:
+        - intitle:"kargo"
 
 - name: element
   vendor: matrix
