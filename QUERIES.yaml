@@ -10217,10 +10217,12 @@
       queries:
         - cpe:"cpe:2.3:a:dokuwiki:dokuwiki"
         - http.html:"/dokuwiki/"
+        - http.html:"content=\"dokuwiki"
         - http.title:"dokuwiki"
     - platform: fofa
       queries:
         - body="/dokuwiki/"
+        - body="content=\"dokuwiki"
         - title="dokuwiki"
     - platform: google
       queries:
@@ -19867,9 +19869,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"check point ssl network extender"
         - http.html:"check point ssl network"
     - platform: fofa
       queries:
+        - body="check point ssl network extender"
         - body="check point ssl network"
 
 - name: awstats
