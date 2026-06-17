@@ -33851,9 +33851,15 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-1450125239
+        - http.title:"siyuan"
     - platform: fofa
       queries:
         - icon_hash=-1450125239
+        - title="siyuan"
+        - title="siyuan" || body="siyuan"
+    - platform: google
+      queries:
+        - intitle:"siyuan"
 
 - name: photoprism
   vendor: photoprism
@@ -36518,3 +36524,22 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: mcp-atlassian
+  vendor: sooperset
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="atlassian mcp" || header="mcp-session-id"
+    - platform: shodan
+      queries:
+        - http.html:"atlassian mcp"
+
+- name: openbullet2
+  vendor: openbullet
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="openbullet2webclient"
