@@ -36517,20 +36517,13 @@
       queries:
         - intitle:"kargo"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: mcp-atlassian
   vendor: sooperset
   type: product
   engines:
     - platform: fofa
       queries:
+        - body="atlassian mcp"
         - body="atlassian mcp" || header="mcp-session-id"
     - platform: shodan
       queries:
@@ -36543,3 +36536,11 @@
     - platform: fofa
       queries:
         - title="openbullet2webclient"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
