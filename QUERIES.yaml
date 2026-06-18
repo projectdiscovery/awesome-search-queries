@@ -22601,9 +22601,13 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"peoplesoft environment management hub"
+        - http.html:"peoplesoft"
         - http.title:"oracle peoplesoft sign-in"
     - platform: fofa
       queries:
+        - body="peoplesoft environment management hub"
+        - body="peoplesoft"
         - title="oracle peoplesoft sign-in"
     - platform: google
       queries:
