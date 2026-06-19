@@ -28949,9 +28949,15 @@
     - platform: fofa
       queries:
         - icon_hash="97378986"
+        - title="dify"
+        - title="dify" || body="dify"
     - platform: shodan
       queries:
         - http.favicon.hash:"97378986"
+        - http.title:"dify"
+    - platform: google
+      queries:
+        - intitle:"dify"
 
 - name: tc-ecommerce
   vendor: themescoder
@@ -33856,10 +33862,12 @@
       queries:
         - http.favicon.hash:-1450125239
         - http.title:"siyuan"
+        - port:6808 "siyuan"
     - platform: fofa
       queries:
         - icon_hash=-1450125239
         - title="siyuan"
+        - title="siyuan" && port="6808"
         - title="siyuan" || body="siyuan"
     - platform: google
       queries:
@@ -36548,3 +36556,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: dsl-2600u
+  vendor: d-link
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - dsl-2600u
