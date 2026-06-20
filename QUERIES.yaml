@@ -36549,14 +36549,6 @@
       queries:
         - title="openbullet2webclient"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: dsl-2600u
   vendor: d-link
   type: product
@@ -36564,3 +36556,11 @@
     - platform: shodan
       queries:
         - dsl-2600u
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
