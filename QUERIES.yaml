@@ -36564,3 +36564,33 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: vllm
+  vendor: vllm
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"/v1/models" http.html:"vllm"
+
+- name: dashy
+  vendor: lissy93
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="dashy"
+    - platform: shodan
+      queries:
+        - http.title:"dashy"
+
+- name: samba
+  vendor: samba
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - protocol=smb && banner=samba
+    - platform: shodan
+      queries:
+        - port:445 product:samba
