@@ -36597,3 +36597,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: order-attributes
+  vendor: amasty
+  type: product
+  engines:
+    - platform: google
+      queries:
+        - inurl:"/rest/v1/amasty_orderattr"
+    - platform: shodan
+      queries:
+        - http.component:"magento"
