@@ -36557,14 +36557,6 @@
       queries:
         - dsl-2600u
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: vllm
   vendor: vllm
   type: product
@@ -36572,6 +36564,9 @@
     - platform: shodan
       queries:
         - http.html:"/v1/models" http.html:"vllm"
+    - platform: fofa
+      queries:
+        - body="/v1/models" http.html:"vllm"
 
 - name: dashy
   vendor: lissy93
@@ -36594,3 +36589,11 @@
     - platform: shodan
       queries:
         - port:445 product:samba
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
