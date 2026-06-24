@@ -1757,6 +1757,7 @@
   engines:
     - platform: google
       queries:
+        - intitle:"gogs"
         - intitle:"installation - gogs"
         - intitle:"sign in - gogs"
     - platform: shodan
@@ -1765,6 +1766,7 @@
         - http.favicon.hash:"-449283196"
         - http.favicon.hash:"1935513730"
         - http.favicon.hash:"917966895"
+        - http.title:"gogs"
         - http.title:"installation - gogs"
         - http.title:"sign in - gogs"
         - 'set-cookie: i_like_gogs='
@@ -1774,6 +1776,7 @@
         - icon_hash="1935513730"
         - icon_hash="917966895"
         - 'set-cookie: i_like_gogs='
+        - title="gogs"
         - title="installation - gogs"
         - title="sign in - gogs"
 
@@ -36608,3 +36611,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: xerte_online_toolkits
+  vendor: xerte
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="xerte online toolkits"
+    - platform: shodan
+      queries:
+        - http.title:"xerte online toolkits"
