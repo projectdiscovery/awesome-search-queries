@@ -36590,14 +36590,6 @@
       queries:
         - port:445 product:samba
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: order-attributes
   vendor: amasty
   type: product
@@ -36608,3 +36600,11 @@
     - platform: shodan
       queries:
         - http.component:"magento"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
