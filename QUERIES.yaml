@@ -36618,6 +36618,29 @@
       queries:
         - intitle:"xerte online toolkits"
 
+- name: ecology
+  vendor: weaver
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/build/ecodesdk/static/js/lib.js"
+        - icon_hash="-1619753057"
+    - platform: shodan
+      queries:
+        - http.html:"/build/ecodesdk/static/js/lib.js"
+
+- name: ecology9
+  vendor: weaver
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="泛微-协同商务系统"
+    - platform: hunter
+      queries:
+        - app.name=="泛微 e-cology 9.0 oa"
+
 - name: element
   vendor: matrix
   type: product
