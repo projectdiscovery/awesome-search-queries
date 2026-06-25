@@ -36604,14 +36604,6 @@
       queries:
         - http.component:"magento"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: xerte_online_toolkits
   vendor: xerte
   type: product
@@ -36622,3 +36614,14 @@
     - platform: shodan
       queries:
         - http.title:"xerte online toolkits"
+    - platform: google
+      queries:
+        - intitle:"xerte online toolkits"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
