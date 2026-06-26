@@ -36628,6 +36628,7 @@
         - icon_hash="-1619753057"
     - platform: shodan
       queries:
+        - http.favicon.hash:"-1619753057"
         - http.html:"/build/ecodesdk/static/js/lib.js"
 
 - name: ecology9
@@ -36648,3 +36649,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: icc
+  vendor: dahua
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-1935899595" && body="*客户端会小于800*"
