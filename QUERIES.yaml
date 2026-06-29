@@ -36657,3 +36657,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: dir-823x_firmware
+  vendor: dlink
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="dir-823x"
+    - platform: shodan
+      queries:
+        - http.title:"d-link"
