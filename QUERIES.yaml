@@ -36661,14 +36661,6 @@
       queries:
         - http.title:"d-link"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: ymc-filter
   vendor: ymc
   type: product
@@ -36676,3 +36668,17 @@
     - platform: publicwww
       queries:
         - /plugins/ymc-smart-filter/
+    - platform: shodan
+      queries:
+        - http.html:/plugins/ymc-smart-filter/
+    - platform: fofa
+      queries:
+        - body=/plugins/ymc-smart-filter/
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
