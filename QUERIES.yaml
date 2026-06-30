@@ -36675,6 +36675,17 @@
       queries:
         - body=/plugins/ymc-smart-filter/
 
+- name: identity-aware-proxy
+  vendor: google
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - header="x-goog-iap-generated-response"
+    - platform: shodan
+      queries:
+        - x-goog-iap-generated-response
+
 - name: element
   vendor: matrix
   type: product
