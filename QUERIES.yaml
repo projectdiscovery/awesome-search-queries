@@ -36693,3 +36693,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: gorse
+  vendor: gorse-io
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="gorse dashboard"
