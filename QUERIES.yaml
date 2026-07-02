@@ -36686,14 +36686,6 @@
       queries:
         - x-goog-iap-generated-response
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: gorse
   vendor: gorse-io
   type: product
@@ -36701,3 +36693,11 @@
     - platform: fofa
       queries:
         - title="gorse dashboard"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
