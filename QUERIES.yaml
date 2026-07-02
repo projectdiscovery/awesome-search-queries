@@ -36694,6 +36694,22 @@
       queries:
         - title="gorse dashboard"
 
+- name: cxsast
+  vendor: checkmarx
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"cxsastmanageruri"
+
+- name: telepresence_mcu_software
+  vendor: cisco
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"cisco telepresence"
+
 - name: element
   vendor: matrix
   type: product
@@ -36701,3 +36717,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: leadconnector
+  vendor: leadconnector
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/leadconnector/"
+    - platform: shodan
+      queries:
+        - http.html:"leadconnector"
