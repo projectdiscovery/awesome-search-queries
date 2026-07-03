@@ -36701,6 +36701,9 @@
     - platform: shodan
       queries:
         - http.html:"cxsastmanageruri"
+    - platform: fofa
+      queries:
+        - body="cxsastmanageruri"
 
 - name: telepresence_mcu_software
   vendor: cisco
@@ -36709,14 +36712,12 @@
     - platform: shodan
       queries:
         - http.title:"cisco telepresence"
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
+    - platform: fofa
       queries:
-        - http.html:"manifest.json"
+        - title="cisco telepresence"
+    - platform: google
+      queries:
+        - intitle:"cisco telepresence"
 
 - name: leadconnector
   vendor: leadconnector
@@ -36725,6 +36726,16 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/leadconnector/"
+        - body="leadconnector"
     - platform: shodan
       queries:
+        - http.html:"/wp-content/plugins/leadconnector/"
         - http.html:"leadconnector"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
