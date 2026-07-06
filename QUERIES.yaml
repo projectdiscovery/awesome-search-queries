@@ -14211,7 +14211,11 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:phpbb:phpbb"
+        - http.component:"phpbb"
         - http.html:"installation panel"
+    - platform: fofa
+      queries:
+        - app="phpbb"
 
 - name: pimcore
   vendor: pimcore
