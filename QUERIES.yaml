@@ -36736,14 +36736,6 @@
         - http.html:"/wp-content/plugins/leadconnector/"
         - http.html:"leadconnector"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: chatbot
   vendor: quantumcloud
   type: product
@@ -36754,3 +36746,11 @@
     - platform: shodan
       queries:
         - http.html:"wp_chatbot_obj"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
