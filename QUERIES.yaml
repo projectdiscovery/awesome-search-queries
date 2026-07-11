@@ -36747,6 +36747,14 @@
       queries:
         - http.html:"wp_chatbot_obj"
 
+- name: maxkb
+  vendor: 1panel
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"maxkb"
+
 - name: element
   vendor: matrix
   type: product
