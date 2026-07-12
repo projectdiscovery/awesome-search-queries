@@ -36754,6 +36754,12 @@
     - platform: shodan
       queries:
         - http.title:"maxkb"
+    - platform: fofa
+      queries:
+        - title="maxkb"
+    - platform: google
+      queries:
+        - intitle:"maxkb"
 
 - name: element
   vendor: matrix
