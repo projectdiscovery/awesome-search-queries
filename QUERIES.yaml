@@ -36768,3 +36768,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: triton-inference-server
+  vendor: nvidia
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"triton" port:8080
