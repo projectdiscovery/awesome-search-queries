@@ -36761,14 +36761,6 @@
       queries:
         - intitle:"maxkb"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: triton-inference-server
   vendor: nvidia
   type: product
@@ -36776,3 +36768,17 @@
     - platform: shodan
       queries:
         - http.title:"triton" port:8080
+    - platform: fofa
+      queries:
+        - title="triton" port:8080
+    - platform: google
+      queries:
+        - intitle:"triton" port:8080
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
