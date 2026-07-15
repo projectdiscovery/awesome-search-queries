@@ -36782,3 +36782,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: 9router
+  vendor: decolua
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - port="20128" || title="9router"
+    - platform: shodan
+      queries:
+        - port:20128 http.html:"9router"
