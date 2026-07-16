@@ -36786,6 +36786,14 @@
       queries:
         - port:20128 http.html:"9router"
 
+- name: qualys_cloud_platform
+  vendor: qualys
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"qualys"
+
 - name: element
   vendor: matrix
   type: product
