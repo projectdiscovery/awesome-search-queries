@@ -36775,14 +36775,6 @@
       queries:
         - intitle:"triton" port:8080
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: 9router
   vendor: decolua
   type: product
@@ -36793,3 +36785,11 @@
     - platform: shodan
       queries:
         - port:20128 http.html:"9router"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
