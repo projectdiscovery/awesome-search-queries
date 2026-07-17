@@ -36793,6 +36793,12 @@
     - platform: shodan
       queries:
         - http.title:"qualys"
+    - platform: fofa
+      queries:
+        - title="qualys"
+    - platform: google
+      queries:
+        - intitle:"qualys"
 
 - name: element
   vendor: matrix
