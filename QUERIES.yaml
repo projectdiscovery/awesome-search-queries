@@ -36800,14 +36800,6 @@
       queries:
         - intitle:"qualys"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: payment_gateway_pix_for_woocommerce
   vendor: linknacional
   type: product
@@ -36818,3 +36810,11 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/payment-gateway-pix-for-woocommerce"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
