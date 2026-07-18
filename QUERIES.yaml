@@ -216,6 +216,7 @@
         - http.html:"/wp-includes/functions.php"
     - platform: fofa
       queries:
+        - app="wordpress"
         - body="/wp-includes/functions.php"
         - body="oembed" && body="wp-"
 
@@ -36818,3 +36819,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: forms
+  vendor: balbooa
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="com_baforms"
