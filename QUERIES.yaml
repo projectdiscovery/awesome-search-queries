@@ -36812,14 +36812,6 @@
       queries:
         - http.html:"/wp-content/plugins/payment-gateway-pix-for-woocommerce"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: forms
   vendor: balbooa
   type: product
@@ -36827,3 +36819,14 @@
     - platform: fofa
       queries:
         - body="com_baforms"
+    - platform: shodan
+      queries:
+        - http.html:"com_baforms"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
