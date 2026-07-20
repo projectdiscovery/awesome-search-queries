@@ -28071,9 +28071,11 @@
     - platform: fofa
       queries:
         - body="requested method is not allowed, please refer to api document"
+        - body="torchserve"
     - platform: shodan
       queries:
         - http.html:"requested method is not allowed, please refer to api document"
+        - http.html:"torchserve"
 
 - name: vicidial
   vendor: vicidial
@@ -36508,9 +36510,13 @@
     - platform: fofa
       queries:
         - app="wordpress-w3-total-cache"
+        - body="/wp-content/plugins/w3-total-cache/"
+        - body="w3-total-cache"
     - platform: shodan
       queries:
         - http.component:"wordpress" http.component:"w3 total cache"
+        - http.html:"/wp-content/plugins/w3-total-cache/"
+        - http.html:"w3-total-cache"
 
 - name: jce
   vendor: joomlacontenteditor
@@ -36830,3 +36836,36 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: jan
+  vendor: janhq
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="cortex"
+    - platform: shodan
+      queries:
+        - port:1337 http.title:"jan"
+
+- name: sglang
+  vendor: sgl-project
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"is_generation"
+
+- name: wp-google-map-gold
+  vendor: flippercode
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-maps-pro/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/wp-maps-pro/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wp-maps-pro/"
