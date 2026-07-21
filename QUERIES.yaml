@@ -36788,9 +36788,11 @@
   engines:
     - platform: fofa
       queries:
+        - body="9router"
         - port="20128" || title="9router"
     - platform: shodan
       queries:
+        - http.html:"9router"
         - port:20128 http.html:"9router"
 
 - name: qualys_cloud_platform
@@ -36873,3 +36875,36 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: wp-hotel-booking
+  vendor: thimpress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-hotel-booking/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/wp-hotel-booking/
+
+- name: kimai
+  vendor: kimai
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="kimai"
+    - platform: shodan
+      queries:
+        - http.title:"kimai"
+
+- name: wpbookit
+  vendor: iqonicdesign
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wpbookit/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/wpbookit/
