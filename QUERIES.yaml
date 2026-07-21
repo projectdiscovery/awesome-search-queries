@@ -36829,14 +36829,6 @@
       queries:
         - http.html:"com_baforms"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: jan
   vendor: janhq
   type: product
@@ -36846,6 +36838,7 @@
         - body="cortex"
     - platform: shodan
       queries:
+        - http.html:"cortex"
         - port:1337 http.title:"jan"
 
 - name: sglang
@@ -36855,6 +36848,9 @@
     - platform: shodan
       queries:
         - http.html:"is_generation"
+    - platform: fofa
+      queries:
+        - body="is_generation"
 
 - name: wp-google-map-gold
   vendor: flippercode
@@ -36869,3 +36865,11 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/wp-maps-pro/"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
