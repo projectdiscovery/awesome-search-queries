@@ -36909,14 +36909,6 @@
       queries:
         - http.html:"/wp-content/plugins/wpbookit/"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: page_builder_ck
   vendor: joomlack
   type: product
@@ -36941,3 +36933,11 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/everest-forms/"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
