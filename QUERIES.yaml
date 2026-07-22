@@ -20036,12 +20036,14 @@
   engines:
     - platform: fofa
       queries:
+        - body="workplace" "sma"
         - title="appliance management console login"
     - platform: google
       queries:
         - intitle:"appliance management console login"
     - platform: shodan
       queries:
+        - http.html:"workplace" "sma"
         - http.title:"appliance management console login"
 
 - name: srx100
@@ -36868,14 +36870,6 @@
       queries:
         - http.html:"/wp-content/plugins/wp-maps-pro/"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: wp-hotel-booking
   vendor: thimpress
   type: product
@@ -36886,6 +36880,9 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/wp-hotel-booking/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wp-hotel-booking/"
 
 - name: kimai
   vendor: kimai
@@ -36908,3 +36905,39 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/wpbookit/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wpbookit/"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: page_builder_ck
+  vendor: joomlack
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="com_pagebuilderck"
+    - platform: shodan
+      queries:
+        - http.html:"com_pagebuilderck"
+
+- name: everest_forms
+  vendor: wpeverest
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/everest-forms/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/everest-forms/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/everest-forms/"
