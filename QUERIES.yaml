@@ -26691,6 +26691,12 @@
     - platform: google
       queries:
         - 'x-powered-by: directus'
+    - platform: fofa
+      queries:
+        - 'header="x-powered-by: directus"'
+    - platform: shodan
+      queries:
+        - 'x-powered-by: directus'
 
 - name: interactsh
   vendor: projectdiscovery
@@ -29250,6 +29256,12 @@
     - platform: shodan
       queries:
         - http.title:"hertzbeat"
+    - platform: fofa
+      queries:
+        - title="hertzbeat"
+    - platform: google
+      queries:
+        - intitle:"hertzbeat"
 
 - name: Drupal
   vendor: Drupal
@@ -36933,6 +36945,199 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/everest-forms/"
+
+- name: sp_page_builder
+  vendor: joomshaper
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="com_sppagebuilder"
+    - platform: shodan
+      queries:
+        - http.html:"com_sppagebuilder"
+
+- name: sp_lms
+  vendor: joomshaper
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="com_splms"
+    - platform: shodan
+      queries:
+        - http.component:"joomla"
+
+- name: verba
+  vendor: weaviate
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"bg-bg-verba"
+
+- name: fiftyone
+  vendor: voxel51
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"fiftyone"
+
+- name: katib
+  vendor: kubeflow
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"dashboard_lib.bundle.js"
+
+- name: prodigy
+  vendor: explosion
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"prodigy" http.favicon.hash:-953245195
+
+- name: fastchat
+  vendor: lm-sys
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"notice_markdown" html:"chat with open large language models"
+
+- name: determined
+  vendor: determined-ai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"determined deep learning training platform"
+
+- name: compreface
+  vendor: exadel
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"compreface"
+
+- name: helicone
+  vendor: helicone
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"helicone"
+
+- name: langtrace
+  vendor: scale3labs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"langtrace"
+
+- name: knime_server
+  vendor: knime
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"_login/_nuxt"
+
+- name: aim
+  vendor: aimhubio
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"open-source, self-hosted ai experiment tracking tool"
+
+- name: deepstack
+  vendor: deepstackai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"deepstack activated"
+
+- name: fooocus
+  vendor: lllyasviel
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"fooocus"
+
+- name: driverless-ai
+  vendor: h2o.ai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"h2o.ai - login"
+
+- name: bitrix_site_manager
+  vendor: bitrix24
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"/bitrix/"
+
+- name: dockwatch
+  vendor: notifiarr
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"dockwatch"
+
+- name: wp-google-maps
+  vendor: developer-developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-google-maps"
+    - platform: shodan
+      queries:
+        - http.html:"wp-google-maps"
+
+- name: geowebserver
+  vendor: geovision
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"geowebserver"
+
+- name: rasa
+  vendor: rasa
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"hello from rasa"
+
+- name: seldon-core
+  vendor: seldonio
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - '"seldon-pipelinegateway"'
+
+- name: vespa
+  vendor: vespa.ai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"vespa"
 
 - name: element
   vendor: matrix
