@@ -37183,6 +37183,20 @@
     - platform: shodan
       queries:
         - http.html:"arelle web services"
+    - platform: fofa
+      queries:
+        - body="arelle web services"
+
+- name: arthas
+  vendor: alibaba
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="arthas console"
+    - platform: shodan
+      queries:
+        - http.title:"arthas console"
 
 - name: element
   vendor: matrix
