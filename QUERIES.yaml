@@ -36967,6 +36967,7 @@
     - platform: shodan
       queries:
         - http.component:"joomla"
+        - http.html:"com_splms"
 
 - name: verba
   vendor: weaviate
@@ -36983,6 +36984,12 @@
     - platform: shodan
       queries:
         - http.title:"fiftyone"
+    - platform: fofa
+      queries:
+        - title="fiftyone"
+    - platform: google
+      queries:
+        - intitle:"fiftyone"
 
 - name: katib
   vendor: kubeflow
@@ -36999,6 +37006,12 @@
     - platform: shodan
       queries:
         - http.title:"prodigy" http.favicon.hash:-953245195
+    - platform: fofa
+      queries:
+        - title="prodigy" http.favicon.hash:-953245195
+    - platform: google
+      queries:
+        - intitle:"prodigy" http.favicon.hash:-953245195
 
 - name: fastchat
   vendor: lm-sys
@@ -37023,6 +37036,12 @@
     - platform: shodan
       queries:
         - http.title:"compreface"
+    - platform: fofa
+      queries:
+        - title="compreface"
+    - platform: google
+      queries:
+        - intitle:"compreface"
 
 - name: helicone
   vendor: helicone
@@ -37031,6 +37050,12 @@
     - platform: shodan
       queries:
         - http.title:"helicone"
+    - platform: fofa
+      queries:
+        - title="helicone"
+    - platform: google
+      queries:
+        - intitle:"helicone"
 
 - name: langtrace
   vendor: scale3labs
@@ -37039,6 +37064,12 @@
     - platform: shodan
       queries:
         - http.title:"langtrace"
+    - platform: fofa
+      queries:
+        - title="langtrace"
+    - platform: google
+      queries:
+        - intitle:"langtrace"
 
 - name: knime_server
   vendor: knime
@@ -37079,6 +37110,12 @@
     - platform: shodan
       queries:
         - http.title:"h2o.ai - login"
+    - platform: fofa
+      queries:
+        - title="h2o.ai - login"
+    - platform: google
+      queries:
+        - intitle:"h2o.ai - login"
 
 - name: bitrix_site_manager
   vendor: bitrix24
@@ -37138,6 +37175,14 @@
     - platform: shodan
       queries:
         - product:"vespa"
+
+- name: arelle
+  vendor: arelle
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"arelle web services"
 
 - name: element
   vendor: matrix
