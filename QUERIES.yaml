@@ -37198,6 +37198,17 @@
       queries:
         - http.title:"arthas console"
 
+- name: fusion-builder
+  vendor: theme-fusion
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="fusion-builder" && body="wordpress"
+    - platform: shodan
+      queries:
+        - http.component:"wordpress" http.component:"avada"
+
 - name: element
   vendor: matrix
   type: product
