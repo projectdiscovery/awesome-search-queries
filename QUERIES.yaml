@@ -37209,6 +37209,38 @@
       queries:
         - http.component:"wordpress" http.component:"avada"
 
+- name: wp-user-frontend
+  vendor: wedevs
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /plugins/wp-user-frontend/
+
+- name: quick-playground
+  vendor: davidfcarr
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /plugins/quick-playground/
+
+- name: canto
+  vendor: flightbycanto
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/canto/
+
+- name: langflow
+  vendor: ibm
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="langflow" || body="langflow"
+
 - name: element
   vendor: matrix
   type: product
