@@ -37259,6 +37259,44 @@
       queries:
         - title="langflow" || body="langflow"
 
+- name: security_management_server
+  vendor: checkpoint
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - port="18190"
+    - platform: shodan
+      queries:
+        - port:18190
+
+- name: meta-box
+  vendor: metabox
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/meta-box/
+
+- name: discuz_x
+  vendor: discuz
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="discuz! x5.0"
+    - platform: shodan
+      queries:
+        - http.html:"discuz! x5.0"
+
+- name: dolibarr
+  vendor: dolibarr
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"dolibarr"
+
 - name: element
   vendor: matrix
   type: product
