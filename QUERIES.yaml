@@ -37216,6 +37216,12 @@
     - platform: publicwww
       queries:
         - /plugins/wp-user-frontend/
+    - platform: shodan
+      queries:
+        - http.html:/plugins/wp-user-frontend/
+    - platform: fofa
+      queries:
+        - body=/plugins/wp-user-frontend/
 
 - name: quick-playground
   vendor: davidfcarr
@@ -37224,6 +37230,12 @@
     - platform: publicwww
       queries:
         - /plugins/quick-playground/
+    - platform: shodan
+      queries:
+        - http.html:/plugins/quick-playground/
+    - platform: fofa
+      queries:
+        - body=/plugins/quick-playground/
 
 - name: canto
   vendor: flightbycanto
@@ -37232,6 +37244,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/canto/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/canto/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/canto/
 
 - name: langflow
   vendor: ibm
