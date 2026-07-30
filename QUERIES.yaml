@@ -31907,6 +31907,9 @@
     - platform: google
       queries:
         - intitle:"flowise"
+    - platform: censys
+      queries:
+        - services.http.response.html_title="flowise"
 
 - name: wp-automatic
   vendor: valvepress
@@ -33025,7 +33028,14 @@
   engines:
     - platform: shodan
       queries:
+        - http.title:"apache tika"
         - http.title:"welcome to the apache tika"
+    - platform: fofa
+      queries:
+        - title="apache tika"
+    - platform: google
+      queries:
+        - intitle:"apache tika"
 
 - name: daenetip4_meto
   vendor: denkovi
