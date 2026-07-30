@@ -37277,6 +37277,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/meta-box/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/meta-box/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/meta-box/
 
 - name: discuz_x
   vendor: discuz
@@ -37296,6 +37302,12 @@
     - platform: shodan
       queries:
         - http.title:"dolibarr"
+    - platform: fofa
+      queries:
+        - title="dolibarr"
+    - platform: google
+      queries:
+        - intitle:"dolibarr"
 
 - name: element
   vendor: matrix
