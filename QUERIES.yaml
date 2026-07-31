@@ -5559,6 +5559,7 @@
         - http.title:"struts2 showcase"
     - platform: fofa
       queries:
+        - app="apache_struts"
         - body="apache struts"
         - body="struts problem report"
         - title="struts2 showcase"
