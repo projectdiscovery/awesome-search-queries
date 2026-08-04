@@ -37327,6 +37327,12 @@
     - platform: shodan
       queries:
         - http.title:"unitrends" -hostname:unitrends.com -hostname:kaseya.com
+    - platform: fofa
+      queries:
+        - title="unitrends" -hostname:unitrends.com -hostname:kaseya.com
+    - platform: google
+      queries:
+        - intitle:"unitrends" -hostname:unitrends.com -hostname:kaseya.com
 
 - name: xen_orchestra
   vendor: vates
@@ -37335,6 +37341,12 @@
     - platform: shodan
       queries:
         - http.title:"xen orchestra"
+    - platform: fofa
+      queries:
+        - title="xen orchestra"
+    - platform: google
+      queries:
+        - intitle:"xen orchestra"
 
 - name: asustor_data_master
   vendor: asustor
@@ -37343,6 +37355,9 @@
     - platform: shodan
       queries:
         - http.favicon.hash:1678170702
+    - platform: fofa
+      queries:
+        - icon_hash=1678170702
 
 - name: backup_and_replication
   vendor: nakivo
@@ -37351,6 +37366,12 @@
     - platform: shodan
       queries:
         - http.title:"nakivo backup & replication" port:4443
+    - platform: fofa
+      queries:
+        - title="nakivo backup & replication" port:4443
+    - platform: google
+      queries:
+        - intitle:"nakivo backup & replication" port:4443
 
 - name: secret_server
   vendor: delinea
@@ -37359,6 +37380,12 @@
     - platform: shodan
       queries:
         - http.title:"secret server"
+    - platform: fofa
+      queries:
+        - title="secret server"
+    - platform: google
+      queries:
+        - intitle:"secret server"
 
 - name: identityiq
   vendor: sailpoint
@@ -37367,6 +37394,12 @@
     - platform: shodan
       queries:
         - http.title:"sailpoint identityiq"
+    - platform: fofa
+      queries:
+        - title="sailpoint identityiq"
+    - platform: google
+      queries:
+        - intitle:"sailpoint identityiq"
 
 - name: xo_lite
   vendor: xcp-ng
@@ -37375,6 +37408,12 @@
     - platform: shodan
       queries:
         - http.title:"xo lite"
+    - platform: fofa
+      queries:
+        - title="xo lite"
+    - platform: google
+      queries:
+        - intitle:"xo lite"
 
 - name: safeguard_for_privileged_passwords
   vendor: oneidentity
@@ -37383,6 +37422,9 @@
     - platform: shodan
       queries:
         - http.html:"safeguard for privileged passwords"
+    - platform: fofa
+      queries:
+        - body="safeguard for privileged passwords"
 
 - name: terastation
   vendor: buffalo
@@ -37391,6 +37433,12 @@
     - platform: shodan
       queries:
         - http.title:"terastation pro - ts-"
+    - platform: fofa
+      queries:
+        - title="terastation pro - ts-"
+    - platform: google
+      queries:
+        - intitle:"terastation pro - ts-"
 
 - name: password_vault_web_access
   vendor: cyberark
@@ -37399,6 +37447,9 @@
     - platform: shodan
       queries:
         - http.html:"/passwordvault/"
+    - platform: fofa
+      queries:
+        - body="/passwordvault/"
 
 - name: pingfederate
   vendor: pingidentity
@@ -37407,6 +37458,9 @@
     - platform: shodan
       queries:
         - http.html:"/pingfederate/dist/styles.css"
+    - platform: fofa
+      queries:
+        - body="/pingfederate/dist/styles.css"
 
 - name: sneeit-framework
   vendor: sneeit
@@ -37415,6 +37469,7 @@
     - platform: fofa
       queries:
         - '"sneeit_articles_pagination"'
+        - body="/wp-content/plugins/wp-social/"
     - platform: publicwww
       queries:
         - /wp-content/plugins/wp-social/
@@ -37440,6 +37495,9 @@
     - platform: shodan
       queries:
         - http.html:"/pingaccess/assets/css/main.css"
+    - platform: fofa
+      queries:
+        - body="/pingaccess/assets/css/main.css"
 
 - name: element
   vendor: matrix
