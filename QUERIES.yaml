@@ -33341,9 +33341,11 @@
   engines:
     - platform: fofa
       queries:
+        - body="d-tale"
         - title="d-tale"
     - platform: shodan
       queries:
+        - http.html:"d-tale"
         - http.title:"d-tale"
 
 - name: privacy_policy_genius
@@ -34795,9 +34797,14 @@
     - platform: shodan
       queries:
         - http.favicon.hash:1727196746
+        - http.title:"langflow"
     - platform: fofa
       queries:
         - icon_hash=1727196746
+        - title="langflow"
+    - platform: google
+      queries:
+        - intitle:"langflow"
 
 - name: blinko
   vendor: blinko-space
