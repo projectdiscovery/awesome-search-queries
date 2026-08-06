@@ -37506,6 +37506,28 @@
       queries:
         - body="/pingaccess/assets/css/main.css"
 
+- name: kestra
+  vendor: kestra
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="kestra"
+    - platform: shodan
+      queries:
+        - http.title:"kestra"
+
+- name: icagenda
+  vendor: joomlic
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="com_icagenda"
+    - platform: shodan
+      queries:
+        - http.html:"com_icagenda"
+
 - name: element
   vendor: matrix
   type: product
