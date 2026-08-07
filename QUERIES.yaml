@@ -37539,6 +37539,14 @@
       queries:
         - http.html:"translatepress"
 
+- name: react_native_community_cli
+  vendor: react-native-community
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="react native" && port="8081"
+
 - name: element
   vendor: matrix
   type: product
