@@ -37528,6 +37528,17 @@
       queries:
         - http.html:"com_icagenda"
 
+- name: translatepress-multilingual
+  vendor: cozmoslabs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="translatepress"
+    - platform: shodan
+      queries:
+        - http.html:"translatepress"
+
 - name: element
   vendor: matrix
   type: product
