@@ -6266,6 +6266,9 @@
     - platform: fofa
       queries:
         - body="formcraft3" && body="wp-"
+    - platform: shodan
+      queries:
+        - http.component:"wordpress" http.html:"formcraft3"
 
 - name: hoteldruid
   vendor: digitaldruid
@@ -37546,6 +37549,42 @@
     - platform: fofa
       queries:
         - title="react native" && port="8081"
+
+- name: kirki
+  vendor: developer-developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/kirki/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/kirki/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/kirki/"
+
+- name: pheditor
+  vendor: pheditor
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="pheditor_password"
+    - platform: shodan
+      queries:
+        - http.html:pheditor
+
+- name: super-forms
+  vendor: developer-developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/super-forms"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/super-forms"
 
 - name: element
   vendor: matrix
