@@ -37571,8 +37571,10 @@
     - platform: fofa
       queries:
         - body="pheditor_password"
+        - body=pheditor
     - platform: shodan
       queries:
+        - http.html:"pheditor_password"
         - http.html:pheditor
 
 - name: super-forms
