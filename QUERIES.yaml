@@ -3679,13 +3679,13 @@
     - platform: shodan
       queries:
         - http.component:"teamcity"
-        - http.title:teamcity
+        - http.title:"teamcity"
     - platform: fofa
       queries:
-        - title=teamcity
+        - title="teamcity"
     - platform: google
       queries:
-        - intitle:teamcity
+        - intitle:"teamcity"
 
 - name: meshcentral
   vendor: meshcentral
@@ -37587,6 +37587,14 @@
     - platform: shodan
       queries:
         - http.html:"wp-content/plugins/super-forms"
+
+- name: cyberstrikeai
+  vendor: ed1s0nz
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"cyberstrikeai"
 
 - name: element
   vendor: matrix
