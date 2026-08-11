@@ -34600,9 +34600,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"/api/app-images"
         - http.html:"arcane"
     - platform: fofa
       queries:
+        - body="/api/app-images"
         - body="arcane"
 
 - name: esm.sh
@@ -37595,6 +37597,14 @@
     - platform: shodan
       queries:
         - http.title:"cyberstrikeai"
+
+- name: net-vision
+  vendor: socomec
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"net vision ups"
 
 - name: element
   vendor: matrix
