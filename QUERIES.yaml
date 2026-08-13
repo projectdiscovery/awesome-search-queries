@@ -26171,10 +26171,12 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"bagisto"
         - http.title:"bagisto installer"
     - platform: fofa
       queries:
         - bagisto
+        - body="bagisto"
         - title="bagisto installer"
     - platform: google
       queries:
@@ -37496,9 +37498,14 @@
     - platform: fofa
       queries:
         - app="gitea"
+        - title="gitea"
     - platform: shodan
       queries:
         - gitea
+        - http.title:"gitea"
+    - platform: google
+      queries:
+        - intitle:"gitea"
 
 - name: pingaccess
   vendor: pingidentity
@@ -37605,6 +37612,99 @@
     - platform: shodan
       queries:
         - http.title:"net vision ups"
+
+- name: 3x-ui
+  vendor: mhsanaei
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="3x-ui"
+    - platform: shodan
+      queries:
+        - 3x-ui http.title:"sign in"
+
+- name: openchamber
+  vendor: openchamber
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="openchamber"
+    - platform: shodan
+      queries:
+        - http.title:"openchamber"
+
+- name: maxsite_cms
+  vendor: max-3000
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - maxsite cms
+    - platform: publicwww
+      queries:
+        - maxsite cms
+    - platform: shodan
+      queries:
+        - maxsite cms
+
+- name: dgraph
+  vendor: hypermodeinc
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="dgraph"
+    - platform: shodan
+      queries:
+        - http.title:"dgraph"
+
+- name: conductor
+  vendor: conductor-oss
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"conductor ui"
+
+- name: parse-server
+  vendor: parse-community
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="parseserverversion" || header="x-parse-application-id"
+    - platform: shodan
+      queries:
+        - '"x-parse-application-id" or http.html:"parseserverversion"'
+
+- name: easytimeline
+  vendor: mediawiki
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="mediawiki"
+    - platform: shodan
+      queries:
+        - http.component:"mediawiki"
+
+- name: gutenverse
+  vendor: jegstudio
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/gutenverse/
+
+- name: miniflux
+  vendor: miniflux
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"sign in - miniflux"
 
 - name: element
   vendor: matrix
