@@ -37634,6 +37634,9 @@
     - platform: shodan
       queries:
         - http.title:"openchamber"
+    - platform: google
+      queries:
+        - intitle:"openchamber"
 
 - name: maxsite_cms
   vendor: max-3000
@@ -37641,12 +37644,14 @@
   engines:
     - platform: fofa
       queries:
+        - body=maxsite cms
         - maxsite cms
     - platform: publicwww
       queries:
         - maxsite cms
     - platform: shodan
       queries:
+        - http.html:maxsite cms
         - maxsite cms
 
 - name: dgraph
@@ -37658,6 +37663,7 @@
         - body="dgraph"
     - platform: shodan
       queries:
+        - http.html:"dgraph"
         - http.title:"dgraph"
 
 - name: conductor
@@ -37667,6 +37673,12 @@
     - platform: shodan
       queries:
         - http.title:"conductor ui"
+    - platform: fofa
+      queries:
+        - title="conductor ui"
+    - platform: google
+      queries:
+        - intitle:"conductor ui"
 
 - name: parse-server
   vendor: parse-community
@@ -37697,6 +37709,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/gutenverse/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/gutenverse/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/gutenverse/
 
 - name: miniflux
   vendor: miniflux
@@ -37705,6 +37723,26 @@
     - platform: shodan
       queries:
         - http.title:"sign in - miniflux"
+    - platform: fofa
+      queries:
+        - title="sign in - miniflux"
+    - platform: google
+      queries:
+        - intitle:"sign in - miniflux"
+
+- name: indeed-wp-superbackup
+  vendor: azzaroco
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/indeed-wp-superbackup/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/indeed-wp-superbackup/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/indeed-wp-superbackup/"
 
 - name: element
   vendor: matrix
