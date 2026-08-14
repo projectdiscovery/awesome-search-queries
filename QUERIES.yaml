@@ -8927,6 +8927,7 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:microsoft:sharepoint_server"
+        - http.component:"sharepoint"
         - http.headers_hash:-1968878704
 
 - name: manageengine_firewall_analyzer
@@ -37743,6 +37744,39 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/indeed-wp-superbackup/"
+
+- name: real-estate-listing-realtyna-wpl
+  vendor: realtyna
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="real-estate-listing-realtyna-wpl"
+    - platform: shodan
+      queries:
+        - http.html:"real-estate-listing-realtyna-wpl"
+
+- name: helix3
+  vendor: ollyo
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="shaper_helix3"
+    - platform: shodan
+      queries:
+        - http.html:"shaper_helix3"
+
+- name: frontend-admin
+  vendor: dynamiapps
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/acf-frontend-form-element/"
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/acf-frontend-form-element/
 
 - name: element
   vendor: matrix
