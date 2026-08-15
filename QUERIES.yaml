@@ -37776,7 +37776,92 @@
         - body="/wp-content/plugins/acf-frontend-form-element/"
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/acf-frontend-form-element/
+        - http.html:"/wp-content/plugins/acf-frontend-form-element/"
+
+- name: localgov_workflows
+  vendor: drupal
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/modules/contrib/localgov"
+
+- name: filerise
+  vendor: error311
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="filerise"
+    - platform: google
+      queries:
+        - intitle:"filerise"
+    - platform: shodan
+      queries:
+        - http.title:"filerise"
+
+- name: gotenberg
+  vendor: thecodingmachine
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"gotenberg"
+
+- name: lightrag
+  vendor: hkuds
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="lightrag"
+    - platform: shodan
+      queries:
+        - http.html:"lightrag"
+
+- name: seraphinite-accelerator
+  vendor: seraphinite
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="seraphinite-accelerator"
+
+- name: woocommerce-wholesale-lead-capture
+  vendor: rymera-web-co
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/woocommerce-wholesale-lead-capture/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/woocommerce-wholesale-lead-capture/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/woocommerce-wholesale-lead-capture/"
+
+- name: homarr
+  vendor: homarr-labs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="homarr"
+    - platform: shodan
+      queries:
+        - http.title:"homarr"
+
+- name: shiori
+  vendor: shiori
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="shiori - bookmarks manager"
+    - platform: shodan
+      queries:
+        - http.title:"shiori - bookmarks manager"
 
 - name: element
   vendor: matrix
