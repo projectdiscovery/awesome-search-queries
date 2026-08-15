@@ -37785,6 +37785,9 @@
     - platform: fofa
       queries:
         - body="/modules/contrib/localgov"
+    - platform: shodan
+      queries:
+        - http.html:"/modules/contrib/localgov"
 
 - name: filerise
   vendor: error311
@@ -37807,6 +37810,9 @@
     - platform: shodan
       queries:
         - http.html:"gotenberg"
+    - platform: fofa
+      queries:
+        - body="gotenberg"
 
 - name: lightrag
   vendor: hkuds
@@ -37826,6 +37832,9 @@
     - platform: fofa
       queries:
         - body="seraphinite-accelerator"
+    - platform: shodan
+      queries:
+        - http.html:"seraphinite-accelerator"
 
 - name: woocommerce-wholesale-lead-capture
   vendor: rymera-web-co
@@ -37851,6 +37860,9 @@
     - platform: shodan
       queries:
         - http.title:"homarr"
+    - platform: google
+      queries:
+        - intitle:"homarr"
 
 - name: shiori
   vendor: shiori
