@@ -37875,6 +37875,34 @@
       queries:
         - http.title:"shiori - bookmarks manager"
 
+- name: newsletters-lite
+  vendor: newsletters-lite
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/newsletters-lite/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/newsletters-lite/"
+
+- name: showdoc
+  vendor: star7th
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="showdoc"
+    - platform: hunter
+      queries:
+        - web.title="showdoc"
+    - platform: shodan
+      queries:
+        - http.title:"showdoc"
+    - platform: zoomeye
+      queries:
+        - app:"showdoc"
+
 - name: element
   vendor: matrix
   type: product
