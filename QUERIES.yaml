@@ -37893,6 +37893,7 @@
     - platform: fofa
       queries:
         - app="showdoc"
+        - title="showdoc"
     - platform: hunter
       queries:
         - web.title="showdoc"
@@ -37902,6 +37903,9 @@
     - platform: zoomeye
       queries:
         - app:"showdoc"
+    - platform: google
+      queries:
+        - intitle:"showdoc"
 
 - name: element
   vendor: matrix
