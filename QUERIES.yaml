@@ -9741,10 +9741,13 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:redhat:jboss_enterprise_application_platform"
+        - http.html:"/jmx-console/" http.title:jboss
         - http.title:"jboss"
     - platform: fofa
       queries:
+        - body="/jmx-console/" http.title:jboss
         - title="jboss"
+        - title="jboss" && body="/jmx-console/"
     - platform: google
       queries:
         - intitle:"jboss"
@@ -21477,6 +21480,10 @@
     - platform: fofa
       queries:
         - app="adobe-magento"
+        - app="magento"
+    - platform: shodan
+      queries:
+        - http.component:"magento"
 
 - name: streampipes
   vendor: apache
@@ -37906,6 +37913,72 @@
     - platform: google
       queries:
         - intitle:"showdoc"
+
+- name: podlove-podcasting-plugin-for-wordpress
+  vendor: podlove
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/podlove-podcasting-plugin-for-wordpress"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/podlove-podcasting-plugin-for-wordpress"
+
+- name: geo_mashup
+  vendor: cyberhobo
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="geo-mashup"
+    - platform: shodan
+      queries:
+        - http.html:"geo-mashup"
+
+- name: rsfiles
+  vendor: rsjoomla
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="com_rsfiles"
+    - platform: shodan
+      queries:
+        - http.html:"com_rsfiles"
+
+- name: bl-wr9000_firmware
+  vendor: lb-link
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="goform" && body="lb-link"
+    - platform: shodan
+      queries:
+        - http.html:"lb-link" "goahead-webs"
+
+- name: crawl4ai
+  vendor: unclecode
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="crawl4ai playground"
+    - platform: shodan
+      queries:
+        - http.title:"crawl4ai playground"
+
+- name: workflow-cps
+  vendor: jenkins
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash=81586312
+    - platform: shodan
+      queries:
+        - http.favicon.hash:81586312
 
 - name: element
   vendor: matrix
