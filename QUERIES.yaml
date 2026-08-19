@@ -37954,6 +37954,7 @@
     - platform: fofa
       queries:
         - body="goform" && body="lb-link"
+        - body="lb-link" "goahead-webs"
     - platform: shodan
       queries:
         - http.html:"lb-link" "goahead-webs"
@@ -37968,6 +37969,9 @@
     - platform: shodan
       queries:
         - http.title:"crawl4ai playground"
+    - platform: google
+      queries:
+        - intitle:"crawl4ai playground"
 
 - name: workflow-cps
   vendor: jenkins
