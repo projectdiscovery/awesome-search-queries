@@ -31127,10 +31127,10 @@
         - /wp-content/plugins/profile-builder/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/profile-builder/
+        - http.html:"/wp-content/plugins/profile-builder/"
     - platform: fofa
       queries:
-        - body=/wp-content/plugins/profile-builder/
+        - body="/wp-content/plugins/profile-builder/"
 
 - name: supportcandy
   vendor: supportcandy
@@ -36557,13 +36557,17 @@
     - platform: fofa
       queries:
         - app="wordpress-w3-total-cache"
+        - body="/wp-content/plugins/w3-total-cache"
         - body="/wp-content/plugins/w3-total-cache/"
         - body="w3-total-cache"
+        - body="wp-content/plugins/w3-total-cache"
     - platform: shodan
       queries:
         - http.component:"wordpress" http.component:"w3 total cache"
+        - http.html:"/wp-content/plugins/w3-total-cache"
         - http.html:"/wp-content/plugins/w3-total-cache/"
         - http.html:"w3-total-cache"
+        - http.html:"wp-content/plugins/w3-total-cache"
 
 - name: jce
   vendor: joomlacontenteditor
@@ -37965,9 +37969,11 @@
   engines:
     - platform: fofa
       queries:
+        - body="crawl4ai"
         - title="crawl4ai playground"
     - platform: shodan
       queries:
+        - http.html:"crawl4ai"
         - http.title:"crawl4ai playground"
     - platform: google
       queries:
@@ -37983,6 +37989,28 @@
     - platform: shodan
       queries:
         - http.favicon.hash:81586312
+
+- name: kan
+  vendor: kanbn
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="kan" && body="_next"
+    - platform: shodan
+      queries:
+        - http.title:"kan"
+
+- name: mineadmin
+  vendor: mineadmin
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="mineadmin"
+    - platform: shodan
+      queries:
+        - http.html:"mineadmin"
 
 - name: element
   vendor: matrix
