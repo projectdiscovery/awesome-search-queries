@@ -7261,6 +7261,9 @@
     - platform: fofa
       queries:
         - title="nexus repository manager"
+    - platform: shodan
+      queries:
+        - http.component:"nexus repository manager"
 
 - name: ncast
   vendor: ncast_project
@@ -25924,9 +25927,12 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"concrete5"
         - http.title:"install concrete"
     - platform: fofa
       queries:
+        - body="concrete5"
+        - body="concrete5" || body="concretecms"
         - title="install concrete"
     - platform: google
       queries:
@@ -37996,10 +38002,14 @@
   engines:
     - platform: fofa
       queries:
+        - title="kan"
         - title="kan" && body="_next"
     - platform: shodan
       queries:
         - http.title:"kan"
+    - platform: google
+      queries:
+        - intitle:"kan"
 
 - name: mineadmin
   vendor: mineadmin
@@ -38011,6 +38021,36 @@
     - platform: shodan
       queries:
         - http.html:"mineadmin"
+
+- name: nexus_repository
+  vendor: sonatype
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="sonatype nexus repository"
+    - platform: shodan
+      queries:
+        - http.title:"sonatype nexus repository"
+
+- name: etherpad
+  vendor: ether
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="etherpad"
+    - platform: shodan
+      queries:
+        - http.title:"etherpad"
+
+- name: planyo-online-reservation-system
+  vendor: xtreeme
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/plugins/planyo-online-reservation-system/"
 
 - name: element
   vendor: matrix
