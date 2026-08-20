@@ -34729,9 +34729,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"lollms"
         - http.title:"lollms"
     - platform: fofa
       queries:
+        - body="lollms"
         - title="lollms"
     - platform: google
       queries:
@@ -38032,6 +38034,9 @@
     - platform: shodan
       queries:
         - http.title:"sonatype nexus repository"
+    - platform: google
+      queries:
+        - intitle:"sonatype nexus repository"
 
 - name: etherpad
   vendor: ether
@@ -38043,6 +38048,9 @@
     - platform: shodan
       queries:
         - http.title:"etherpad"
+    - platform: google
+      queries:
+        - intitle:"etherpad"
 
 - name: planyo-online-reservation-system
   vendor: xtreeme
@@ -38051,6 +38059,50 @@
     - platform: fofa
       queries:
         - body="/plugins/planyo-online-reservation-system/"
+    - platform: shodan
+      queries:
+        - http.html:"/plugins/planyo-online-reservation-system/"
+
+- name: wpzoom-portfolio
+  vendor: wpzoom
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wpzoom-portfolio"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wpzoom-portfolio"
+
+- name: memberglut
+  vendor: memberglut
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/memberglut"
+
+- name: ech0
+  vendor: lin-snow
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title:"ech0"
+    - platform: shodan
+      queries:
+        - http.title:"ech0"
+
+- name: rabbitmq_server
+  vendor: broadcom
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="rabbitmq management"
+    - platform: shodan
+      queries:
+        - http.title:"rabbitmq management"
 
 - name: element
   vendor: matrix
