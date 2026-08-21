@@ -38081,6 +38081,9 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/memberglut"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/memberglut"
 
 - name: ech0
   vendor: lin-snow
@@ -38089,9 +38092,13 @@
     - platform: fofa
       queries:
         - title:"ech0"
+        - title="ech0"
     - platform: shodan
       queries:
         - http.title:"ech0"
+    - platform: google
+      queries:
+        - intitle:"ech0"
 
 - name: rabbitmq_server
   vendor: broadcom
@@ -38103,6 +38110,9 @@
     - platform: shodan
       queries:
         - http.title:"rabbitmq management"
+    - platform: google
+      queries:
+        - intitle:"rabbitmq management"
 
 - name: element
   vendor: matrix
