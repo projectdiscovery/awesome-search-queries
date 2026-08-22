@@ -38114,6 +38114,17 @@
       queries:
         - intitle:"rabbitmq management"
 
+- name: kopia
+  vendor: kopia
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash=="952466528"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:952466528
+
 - name: element
   vendor: matrix
   type: product
