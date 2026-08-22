@@ -38120,10 +38120,12 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash=952466528
         - icon_hash=="952466528"
     - platform: shodan
       queries:
         - http.favicon.hash:952466528
+        - http.favicon.hash:="952466528"
 
 - name: element
   vendor: matrix
