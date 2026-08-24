@@ -8757,6 +8757,7 @@
       queries:
         - cpe:"cpe:2.3:a:vbulletin:vbulletin"
         - http.component:"vbulletin"
+        - http.favicon.hash:-601665621 http.component:"vbulletin"
         - http.html:"powered by vbulletin"
         - http.title:"powered by vbulletin"
         - http.title:"vbulletin"
@@ -8764,6 +8765,7 @@
       queries:
         - app="vbulletin"
         - body="powered by vbulletin"
+        - icon_hash=-601665621 http.component:"vbulletin"
         - title="powered by vbulletin"
         - title="vbulletin"
 
@@ -11461,6 +11463,7 @@
       queries:
         - body="opentsdb"
         - icon_hash=407286339
+        - title="opentsdb"
 
 - name: jeesns
   vendor: jeesns
