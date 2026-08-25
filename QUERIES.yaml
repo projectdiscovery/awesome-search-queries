@@ -7678,9 +7678,12 @@
   engines:
     - platform: shodan
       queries:
+        - body:"/html/rconfig"
+        - http.html:"/html/rconfig"
         - http.title:"rconfig"
     - platform: fofa
       queries:
+        - body="/html/rconfig"
         - title="rconfig"
     - platform: google
       queries:
@@ -12306,16 +12309,20 @@
       queries:
         - cpe:"cpe:2.3:a:php:php"
         - http.title:"php warning" || "fatal error"
+        - http.title:"php" port:80,443
         - php.ini
         - the requested resource <code class="url">
         - 'x-powered-by: php'
         - x-powered-by:"php"
     - platform: fofa
       queries:
+        - app="php"
         - title="php warning" || "fatal error"
+        - title="php" port:80,443
     - platform: google
       queries:
         - intitle:"php warning" || "fatal error"
+        - intitle:"php" port:80,443
 
 - name: awstats
   vendor: laurent_destailleur
@@ -14351,6 +14358,14 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:redhat:jboss_application_server"
+        - http.title:"jboss"
+    - platform: fofa
+      queries:
+        - app="jboss"
+        - title="jboss"
+    - platform: google
+      queries:
+        - intitle:"jboss"
 
 - name: jbossweb
   vendor: redhat
@@ -38160,10 +38175,14 @@
   engines:
     - platform: fofa
       queries:
+        - title="sign in to keycloak" || http.title:"log in to keycloak"
         - title="sign in to keycloak" || title="log in to keycloak"
     - platform: shodan
       queries:
         - http.title:"sign in to keycloak" || http.title:"log in to keycloak"
+    - platform: google
+      queries:
+        - intitle:"sign in to keycloak" || http.title:"log in to keycloak"
 
 - name: registrationmagic
   vendor: metagauss
@@ -38175,6 +38194,86 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/custom-registration-form-builder-with-submission-manager/"
+
+- name: all-in-one-wp-migration
+  vendor: servmask
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/all-in-one-wp-migration/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/all-in-one-wp-migration/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/all-in-one-wp-migration/"
+
+- name: invoiceplane
+  vendor: invoiceplane
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="invoiceplane"
+    - platform: shodan
+      queries:
+        - http.html:"invoiceplane"
+
+- name: feast
+  vendor: feast-dev
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="493797515"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:493797515
+
+- name: documenso
+  vendor: documenso
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="documenso"
+    - platform: shodan
+      queries:
+        - http.title:"documenso"
+
+- name: wallos
+  vendor: ellite
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="wallos - subscription tracker"
+    - platform: shodan
+      queries:
+        - http.title:"wallos - subscription tracker"
+
+- name: karakeep
+  vendor: karakeep-app
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="karakeep"
+    - platform: shodan
+      queries:
+        - http.title:"karakeep"
+
+- name: homebox
+  vendor: sysadminsmedia
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="homebox-frontend"
+    - platform: shodan
+      queries:
+        - http.html:"homebox-frontend"
 
 - name: element
   vendor: matrix
