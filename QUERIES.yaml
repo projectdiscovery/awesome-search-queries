@@ -25930,10 +25930,12 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"/index.php/ccm/system/"
         - http.html:"concrete5"
         - http.title:"install concrete"
     - platform: fofa
       queries:
+        - body="/index.php/ccm/system/"
         - body="concrete5"
         - body="concrete5" || body="concretecms"
         - title="install concrete"
@@ -38129,6 +38131,50 @@
       queries:
         - http.favicon.hash:952466528
         - http.favicon.hash:="952466528"
+
+- name: seaweedfs
+  vendor: seaweedfs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - server="seaweedfs"
+    - platform: shodan
+      queries:
+        - server:"seaweedfs"
+
+- name: wpadverts
+  vendor: developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/wpadverts"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/wpadverts"
+
+- name: keycloak
+  vendor: keycloak
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="sign in to keycloak" || title="log in to keycloak"
+    - platform: shodan
+      queries:
+        - http.title:"sign in to keycloak" || http.title:"log in to keycloak"
+
+- name: registrationmagic
+  vendor: metagauss
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/custom-registration-form-builder-with-submission-manager/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/custom-registration-form-builder-with-submission-manager/"
 
 - name: element
   vendor: matrix
