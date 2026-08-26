@@ -38229,7 +38229,7 @@
         - icon_hash="493797515"
     - platform: shodan
       queries:
-        - http.favicon.hash:493797515
+        - http.favicon.hash:"493797515"
 
 - name: documenso
   vendor: documenso
@@ -38241,6 +38241,9 @@
     - platform: shodan
       queries:
         - http.title:"documenso"
+    - platform: google
+      queries:
+        - intitle:"documenso"
 
 - name: wallos
   vendor: ellite
@@ -38252,6 +38255,9 @@
     - platform: shodan
       queries:
         - http.title:"wallos - subscription tracker"
+    - platform: google
+      queries:
+        - intitle:"wallos - subscription tracker"
 
 - name: karakeep
   vendor: karakeep-app
@@ -38263,6 +38269,9 @@
     - platform: shodan
       queries:
         - http.title:"karakeep"
+    - platform: google
+      queries:
+        - intitle:"karakeep"
 
 - name: homebox
   vendor: sysadminsmedia
