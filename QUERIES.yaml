@@ -3057,10 +3057,13 @@
     - platform: shodan
       queries:
         - http.favicon.hash:1624375939
+        - http.html:"zimbra collaboration suite web client"
         - http.title:"zimbra collaboration suite"
         - http.title:"zimbra web client sign in"
     - platform: fofa
       queries:
+        - app="zimbra-collaboration-suite"
+        - body="zimbra collaboration suite web client"
         - icon_hash=1624375939
         - title="zimbra collaboration suite"
         - title="zimbra web client sign in"
@@ -38283,6 +38286,60 @@
     - platform: shodan
       queries:
         - http.html:"homebox-frontend"
+
+- name: expand-maker
+  vendor: radmore
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/expand-maker/
+
+- name: Easy Store
+  vendor: JoomShaper
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="joomla" && body="easy store"
+
+- name: wallabag
+  vendor: wallabag
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="wallabag"
+    - platform: shodan
+      queries:
+        - http.title:"wallabag"
+
+- name: planka
+  vendor: planka
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"planka is the kanban-style project mastering tool"
+
+- name: inventree
+  vendor: inventree
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="inventree"
+    - platform: shodan
+      queries:
+        - http.title:"inventree"
+
+- name: docuseal
+  vendor: docusealco
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"data-theme=\"docuseal\""
 
 - name: element
   vendor: matrix
