@@ -38369,6 +38369,34 @@
     - platform: shodan
       queries:
         - http.title:"komga"
+    - platform: google
+      queries:
+        - intitle:"komga"
+
+- name: frick-quantum-hd
+  vendor: johnson-controls
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - header="primeunity" || body="quantum hd"
+    - platform: shodan
+      queries:
+        - http.headers:"primeunity"
+
+- name: elementor-pro
+  vendor: elementor
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/plugins/elementor-pro/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/elementor-pro/
+    - platform: shodan
+      queries:
+        - http.html:"/plugins/elementor-pro/"
 
 - name: element
   vendor: matrix
