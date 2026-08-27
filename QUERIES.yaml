@@ -38294,6 +38294,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/expand-maker/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/expand-maker/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/expand-maker/
 
 - name: Easy Store
   vendor: JoomShaper
@@ -38313,6 +38319,9 @@
     - platform: shodan
       queries:
         - http.title:"wallabag"
+    - platform: google
+      queries:
+        - intitle:"wallabag"
 
 - name: planka
   vendor: planka
@@ -38321,6 +38330,9 @@
     - platform: shodan
       queries:
         - http.html:"planka is the kanban-style project mastering tool"
+    - platform: fofa
+      queries:
+        - body="planka is the kanban-style project mastering tool"
 
 - name: inventree
   vendor: inventree
@@ -38332,6 +38344,9 @@
     - platform: shodan
       queries:
         - http.title:"inventree"
+    - platform: google
+      queries:
+        - intitle:"inventree"
 
 - name: docuseal
   vendor: docusealco
@@ -38340,6 +38355,20 @@
     - platform: shodan
       queries:
         - http.html:"data-theme=\"docuseal\""
+    - platform: fofa
+      queries:
+        - body="data-theme=\"docuseal\""
+
+- name: komga
+  vendor: gotson
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="komga"
+    - platform: shodan
+      queries:
+        - http.title:"komga"
 
 - name: element
   vendor: matrix
