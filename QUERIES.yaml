@@ -38391,12 +38391,14 @@
     - platform: fofa
       queries:
         - body="/plugins/elementor-pro/"
+        - body=/wp-content/plugins/elementor-pro/
     - platform: publicwww
       queries:
         - /wp-content/plugins/elementor-pro/
     - platform: shodan
       queries:
         - http.html:"/plugins/elementor-pro/"
+        - http.html:/wp-content/plugins/elementor-pro/
 
 - name: element
   vendor: matrix
