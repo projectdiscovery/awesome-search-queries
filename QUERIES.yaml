@@ -35047,11 +35047,17 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="-1180440057"
         - icon_hash=2146763496
         - title="mailcow"
     - platform: shodan
       queries:
+        - http.component:"swagger"
+        - http.favicon.hash:"-1180440057"
         - http.favicon.hash:2146763496
+    - platform: zoomeye
+      queries:
+        - app:"swagger ui"
 
 - name: hoppscotch
   vendor: hoppscotch
@@ -38399,6 +38405,113 @@
       queries:
         - http.html:"/plugins/elementor-pro/"
         - http.html:/wp-content/plugins/elementor-pro/
+
+- name: kirby
+  vendor: getkirby
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="987600836"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:987600836
+
+- name: gotenberg
+  vendor: gotenberg
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - gotenberg
+    - platform: shodan
+      queries:
+        - gotenberg
+
+- name: wp-content-permission
+  vendor: orenhav
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/wp-content-permission/
+
+- name: silverbullet
+  vendor: silverbulletmd
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="silverbullet"
+    - platform: shodan
+      queries:
+        - http.title:"silverbullet"
+
+- name: romm
+  vendor: rommapp
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="romm"
+    - platform: shodan
+      queries:
+        - http.title:"romm"
+
+- name: docmost
+  vendor: docmost
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="docmost"
+    - platform: shodan
+      queries:
+        - http.title:"docmost"
+
+- name: donetick
+  vendor: donetick
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="donetick"
+    - platform: shodan
+      queries:
+        - http.title:"donetick"
+
+- name: linkding
+  vendor: sissbruecker
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="linkding"
+    - platform: shodan
+      queries:
+        - http.title:"linkding"
+
+- name: signoz
+  vendor: signoz
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="signoz"
+    - platform: shodan
+      queries:
+        - http.title:"signoz"
+
+- name: dawarich
+  vendor: freika
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="dawarich"
+    - platform: shodan
+      queries:
+        - http.title:"dawarich"
 
 - name: element
   vendor: matrix
