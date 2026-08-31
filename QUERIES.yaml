@@ -38540,6 +38540,17 @@
       queries:
         - intitle:"dawarich"
 
+- name: db-gpt
+  vendor: eosphoros
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="100632689"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:100632689
+
 - name: element
   vendor: matrix
   type: product
