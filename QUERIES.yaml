@@ -38415,7 +38415,7 @@
         - icon_hash="987600836"
     - platform: shodan
       queries:
-        - http.favicon.hash:987600836
+        - http.favicon.hash:"987600836"
 
 - name: gotenberg
   vendor: gotenberg
@@ -38435,6 +38435,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/wp-content-permission/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/wp-content-permission/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/wp-content-permission/
 
 - name: silverbullet
   vendor: silverbulletmd
@@ -38446,6 +38452,9 @@
     - platform: shodan
       queries:
         - http.title:"silverbullet"
+    - platform: google
+      queries:
+        - intitle:"silverbullet"
 
 - name: romm
   vendor: rommapp
@@ -38457,6 +38466,9 @@
     - platform: shodan
       queries:
         - http.title:"romm"
+    - platform: google
+      queries:
+        - intitle:"romm"
 
 - name: docmost
   vendor: docmost
@@ -38468,6 +38480,9 @@
     - platform: shodan
       queries:
         - http.title:"docmost"
+    - platform: google
+      queries:
+        - intitle:"docmost"
 
 - name: donetick
   vendor: donetick
@@ -38479,6 +38494,9 @@
     - platform: shodan
       queries:
         - http.title:"donetick"
+    - platform: google
+      queries:
+        - intitle:"donetick"
 
 - name: linkding
   vendor: sissbruecker
@@ -38490,6 +38508,9 @@
     - platform: shodan
       queries:
         - http.title:"linkding"
+    - platform: google
+      queries:
+        - intitle:"linkding"
 
 - name: signoz
   vendor: signoz
@@ -38501,6 +38522,9 @@
     - platform: shodan
       queries:
         - http.title:"signoz"
+    - platform: google
+      queries:
+        - intitle:"signoz"
 
 - name: dawarich
   vendor: freika
@@ -38512,6 +38536,9 @@
     - platform: shodan
       queries:
         - http.title:"dawarich"
+    - platform: google
+      queries:
+        - intitle:"dawarich"
 
 - name: element
   vendor: matrix
