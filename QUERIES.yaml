@@ -38551,6 +38551,17 @@
       queries:
         - http.favicon.hash:"100632689"
 
+- name: mjobtime
+  vendor: mjobtime
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="mjobtime"
+    - platform: shodan
+      queries:
+        - http.html:"mjobtime"
+
 - name: element
   vendor: matrix
   type: product
