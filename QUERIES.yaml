@@ -38549,7 +38549,7 @@
         - icon_hash="100632689"
     - platform: shodan
       queries:
-        - http.favicon.hash:100632689
+        - http.favicon.hash:"100632689"
 
 - name: element
   vendor: matrix
