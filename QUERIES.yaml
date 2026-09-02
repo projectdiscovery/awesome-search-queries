@@ -38562,6 +38562,36 @@
       queries:
         - http.html:"mjobtime"
 
+- name: core-geonetwork
+  vendor: geonetwork
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"/srv/eng/"
+
+- name: switchvox
+  vendor: sangoma
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="switchvox"
+    - platform: shodan
+      queries:
+        - http.html:"switchvox"
+
+- name: fiberhome_router
+  vendor: fiberhome
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="fiberhome"
+    - platform: shodan
+      queries:
+        - http.title:"fiberhome"
+
 - name: element
   vendor: matrix
   type: product
