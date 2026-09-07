@@ -38592,6 +38592,25 @@
       queries:
         - http.title:"fiberhome"
 
+- name: krayin-laravel-crm
+  vendor: webkul
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="krayin" || header="krayin_crm_session"
+
+- name: flagr
+  vendor: openflagr
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="flagr"
+    - platform: shodan
+      queries:
+        - http.html:"flagr"
+
 - name: element
   vendor: matrix
   type: product
