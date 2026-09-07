@@ -33510,6 +33510,7 @@
   engines:
     - platform: fofa
       queries:
+        - app="nginx-ui"
         - title="nginx ui"
     - platform: shodan
       queries:
@@ -38610,6 +38611,55 @@
     - platform: shodan
       queries:
         - http.html:"flagr"
+
+- name: wegia
+  vendor: labredescefetrj
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wegia"
+    - platform: shodan
+      queries:
+        - http.html:"wegia"
+
+- name: clipbucket
+  vendor: macwarrior
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="clipbucket" || body="clipbucket"
+    - platform: shodan
+      queries:
+        - http.html:"clipbucket"
+
+- name: wgdashboard
+  vendor: wgdashboard
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="wgdashboard"
+
+- name: elementskit-lite
+  vendor: wpmet
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/elementskit-lite/"
+
+- name: shield-security
+  vendor: wp-simple-firewall
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-simple-firewall/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wp-simple-firewall/"
 
 - name: element
   vendor: matrix
