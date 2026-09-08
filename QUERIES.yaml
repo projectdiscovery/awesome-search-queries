@@ -38665,6 +38665,17 @@
       queries:
         - http.html:"/wp-content/plugins/wp-simple-firewall/"
 
+- name: acymailing
+  vendor: acyba
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="com_acym" || body="acymailing"
+    - platform: shodan
+      queries:
+        - http.html:"com_acym"
+
 - name: element
   vendor: matrix
   type: product
