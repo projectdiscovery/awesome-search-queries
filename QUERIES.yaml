@@ -38629,6 +38629,7 @@
   engines:
     - platform: fofa
       queries:
+        - body="clipbucket"
         - body="clipbucket" || body="clipbucket"
     - platform: shodan
       queries:
@@ -38649,6 +38650,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/elementskit-lite/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/elementskit-lite/"
 
 - name: shield-security
   vendor: wp-simple-firewall
