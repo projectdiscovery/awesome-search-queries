@@ -23709,6 +23709,7 @@
         - http.favicon.hash:"1519363246"
         - http.favicon.hash:"1937353549"
         - http.title:"n-central login"
+        - http.title:"n-central"
         - 'set-cookie: ncentral_version='
     - platform: fofa
       queries:
@@ -23716,9 +23717,11 @@
         - icon_hash="1937353549"
         - 'set-cookie: ncentral_version='
         - title="n-central login"
+        - title="n-central"
     - platform: google
       queries:
         - intitle:"n-central login"
+        - intitle:"n-central"
 
 - name: audiobookshelf
   vendor: audiobookshelf
@@ -38671,6 +38674,7 @@
   engines:
     - platform: fofa
       queries:
+        - body="com_acym"
         - body="com_acym" || body="acymailing"
     - platform: shodan
       queries:
