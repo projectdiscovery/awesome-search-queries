@@ -20068,14 +20068,18 @@
   engines:
     - platform: fofa
       queries:
+        - body="sonicwall"
         - body="workplace" "sma"
+        - body="workplace" html:"sonicwall"
         - title="appliance management console login"
     - platform: google
       queries:
         - intitle:"appliance management console login"
     - platform: shodan
       queries:
+        - http.html:"sonicwall"
         - http.html:"workplace" "sma"
+        - http.html:"workplace" html:"sonicwall"
         - http.title:"appliance management console login"
 
 - name: srx100
@@ -28149,6 +28153,13 @@
     - platform: fofa
       queries:
         - app="totvs-fluig"
+        - title="fluig"
+    - platform: shodan
+      queries:
+        - http.title:"fluig"
+    - platform: google
+      queries:
+        - intitle:"fluig"
 
 - name: liteSpeed-cache
   vendor: liteSpeed-technologies
@@ -38679,6 +38690,17 @@
     - platform: shodan
       queries:
         - http.html:"com_acym"
+
+- name: monsta-ftp
+  vendor: monsta
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="monsta ftp"
+    - platform: shodan
+      queries:
+        - http.html:"monsta ftp"
 
 - name: element
   vendor: matrix
