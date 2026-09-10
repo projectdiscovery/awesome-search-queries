@@ -2756,6 +2756,10 @@
     - platform: shodan
       queries:
         - http.html:"librenms install"
+        - http.title:"librenms"
+    - platform: google
+      queries:
+        - intitle:"librenms"
 
 - name: hybris
   vendor: sap
