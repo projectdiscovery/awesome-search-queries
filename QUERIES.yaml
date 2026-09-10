@@ -29229,9 +29229,14 @@
       queries:
         - http.html:"cyberpanel"
         - http.html:"login to your cyberpanel account"
+        - http.title:"login - cyberpanel"
     - platform: fofa
       queries:
         - body="login to your cyberpanel account"
+        - title="login - cyberpanel"
+    - platform: google
+      queries:
+        - intitle:"login - cyberpanel"
 
 - name: oqtane
   vendor: oqtane
@@ -38705,6 +38710,39 @@
     - platform: shodan
       queries:
         - http.html:"monsta ftp"
+
+- name: tpadmin
+  vendor: yuan1994
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="tpadmin"
+    - platform: shodan
+      queries:
+        - http.html:"tpadmin"
+
+- name: masterstudy-lms
+  vendor: stylemix
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="masterstudy-lms-learning-management-system"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/masterstudy-lms-learning-management-system/"
+
+- name: paperclipai
+  vendor: paperclipai
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="paperclip" && port="3100"
+    - platform: shodan
+      queries:
+        - http.title:"paperclip" port:3100
 
 - name: element
   vendor: matrix
