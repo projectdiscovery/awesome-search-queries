@@ -38781,10 +38781,14 @@
   engines:
     - platform: fofa
       queries:
+        - title="freescout"
         - title="freescout" || body="freescout"
     - platform: shodan
       queries:
         - http.title:"freescout"
+    - platform: google
+      queries:
+        - intitle:"freescout"
 
 - name: livy
   vendor: apache
