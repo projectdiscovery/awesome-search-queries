@@ -11271,9 +11271,12 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"bludit"
         - http.title:"bludit"
     - platform: fofa
       queries:
+        - body="bludit"
+        - body="powered by bludit" || body="bludit.com"
         - title="bludit"
     - platform: google
       queries:
@@ -28976,6 +28979,9 @@
     - platform: shodan
       queries:
         - http.html:"simplehelp"
+    - platform: fofa
+      queries:
+        - body="simplehelp"
 
 - name: mindsdb
   vendor: mindsdb
@@ -38728,10 +38734,12 @@
   engines:
     - platform: fofa
       queries:
+        - body="/wp-content/plugins/masterstudy-lms-learning-management-system/"
         - body="masterstudy-lms-learning-management-system"
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/masterstudy-lms-learning-management-system/"
+        - http.html:"masterstudy-lms-learning-management-system"
 
 - name: paperclipai
   vendor: paperclipai
@@ -38740,9 +38748,57 @@
     - platform: fofa
       queries:
         - title="paperclip" && port="3100"
+        - title="paperclip" port:3100
     - platform: shodan
       queries:
         - http.title:"paperclip" port:3100
+    - platform: google
+      queries:
+        - intitle:"paperclip" port:3100
+
+- name: simatic_s7
+  vendor: siemens
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - port:102 "6es7"
+
+- name: mailinspector
+  vendor: hsclabs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="mailinspector"
+    - platform: shodan
+      queries:
+        - http.html:"mailinspector"
+
+- name: freescout
+  vendor: freescout-help-desk
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="freescout" || body="freescout"
+    - platform: shodan
+      queries:
+        - http.title:"freescout"
+
+- name: livy
+  vendor: apache
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"livy - sessions"
+    - platform: fofa
+      queries:
+        - title="livy - sessions"
+    - platform: google
+      queries:
+        - intitle:"livy - sessions"
 
 - name: element
   vendor: matrix
