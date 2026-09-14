@@ -38804,6 +38804,17 @@
       queries:
         - intitle:"livy - sessions"
 
+- name: kafka-ui
+  vendor: provectus
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="ui for apache kafka"
+    - platform: shodan
+      queries:
+        - http.title:"ui for apache kafka"
+
 - name: element
   vendor: matrix
   type: product
