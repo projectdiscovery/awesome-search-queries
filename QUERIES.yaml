@@ -26037,13 +26037,21 @@
   engines:
     - platform: shodan
       queries:
+        - http.component:"discourse"
         - http.title:"discourse setup"
     - platform: fofa
       queries:
+        - app="discourse"
         - title="discourse setup"
     - platform: google
       queries:
         - intitle:"discourse setup"
+    - platform: hunter
+      queries:
+        - web.title="discourse"
+    - platform: zoomeye
+      queries:
+        - app:"discourse"
 
 - name: sabnzbd
   vendor: sabnzbd
@@ -38814,6 +38822,31 @@
     - platform: shodan
       queries:
         - http.title:"ui for apache kafka"
+    - platform: google
+      queries:
+        - intitle:"ui for apache kafka"
+
+- name: appium
+  vendor: appium
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-144749386"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-144749386
+
+- name: ctrlpanel
+  vendor: ctrlpanel-gg
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="ctrlpanel"
+    - platform: shodan
+      queries:
+        - http.title:"ctrlpanel" http.html:"ctrlpanel"
 
 - name: element
   vendor: matrix
