@@ -38835,7 +38835,7 @@
         - icon_hash="-144749386"
     - platform: shodan
       queries:
-        - http.favicon.hash:-144749386
+        - http.favicon.hash:"-144749386"
 
 - name: ctrlpanel
   vendor: ctrlpanel-gg
@@ -38847,6 +38847,85 @@
     - platform: shodan
       queries:
         - http.title:"ctrlpanel" http.html:"ctrlpanel"
+
+- name: passwordpusher
+  vendor: pglombardo
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="password pusher"
+    - platform: shodan
+      queries:
+        - http.title:"password pusher"
+
+- name: endpoint-manager-mobile
+  vendor: ivanti
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"ivanti endpoint manager mobile (epmm)"
+
+- name: geo-my-wp
+  vendor: developer.developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/geo-my-wp/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/geo-my-wp/"
+
+- name: omniroute
+  vendor: omniroute
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="omniroute"
+    - platform: shodan
+      queries:
+        - http.title:"omniroute"
+
+- name: nextgen-gallery
+  vendor: imagely
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="nextgen gallery"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/nextgen-gallery/
+
+- name: divi-form-builder
+  vendor: elegantthemes
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/divi-form-builder/
+
+- name: papercut_ng,papercut_mf
+  vendor: papercut
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="papercut"
+    - platform: shodan
+      queries:
+        - http.title:"papercut"
+
+- name: device-builder
+  vendor: esphome
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"esphome device builder"
 
 - name: element
   vendor: matrix
