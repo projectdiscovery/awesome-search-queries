@@ -38857,6 +38857,7 @@
         - body="password pusher"
     - platform: shodan
       queries:
+        - http.html:"password pusher"
         - http.title:"password pusher"
 
 - name: endpoint-manager-mobile
@@ -38888,6 +38889,9 @@
     - platform: shodan
       queries:
         - http.title:"omniroute"
+    - platform: google
+      queries:
+        - intitle:"omniroute"
 
 - name: nextgen-gallery
   vendor: imagely
@@ -38896,9 +38900,14 @@
     - platform: fofa
       queries:
         - body="nextgen gallery"
+        - body=/wp-content/plugins/nextgen-gallery/
     - platform: publicwww
       queries:
         - /wp-content/plugins/nextgen-gallery/
+    - platform: shodan
+      queries:
+        - http.html:"nextgen gallery"
+        - http.html:/wp-content/plugins/nextgen-gallery/
 
 - name: divi-form-builder
   vendor: elegantthemes
@@ -38907,6 +38916,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/divi-form-builder/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/divi-form-builder/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/divi-form-builder/
 
 - name: papercut_ng,papercut_mf
   vendor: papercut
@@ -38918,6 +38933,9 @@
     - platform: shodan
       queries:
         - http.title:"papercut"
+    - platform: google
+      queries:
+        - intitle:"papercut"
 
 - name: device-builder
   vendor: esphome
@@ -38926,6 +38944,12 @@
     - platform: shodan
       queries:
         - http.title:"esphome device builder"
+    - platform: fofa
+      queries:
+        - title="esphome device builder"
+    - platform: google
+      queries:
+        - intitle:"esphome device builder"
 
 - name: element
   vendor: matrix
