@@ -38951,6 +38951,17 @@
       queries:
         - intitle:"esphome device builder"
 
+- name: advanced-responsive-video-embedder
+  vendor: advanced-responsive-video-embedder
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="advanced-responsive-video-embedder"
+    - platform: shodan
+      queries:
+        - http.html:"advanced-responsive-video-embedder"
+
 - name: element
   vendor: matrix
   type: product
