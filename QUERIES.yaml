@@ -7739,9 +7739,15 @@
     - platform: fofa
       queries:
         - icon_hash="362091310"
+        - title="ivanti user portal"
+        - title="ivanti user portal" || body="ui.login.css"
     - platform: shodan
       queries:
         - http.favicon.hash:"362091310"
+        - http.title:"ivanti user portal"
+    - platform: google
+      queries:
+        - intitle:"ivanti user portal"
 
 - name: mirth_connect
   vendor: nextgen
@@ -23727,6 +23733,7 @@
         - icon_hash="1519363246"
         - icon_hash="1937353549"
         - 'set-cookie: ncentral_version='
+        - title="n-central login redirect"
         - title="n-central login"
         - title="n-central"
     - platform: google
@@ -38962,6 +38969,33 @@
       queries:
         - http.html:"advanced-responsive-video-embedder"
 
+- name: yamcs
+  vendor: yamcs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"yamcs"
+
+- name: siyuan
+  vendor: b3log
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-1450125239
+
+- name: ten-framework
+  vendor: ten-framework
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="ten manager"
+    - platform: shodan
+      queries:
+        - http.title:"ten manager"
+
 - name: element
   vendor: matrix
   type: product
@@ -38969,3 +39003,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: etcd
+  vendor: etcd
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"etcd"
