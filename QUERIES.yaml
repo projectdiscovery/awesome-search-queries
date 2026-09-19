@@ -38984,6 +38984,9 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-1450125239
+    - platform: fofa
+      queries:
+        - icon_hash=-1450125239
 
 - name: ten-framework
   vendor: ten-framework
@@ -38995,14 +38998,9 @@
     - platform: shodan
       queries:
         - http.title:"ten manager"
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
+    - platform: google
       queries:
-        - http.html:"manifest.json"
+        - intitle:"ten manager"
 
 - name: etcd
   vendor: etcd
@@ -39011,3 +39009,11 @@
     - platform: shodan
       queries:
         - product:"etcd"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
