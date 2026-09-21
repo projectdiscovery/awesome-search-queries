@@ -4322,16 +4322,19 @@
       queries:
         - cpe:"cpe:2.3:a:minio:minio"
         - http.html:"symfony profiler"
+        - http.title:"minio aistor"
         - http.title:"minio browser"
         - http.title:"minio console"
     - platform: fofa
       queries:
         - app="minio"
         - body="symfony profiler"
+        - title="minio aistor"
         - title="minio browser"
         - title="minio console"
     - platform: google
       queries:
+        - intitle:"minio aistor"
         - intitle:"minio browser"
         - intitle:"minio console"
 
@@ -39009,6 +39012,39 @@
     - platform: shodan
       queries:
         - product:"etcd"
+
+- name: gpon_router_firmware
+  vendor: dasannetworks
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="gpon home gateway"
+    - platform: shodan
+      queries:
+        - http.title:"gpon home gateway"
+
+- name: gravityforms
+  vendor: rocketgenius
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="gravityforms" && body="gform_wrapper"
+    - platform: shodan
+      queries:
+        - http.html:"gravityforms" http.html:"gform_wrapper"
+
+- name: penpot
+  vendor: penpot
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="penpot
+    - platform: shodan
+      queries:
+        - http.title:"penpot"
 
 - name: element
   vendor: matrix
