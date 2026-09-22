@@ -8392,9 +8392,14 @@
     - platform: shodan
       queries:
         - http.html:"netmaker"
+        - http.title:"netmaker"
     - platform: fofa
       queries:
         - body="netmaker"
+        - title="netmaker"
+    - platform: google
+      queries:
+        - intitle:"netmaker"
 
 - name: winter
   vendor: wintercms
@@ -8402,9 +8407,11 @@
   engines:
     - platform: fofa
       queries:
+        - body="winter cms"
         - title="winter cms"
     - platform: shodan
       queries:
+        - http.html:"winter cms"
         - http.title:"winter cms"
     - platform: google
       queries:
@@ -27600,9 +27607,14 @@
     - platform: shodan
       queries:
         - http.html:"ckan 2.8.2" || html:"ckan 2.3"
+        - http.title:"ckan"
     - platform: fofa
       queries:
         - body="ckan 2.8.2" || html:"ckan 2.3"
+        - title="ckan"
+    - platform: google
+      queries:
+        - intitle:"ckan"
 
 - name: openshift_origin
   vendor: redhat
@@ -28124,9 +28136,14 @@
     - platform: shodan
       queries:
         - http.html:"owncast"
+        - http.title:"owncast"
     - platform: fofa
       queries:
         - body="owncast"
+        - title="owncast"
+    - platform: google
+      queries:
+        - intitle:"owncast"
 
 - name: media-suite
   vendor: harman
@@ -29007,7 +29024,14 @@
   engines:
     - platform: shodan
       queries:
+        - http.title:"mindsdb studio"
         - http.title:"mindsdb"
+    - platform: fofa
+      queries:
+        - title="mindsdb studio"
+    - platform: google
+      queries:
+        - intitle:"mindsdb studio"
 
 - name: senayan_library_management_system
   vendor: slims
@@ -29622,6 +29646,9 @@
     - platform: shodan
       queries:
         - http.html:"openmrs"
+    - platform: fofa
+      queries:
+        - body="openmrs"
 
 - name: ai_engine
   vendor: meowapps
@@ -33268,9 +33295,14 @@
     - platform: fofa
       queries:
         - body="whodb"
+        - title="whodb"
     - platform: shodan
       queries:
         - http.html:"whodb"
+        - http.title:"whodb"
+    - platform: google
+      queries:
+        - intitle:"whodb"
 
 - name: opencode
   vendor: opencode
@@ -34158,10 +34190,12 @@
   engines:
     - platform: fofa
       queries:
+        - body="tinacms"
         - body="tinacms" || body="tinacms"
         - title="tinacms"
     - platform: shodan
       queries:
+        - http.html:"tinacms"
         - http.title:"tinacms"
     - platform: google
       queries:
@@ -37028,6 +37062,9 @@
     - platform: shodan
       queries:
         - http.title:"kimai"
+    - platform: google
+      queries:
+        - intitle:"kimai"
 
 - name: wpbookit
   vendor: iqonicdesign
@@ -38273,9 +38310,14 @@
     - platform: fofa
       queries:
         - body="invoiceplane"
+        - title="invoiceplane"
     - platform: shodan
       queries:
         - http.html:"invoiceplane"
+        - http.title:"invoiceplane"
+    - platform: google
+      queries:
+        - intitle:"invoiceplane"
 
 - name: feast
   vendor: feast-dev
@@ -39053,6 +39095,252 @@
       queries:
         - intitle:"penpot"
 
+- name: ai-copilot-content-generator
+  vendor: aiwu
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/ai-copilot-content-generator/"
+
+- name: wp-module-data,bluehost-wordpress-plugin,hostgator,wp-plugin-web,crazy-domains
+  vendor: newfold
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-plugin-crazy-domains"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wp-plugin-crazy-domains"
+
+- name: cockpit
+  vendor: cockpit-hq
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash=="688609340"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:"688609340"
+
+- name: lufi
+  vendor: fiat-tux
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"lufi"
+
+- name: easyappointments
+  vendor: easyappointments
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"easy!appointments"
+
+- name: typesetter_cms
+  vendor: typesetter
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"typesetter cms"
+
+- name: cloudserver
+  vendor: scality
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - '"scalitys3"'
+
+- name: opensupports
+  vendor: opensupports
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"opensupports"
+
+- name: horilla
+  vendor: horilla
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"login - horilla dashboard"
+
+- name: microbin
+  vendor: microbin
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"microbin"
+
+- name: iobroker
+  vendor: iobroker
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"iobroker"
+
+- name: gladys
+  vendor: gladysassistant
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"gladys assistant"
+
+- name: iotsharp
+  vendor: iotsharp
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"iotsharp"
+
+- name: thingspanel
+  vendor: thingspanel
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"thingspanel"
+
+- name: castopod
+  vendor: ad_aures
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"castopod"
+
+- name: kapua
+  vendor: eclipse
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"eclipse kapua"
+
+- name: yaade
+  vendor: esperotech
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"yaade"
+
+- name: monica
+  vendor: monicahq
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"monica – personal relationship manager"
+
+- name: omeka_s
+  vendor: omeka
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"omeka s"
+
+- name: typesense_dashboard
+  vendor: bfritscher
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"typesense-dashboard"
+
+- name: opik
+  vendor: comet-ml
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"comet opik"
+
+- name: saleor_dashboard
+  vendor: saleor
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"sign in to the saleor dashboard"
+
+- name: formbricks
+  vendor: formbricks
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"formbricks"
+
+- name: fluidd
+  vendor: fluidd-core
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"fluidd"
+
+- name: minthcm
+  vendor: minthcm
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"minthcm"
+
+- name: openbas
+  vendor: filigran
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"openbas - open breach & attack simulation platform"
+
+- name: shynet
+  vendor: shynet
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"shynet"
+
+- name: lowcoder
+  vendor: lowcoder-org
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"lowcoder | rapid app & videomeeting builder for everyone."
+
+- name: scrutiny
+  vendor: analogj
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"scrutiny"
+
+- name: cube
+  vendor: cube-dev
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"cube.js playground"
+
 - name: element
   vendor: matrix
   type: product
@@ -39060,3 +39348,1600 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: misskey
+  vendor: misskey
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"thank you for using misskey"
+
+- name: api_management
+  vendor: gravitee
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"gravitee-logo-cyan.svg"
+
+- name: rapid_scada
+  vendor: rapidscada
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"rapid scada"
+
+- name: openevse-wifi
+  vendor: openevse
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"openevse wifi"
+
+- name: senaite
+  vendor: senaite
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"++plone++senaite.core.static"
+
+- name: documize_community
+  vendor: documize
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"documize"
+
+- name: swarmpit
+  vendor: swarmpit
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"swarmpit"
+
+- name: dns_server
+  vendor: technitium
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"technitium dns server"
+
+- name: ant_media_server
+  vendor: ant_media
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"ant media server"
+
+- name: mobilizon
+  vendor: framasoft
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"mobilizon doesn't work properly"
+
+- name: cinny
+  vendor: cinnyapp
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"cinny"
+
+- name: yugabytedb
+  vendor: yugabyte
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"yugabytedb"
+
+- name: coder
+  vendor: coder
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"coder"
+
+- name: gokapi
+  vendor: forceu
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"gokapi"
+
+- name: broadleaf_commerce
+  vendor: broadleafcommerce
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"broadleaf commerce"
+
+- name: medusa
+  vendor: medusajs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"medusa next.js starter template"
+
+- name: solarassistant
+  vendor: solarassistant
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"solarassistant"
+
+- name: powerdns-admin
+  vendor: powerdns-admin
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"powerdns-admin"
+
+- name: starrocks
+  vendor: starrocks
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"starrocks"
+
+- name: gotosocial
+  vendor: superseriousbusiness
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"gotosocial"
+
+- name: illa_builder
+  vendor: illacloud
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"illa cloud"
+
+- name: proget
+  vendor: inedo
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"proget"
+
+- name: lago
+  vendor: getlago
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"lago"
+
+- name: affine
+  vendor: toeverything
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"affine"
+
+- name: pixelfed
+  vendor: pixelfed
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"window.pfl"
+
+- name: appflowy-cloud
+  vendor: appflowy-io
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"appflowy"
+
+- name: funkwhale
+  vendor: funkwhale
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"funkwhale"
+
+- name: growthbook
+  vendor: growthbook
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"growthbook"
+
+- name: watchyourlan
+  vendor: aceberg
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"watchyourlan"
+
+- name: chartbrew
+  vendor: chartbrew
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"chartbrew"
+
+- name: bahmni
+  vendor: bahmni
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"bahmni"
+
+- name: vouch_proxy
+  vendor: vouch
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"vouch proxy - 400 bad request"
+
+- name: gameap
+  vendor: gameap
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"gameap"
+
+- name: openelis_global
+  vendor: digi-uw
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"openelis global frontend"
+
+- name: duplicati
+  vendor: duplicati
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"duplicati login"
+
+- name: trilium
+  vendor: triliumnext
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"trilium notes"
+
+- name: flagsmith
+  vendor: flagsmith
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"flagsmith"
+
+- name: glitchtip
+  vendor: glitchtip
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"glitchtip"
+
+- name: restreamer
+  vendor: datarhei
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"restreamer"
+
+- name: pretix
+  vendor: pretix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"ticketing powered by pretix"
+
+- name: scada-lts
+  vendor: scada-lts
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"scada-lts"
+
+- name: uptrace
+  vendor: uptrace
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"uptrace"
+
+- name: netbird
+  vendor: netbird
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"netbird dashboard"
+
+- name: keila
+  vendor: pentacent
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"keila"
+
+- name: mailtrain
+  vendor: mailtrain
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"mailtrain"
+
+- name: agenta
+  vendor: agenta-ai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - 'http.title:"agenta: the llmops platform."'
+
+- name: invoiceninja
+  vendor: invoiceninja
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"invoice ninja"
+
+- name: archivesspace
+  vendor: archivesspace
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"archivesspace"
+
+- name: shuffle
+  vendor: shuffle
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"shuffle"
+
+- name: cloudreve
+  vendor: cloudreve
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"cloudreve"
+
+- name: taiga
+  vendor: taigaio
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"taiga"
+
+- name: autobrr
+  vendor: autobrr
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"autobrr"
+
+- name: statping-ng
+  vendor: statping-ng
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"statping"
+
+- name: coroot
+  vendor: coroot
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"coroot"
+
+- name: orthanc
+  vendor: orthanc-server
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"orthanc explorer"
+
+- name: pgweb
+  vendor: sosedoff
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"pgweb"
+
+- name: openboxes
+  vendor: openboxes
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"openboxes.css"
+
+- name: mayan-edms
+  vendor: mayan-edms
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"mayan edms"
+
+- name: nymea
+  vendor: nymea
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - '"nymea"'
+
+- name: defguard
+  vendor: defguard
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"defguard"
+
+- name: datasette
+  vendor: simonw
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"datasette"
+
+- name: kaui
+  vendor: killbill
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"kaui"
+
+- name: perses
+  vendor: perses
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"perses"
+
+- name: libretime
+  vendor: libretime
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"libretime"
+
+- name: psitransfer
+  vendor: psi-4ward
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"psitransfer"
+
+- name: trigger.dev
+  vendor: triggerdotdev
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"login to trigger.dev"
+
+- name: keystone
+  vendor: keystonejs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"keystonejs"
+
+- name: janus_gateway
+  vendor: meetecho
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"janus webrtc server"
+
+- name: sylius
+  vendor: sylius
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"sylius"
+
+- name: part-db
+  vendor: part-db
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"part-db"
+
+- name: runtipi
+  vendor: runtipi
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"runtipi"
+
+- name: kubesphere
+  vendor: kubesphere
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"kubesphere"
+
+- name: goatcounter
+  vendor: goatcounter
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"goatcounter"
+
+- name: saleor
+  vendor: saleor
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"saleor e-commerce"
+
+- name: adempiere
+  vendor: adempiere
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"adempiere application home"
+
+- name: inngest
+  vendor: inngest
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"inngest server"
+
+- name: mathesar
+  vendor: mathesar-foundation
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"mathesar"
+
+- name: gatus
+  vendor: twin
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"health dashboard | gatus"
+
+- name: librebooking
+  vendor: librebooking
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"librebooking - log in"
+
+- name: backstage
+  vendor: backstage
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"backstage is an open platform for building developer portals"
+
+- name: sharry
+  vendor: eikek
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"sharry"
+
+- name: focalboard
+  vendor: mattermost
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"focalboard"
+
+- name: luigi
+  vendor: spotify
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"luigi task visualiser"
+
+- name: pluxml
+  vendor: pluxml
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"plucss.css" http.html:"feed.php?rss/commentaires"
+
+- name: islandora
+  vendor: islandora
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"islandora.ca"
+
+- name: stalwart-mail-server
+  vendor: stalwart-labs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"stalwart management"
+
+- name: grist
+  vendor: gristlabs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"loading... - grist"
+
+- name: swetrix
+  vendor: swetrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"swetrix"
+
+- name: calaos-web-app
+  vendor: calaos
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"calaos web app"
+
+- name: hatchet
+  vendor: hatchet-dev
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"hatchet"
+
+- name: flowfuse
+  vendor: flowfuse
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"flowfuse"
+
+- name: mailu
+  vendor: mailu
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"mailu-admin"
+
+- name: openwisp
+  vendor: openwisp
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"openwisp"
+
+- name: solaranzeige
+  vendor: solaranzeige
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"solaranzeige"
+
+- name: evershop
+  vendor: evershopcommerce
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"evershop"
+
+- name: nipap
+  vendor: spritelink
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"nipap"
+
+- name: cells
+  vendor: pydio
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"pydio cells"
+
+- name: openwb
+  vendor: openwb
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"openwb"
+
+- name: zincsearch
+  vendor: zincsearch
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"zincsearch"
+
+- name: komodo
+  vendor: moghtech
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"komodo"
+
+- name: humhub
+  vendor: humhub
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"humhub-app.js"
+
+- name: shellhub
+  vendor: shellhub-io
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"shellhub"
+
+- name: akkoma
+  vendor: akkoma
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"akkoma"
+
+- name: bunkerweb
+  vendor: bunkerity
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"bunkerweb"
+
+- name: highlight
+  vendor: highlight
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"highlight.io"
+
+- name: lizmap_web_client
+  vendor: 3liz
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"lizmap"
+
+- name: fileflows
+  vendor: fileflows
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"fileflows"
+
+- name: rport
+  vendor: realvnc-labs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"rport"
+
+- name: typemill
+  vendor: typemill
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"typemill"
+
+- name: wekan
+  vendor: wekan
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"wekan"
+
+- name: plik
+  vendor: root-gg
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"plik"
+
+- name: jirafeau
+  vendor: mojo42
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"jirafeau"
+
+- name: ipplan
+  vendor: ipplan
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"ipplan"
+
+- name: docusaurus
+  vendor: facebook
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"__docusaurus"
+
+- name: monitoror
+  vendor: monitoror
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"monitoror"
+
+- name: logto
+  vendor: silverhand
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"window.logtossr"
+
+- name: geonetwork
+  vendor: geonetwork
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"geonetwork"
+
+- name: etherpad_lite
+  vendor: etherpad
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"etherpad"
+
+- name: picoshare
+  vendor: mtlynch
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"picoshare"
+
+- name: dispatcharr
+  vendor: dispatcharr
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"dispatcharr"
+
+- name: otter_wiki
+  vendor: redimp
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"otter wiki"
+
+- name: peppermint
+  vendor: peppermint-lab
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"peppermint"
+
+- name: chibisafe
+  vendor: chibisafe
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"chibisafe"
+
+- name: prusalink
+  vendor: prusa-research
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"prusalink"
+
+- name: docker_registry_ui
+  vendor: joxit
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"docker registry ui"
+
+- name: headplane
+  vendor: tale
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"headplane"
+
+- name: kener
+  vendor: rajnandan1
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"kener - open source status page system"
+
+- name: cabot
+  vendor: arachnys
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"cabot by arachnys"
+
+- name: ovenmediaengine
+  vendor: ovenmedialabs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"ovenmediaengine"
+
+- name: cryptpad
+  vendor: cryptpad
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"cryptpad"
+
+- name: dataverse
+  vendor: iqss
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"dataverse"
+
+- name: apprise-api
+  vendor: caronc
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"apprise api"
+
+- name: publii
+  vendor: getpublii
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"publii open-source cms for static site"
+
+- name: weberp
+  vendor: weberp
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"weberp login screen"
+
+- name: virto_commerce
+  vendor: virtocommerce
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"virto commerce"
+
+- name: sunshine
+  vendor: lizardbyte
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - port:47990 http.title:"sunshine"
+
+- name: sentrifugo
+  vendor: sentrifugo
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"sentrifugo"
+
+- name: restate
+  vendor: restatedev
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"restate" port:9070
+
+- name: it-tools
+  vendor: corentinth
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"it tools - handy online tools for developers"
+
+- name: htmly
+  vendor: htmly
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:'meta name="generator" content="htmly'
+
+- name: postal
+  vendor: postalserver
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"login - postal"
+
+- name: pimatic
+  vendor: pimatic
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"pimatic"
+
+- name: quay
+  vendor: redhat
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"ng-app=\"quay\""
+
+- name: tuleap
+  vendor: enalean
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"tuleap"
+
+- name: galaxy
+  vendor: galaxyproject
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"galaxy" http.html:"/static/dist/base.css"
+
+- name: aptabase
+  vendor: aptabase
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"aptabase"
+
+- name: cal.com
+  vendor: calcom
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"cal.com"
+
+- name: thinger-io
+  vendor: thinger-io
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"thinger.io"
+
+- name: raneto
+  vendor: raneto
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"raneto"
+
+- name: admidio
+  vendor: admidio
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"admidio"
+
+- name: pingvin_share
+  vendor: stonith404
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"pingvin share"
+
+- name: crafty_controller
+  vendor: crafty_controller
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"crafty controller"
+
+- name: homegenie
+  vendor: genielabs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"homegenie"
+
+- name: mediacms
+  vendor: mediacms-io
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"mediacms"
+
+- name: gollum
+  vendor: gollum
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"gollum"
+
+- name: flowable
+  vendor: flowable
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"flowable"
+
+- name: lldap
+  vendor: lldap
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"lldap administration"
+
+- name: zigbee2mqtt
+  vendor: koenkk
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"zigbee2mqtt"
+
+- name: pangolin
+  vendor: fosrl
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"dashboard - pangolin"
+
+- name: volumio
+  vendor: volumio
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"volumio - the music player"
+
+- name: writefreely
+  vendor: writefreely
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"writefreely"
+
+- name: 3dprinteros-client
+  vendor: 3dprinteros
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"3dprinteros client"
+
+- name: webvirtcloud
+  vendor: retspen
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"webvirtcloud"
+
+- name: gonic
+  vendor: sentriz
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"gonic"
+
+- name: firefly-iii
+  vendor: firefly-iii
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"firefly iii"
+
+- name: umbrel
+  vendor: umbrel
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"umbrel"
+
+- name: flipt
+  vendor: flipt
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"flipt"
+
+- name: pufferpanel
+  vendor: pufferpanel
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"pufferpanel"
+
+- name: crater
+  vendor: crater
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"crater - self hosted invoicing platform"
+
+- name: cloudron
+  vendor: cloudron
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"cloudron - not found"
+
+- name: loxberry
+  vendor: loxberry
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"loxberry"
+
+- name: evcc
+  vendor: evcc-io
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"evcc"
+
+- name: firezone
+  vendor: firezone
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"firezone"
+
+- name: sao
+  vendor: tryton
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"tryton"
+
+- name: plane
+  vendor: makeplane
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"plane | simple, extensible, open-source project management tool."
+
+- name: idempiere
+  vendor: idempiere
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"idempiere application home"
+
+- name: tasmoadmin
+  vendor: tasmoadmin
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"tasmoadmin"
+
+- name: backup_server
+  vendor: proxmox
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"/js/proxmox-backup-gui.js"
+
+- name: panel
+  vendor: pelican_dev
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"pelican panel"
+
+- name: bareos
+  vendor: bareos
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"bareos - login"
+
+- name: peertube
+  vendor: framasoft
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"window.peertubeserverconfig"
+
+- name: faveo-helpdesk
+  vendor: ladybird-web-solution
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"faveo helpdesk"
+
+- name: mainsail
+  vendor: mainsail-crew
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"mainsail"
+
+- name: scrypted
+  vendor: koush
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"scrypted"
+
+- name: docspell
+  vendor: docspell
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"docspell"
+
+- name: frontaccounting
+  vendor: frontaccounting
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"frontaccounting"
+
+- name: filerun
+  vendor: filerun
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"filerun"
+
+- name: lemmy
+  vendor: lemmy
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"window.isodata" http.html:"site_res"
+
+- name: countly
+  vendor: countly
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"countly"
+
+- name: mainflux
+  vendor: mainflux
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"mainflux"
+
+- name: kanidm
+  vendor: kanidm
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"kanidm"
+
+- name: azuracast
+  vendor: azuracast
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"log in - azuracast"
+
+- name: metasfresh
+  vendor: metasfresh
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"metasfresh"
+
+- name: parseable
+  vendor: parseablehq
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"parseable"
+
+- name: promptfoo
+  vendor: promptfoo
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"promptfoo"
+
+- name: cloudbeaver
+  vendor: dbeaver
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"cloudbeaver"
+
+- name: excalidraw
+  vendor: excalidraw
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"excalidraw"
+
+- name: authoritative_server
+  vendor: powerdns
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="powerdns authoritative server monitor"
+        - title="powerdns authoritative server monitor"
+    - platform: shodan
+      queries:
+        - http.html:"powerdns authoritative server monitor"
+        - http.title:"powerdns authoritative server monitor"
+
+- name: qdrant
+  vendor: qdrant
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"qdrant - vector search engine"
