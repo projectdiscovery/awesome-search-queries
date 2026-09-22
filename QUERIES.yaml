@@ -39023,6 +39023,9 @@
     - platform: shodan
       queries:
         - http.title:"gpon home gateway"
+    - platform: google
+      queries:
+        - intitle:"gpon home gateway"
 
 - name: gravityforms
   vendor: rocketgenius
@@ -39031,6 +39034,7 @@
     - platform: fofa
       queries:
         - body="gravityforms" && body="gform_wrapper"
+        - body="gravityforms" http.html:"gform_wrapper"
     - platform: shodan
       queries:
         - http.html:"gravityforms" http.html:"gform_wrapper"
@@ -39041,10 +39045,13 @@
   engines:
     - platform: fofa
       queries:
-        - title="penpot
+        - title="penpot"
     - platform: shodan
       queries:
         - http.title:"penpot"
+    - platform: google
+      queries:
+        - intitle:"penpot"
 
 - name: element
   vendor: matrix
