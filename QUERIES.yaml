@@ -42132,9 +42132,25 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/hippoo/"
+        - body=/wp-content/plugins/hippoo
     - platform: publicwww
       queries:
         - /wp-content/plugins/hippoo
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/hippoo/"
+        - http.html:/wp-content/plugins/hippoo
+
+- name: bookly-responsive-appointment-booking-tool
+  vendor: bookly
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="booklyl10nglobal"
+    - platform: shodan
+      queries:
+        - http.html:"booklyl10nglobal"
 
 - name: element
   vendor: matrix
