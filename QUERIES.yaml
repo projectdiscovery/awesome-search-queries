@@ -39102,6 +39102,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ai-copilot-content-generator/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/ai-copilot-content-generator/"
 
 - name: wp-module-data,bluehost-wordpress-plugin,hostgator,wp-plugin-web,crazy-domains
   vendor: newfold
@@ -39120,10 +39123,12 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="688609340"
         - icon_hash=="688609340"
     - platform: shodan
       queries:
         - http.favicon.hash:"688609340"
+        - http.favicon.hash:="688609340"
 
 - name: lufi
   vendor: fiat-tux
@@ -39132,6 +39137,12 @@
     - platform: shodan
       queries:
         - http.title:"lufi"
+    - platform: fofa
+      queries:
+        - title="lufi"
+    - platform: google
+      queries:
+        - intitle:"lufi"
 
 - name: easyappointments
   vendor: easyappointments
@@ -39140,6 +39151,12 @@
     - platform: shodan
       queries:
         - http.title:"easy!appointments"
+    - platform: fofa
+      queries:
+        - title="easy!appointments"
+    - platform: google
+      queries:
+        - intitle:"easy!appointments"
 
 - name: typesetter_cms
   vendor: typesetter
@@ -39148,6 +39165,9 @@
     - platform: shodan
       queries:
         - http.html:"typesetter cms"
+    - platform: fofa
+      queries:
+        - body="typesetter cms"
 
 - name: cloudserver
   vendor: scality
@@ -39164,6 +39184,12 @@
     - platform: shodan
       queries:
         - http.title:"opensupports"
+    - platform: fofa
+      queries:
+        - title="opensupports"
+    - platform: google
+      queries:
+        - intitle:"opensupports"
 
 - name: horilla
   vendor: horilla
@@ -39172,6 +39198,12 @@
     - platform: shodan
       queries:
         - http.title:"login - horilla dashboard"
+    - platform: fofa
+      queries:
+        - title="login - horilla dashboard"
+    - platform: google
+      queries:
+        - intitle:"login - horilla dashboard"
 
 - name: microbin
   vendor: microbin
@@ -39180,6 +39212,12 @@
     - platform: shodan
       queries:
         - http.title:"microbin"
+    - platform: fofa
+      queries:
+        - title="microbin"
+    - platform: google
+      queries:
+        - intitle:"microbin"
 
 - name: iobroker
   vendor: iobroker
@@ -39188,6 +39226,9 @@
     - platform: shodan
       queries:
         - http.html:"iobroker"
+    - platform: fofa
+      queries:
+        - body="iobroker"
 
 - name: gladys
   vendor: gladysassistant
@@ -39196,6 +39237,12 @@
     - platform: shodan
       queries:
         - http.title:"gladys assistant"
+    - platform: fofa
+      queries:
+        - title="gladys assistant"
+    - platform: google
+      queries:
+        - intitle:"gladys assistant"
 
 - name: iotsharp
   vendor: iotsharp
@@ -39204,6 +39251,9 @@
     - platform: shodan
       queries:
         - http.html:"iotsharp"
+    - platform: fofa
+      queries:
+        - body="iotsharp"
 
 - name: thingspanel
   vendor: thingspanel
@@ -39212,6 +39262,12 @@
     - platform: shodan
       queries:
         - http.title:"thingspanel"
+    - platform: fofa
+      queries:
+        - title="thingspanel"
+    - platform: google
+      queries:
+        - intitle:"thingspanel"
 
 - name: castopod
   vendor: ad_aures
@@ -39220,6 +39276,9 @@
     - platform: shodan
       queries:
         - http.html:"castopod"
+    - platform: fofa
+      queries:
+        - body="castopod"
 
 - name: kapua
   vendor: eclipse
@@ -39228,6 +39287,12 @@
     - platform: shodan
       queries:
         - http.title:"eclipse kapua"
+    - platform: fofa
+      queries:
+        - title="eclipse kapua"
+    - platform: google
+      queries:
+        - intitle:"eclipse kapua"
 
 - name: yaade
   vendor: esperotech
@@ -39236,6 +39301,12 @@
     - platform: shodan
       queries:
         - http.title:"yaade"
+    - platform: fofa
+      queries:
+        - title="yaade"
+    - platform: google
+      queries:
+        - intitle:"yaade"
 
 - name: monica
   vendor: monicahq
@@ -39244,6 +39315,12 @@
     - platform: shodan
       queries:
         - http.title:"monica – personal relationship manager"
+    - platform: fofa
+      queries:
+        - title="monica – personal relationship manager"
+    - platform: google
+      queries:
+        - intitle:"monica – personal relationship manager"
 
 - name: omeka_s
   vendor: omeka
@@ -39252,6 +39329,12 @@
     - platform: shodan
       queries:
         - http.title:"omeka s"
+    - platform: fofa
+      queries:
+        - title="omeka s"
+    - platform: google
+      queries:
+        - intitle:"omeka s"
 
 - name: typesense_dashboard
   vendor: bfritscher
@@ -39260,6 +39343,12 @@
     - platform: shodan
       queries:
         - http.title:"typesense-dashboard"
+    - platform: fofa
+      queries:
+        - title="typesense-dashboard"
+    - platform: google
+      queries:
+        - intitle:"typesense-dashboard"
 
 - name: opik
   vendor: comet-ml
@@ -39268,6 +39357,12 @@
     - platform: shodan
       queries:
         - http.title:"comet opik"
+    - platform: fofa
+      queries:
+        - title="comet opik"
+    - platform: google
+      queries:
+        - intitle:"comet opik"
 
 - name: saleor_dashboard
   vendor: saleor
@@ -39276,6 +39371,12 @@
     - platform: shodan
       queries:
         - http.title:"sign in to the saleor dashboard"
+    - platform: fofa
+      queries:
+        - title="sign in to the saleor dashboard"
+    - platform: google
+      queries:
+        - intitle:"sign in to the saleor dashboard"
 
 - name: formbricks
   vendor: formbricks
@@ -39284,6 +39385,12 @@
     - platform: shodan
       queries:
         - http.title:"formbricks"
+    - platform: fofa
+      queries:
+        - title="formbricks"
+    - platform: google
+      queries:
+        - intitle:"formbricks"
 
 - name: fluidd
   vendor: fluidd-core
@@ -39292,6 +39399,12 @@
     - platform: shodan
       queries:
         - http.title:"fluidd"
+    - platform: fofa
+      queries:
+        - title="fluidd"
+    - platform: google
+      queries:
+        - intitle:"fluidd"
 
 - name: minthcm
   vendor: minthcm
@@ -39300,6 +39413,12 @@
     - platform: shodan
       queries:
         - http.title:"minthcm"
+    - platform: fofa
+      queries:
+        - title="minthcm"
+    - platform: google
+      queries:
+        - intitle:"minthcm"
 
 - name: openbas
   vendor: filigran
@@ -39308,6 +39427,12 @@
     - platform: shodan
       queries:
         - http.title:"openbas - open breach & attack simulation platform"
+    - platform: fofa
+      queries:
+        - title="openbas - open breach & attack simulation platform"
+    - platform: google
+      queries:
+        - intitle:"openbas - open breach & attack simulation platform"
 
 - name: shynet
   vendor: shynet
@@ -39316,6 +39441,9 @@
     - platform: shodan
       queries:
         - http.html:"shynet"
+    - platform: fofa
+      queries:
+        - body="shynet"
 
 - name: lowcoder
   vendor: lowcoder-org
@@ -39324,6 +39452,12 @@
     - platform: shodan
       queries:
         - http.title:"lowcoder | rapid app & videomeeting builder for everyone."
+    - platform: fofa
+      queries:
+        - title="lowcoder | rapid app & videomeeting builder for everyone."
+    - platform: google
+      queries:
+        - intitle:"lowcoder | rapid app & videomeeting builder for everyone."
 
 - name: scrutiny
   vendor: analogj
@@ -39332,6 +39466,12 @@
     - platform: shodan
       queries:
         - http.title:"scrutiny"
+    - platform: fofa
+      queries:
+        - title="scrutiny"
+    - platform: google
+      queries:
+        - intitle:"scrutiny"
 
 - name: cube
   vendor: cube-dev
@@ -39340,14 +39480,12 @@
     - platform: shodan
       queries:
         - http.title:"cube.js playground"
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
+    - platform: fofa
       queries:
-        - http.html:"manifest.json"
+        - title="cube.js playground"
+    - platform: google
+      queries:
+        - intitle:"cube.js playground"
 
 - name: misskey
   vendor: misskey
@@ -39356,6 +39494,9 @@
     - platform: shodan
       queries:
         - http.html:"thank you for using misskey"
+    - platform: fofa
+      queries:
+        - body="thank you for using misskey"
 
 - name: api_management
   vendor: gravitee
@@ -39364,6 +39505,9 @@
     - platform: shodan
       queries:
         - http.html:"gravitee-logo-cyan.svg"
+    - platform: fofa
+      queries:
+        - body="gravitee-logo-cyan.svg"
 
 - name: rapid_scada
   vendor: rapidscada
@@ -39372,6 +39516,12 @@
     - platform: shodan
       queries:
         - http.title:"rapid scada"
+    - platform: fofa
+      queries:
+        - title="rapid scada"
+    - platform: google
+      queries:
+        - intitle:"rapid scada"
 
 - name: openevse-wifi
   vendor: openevse
@@ -39380,6 +39530,12 @@
     - platform: shodan
       queries:
         - http.title:"openevse wifi"
+    - platform: fofa
+      queries:
+        - title="openevse wifi"
+    - platform: google
+      queries:
+        - intitle:"openevse wifi"
 
 - name: senaite
   vendor: senaite
@@ -39388,6 +39544,9 @@
     - platform: shodan
       queries:
         - http.html:"++plone++senaite.core.static"
+    - platform: fofa
+      queries:
+        - body="++plone++senaite.core.static"
 
 - name: documize_community
   vendor: documize
@@ -39396,6 +39555,12 @@
     - platform: shodan
       queries:
         - http.title:"documize"
+    - platform: fofa
+      queries:
+        - title="documize"
+    - platform: google
+      queries:
+        - intitle:"documize"
 
 - name: swarmpit
   vendor: swarmpit
@@ -39404,6 +39569,12 @@
     - platform: shodan
       queries:
         - http.title:"swarmpit"
+    - platform: fofa
+      queries:
+        - title="swarmpit"
+    - platform: google
+      queries:
+        - intitle:"swarmpit"
 
 - name: dns_server
   vendor: technitium
@@ -39412,6 +39583,12 @@
     - platform: shodan
       queries:
         - http.title:"technitium dns server"
+    - platform: fofa
+      queries:
+        - title="technitium dns server"
+    - platform: google
+      queries:
+        - intitle:"technitium dns server"
 
 - name: ant_media_server
   vendor: ant_media
@@ -39420,6 +39597,12 @@
     - platform: shodan
       queries:
         - http.title:"ant media server"
+    - platform: fofa
+      queries:
+        - title="ant media server"
+    - platform: google
+      queries:
+        - intitle:"ant media server"
 
 - name: mobilizon
   vendor: framasoft
@@ -39428,6 +39611,9 @@
     - platform: shodan
       queries:
         - http.html:"mobilizon doesn't work properly"
+    - platform: fofa
+      queries:
+        - body="mobilizon doesn't work properly"
 
 - name: cinny
   vendor: cinnyapp
@@ -39436,6 +39622,12 @@
     - platform: shodan
       queries:
         - http.title:"cinny"
+    - platform: fofa
+      queries:
+        - title="cinny"
+    - platform: google
+      queries:
+        - intitle:"cinny"
 
 - name: yugabytedb
   vendor: yugabyte
@@ -39444,6 +39636,12 @@
     - platform: shodan
       queries:
         - http.title:"yugabytedb"
+    - platform: fofa
+      queries:
+        - title="yugabytedb"
+    - platform: google
+      queries:
+        - intitle:"yugabytedb"
 
 - name: coder
   vendor: coder
@@ -39452,6 +39650,12 @@
     - platform: shodan
       queries:
         - http.title:"coder"
+    - platform: fofa
+      queries:
+        - title="coder"
+    - platform: google
+      queries:
+        - intitle:"coder"
 
 - name: gokapi
   vendor: forceu
@@ -39460,6 +39664,12 @@
     - platform: shodan
       queries:
         - http.title:"gokapi"
+    - platform: fofa
+      queries:
+        - title="gokapi"
+    - platform: google
+      queries:
+        - intitle:"gokapi"
 
 - name: broadleaf_commerce
   vendor: broadleafcommerce
@@ -39468,6 +39678,9 @@
     - platform: shodan
       queries:
         - http.html:"broadleaf commerce"
+    - platform: fofa
+      queries:
+        - body="broadleaf commerce"
 
 - name: medusa
   vendor: medusajs
@@ -39476,6 +39689,12 @@
     - platform: shodan
       queries:
         - http.title:"medusa next.js starter template"
+    - platform: fofa
+      queries:
+        - title="medusa next.js starter template"
+    - platform: google
+      queries:
+        - intitle:"medusa next.js starter template"
 
 - name: solarassistant
   vendor: solarassistant
@@ -39484,6 +39703,12 @@
     - platform: shodan
       queries:
         - http.title:"solarassistant"
+    - platform: fofa
+      queries:
+        - title="solarassistant"
+    - platform: google
+      queries:
+        - intitle:"solarassistant"
 
 - name: powerdns-admin
   vendor: powerdns-admin
@@ -39492,6 +39717,12 @@
     - platform: shodan
       queries:
         - http.title:"powerdns-admin"
+    - platform: fofa
+      queries:
+        - title="powerdns-admin"
+    - platform: google
+      queries:
+        - intitle:"powerdns-admin"
 
 - name: starrocks
   vendor: starrocks
@@ -39500,6 +39731,12 @@
     - platform: shodan
       queries:
         - http.title:"starrocks"
+    - platform: fofa
+      queries:
+        - title="starrocks"
+    - platform: google
+      queries:
+        - intitle:"starrocks"
 
 - name: gotosocial
   vendor: superseriousbusiness
@@ -39508,6 +39745,9 @@
     - platform: shodan
       queries:
         - http.html:"gotosocial"
+    - platform: fofa
+      queries:
+        - body="gotosocial"
 
 - name: illa_builder
   vendor: illacloud
@@ -39516,6 +39756,12 @@
     - platform: shodan
       queries:
         - http.title:"illa cloud"
+    - platform: fofa
+      queries:
+        - title="illa cloud"
+    - platform: google
+      queries:
+        - intitle:"illa cloud"
 
 - name: proget
   vendor: inedo
@@ -39524,6 +39770,12 @@
     - platform: shodan
       queries:
         - http.title:"proget"
+    - platform: fofa
+      queries:
+        - title="proget"
+    - platform: google
+      queries:
+        - intitle:"proget"
 
 - name: lago
   vendor: getlago
@@ -39532,6 +39784,12 @@
     - platform: shodan
       queries:
         - http.title:"lago"
+    - platform: fofa
+      queries:
+        - title="lago"
+    - platform: google
+      queries:
+        - intitle:"lago"
 
 - name: affine
   vendor: toeverything
@@ -39540,6 +39798,12 @@
     - platform: shodan
       queries:
         - http.title:"affine"
+    - platform: fofa
+      queries:
+        - title="affine"
+    - platform: google
+      queries:
+        - intitle:"affine"
 
 - name: pixelfed
   vendor: pixelfed
@@ -39548,6 +39812,9 @@
     - platform: shodan
       queries:
         - http.html:"window.pfl"
+    - platform: fofa
+      queries:
+        - body="window.pfl"
 
 - name: appflowy-cloud
   vendor: appflowy-io
@@ -39556,6 +39823,12 @@
     - platform: shodan
       queries:
         - http.title:"appflowy"
+    - platform: fofa
+      queries:
+        - title="appflowy"
+    - platform: google
+      queries:
+        - intitle:"appflowy"
 
 - name: funkwhale
   vendor: funkwhale
@@ -39564,6 +39837,12 @@
     - platform: shodan
       queries:
         - http.title:"funkwhale"
+    - platform: fofa
+      queries:
+        - title="funkwhale"
+    - platform: google
+      queries:
+        - intitle:"funkwhale"
 
 - name: growthbook
   vendor: growthbook
@@ -39572,6 +39851,12 @@
     - platform: shodan
       queries:
         - http.title:"growthbook"
+    - platform: fofa
+      queries:
+        - title="growthbook"
+    - platform: google
+      queries:
+        - intitle:"growthbook"
 
 - name: watchyourlan
   vendor: aceberg
@@ -39580,6 +39865,12 @@
     - platform: shodan
       queries:
         - http.title:"watchyourlan"
+    - platform: fofa
+      queries:
+        - title="watchyourlan"
+    - platform: google
+      queries:
+        - intitle:"watchyourlan"
 
 - name: chartbrew
   vendor: chartbrew
@@ -39588,6 +39879,12 @@
     - platform: shodan
       queries:
         - http.title:"chartbrew"
+    - platform: fofa
+      queries:
+        - title="chartbrew"
+    - platform: google
+      queries:
+        - intitle:"chartbrew"
 
 - name: bahmni
   vendor: bahmni
@@ -39596,6 +39893,9 @@
     - platform: shodan
       queries:
         - http.html:"bahmni"
+    - platform: fofa
+      queries:
+        - body="bahmni"
 
 - name: vouch_proxy
   vendor: vouch
@@ -39604,6 +39904,12 @@
     - platform: shodan
       queries:
         - http.title:"vouch proxy - 400 bad request"
+    - platform: fofa
+      queries:
+        - title="vouch proxy - 400 bad request"
+    - platform: google
+      queries:
+        - intitle:"vouch proxy - 400 bad request"
 
 - name: gameap
   vendor: gameap
@@ -39612,6 +39918,9 @@
     - platform: shodan
       queries:
         - http.html:"gameap"
+    - platform: fofa
+      queries:
+        - body="gameap"
 
 - name: openelis_global
   vendor: digi-uw
@@ -39620,6 +39929,9 @@
     - platform: shodan
       queries:
         - http.html:"openelis global frontend"
+    - platform: fofa
+      queries:
+        - body="openelis global frontend"
 
 - name: duplicati
   vendor: duplicati
@@ -39628,6 +39940,12 @@
     - platform: shodan
       queries:
         - http.title:"duplicati login"
+    - platform: fofa
+      queries:
+        - title="duplicati login"
+    - platform: google
+      queries:
+        - intitle:"duplicati login"
 
 - name: trilium
   vendor: triliumnext
@@ -39636,6 +39954,12 @@
     - platform: shodan
       queries:
         - http.title:"trilium notes"
+    - platform: fofa
+      queries:
+        - title="trilium notes"
+    - platform: google
+      queries:
+        - intitle:"trilium notes"
 
 - name: flagsmith
   vendor: flagsmith
@@ -39644,6 +39968,12 @@
     - platform: shodan
       queries:
         - http.title:"flagsmith"
+    - platform: fofa
+      queries:
+        - title="flagsmith"
+    - platform: google
+      queries:
+        - intitle:"flagsmith"
 
 - name: glitchtip
   vendor: glitchtip
@@ -39652,6 +39982,12 @@
     - platform: shodan
       queries:
         - http.title:"glitchtip"
+    - platform: fofa
+      queries:
+        - title="glitchtip"
+    - platform: google
+      queries:
+        - intitle:"glitchtip"
 
 - name: restreamer
   vendor: datarhei
@@ -39660,6 +39996,9 @@
     - platform: shodan
       queries:
         - http.html:"restreamer"
+    - platform: fofa
+      queries:
+        - body="restreamer"
 
 - name: pretix
   vendor: pretix
@@ -39668,6 +40007,9 @@
     - platform: shodan
       queries:
         - http.html:"ticketing powered by pretix"
+    - platform: fofa
+      queries:
+        - body="ticketing powered by pretix"
 
 - name: scada-lts
   vendor: scada-lts
@@ -39676,6 +40018,12 @@
     - platform: shodan
       queries:
         - http.title:"scada-lts"
+    - platform: fofa
+      queries:
+        - title="scada-lts"
+    - platform: google
+      queries:
+        - intitle:"scada-lts"
 
 - name: uptrace
   vendor: uptrace
@@ -39684,6 +40032,12 @@
     - platform: shodan
       queries:
         - http.title:"uptrace"
+    - platform: fofa
+      queries:
+        - title="uptrace"
+    - platform: google
+      queries:
+        - intitle:"uptrace"
 
 - name: netbird
   vendor: netbird
@@ -39692,6 +40046,12 @@
     - platform: shodan
       queries:
         - http.title:"netbird dashboard"
+    - platform: fofa
+      queries:
+        - title="netbird dashboard"
+    - platform: google
+      queries:
+        - intitle:"netbird dashboard"
 
 - name: keila
   vendor: pentacent
@@ -39700,6 +40060,12 @@
     - platform: shodan
       queries:
         - http.title:"keila"
+    - platform: fofa
+      queries:
+        - title="keila"
+    - platform: google
+      queries:
+        - intitle:"keila"
 
 - name: mailtrain
   vendor: mailtrain
@@ -39708,6 +40074,12 @@
     - platform: shodan
       queries:
         - http.title:"mailtrain"
+    - platform: fofa
+      queries:
+        - title="mailtrain"
+    - platform: google
+      queries:
+        - intitle:"mailtrain"
 
 - name: agenta
   vendor: agenta-ai
@@ -39716,6 +40088,12 @@
     - platform: shodan
       queries:
         - 'http.title:"agenta: the llmops platform."'
+    - platform: fofa
+      queries:
+        - 'title="agenta: the llmops platform."'
+    - platform: google
+      queries:
+        - 'intitle:"agenta: the llmops platform."'
 
 - name: invoiceninja
   vendor: invoiceninja
@@ -39724,6 +40102,12 @@
     - platform: shodan
       queries:
         - http.title:"invoice ninja"
+    - platform: fofa
+      queries:
+        - title="invoice ninja"
+    - platform: google
+      queries:
+        - intitle:"invoice ninja"
 
 - name: archivesspace
   vendor: archivesspace
@@ -39732,6 +40116,12 @@
     - platform: shodan
       queries:
         - http.title:"archivesspace"
+    - platform: fofa
+      queries:
+        - title="archivesspace"
+    - platform: google
+      queries:
+        - intitle:"archivesspace"
 
 - name: shuffle
   vendor: shuffle
@@ -39740,6 +40130,12 @@
     - platform: shodan
       queries:
         - http.title:"shuffle"
+    - platform: fofa
+      queries:
+        - title="shuffle"
+    - platform: google
+      queries:
+        - intitle:"shuffle"
 
 - name: cloudreve
   vendor: cloudreve
@@ -39748,6 +40144,12 @@
     - platform: shodan
       queries:
         - http.title:"cloudreve"
+    - platform: fofa
+      queries:
+        - title="cloudreve"
+    - platform: google
+      queries:
+        - intitle:"cloudreve"
 
 - name: taiga
   vendor: taigaio
@@ -39756,6 +40158,12 @@
     - platform: shodan
       queries:
         - http.title:"taiga"
+    - platform: fofa
+      queries:
+        - title="taiga"
+    - platform: google
+      queries:
+        - intitle:"taiga"
 
 - name: autobrr
   vendor: autobrr
@@ -39764,6 +40172,12 @@
     - platform: shodan
       queries:
         - http.title:"autobrr"
+    - platform: fofa
+      queries:
+        - title="autobrr"
+    - platform: google
+      queries:
+        - intitle:"autobrr"
 
 - name: statping-ng
   vendor: statping-ng
@@ -39772,6 +40186,12 @@
     - platform: shodan
       queries:
         - http.title:"statping"
+    - platform: fofa
+      queries:
+        - title="statping"
+    - platform: google
+      queries:
+        - intitle:"statping"
 
 - name: coroot
   vendor: coroot
@@ -39780,6 +40200,12 @@
     - platform: shodan
       queries:
         - http.title:"coroot"
+    - platform: fofa
+      queries:
+        - title="coroot"
+    - platform: google
+      queries:
+        - intitle:"coroot"
 
 - name: orthanc
   vendor: orthanc-server
@@ -39788,6 +40214,12 @@
     - platform: shodan
       queries:
         - http.title:"orthanc explorer"
+    - platform: fofa
+      queries:
+        - title="orthanc explorer"
+    - platform: google
+      queries:
+        - intitle:"orthanc explorer"
 
 - name: pgweb
   vendor: sosedoff
@@ -39796,6 +40228,12 @@
     - platform: shodan
       queries:
         - http.title:"pgweb"
+    - platform: fofa
+      queries:
+        - title="pgweb"
+    - platform: google
+      queries:
+        - intitle:"pgweb"
 
 - name: openboxes
   vendor: openboxes
@@ -39804,6 +40242,9 @@
     - platform: shodan
       queries:
         - http.html:"openboxes.css"
+    - platform: fofa
+      queries:
+        - body="openboxes.css"
 
 - name: mayan-edms
   vendor: mayan-edms
@@ -39812,6 +40253,12 @@
     - platform: shodan
       queries:
         - http.title:"mayan edms"
+    - platform: fofa
+      queries:
+        - title="mayan edms"
+    - platform: google
+      queries:
+        - intitle:"mayan edms"
 
 - name: nymea
   vendor: nymea
@@ -39828,6 +40275,12 @@
     - platform: shodan
       queries:
         - http.title:"defguard"
+    - platform: fofa
+      queries:
+        - title="defguard"
+    - platform: google
+      queries:
+        - intitle:"defguard"
 
 - name: datasette
   vendor: simonw
@@ -39836,6 +40289,12 @@
     - platform: shodan
       queries:
         - http.title:"datasette"
+    - platform: fofa
+      queries:
+        - title="datasette"
+    - platform: google
+      queries:
+        - intitle:"datasette"
 
 - name: kaui
   vendor: killbill
@@ -39844,6 +40303,12 @@
     - platform: shodan
       queries:
         - http.title:"kaui"
+    - platform: fofa
+      queries:
+        - title="kaui"
+    - platform: google
+      queries:
+        - intitle:"kaui"
 
 - name: perses
   vendor: perses
@@ -39852,6 +40317,12 @@
     - platform: shodan
       queries:
         - http.title:"perses"
+    - platform: fofa
+      queries:
+        - title="perses"
+    - platform: google
+      queries:
+        - intitle:"perses"
 
 - name: libretime
   vendor: libretime
@@ -39860,6 +40331,12 @@
     - platform: shodan
       queries:
         - http.title:"libretime"
+    - platform: fofa
+      queries:
+        - title="libretime"
+    - platform: google
+      queries:
+        - intitle:"libretime"
 
 - name: psitransfer
   vendor: psi-4ward
@@ -39868,6 +40345,12 @@
     - platform: shodan
       queries:
         - http.title:"psitransfer"
+    - platform: fofa
+      queries:
+        - title="psitransfer"
+    - platform: google
+      queries:
+        - intitle:"psitransfer"
 
 - name: trigger.dev
   vendor: triggerdotdev
@@ -39876,6 +40359,12 @@
     - platform: shodan
       queries:
         - http.title:"login to trigger.dev"
+    - platform: fofa
+      queries:
+        - title="login to trigger.dev"
+    - platform: google
+      queries:
+        - intitle:"login to trigger.dev"
 
 - name: keystone
   vendor: keystonejs
@@ -39884,6 +40373,12 @@
     - platform: shodan
       queries:
         - http.title:"keystonejs"
+    - platform: fofa
+      queries:
+        - title="keystonejs"
+    - platform: google
+      queries:
+        - intitle:"keystonejs"
 
 - name: janus_gateway
   vendor: meetecho
@@ -39892,6 +40387,9 @@
     - platform: shodan
       queries:
         - http.html:"janus webrtc server"
+    - platform: fofa
+      queries:
+        - body="janus webrtc server"
 
 - name: sylius
   vendor: sylius
@@ -39900,6 +40398,9 @@
     - platform: shodan
       queries:
         - http.html:"sylius"
+    - platform: fofa
+      queries:
+        - body="sylius"
 
 - name: part-db
   vendor: part-db
@@ -39908,6 +40409,12 @@
     - platform: shodan
       queries:
         - http.title:"part-db"
+    - platform: fofa
+      queries:
+        - title="part-db"
+    - platform: google
+      queries:
+        - intitle:"part-db"
 
 - name: runtipi
   vendor: runtipi
@@ -39916,6 +40423,12 @@
     - platform: shodan
       queries:
         - http.title:"runtipi"
+    - platform: fofa
+      queries:
+        - title="runtipi"
+    - platform: google
+      queries:
+        - intitle:"runtipi"
 
 - name: kubesphere
   vendor: kubesphere
@@ -39924,6 +40437,12 @@
     - platform: shodan
       queries:
         - http.title:"kubesphere"
+    - platform: fofa
+      queries:
+        - title="kubesphere"
+    - platform: google
+      queries:
+        - intitle:"kubesphere"
 
 - name: goatcounter
   vendor: goatcounter
@@ -39932,6 +40451,12 @@
     - platform: shodan
       queries:
         - http.title:"goatcounter"
+    - platform: fofa
+      queries:
+        - title="goatcounter"
+    - platform: google
+      queries:
+        - intitle:"goatcounter"
 
 - name: saleor
   vendor: saleor
@@ -39940,6 +40465,12 @@
     - platform: shodan
       queries:
         - http.title:"saleor e-commerce"
+    - platform: fofa
+      queries:
+        - title="saleor e-commerce"
+    - platform: google
+      queries:
+        - intitle:"saleor e-commerce"
 
 - name: adempiere
   vendor: adempiere
@@ -39948,6 +40479,12 @@
     - platform: shodan
       queries:
         - http.title:"adempiere application home"
+    - platform: fofa
+      queries:
+        - title="adempiere application home"
+    - platform: google
+      queries:
+        - intitle:"adempiere application home"
 
 - name: inngest
   vendor: inngest
@@ -39956,6 +40493,12 @@
     - platform: shodan
       queries:
         - http.title:"inngest server"
+    - platform: fofa
+      queries:
+        - title="inngest server"
+    - platform: google
+      queries:
+        - intitle:"inngest server"
 
 - name: mathesar
   vendor: mathesar-foundation
@@ -39964,6 +40507,12 @@
     - platform: shodan
       queries:
         - http.title:"mathesar"
+    - platform: fofa
+      queries:
+        - title="mathesar"
+    - platform: google
+      queries:
+        - intitle:"mathesar"
 
 - name: gatus
   vendor: twin
@@ -39972,6 +40521,12 @@
     - platform: shodan
       queries:
         - http.title:"health dashboard | gatus"
+    - platform: fofa
+      queries:
+        - title="health dashboard | gatus"
+    - platform: google
+      queries:
+        - intitle:"health dashboard | gatus"
 
 - name: librebooking
   vendor: librebooking
@@ -39980,6 +40535,12 @@
     - platform: shodan
       queries:
         - http.title:"librebooking - log in"
+    - platform: fofa
+      queries:
+        - title="librebooking - log in"
+    - platform: google
+      queries:
+        - intitle:"librebooking - log in"
 
 - name: backstage
   vendor: backstage
@@ -39988,6 +40549,9 @@
     - platform: shodan
       queries:
         - http.html:"backstage is an open platform for building developer portals"
+    - platform: fofa
+      queries:
+        - body="backstage is an open platform for building developer portals"
 
 - name: sharry
   vendor: eikek
@@ -39996,6 +40560,12 @@
     - platform: shodan
       queries:
         - http.title:"sharry"
+    - platform: fofa
+      queries:
+        - title="sharry"
+    - platform: google
+      queries:
+        - intitle:"sharry"
 
 - name: focalboard
   vendor: mattermost
@@ -40004,6 +40574,12 @@
     - platform: shodan
       queries:
         - http.title:"focalboard"
+    - platform: fofa
+      queries:
+        - title="focalboard"
+    - platform: google
+      queries:
+        - intitle:"focalboard"
 
 - name: luigi
   vendor: spotify
@@ -40012,6 +40588,12 @@
     - platform: shodan
       queries:
         - http.title:"luigi task visualiser"
+    - platform: fofa
+      queries:
+        - title="luigi task visualiser"
+    - platform: google
+      queries:
+        - intitle:"luigi task visualiser"
 
 - name: pluxml
   vendor: pluxml
@@ -40020,6 +40602,9 @@
     - platform: shodan
       queries:
         - http.html:"plucss.css" http.html:"feed.php?rss/commentaires"
+    - platform: fofa
+      queries:
+        - body="plucss.css" http.html:"feed.php?rss/commentaires"
 
 - name: islandora
   vendor: islandora
@@ -40028,6 +40613,9 @@
     - platform: shodan
       queries:
         - http.html:"islandora.ca"
+    - platform: fofa
+      queries:
+        - body="islandora.ca"
 
 - name: stalwart-mail-server
   vendor: stalwart-labs
@@ -40036,6 +40624,12 @@
     - platform: shodan
       queries:
         - http.title:"stalwart management"
+    - platform: fofa
+      queries:
+        - title="stalwart management"
+    - platform: google
+      queries:
+        - intitle:"stalwart management"
 
 - name: grist
   vendor: gristlabs
@@ -40044,6 +40638,12 @@
     - platform: shodan
       queries:
         - http.title:"loading... - grist"
+    - platform: fofa
+      queries:
+        - title="loading... - grist"
+    - platform: google
+      queries:
+        - intitle:"loading... - grist"
 
 - name: swetrix
   vendor: swetrix
@@ -40052,6 +40652,12 @@
     - platform: shodan
       queries:
         - http.title:"swetrix"
+    - platform: fofa
+      queries:
+        - title="swetrix"
+    - platform: google
+      queries:
+        - intitle:"swetrix"
 
 - name: calaos-web-app
   vendor: calaos
@@ -40060,6 +40666,12 @@
     - platform: shodan
       queries:
         - http.title:"calaos web app"
+    - platform: fofa
+      queries:
+        - title="calaos web app"
+    - platform: google
+      queries:
+        - intitle:"calaos web app"
 
 - name: hatchet
   vendor: hatchet-dev
@@ -40068,6 +40680,12 @@
     - platform: shodan
       queries:
         - http.title:"hatchet"
+    - platform: fofa
+      queries:
+        - title="hatchet"
+    - platform: google
+      queries:
+        - intitle:"hatchet"
 
 - name: flowfuse
   vendor: flowfuse
@@ -40076,6 +40694,12 @@
     - platform: shodan
       queries:
         - http.title:"flowfuse"
+    - platform: fofa
+      queries:
+        - title="flowfuse"
+    - platform: google
+      queries:
+        - intitle:"flowfuse"
 
 - name: mailu
   vendor: mailu
@@ -40084,6 +40708,12 @@
     - platform: shodan
       queries:
         - http.title:"mailu-admin"
+    - platform: fofa
+      queries:
+        - title="mailu-admin"
+    - platform: google
+      queries:
+        - intitle:"mailu-admin"
 
 - name: openwisp
   vendor: openwisp
@@ -40092,6 +40722,12 @@
     - platform: shodan
       queries:
         - http.title:"openwisp"
+    - platform: fofa
+      queries:
+        - title="openwisp"
+    - platform: google
+      queries:
+        - intitle:"openwisp"
 
 - name: solaranzeige
   vendor: solaranzeige
@@ -40100,6 +40736,12 @@
     - platform: shodan
       queries:
         - http.title:"solaranzeige"
+    - platform: fofa
+      queries:
+        - title="solaranzeige"
+    - platform: google
+      queries:
+        - intitle:"solaranzeige"
 
 - name: evershop
   vendor: evershopcommerce
@@ -40108,6 +40750,9 @@
     - platform: shodan
       queries:
         - http.html:"evershop"
+    - platform: fofa
+      queries:
+        - body="evershop"
 
 - name: nipap
   vendor: spritelink
@@ -40116,6 +40761,12 @@
     - platform: shodan
       queries:
         - http.title:"nipap"
+    - platform: fofa
+      queries:
+        - title="nipap"
+    - platform: google
+      queries:
+        - intitle:"nipap"
 
 - name: cells
   vendor: pydio
@@ -40124,6 +40775,9 @@
     - platform: shodan
       queries:
         - http.html:"pydio cells"
+    - platform: fofa
+      queries:
+        - body="pydio cells"
 
 - name: openwb
   vendor: openwb
@@ -40132,6 +40786,12 @@
     - platform: shodan
       queries:
         - http.title:"openwb"
+    - platform: fofa
+      queries:
+        - title="openwb"
+    - platform: google
+      queries:
+        - intitle:"openwb"
 
 - name: zincsearch
   vendor: zincsearch
@@ -40140,6 +40800,12 @@
     - platform: shodan
       queries:
         - http.title:"zincsearch"
+    - platform: fofa
+      queries:
+        - title="zincsearch"
+    - platform: google
+      queries:
+        - intitle:"zincsearch"
 
 - name: komodo
   vendor: moghtech
@@ -40148,6 +40814,12 @@
     - platform: shodan
       queries:
         - http.title:"komodo"
+    - platform: fofa
+      queries:
+        - title="komodo"
+    - platform: google
+      queries:
+        - intitle:"komodo"
 
 - name: humhub
   vendor: humhub
@@ -40156,6 +40828,9 @@
     - platform: shodan
       queries:
         - http.html:"humhub-app.js"
+    - platform: fofa
+      queries:
+        - body="humhub-app.js"
 
 - name: shellhub
   vendor: shellhub-io
@@ -40164,6 +40839,12 @@
     - platform: shodan
       queries:
         - http.title:"shellhub"
+    - platform: fofa
+      queries:
+        - title="shellhub"
+    - platform: google
+      queries:
+        - intitle:"shellhub"
 
 - name: akkoma
   vendor: akkoma
@@ -40172,6 +40853,9 @@
     - platform: shodan
       queries:
         - http.html:"akkoma"
+    - platform: fofa
+      queries:
+        - body="akkoma"
 
 - name: bunkerweb
   vendor: bunkerity
@@ -40180,6 +40864,12 @@
     - platform: shodan
       queries:
         - http.title:"bunkerweb"
+    - platform: fofa
+      queries:
+        - title="bunkerweb"
+    - platform: google
+      queries:
+        - intitle:"bunkerweb"
 
 - name: highlight
   vendor: highlight
@@ -40188,6 +40878,12 @@
     - platform: shodan
       queries:
         - http.title:"highlight.io"
+    - platform: fofa
+      queries:
+        - title="highlight.io"
+    - platform: google
+      queries:
+        - intitle:"highlight.io"
 
 - name: lizmap_web_client
   vendor: 3liz
@@ -40196,6 +40892,12 @@
     - platform: shodan
       queries:
         - http.title:"lizmap"
+    - platform: fofa
+      queries:
+        - title="lizmap"
+    - platform: google
+      queries:
+        - intitle:"lizmap"
 
 - name: fileflows
   vendor: fileflows
@@ -40204,6 +40906,9 @@
     - platform: shodan
       queries:
         - http.html:"fileflows"
+    - platform: fofa
+      queries:
+        - body="fileflows"
 
 - name: rport
   vendor: realvnc-labs
@@ -40212,6 +40917,12 @@
     - platform: shodan
       queries:
         - http.title:"rport"
+    - platform: fofa
+      queries:
+        - title="rport"
+    - platform: google
+      queries:
+        - intitle:"rport"
 
 - name: typemill
   vendor: typemill
@@ -40220,6 +40931,9 @@
     - platform: shodan
       queries:
         - http.html:"typemill"
+    - platform: fofa
+      queries:
+        - body="typemill"
 
 - name: wekan
   vendor: wekan
@@ -40228,6 +40942,12 @@
     - platform: shodan
       queries:
         - http.title:"wekan"
+    - platform: fofa
+      queries:
+        - title="wekan"
+    - platform: google
+      queries:
+        - intitle:"wekan"
 
 - name: plik
   vendor: root-gg
@@ -40236,6 +40956,12 @@
     - platform: shodan
       queries:
         - http.title:"plik"
+    - platform: fofa
+      queries:
+        - title="plik"
+    - platform: google
+      queries:
+        - intitle:"plik"
 
 - name: jirafeau
   vendor: mojo42
@@ -40244,6 +40970,12 @@
     - platform: shodan
       queries:
         - http.title:"jirafeau"
+    - platform: fofa
+      queries:
+        - title="jirafeau"
+    - platform: google
+      queries:
+        - intitle:"jirafeau"
 
 - name: ipplan
   vendor: ipplan
@@ -40252,6 +40984,12 @@
     - platform: shodan
       queries:
         - http.title:"ipplan"
+    - platform: fofa
+      queries:
+        - title="ipplan"
+    - platform: google
+      queries:
+        - intitle:"ipplan"
 
 - name: docusaurus
   vendor: facebook
@@ -40260,6 +40998,9 @@
     - platform: shodan
       queries:
         - http.html:"__docusaurus"
+    - platform: fofa
+      queries:
+        - body="__docusaurus"
 
 - name: monitoror
   vendor: monitoror
@@ -40268,6 +41009,12 @@
     - platform: shodan
       queries:
         - http.title:"monitoror"
+    - platform: fofa
+      queries:
+        - title="monitoror"
+    - platform: google
+      queries:
+        - intitle:"monitoror"
 
 - name: logto
   vendor: silverhand
@@ -40276,6 +41023,9 @@
     - platform: shodan
       queries:
         - http.html:"window.logtossr"
+    - platform: fofa
+      queries:
+        - body="window.logtossr"
 
 - name: geonetwork
   vendor: geonetwork
@@ -40284,6 +41034,12 @@
     - platform: shodan
       queries:
         - http.title:"geonetwork"
+    - platform: fofa
+      queries:
+        - title="geonetwork"
+    - platform: google
+      queries:
+        - intitle:"geonetwork"
 
 - name: etherpad_lite
   vendor: etherpad
@@ -40292,6 +41048,12 @@
     - platform: shodan
       queries:
         - http.title:"etherpad"
+    - platform: fofa
+      queries:
+        - title="etherpad"
+    - platform: google
+      queries:
+        - intitle:"etherpad"
 
 - name: picoshare
   vendor: mtlynch
@@ -40300,6 +41062,12 @@
     - platform: shodan
       queries:
         - http.title:"picoshare"
+    - platform: fofa
+      queries:
+        - title="picoshare"
+    - platform: google
+      queries:
+        - intitle:"picoshare"
 
 - name: dispatcharr
   vendor: dispatcharr
@@ -40308,6 +41076,12 @@
     - platform: shodan
       queries:
         - http.title:"dispatcharr"
+    - platform: fofa
+      queries:
+        - title="dispatcharr"
+    - platform: google
+      queries:
+        - intitle:"dispatcharr"
 
 - name: otter_wiki
   vendor: redimp
@@ -40316,6 +41090,12 @@
     - platform: shodan
       queries:
         - http.title:"otter wiki"
+    - platform: fofa
+      queries:
+        - title="otter wiki"
+    - platform: google
+      queries:
+        - intitle:"otter wiki"
 
 - name: peppermint
   vendor: peppermint-lab
@@ -40324,6 +41104,12 @@
     - platform: shodan
       queries:
         - http.title:"peppermint"
+    - platform: fofa
+      queries:
+        - title="peppermint"
+    - platform: google
+      queries:
+        - intitle:"peppermint"
 
 - name: chibisafe
   vendor: chibisafe
@@ -40332,6 +41118,12 @@
     - platform: shodan
       queries:
         - http.title:"chibisafe"
+    - platform: fofa
+      queries:
+        - title="chibisafe"
+    - platform: google
+      queries:
+        - intitle:"chibisafe"
 
 - name: prusalink
   vendor: prusa-research
@@ -40340,6 +41132,9 @@
     - platform: shodan
       queries:
         - http.html:"prusalink"
+    - platform: fofa
+      queries:
+        - body="prusalink"
 
 - name: docker_registry_ui
   vendor: joxit
@@ -40348,6 +41143,12 @@
     - platform: shodan
       queries:
         - http.title:"docker registry ui"
+    - platform: fofa
+      queries:
+        - title="docker registry ui"
+    - platform: google
+      queries:
+        - intitle:"docker registry ui"
 
 - name: headplane
   vendor: tale
@@ -40356,6 +41157,12 @@
     - platform: shodan
       queries:
         - http.title:"headplane"
+    - platform: fofa
+      queries:
+        - title="headplane"
+    - platform: google
+      queries:
+        - intitle:"headplane"
 
 - name: kener
   vendor: rajnandan1
@@ -40364,6 +41171,12 @@
     - platform: shodan
       queries:
         - http.title:"kener - open source status page system"
+    - platform: fofa
+      queries:
+        - title="kener - open source status page system"
+    - platform: google
+      queries:
+        - intitle:"kener - open source status page system"
 
 - name: cabot
   vendor: arachnys
@@ -40372,6 +41185,12 @@
     - platform: shodan
       queries:
         - http.title:"cabot by arachnys"
+    - platform: fofa
+      queries:
+        - title="cabot by arachnys"
+    - platform: google
+      queries:
+        - intitle:"cabot by arachnys"
 
 - name: ovenmediaengine
   vendor: ovenmedialabs
@@ -40380,6 +41199,9 @@
     - platform: shodan
       queries:
         - http.html:"ovenmediaengine"
+    - platform: fofa
+      queries:
+        - body="ovenmediaengine"
 
 - name: cryptpad
   vendor: cryptpad
@@ -40388,6 +41210,12 @@
     - platform: shodan
       queries:
         - http.title:"cryptpad"
+    - platform: fofa
+      queries:
+        - title="cryptpad"
+    - platform: google
+      queries:
+        - intitle:"cryptpad"
 
 - name: dataverse
   vendor: iqss
@@ -40396,6 +41224,12 @@
     - platform: shodan
       queries:
         - http.title:"dataverse"
+    - platform: fofa
+      queries:
+        - title="dataverse"
+    - platform: google
+      queries:
+        - intitle:"dataverse"
 
 - name: apprise-api
   vendor: caronc
@@ -40404,6 +41238,12 @@
     - platform: shodan
       queries:
         - http.title:"apprise api"
+    - platform: fofa
+      queries:
+        - title="apprise api"
+    - platform: google
+      queries:
+        - intitle:"apprise api"
 
 - name: publii
   vendor: getpublii
@@ -40412,6 +41252,9 @@
     - platform: shodan
       queries:
         - http.html:"publii open-source cms for static site"
+    - platform: fofa
+      queries:
+        - body="publii open-source cms for static site"
 
 - name: weberp
   vendor: weberp
@@ -40420,6 +41263,12 @@
     - platform: shodan
       queries:
         - http.title:"weberp login screen"
+    - platform: fofa
+      queries:
+        - title="weberp login screen"
+    - platform: google
+      queries:
+        - intitle:"weberp login screen"
 
 - name: virto_commerce
   vendor: virtocommerce
@@ -40428,6 +41277,12 @@
     - platform: shodan
       queries:
         - http.title:"virto commerce"
+    - platform: fofa
+      queries:
+        - title="virto commerce"
+    - platform: google
+      queries:
+        - intitle:"virto commerce"
 
 - name: sunshine
   vendor: lizardbyte
@@ -40444,6 +41299,12 @@
     - platform: shodan
       queries:
         - http.title:"sentrifugo"
+    - platform: fofa
+      queries:
+        - title="sentrifugo"
+    - platform: google
+      queries:
+        - intitle:"sentrifugo"
 
 - name: restate
   vendor: restatedev
@@ -40452,6 +41313,12 @@
     - platform: shodan
       queries:
         - http.title:"restate" port:9070
+    - platform: fofa
+      queries:
+        - title="restate" port:9070
+    - platform: google
+      queries:
+        - intitle:"restate" port:9070
 
 - name: it-tools
   vendor: corentinth
@@ -40460,6 +41327,12 @@
     - platform: shodan
       queries:
         - http.title:"it tools - handy online tools for developers"
+    - platform: fofa
+      queries:
+        - title="it tools - handy online tools for developers"
+    - platform: google
+      queries:
+        - intitle:"it tools - handy online tools for developers"
 
 - name: htmly
   vendor: htmly
@@ -40468,6 +41341,9 @@
     - platform: shodan
       queries:
         - http.html:'meta name="generator" content="htmly'
+    - platform: fofa
+      queries:
+        - body='meta name="generator" content="htmly'
 
 - name: postal
   vendor: postalserver
@@ -40476,6 +41352,12 @@
     - platform: shodan
       queries:
         - http.title:"login - postal"
+    - platform: fofa
+      queries:
+        - title="login - postal"
+    - platform: google
+      queries:
+        - intitle:"login - postal"
 
 - name: pimatic
   vendor: pimatic
@@ -40484,6 +41366,12 @@
     - platform: shodan
       queries:
         - http.title:"pimatic"
+    - platform: fofa
+      queries:
+        - title="pimatic"
+    - platform: google
+      queries:
+        - intitle:"pimatic"
 
 - name: quay
   vendor: redhat
@@ -40492,6 +41380,9 @@
     - platform: shodan
       queries:
         - http.html:"ng-app=\"quay\""
+    - platform: fofa
+      queries:
+        - body="ng-app=\"quay\""
 
 - name: tuleap
   vendor: enalean
@@ -40500,6 +41391,12 @@
     - platform: shodan
       queries:
         - http.title:"tuleap"
+    - platform: fofa
+      queries:
+        - title="tuleap"
+    - platform: google
+      queries:
+        - intitle:"tuleap"
 
 - name: galaxy
   vendor: galaxyproject
@@ -40508,6 +41405,9 @@
     - platform: shodan
       queries:
         - http.html:"galaxy" http.html:"/static/dist/base.css"
+    - platform: fofa
+      queries:
+        - body="galaxy" http.html:"/static/dist/base.css"
 
 - name: aptabase
   vendor: aptabase
@@ -40516,6 +41416,12 @@
     - platform: shodan
       queries:
         - http.title:"aptabase"
+    - platform: fofa
+      queries:
+        - title="aptabase"
+    - platform: google
+      queries:
+        - intitle:"aptabase"
 
 - name: cal.com
   vendor: calcom
@@ -40524,6 +41430,12 @@
     - platform: shodan
       queries:
         - http.title:"cal.com"
+    - platform: fofa
+      queries:
+        - title="cal.com"
+    - platform: google
+      queries:
+        - intitle:"cal.com"
 
 - name: thinger-io
   vendor: thinger-io
@@ -40532,6 +41444,12 @@
     - platform: shodan
       queries:
         - http.title:"thinger.io"
+    - platform: fofa
+      queries:
+        - title="thinger.io"
+    - platform: google
+      queries:
+        - intitle:"thinger.io"
 
 - name: raneto
   vendor: raneto
@@ -40540,6 +41458,9 @@
     - platform: shodan
       queries:
         - http.html:"raneto"
+    - platform: fofa
+      queries:
+        - body="raneto"
 
 - name: admidio
   vendor: admidio
@@ -40548,6 +41469,12 @@
     - platform: shodan
       queries:
         - http.title:"admidio"
+    - platform: fofa
+      queries:
+        - title="admidio"
+    - platform: google
+      queries:
+        - intitle:"admidio"
 
 - name: pingvin_share
   vendor: stonith404
@@ -40556,6 +41483,12 @@
     - platform: shodan
       queries:
         - http.title:"pingvin share"
+    - platform: fofa
+      queries:
+        - title="pingvin share"
+    - platform: google
+      queries:
+        - intitle:"pingvin share"
 
 - name: crafty_controller
   vendor: crafty_controller
@@ -40564,6 +41497,9 @@
     - platform: shodan
       queries:
         - http.html:"crafty controller"
+    - platform: fofa
+      queries:
+        - body="crafty controller"
 
 - name: homegenie
   vendor: genielabs
@@ -40572,6 +41508,12 @@
     - platform: shodan
       queries:
         - http.title:"homegenie"
+    - platform: fofa
+      queries:
+        - title="homegenie"
+    - platform: google
+      queries:
+        - intitle:"homegenie"
 
 - name: mediacms
   vendor: mediacms-io
@@ -40580,6 +41522,9 @@
     - platform: shodan
       queries:
         - http.html:"mediacms"
+    - platform: fofa
+      queries:
+        - body="mediacms"
 
 - name: gollum
   vendor: gollum
@@ -40588,6 +41533,9 @@
     - platform: shodan
       queries:
         - http.html:"gollum"
+    - platform: fofa
+      queries:
+        - body="gollum"
 
 - name: flowable
   vendor: flowable
@@ -40596,6 +41544,12 @@
     - platform: shodan
       queries:
         - http.title:"flowable"
+    - platform: fofa
+      queries:
+        - title="flowable"
+    - platform: google
+      queries:
+        - intitle:"flowable"
 
 - name: lldap
   vendor: lldap
@@ -40604,6 +41558,12 @@
     - platform: shodan
       queries:
         - http.title:"lldap administration"
+    - platform: fofa
+      queries:
+        - title="lldap administration"
+    - platform: google
+      queries:
+        - intitle:"lldap administration"
 
 - name: zigbee2mqtt
   vendor: koenkk
@@ -40612,6 +41572,9 @@
     - platform: shodan
       queries:
         - http.html:"zigbee2mqtt"
+    - platform: fofa
+      queries:
+        - body="zigbee2mqtt"
 
 - name: pangolin
   vendor: fosrl
@@ -40620,6 +41583,12 @@
     - platform: shodan
       queries:
         - http.title:"dashboard - pangolin"
+    - platform: fofa
+      queries:
+        - title="dashboard - pangolin"
+    - platform: google
+      queries:
+        - intitle:"dashboard - pangolin"
 
 - name: volumio
   vendor: volumio
@@ -40628,6 +41597,12 @@
     - platform: shodan
       queries:
         - http.title:"volumio - the music player"
+    - platform: fofa
+      queries:
+        - title="volumio - the music player"
+    - platform: google
+      queries:
+        - intitle:"volumio - the music player"
 
 - name: writefreely
   vendor: writefreely
@@ -40636,6 +41611,9 @@
     - platform: shodan
       queries:
         - http.html:"writefreely"
+    - platform: fofa
+      queries:
+        - body="writefreely"
 
 - name: 3dprinteros-client
   vendor: 3dprinteros
@@ -40644,6 +41622,12 @@
     - platform: shodan
       queries:
         - http.title:"3dprinteros client"
+    - platform: fofa
+      queries:
+        - title="3dprinteros client"
+    - platform: google
+      queries:
+        - intitle:"3dprinteros client"
 
 - name: webvirtcloud
   vendor: retspen
@@ -40652,6 +41636,12 @@
     - platform: shodan
       queries:
         - http.title:"webvirtcloud"
+    - platform: fofa
+      queries:
+        - title="webvirtcloud"
+    - platform: google
+      queries:
+        - intitle:"webvirtcloud"
 
 - name: gonic
   vendor: sentriz
@@ -40660,6 +41650,12 @@
     - platform: shodan
       queries:
         - http.title:"gonic"
+    - platform: fofa
+      queries:
+        - title="gonic"
+    - platform: google
+      queries:
+        - intitle:"gonic"
 
 - name: firefly-iii
   vendor: firefly-iii
@@ -40668,6 +41664,12 @@
     - platform: shodan
       queries:
         - http.title:"firefly iii"
+    - platform: fofa
+      queries:
+        - title="firefly iii"
+    - platform: google
+      queries:
+        - intitle:"firefly iii"
 
 - name: umbrel
   vendor: umbrel
@@ -40676,6 +41678,12 @@
     - platform: shodan
       queries:
         - http.title:"umbrel"
+    - platform: fofa
+      queries:
+        - title="umbrel"
+    - platform: google
+      queries:
+        - intitle:"umbrel"
 
 - name: flipt
   vendor: flipt
@@ -40684,6 +41692,12 @@
     - platform: shodan
       queries:
         - http.title:"flipt"
+    - platform: fofa
+      queries:
+        - title="flipt"
+    - platform: google
+      queries:
+        - intitle:"flipt"
 
 - name: pufferpanel
   vendor: pufferpanel
@@ -40692,6 +41706,9 @@
     - platform: shodan
       queries:
         - http.html:"pufferpanel"
+    - platform: fofa
+      queries:
+        - body="pufferpanel"
 
 - name: crater
   vendor: crater
@@ -40700,6 +41717,12 @@
     - platform: shodan
       queries:
         - http.title:"crater - self hosted invoicing platform"
+    - platform: fofa
+      queries:
+        - title="crater - self hosted invoicing platform"
+    - platform: google
+      queries:
+        - intitle:"crater - self hosted invoicing platform"
 
 - name: cloudron
   vendor: cloudron
@@ -40708,6 +41731,12 @@
     - platform: shodan
       queries:
         - http.title:"cloudron - not found"
+    - platform: fofa
+      queries:
+        - title="cloudron - not found"
+    - platform: google
+      queries:
+        - intitle:"cloudron - not found"
 
 - name: loxberry
   vendor: loxberry
@@ -40716,6 +41745,12 @@
     - platform: shodan
       queries:
         - http.title:"loxberry"
+    - platform: fofa
+      queries:
+        - title="loxberry"
+    - platform: google
+      queries:
+        - intitle:"loxberry"
 
 - name: evcc
   vendor: evcc-io
@@ -40724,6 +41759,12 @@
     - platform: shodan
       queries:
         - http.title:"evcc"
+    - platform: fofa
+      queries:
+        - title="evcc"
+    - platform: google
+      queries:
+        - intitle:"evcc"
 
 - name: firezone
   vendor: firezone
@@ -40732,6 +41773,12 @@
     - platform: shodan
       queries:
         - http.title:"firezone"
+    - platform: fofa
+      queries:
+        - title="firezone"
+    - platform: google
+      queries:
+        - intitle:"firezone"
 
 - name: sao
   vendor: tryton
@@ -40740,6 +41787,12 @@
     - platform: shodan
       queries:
         - http.title:"tryton"
+    - platform: fofa
+      queries:
+        - title="tryton"
+    - platform: google
+      queries:
+        - intitle:"tryton"
 
 - name: plane
   vendor: makeplane
@@ -40748,6 +41801,12 @@
     - platform: shodan
       queries:
         - http.title:"plane | simple, extensible, open-source project management tool."
+    - platform: fofa
+      queries:
+        - title="plane | simple, extensible, open-source project management tool."
+    - platform: google
+      queries:
+        - intitle:"plane | simple, extensible, open-source project management tool."
 
 - name: idempiere
   vendor: idempiere
@@ -40756,6 +41815,12 @@
     - platform: shodan
       queries:
         - http.title:"idempiere application home"
+    - platform: fofa
+      queries:
+        - title="idempiere application home"
+    - platform: google
+      queries:
+        - intitle:"idempiere application home"
 
 - name: tasmoadmin
   vendor: tasmoadmin
@@ -40764,6 +41829,12 @@
     - platform: shodan
       queries:
         - http.title:"tasmoadmin"
+    - platform: fofa
+      queries:
+        - title="tasmoadmin"
+    - platform: google
+      queries:
+        - intitle:"tasmoadmin"
 
 - name: backup_server
   vendor: proxmox
@@ -40772,6 +41843,9 @@
     - platform: shodan
       queries:
         - http.html:"/js/proxmox-backup-gui.js"
+    - platform: fofa
+      queries:
+        - body="/js/proxmox-backup-gui.js"
 
 - name: panel
   vendor: pelican_dev
@@ -40780,6 +41854,9 @@
     - platform: shodan
       queries:
         - http.html:"pelican panel"
+    - platform: fofa
+      queries:
+        - body="pelican panel"
 
 - name: bareos
   vendor: bareos
@@ -40788,6 +41865,12 @@
     - platform: shodan
       queries:
         - http.title:"bareos - login"
+    - platform: fofa
+      queries:
+        - title="bareos - login"
+    - platform: google
+      queries:
+        - intitle:"bareos - login"
 
 - name: peertube
   vendor: framasoft
@@ -40796,6 +41879,9 @@
     - platform: shodan
       queries:
         - http.html:"window.peertubeserverconfig"
+    - platform: fofa
+      queries:
+        - body="window.peertubeserverconfig"
 
 - name: faveo-helpdesk
   vendor: ladybird-web-solution
@@ -40804,6 +41890,12 @@
     - platform: shodan
       queries:
         - http.title:"faveo helpdesk"
+    - platform: fofa
+      queries:
+        - title="faveo helpdesk"
+    - platform: google
+      queries:
+        - intitle:"faveo helpdesk"
 
 - name: mainsail
   vendor: mainsail-crew
@@ -40812,6 +41904,12 @@
     - platform: shodan
       queries:
         - http.title:"mainsail"
+    - platform: fofa
+      queries:
+        - title="mainsail"
+    - platform: google
+      queries:
+        - intitle:"mainsail"
 
 - name: scrypted
   vendor: koush
@@ -40820,6 +41918,12 @@
     - platform: shodan
       queries:
         - http.title:"scrypted"
+    - platform: fofa
+      queries:
+        - title="scrypted"
+    - platform: google
+      queries:
+        - intitle:"scrypted"
 
 - name: docspell
   vendor: docspell
@@ -40828,6 +41932,12 @@
     - platform: shodan
       queries:
         - http.title:"docspell"
+    - platform: fofa
+      queries:
+        - title="docspell"
+    - platform: google
+      queries:
+        - intitle:"docspell"
 
 - name: frontaccounting
   vendor: frontaccounting
@@ -40836,6 +41946,12 @@
     - platform: shodan
       queries:
         - http.title:"frontaccounting"
+    - platform: fofa
+      queries:
+        - title="frontaccounting"
+    - platform: google
+      queries:
+        - intitle:"frontaccounting"
 
 - name: filerun
   vendor: filerun
@@ -40844,6 +41960,12 @@
     - platform: shodan
       queries:
         - http.title:"filerun"
+    - platform: fofa
+      queries:
+        - title="filerun"
+    - platform: google
+      queries:
+        - intitle:"filerun"
 
 - name: lemmy
   vendor: lemmy
@@ -40852,6 +41974,9 @@
     - platform: shodan
       queries:
         - http.html:"window.isodata" http.html:"site_res"
+    - platform: fofa
+      queries:
+        - body="window.isodata" http.html:"site_res"
 
 - name: countly
   vendor: countly
@@ -40860,6 +41985,12 @@
     - platform: shodan
       queries:
         - http.title:"countly"
+    - platform: fofa
+      queries:
+        - title="countly"
+    - platform: google
+      queries:
+        - intitle:"countly"
 
 - name: mainflux
   vendor: mainflux
@@ -40868,6 +41999,12 @@
     - platform: shodan
       queries:
         - http.title:"mainflux"
+    - platform: fofa
+      queries:
+        - title="mainflux"
+    - platform: google
+      queries:
+        - intitle:"mainflux"
 
 - name: kanidm
   vendor: kanidm
@@ -40876,6 +42013,9 @@
     - platform: shodan
       queries:
         - http.html:"kanidm"
+    - platform: fofa
+      queries:
+        - body="kanidm"
 
 - name: azuracast
   vendor: azuracast
@@ -40884,6 +42024,12 @@
     - platform: shodan
       queries:
         - http.title:"log in - azuracast"
+    - platform: fofa
+      queries:
+        - title="log in - azuracast"
+    - platform: google
+      queries:
+        - intitle:"log in - azuracast"
 
 - name: metasfresh
   vendor: metasfresh
@@ -40892,6 +42038,12 @@
     - platform: shodan
       queries:
         - http.title:"metasfresh"
+    - platform: fofa
+      queries:
+        - title="metasfresh"
+    - platform: google
+      queries:
+        - intitle:"metasfresh"
 
 - name: parseable
   vendor: parseablehq
@@ -40900,6 +42052,12 @@
     - platform: shodan
       queries:
         - http.title:"parseable"
+    - platform: fofa
+      queries:
+        - title="parseable"
+    - platform: google
+      queries:
+        - intitle:"parseable"
 
 - name: promptfoo
   vendor: promptfoo
@@ -40908,6 +42066,12 @@
     - platform: shodan
       queries:
         - http.title:"promptfoo"
+    - platform: fofa
+      queries:
+        - title="promptfoo"
+    - platform: google
+      queries:
+        - intitle:"promptfoo"
 
 - name: cloudbeaver
   vendor: dbeaver
@@ -40916,6 +42080,12 @@
     - platform: shodan
       queries:
         - http.title:"cloudbeaver"
+    - platform: fofa
+      queries:
+        - title="cloudbeaver"
+    - platform: google
+      queries:
+        - intitle:"cloudbeaver"
 
 - name: excalidraw
   vendor: excalidraw
@@ -40924,6 +42094,12 @@
     - platform: shodan
       queries:
         - http.title:"excalidraw"
+    - platform: fofa
+      queries:
+        - title="excalidraw"
+    - platform: google
+      queries:
+        - intitle:"excalidraw"
 
 - name: authoritative_server
   vendor: powerdns
@@ -40937,6 +42113,9 @@
       queries:
         - http.html:"powerdns authoritative server monitor"
         - http.title:"powerdns authoritative server monitor"
+    - platform: google
+      queries:
+        - intitle:"powerdns authoritative server monitor"
 
 - name: qdrant
   vendor: qdrant
@@ -40945,3 +42124,22 @@
     - platform: shodan
       queries:
         - http.html:"qdrant - vector search engine"
+
+- name: hippoo
+  vendor: hippoo
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/hippoo/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/hippoo
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
