@@ -29017,6 +29017,7 @@
     - platform: fofa
       queries:
         - body="simplehelp"
+        - title="simplehelp"
 
 - name: mindsdb
   vendor: mindsdb
@@ -42151,6 +42152,28 @@
     - platform: shodan
       queries:
         - http.html:"booklyl10nglobal"
+
+- name: blue_angel_software_suite
+  vendor: 5vtechnologies
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="analog telephone adapter" && server="mini_httpd"
+    - platform: shodan
+      queries:
+        - http.title:"analog telephone adapter" http.headers:"mini_httpd"
+
+- name: asgaros-forum
+  vendor: asgaros
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/asgaros-forum"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/asgaros-forum"
 
 - name: element
   vendor: matrix
