@@ -42160,9 +42160,13 @@
     - platform: fofa
       queries:
         - title="analog telephone adapter" && server="mini_httpd"
+        - title="analog telephone adapter" http.headers:"mini_httpd"
     - platform: shodan
       queries:
         - http.title:"analog telephone adapter" http.headers:"mini_httpd"
+    - platform: google
+      queries:
+        - intitle:"analog telephone adapter" http.headers:"mini_httpd"
 
 - name: asgaros-forum
   vendor: asgaros
