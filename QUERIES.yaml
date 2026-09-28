@@ -37464,6 +37464,7 @@
         - http.title:"dolibarr"
     - platform: fofa
       queries:
+        - app="dolibarr"
         - title="dolibarr"
     - platform: google
       queries:
@@ -42178,6 +42179,51 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/asgaros-forum"
+
+- name: sl1
+  vendor: sciencelogic
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="login.em7"
+        - icon_hash="-209017361"
+        - title="sciencelogic em7"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-209017361
+        - http.html:"login.em7"
+        - http.title:"sciencelogic em7"
+
+- name: visualcomposer
+  vendor: developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/visualcomposer/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/visualcomposer/"
+
+- name: gitlab-mcp
+  vendor: zereight
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"\"transport\":\"sse\""
+
+- name: signalk-server
+  vendor: signalk
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="signal k server"
+    - platform: shodan
+      queries:
+        - http.title:"signal k server"
 
 - name: element
   vendor: matrix
