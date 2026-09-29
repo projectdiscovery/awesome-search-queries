@@ -42191,9 +42191,12 @@
         - title="sciencelogic em7"
     - platform: shodan
       queries:
-        - http.favicon.hash:-209017361
+        - http.favicon.hash:"-209017361"
         - http.html:"login.em7"
         - http.title:"sciencelogic em7"
+    - platform: google
+      queries:
+        - intitle:"sciencelogic em7"
 
 - name: visualcomposer
   vendor: developer
@@ -42213,6 +42216,9 @@
     - platform: shodan
       queries:
         - http.html:"\"transport\":\"sse\""
+    - platform: fofa
+      queries:
+        - body="\"transport\":\"sse\""
 
 - name: signalk-server
   vendor: signalk
