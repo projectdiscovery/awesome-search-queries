@@ -13499,6 +13499,7 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:facebook:react"
+        - http.component:"next.js"
 
 - name: firebase_cloud_messaging
   vendor: google
