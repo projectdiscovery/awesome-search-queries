@@ -42240,7 +42240,7 @@
         - icon_hash="-498882777"
     - platform: shodan
       queries:
-        - http.favicon.hash:-498882777
+        - http.favicon.hash:"-498882777"
 
 - name: element
   vendor: matrix
