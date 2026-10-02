@@ -21390,9 +21390,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"elfinder"
         - http.title:"elfinder"
     - platform: fofa
       queries:
+        - body="elfinder"
         - title="elfinder"
     - platform: google
       queries:
@@ -35286,10 +35288,12 @@
     - platform: fofa
       queries:
         - body="litellm"
+        - icon_hash="539724359"
         - title="litellm api - swagger ui"
         - title="litellm api"
     - platform: shodan
       queries:
+        - http.favicon.hash:"539724359"
         - http.html:"litellm"
         - http.title:"litellm api - swagger ui"
     - platform: google
