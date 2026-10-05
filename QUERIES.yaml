@@ -39027,7 +39027,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"yamcs mission control"
         - http.title:"yamcs"
+    - platform: fofa
+      queries:
+        - body="yamcs mission control"
 
 - name: siyuan
   vendor: b3log
