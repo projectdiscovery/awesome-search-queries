@@ -42251,6 +42251,17 @@
       queries:
         - http.favicon.hash:"-498882777"
 
+- name: wpforms
+  vendor: awesome-motive
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wpforms-uploader"
+    - platform: shodan
+      queries:
+        - http.html:"wpforms-uploader"
+
 - name: element
   vendor: matrix
   type: product
@@ -42258,3 +42269,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: paperclip
+  vendor: paperclipai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"paperclip"
