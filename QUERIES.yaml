@@ -42276,6 +42276,14 @@
       queries:
         - intitle:"paperclip"
 
+- name: jira,confluence,bitbucket
+  vendor: atlassian
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.component:"atlassian"
+
 - name: element
   vendor: matrix
   type: product
