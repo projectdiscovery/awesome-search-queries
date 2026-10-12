@@ -23581,9 +23581,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"fossbilling"
         - http.title:"fossbilling"
     - platform: fofa
       queries:
+        - body="fossbilling"
         - title="fossbilling"
     - platform: google
       queries:
@@ -26058,10 +26060,12 @@
     - platform: shodan
       queries:
         - http.component:"discourse"
+        - http.html:"discourse"
         - http.title:"discourse setup"
     - platform: fofa
       queries:
         - app="discourse"
+        - body="discourse"
         - title="discourse setup"
     - platform: google
       queries:
@@ -42283,6 +42287,17 @@
     - platform: shodan
       queries:
         - http.component:"atlassian"
+
+- name: theia
+  vendor: eclipse
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="eclipse-theia"
+    - platform: shodan
+      queries:
+        - http.html:"eclipse-theia"
 
 - name: element
   vendor: matrix
