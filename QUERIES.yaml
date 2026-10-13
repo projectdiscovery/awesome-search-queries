@@ -26065,11 +26065,13 @@
     - platform: shodan
       queries:
         - http.component:"discourse"
+        - http.html:"/assets/discourse"
         - http.html:"discourse"
         - http.title:"discourse setup"
     - platform: fofa
       queries:
         - app="discourse"
+        - body="/assets/discourse"
         - body="discourse"
         - title="discourse setup"
     - platform: google
@@ -42321,6 +42323,12 @@
     - platform: shodan
       queries:
         - http.title:"hermes agent"
+    - platform: fofa
+      queries:
+        - title="hermes agent"
+    - platform: google
+      queries:
+        - intitle:"hermes agent"
 
 - name: filegator
   vendor: filegator
@@ -42332,6 +42340,9 @@
     - platform: shodan
       queries:
         - http.title:"filegator"
+    - platform: google
+      queries:
+        - intitle:"filegator"
 
 - name: tag-groups
   vendor: publishpress
@@ -42340,6 +42351,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/tag-groups/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/tag-groups/"
 
 - name: divi_plus
   vendor: elicus
@@ -42348,9 +42362,22 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/divi-plus/"
+        - body="divi-plus"
     - platform: shodan
       queries:
+        - http.html:"/wp-content/plugins/divi-plus/"
         - http.html:"divi-plus"
+
+- name: bifrost
+  vendor: maximhq
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="bifrost-shell"
+    - platform: shodan
+      queries:
+        - http.html:"bifrost-shell"
 
 - name: element
   vendor: matrix
