@@ -24846,9 +24846,14 @@
       queries:
         - http.favicon.hash:-636718605
         - icon_hash=-636718605
+        - title="caldera"
     - platform: shodan
       queries:
         - http.favicon.hash:-636718605
+        - http.title:"caldera"
+    - platform: google
+      queries:
+        - intitle:"caldera"
 
 - name: joget_dx
   vendor: joget
@@ -42298,6 +42303,54 @@
     - platform: shodan
       queries:
         - http.html:"eclipse-theia"
+
+- name: gost
+  vendor: gost
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"go ssh"
+        - ssl.cert.subject.cn:"gost"
+        - ssl.cert.subject.cn:"gost.run"
+
+- name: hermes-agent
+  vendor: nousresearch
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"hermes agent"
+
+- name: filegator
+  vendor: filegator
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="filegator"
+    - platform: shodan
+      queries:
+        - http.title:"filegator"
+
+- name: tag-groups
+  vendor: publishpress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/tag-groups/"
+
+- name: divi_plus
+  vendor: elicus
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/divi-plus/"
+    - platform: shodan
+      queries:
+        - http.html:"divi-plus"
 
 - name: element
   vendor: matrix
