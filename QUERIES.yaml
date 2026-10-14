@@ -42379,6 +42379,33 @@
       queries:
         - http.html:"bifrost-shell"
 
+- name: weMail
+  vendor: weDevs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wemail/"
+
+- name: suitecrm
+  vendor: suitecrm
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"suitecrm"
+
+- name: chef_automate
+  vendor: progress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="chef automate"
+    - platform: shodan
+      queries:
+        - http.title:"chef automate"
+
 - name: element
   vendor: matrix
   type: product
@@ -42386,3 +42413,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: ruoyi
+  vendor: ruoyi
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="ruoyi"
+    - platform: shodan
+      queries:
+        - http.html:"若依管理系统"
