@@ -1031,10 +1031,12 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"/dana-na/auth/"
         - http.html:"welcome.cgi?p=logo"
         - http.title:"ivanti connect secure"
     - platform: fofa
       queries:
+        - body="/dana-na/auth/"
         - body="welcome.cgi?p=logo"
         - title="ivanti connect secure"
     - platform: google
@@ -34789,6 +34791,13 @@
     - platform: shodan
       queries:
         - http.title:"apache skywalking"
+        - http.title:"skywalking horizon ui"
+    - platform: fofa
+      queries:
+        - title="skywalking horizon ui"
+    - platform: google
+      queries:
+        - intitle:"skywalking horizon ui"
 
 - name: dataease
   vendor: fit2cloud
@@ -42386,6 +42395,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/wemail/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wemail/"
 
 - name: suitecrm
   vendor: suitecrm
@@ -42394,6 +42406,12 @@
     - platform: shodan
       queries:
         - http.title:"suitecrm"
+    - platform: fofa
+      queries:
+        - title="suitecrm"
+    - platform: google
+      queries:
+        - intitle:"suitecrm"
 
 - name: chef_automate
   vendor: progress
@@ -42405,6 +42423,32 @@
     - platform: shodan
       queries:
         - http.title:"chef automate"
+    - platform: google
+      queries:
+        - intitle:"chef automate"
+
+- name: ruoyi
+  vendor: ruoyi
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="ruoyi"
+        - body="若依管理系统"
+    - platform: shodan
+      queries:
+        - http.html:"若依管理系统"
+
+- name: quantum_security_management
+  vendor: checkpoint
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - port="19009"
+    - platform: shodan
+      queries:
+        - port:19009
 
 - name: element
   vendor: matrix
@@ -42414,13 +42458,16 @@
       queries:
         - http.html:"manifest.json"
 
-- name: ruoyi
-  vendor: ruoyi
+- name: skywalking-horizon-ui
+  vendor: apache
   type: product
   engines:
-    - platform: fofa
-      queries:
-        - app="ruoyi"
     - platform: shodan
       queries:
-        - http.html:"若依管理系统"
+        - http.title:"skywalking horizon ui"
+    - platform: fofa
+      queries:
+        - title="skywalking horizon ui"
+    - platform: google
+      queries:
+        - intitle:"skywalking horizon ui"
