@@ -9774,10 +9774,12 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:redhat:jboss_enterprise_application_platform"
+        - http.html:"/jmx-console/"
         - http.html:"/jmx-console/" http.title:jboss
         - http.title:"jboss"
     - platform: fofa
       queries:
+        - body="/jmx-console/"
         - body="/jmx-console/" http.title:jboss
         - title="jboss"
         - title="jboss" && body="/jmx-console/"
@@ -42474,6 +42476,17 @@
     - platform: shodan
       queries:
         - http.html:"wp-content/plugins/fulltext-search"
+
+- name: woocommerce-request-a-quote
+  vendor: addify
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/woocommerce-request-a-quote/"
+    - platform: shodan
+      queries:
+        - http.html:"woocommerce-request-a-quote"
 
 - name: element
   vendor: matrix
