@@ -42450,14 +42450,6 @@
       queries:
         - port:19009
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: skywalking-horizon-ui
   vendor: apache
   type: product
@@ -42471,3 +42463,22 @@
     - platform: google
       queries:
         - intitle:"skywalking horizon ui"
+
+- name: wp_fast_total_search
+  vendor: wp-fast-total-search
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/fulltext-search"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/fulltext-search"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
