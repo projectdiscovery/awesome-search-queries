@@ -42484,8 +42484,10 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/woocommerce-request-a-quote/"
+        - body="woocommerce-request-a-quote"
     - platform: shodan
       queries:
+        - http.html:"/wp-content/plugins/woocommerce-request-a-quote/"
         - http.html:"woocommerce-request-a-quote"
 
 - name: element
