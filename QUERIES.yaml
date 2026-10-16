@@ -42490,6 +42490,17 @@
         - http.html:"/wp-content/plugins/woocommerce-request-a-quote/"
         - http.html:"woocommerce-request-a-quote"
 
+- name: splunk_enterprise
+  vendor: splunk
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="patroni"
+    - platform: shodan
+      queries:
+        - http.html:"patroni"
+
 - name: element
   vendor: matrix
   type: product
