@@ -42501,6 +42501,17 @@
       queries:
         - http.html:"patroni"
 
+- name: nw-431f
+  vendor: neterbit
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="neterbit nw-431f"
+    - platform: shodan
+      queries:
+        - http.title:"neterbit nw-431f"
+
 - name: element
   vendor: matrix
   type: product
