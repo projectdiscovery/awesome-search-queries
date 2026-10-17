@@ -42511,6 +42511,9 @@
     - platform: shodan
       queries:
         - http.title:"neterbit nw-431f"
+    - platform: google
+      queries:
+        - intitle:"neterbit nw-431f"
 
 - name: element
   vendor: matrix
