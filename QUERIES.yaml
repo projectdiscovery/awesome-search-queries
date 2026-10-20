@@ -42515,6 +42515,28 @@
       queries:
         - intitle:"neterbit nw-431f"
 
+- name: the_events_calendar
+  vendor: theeventscalendar
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/the-events-calendar/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/the-events-calendar/"
+
+- name: the-grid
+  vendor: theme-one
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/the-grid/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/the-grid/
+
 - name: element
   vendor: matrix
   type: product
