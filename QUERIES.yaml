@@ -42536,6 +42536,20 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/the-grid/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/the-grid/"
+
+- name: truebooker-appointment-booking
+  vendor: truebooker
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="truebooker-appointment-booking"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/truebooker-appointment-booking/
 
 - name: element
   vendor: matrix
