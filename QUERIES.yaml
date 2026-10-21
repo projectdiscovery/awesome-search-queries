@@ -33297,7 +33297,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"dokploy"
         - http.title:dokploy
+    - platform: fofa
+      queries:
+        - body="dokploy"
 
 - name: xwiki-platform-distribution-flavor-main
   vendor: XWiki
@@ -42547,9 +42551,77 @@
     - platform: fofa
       queries:
         - body="truebooker-appointment-booking"
+        - body=/wp-content/plugins/truebooker-appointment-booking/
     - platform: publicwww
       queries:
         - /wp-content/plugins/truebooker-appointment-booking/
+    - platform: shodan
+      queries:
+        - http.html:"truebooker-appointment-booking"
+        - http.html:/wp-content/plugins/truebooker-appointment-booking/
+
+- name: mountdev-ai-mcp-connector
+  vendor: developer-developer-developer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/mountdev-ai-mcp-connector/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/mountdev-ai-mcp-connector/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/mountdev-ai-mcp-connector/"
+
+- name: fusion-builder
+  vendor: themefusion
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="fusion-builder" && body="avada"
+    - platform: shodan
+      queries:
+        - http.component:"avada theme"
+
+- name: gdpr-cookie-consent
+  vendor: wp-legal-pages
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/gdpr-cookie-consent/"
+
+- name: advance-product-search
+  vendor: th-advance-product-search
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - wp-content/plugins/th-advance-product-search/
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/th-advance-product-search/"
+
+- name: ajax-load-more
+  vendor: darren-cooney
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/ajax-load-more/"
+
+- name: geo-my-wp
+  vendor: eyal-fitoussi
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/geo-my-wp/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/geo-my-wp/"
 
 - name: element
   vendor: matrix
