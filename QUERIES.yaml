@@ -12342,6 +12342,7 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:php:php"
+        - http.component:"php"
         - 'http.headers_hash:* "x-powered-by: php/"'
         - http.title:"php warning" || "fatal error"
         - http.title:"php" port:80,443
@@ -12352,6 +12353,7 @@
     - platform: fofa
       queries:
         - app="php"
+        - 'header="x-powered-by: php"'
         - title="php warning" || "fatal error"
         - title="php" port:80,443
     - platform: google
@@ -42643,6 +42645,44 @@
       queries:
         - http.title:"rustypaste"
 
+- name: piotnetforms-pro
+  vendor: piotnetforms
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="piotnetforms"
+    - platform: shodan
+      queries:
+        - http.html:"piotnetforms"
+
+- name: broken-link-checker
+  vendor: wpmu-dev
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/broken-link-checker/"
+
+- name: stirling-pdf
+  vendor: stirling-tools
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="stirling pdf"
+    - platform: shodan
+      queries:
+        - http.title:"stirling pdf"
+
+- name: contact-form-entries
+  vendor: crm-perks
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/contact-form-entries/"
+
 - name: element
   vendor: matrix
   type: product
@@ -42650,3 +42690,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: emudhra
+  vendor: emudhra
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - cert="emudhra"
+    - platform: shodan
+      queries:
+        - ssl:"emudhra"
