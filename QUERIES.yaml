@@ -3671,14 +3671,18 @@
       queries:
         - http.favicon.hash:"-1474875778"
         - http.html:"setup glpi"
+        - http.title:"authentication - glpi"
         - http.title:"glpi"
     - platform: fofa
       queries:
+        - app="glpi"
         - body="setup glpi"
         - icon_hash="-1474875778"
+        - title="authentication - glpi"
         - title="glpi"
     - platform: google
       queries:
+        - intitle:"authentication - glpi"
         - intitle:"glpi"
 
 - name: teamcity
@@ -12338,6 +12342,7 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:php:php"
+        - 'http.headers_hash:* "x-powered-by: php/"'
         - http.title:"php warning" || "fatal error"
         - http.title:"php" port:80,443
         - php.ini
@@ -42592,6 +42597,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/gdpr-cookie-consent/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/gdpr-cookie-consent/"
 
 - name: advance-product-search
   vendor: th-advance-product-search
@@ -42599,6 +42607,7 @@
   engines:
     - platform: fofa
       queries:
+        - body="wp-content/plugins/th-advance-product-search/"
         - wp-content/plugins/th-advance-product-search/
     - platform: shodan
       queries:
@@ -42611,6 +42620,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ajax-load-more/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/ajax-load-more/"
 
 - name: geo-my-wp
   vendor: eyal-fitoussi
@@ -42622,6 +42634,14 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/geo-my-wp/"
+
+- name: rustypaste
+  vendor: orhun
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"rustypaste"
 
 - name: element
   vendor: matrix
