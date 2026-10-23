@@ -42663,6 +42663,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/broken-link-checker/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/broken-link-checker/"
 
 - name: stirling-pdf
   vendor: stirling-tools
@@ -42674,6 +42677,9 @@
     - platform: shodan
       queries:
         - http.title:"stirling pdf"
+    - platform: google
+      queries:
+        - intitle:"stirling pdf"
 
 - name: contact-form-entries
   vendor: crm-perks
@@ -42682,14 +42688,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/contact-form-entries/"
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
     - platform: shodan
       queries:
-        - http.html:"manifest.json"
+        - http.html:"/wp-content/plugins/contact-form-entries/"
 
 - name: emudhra
   vendor: emudhra
@@ -42701,3 +42702,22 @@
     - platform: shodan
       queries:
         - ssl:"emudhra"
+
+- name: bricksforge
+  vendor: bricksforge
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/bricksforge"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/bricksforge"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
