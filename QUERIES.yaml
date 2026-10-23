@@ -3325,9 +3325,11 @@
     - platform: shodan
       queries:
         - '"set-cookie: appsessionid=" "path=/admin"'
+        - http.favicon.hash:-945076912
         - http.title:"identity services engine"
     - platform: fofa
       queries:
+        - icon_hash=-945076912
         - title="identity services engine"
     - platform: google
       queries:
@@ -42713,6 +42715,17 @@
     - platform: shodan
       queries:
         - http.html:"wp-content/plugins/bricksforge"
+
+- name: redcap
+  vendor: vanderbilt
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="redcap" || body="redcap_version" || body="/surveys/?s="
+    - platform: shodan
+      queries:
+        - http.title:"redcap"
 
 - name: element
   vendor: matrix
