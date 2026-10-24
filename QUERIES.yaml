@@ -42738,8 +42738,10 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-addons-for-contact-form-7"
+        - body=/wp-content/plugins/ultimate-addons-for-contact-form-7/
     - platform: shodan
       queries:
+        - http.html:"/wp-content/plugins/ultimate-addons-for-contact-form-7"
         - http.html:/wp-content/plugins/ultimate-addons-for-contact-form-7/
 
 - name: theme-my-login
@@ -42749,6 +42751,9 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/theme-my-login"
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/theme-my-login"
 
 - name: quotes_llama
   vendor: quotes-llama
@@ -42756,6 +42761,7 @@
   engines:
     - platform: fofa
       queries:
+        - body="wp-content/plugins/quotes-llama/"
         - wp-content/plugins/quotes-llama/
     - platform: shodan
       queries:
@@ -42768,6 +42774,20 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/link-library/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/link-library/"
+
+- name: concretecms
+  vendor: concretecms
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="concrete cms"
+    - platform: shodan
+      queries:
+        - http.html:"concrete cms"
 
 - name: element
   vendor: matrix
