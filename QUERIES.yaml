@@ -42722,10 +42722,52 @@
   engines:
     - platform: fofa
       queries:
+        - title="redcap"
         - title="redcap" || body="redcap_version" || body="/surveys/?s="
     - platform: shodan
       queries:
         - http.title:"redcap"
+    - platform: google
+      queries:
+        - intitle:"redcap"
+
+- name: ultimate-addons-for-contact-form-7
+  vendor: themefic
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/ultimate-addons-for-contact-form-7"
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/ultimate-addons-for-contact-form-7/
+
+- name: theme-my-login
+  vendor: theme-my-login
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/theme-my-login"
+
+- name: quotes_llama
+  vendor: quotes-llama
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - wp-content/plugins/quotes-llama/
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/quotes-llama/"
+
+- name: link-library
+  vendor: yannick-lefebvre
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/link-library/"
 
 - name: element
   vendor: matrix
