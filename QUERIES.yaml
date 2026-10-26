@@ -214,11 +214,17 @@
         - cpe:"cpe:2.3:a:wordpress:wordpress"
         - http.component:"wordpress"
         - http.html:"/wp-includes/functions.php"
+        - http.html:"wp-json" http.html:"wordpress"
     - platform: fofa
       queries:
         - app="wordpress"
         - body="/wp-includes/functions.php"
         - body="oembed" && body="wp-"
+        - body="wp-content" && body="wp-json"
+        - body="wp-json" http.html:"wordpress"
+    - platform: google
+      queries:
+        - inurl:"/wp-json/wp/v2/"
 
 - name: confluence_server
   vendor: atlassian
@@ -5739,10 +5745,13 @@
     - platform: shodan
       queries:
         - http.favicon.hash:2124459909
+        - http.html:"httpfileserver" || product:"hfs"
         - http.title:"hfs /"
         - 'set-cookie: hfs_sid_='
     - platform: fofa
       queries:
+        - app="hfs"
+        - body="httpfileserver" || product:"hfs"
         - icon_hash=2124459909
         - title="hfs /"
     - platform: google
@@ -12270,6 +12279,10 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:nodejs:node.js"
+        - http.component:"express"
+    - platform: fofa
+      queries:
+        - 'header="x-powered-by: express"'
 
 - name: open_journal_systems
   vendor: public_knowledge_project
@@ -20987,10 +21000,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:-976853304
+        - http.favicon.hash:"-976853304"
     - platform: fofa
       queries:
-        - icon_hash=-976853304
+        - icon_hash="-976853304"
         - localai api
 
 - name: anything-llm
@@ -42789,6 +42802,101 @@
       queries:
         - http.html:"concrete cms"
 
+- name: AK-SM 800A
+  vendor: Danfoss
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="ak-sm 800a"
+    - platform: shodan
+      queries:
+        - http.html:"ak-sm 800a"
+
+- name: file-manager-advanced
+  vendor: saad-iqbal
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/file-manager-advanced/"
+
+- name: simple_membership
+  vendor: ordasoft
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="com_simplemembership"
+    - platform: shodan
+      queries:
+        - http.html:"com_simplemembership"
+
+- name: agile-store-locator
+  vendor: agile-logix
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/agile-store-locator/"
+
+- name: nex-forms-express-wp-form-builder
+  vendor: basix
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/nex-forms-express-wp-form-builder/
+
+- name: mcp-chrome-bridge
+  vendor: hangwin
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="chrome mcp"
+    - platform: shodan
+      queries:
+        - http.html:"chrome mcp"
+
+- name: file-manager
+  vendor: bit-apps
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/file-manager/"
+
+- name: media-library-assistant
+  vendor: david-lingren
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/media-library-assistant/"
+
+- name: wp-ticket
+  vendor: emarket-design
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-ticket"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wp-ticket"
+
+- name: paisa
+  vendor: ananthakumaran
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="paisa is an open source personal finance manager"
+    - platform: shodan
+      queries:
+        - http.title:"paisa"
+
 - name: element
   vendor: matrix
   type: product
@@ -42796,3 +42904,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: jetpack
+  vendor: automattic
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/jetpack/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/jetpack/"
