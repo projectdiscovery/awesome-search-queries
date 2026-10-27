@@ -42820,6 +42820,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/file-manager-advanced/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/file-manager-advanced/"
 
 - name: simple_membership
   vendor: ordasoft
@@ -42839,6 +42842,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/agile-store-locator/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/agile-store-locator/"
 
 - name: nex-forms-express-wp-form-builder
   vendor: basix
@@ -42847,6 +42853,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/nex-forms-express-wp-form-builder/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/nex-forms-express-wp-form-builder/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/nex-forms-express-wp-form-builder/
 
 - name: mcp-chrome-bridge
   vendor: hangwin
@@ -42866,6 +42878,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/file-manager/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/file-manager/"
 
 - name: media-library-assistant
   vendor: david-lingren
@@ -42874,6 +42889,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/media-library-assistant/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/media-library-assistant/"
 
 - name: wp-ticket
   vendor: emarket-design
@@ -42893,17 +42911,14 @@
     - platform: fofa
       queries:
         - body="paisa is an open source personal finance manager"
+        - title="paisa"
     - platform: shodan
       queries:
+        - http.html:"paisa is an open source personal finance manager"
         - http.title:"paisa"
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
+    - platform: google
       queries:
-        - http.html:"manifest.json"
+        - intitle:"paisa"
 
 - name: jetpack
   vendor: automattic
@@ -42915,3 +42930,11 @@
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/jetpack/"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
