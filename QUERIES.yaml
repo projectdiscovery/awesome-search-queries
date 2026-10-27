@@ -42931,6 +42931,14 @@
       queries:
         - http.html:"/wp-content/plugins/jetpack/"
 
+- name: lighter
+  vendor: exacaster
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"lighter"
+
 - name: element
   vendor: matrix
   type: product
@@ -42938,3 +42946,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: ahsaycbs
+  vendor: ahsay
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="ahsaycbs" || body="/cbs/logon.do"
+    - platform: shodan
+      queries:
+        - http.title:"/cbs/logon.do"
