@@ -34065,10 +34065,12 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-1450125239
+        - http.html:"siyuan"
         - http.title:"siyuan"
         - port:6808 "siyuan"
     - platform: fofa
       queries:
+        - body="siyuan"
         - icon_hash=-1450125239
         - title="siyuan"
         - title="siyuan" && port="6808"
@@ -35102,6 +35104,9 @@
     - platform: shodan
       queries:
         - http.title:"mlflow"
+    - platform: google
+      queries:
+        - intitle:"mlflow"
 
 - name: airbyte
   vendor: airbyte
@@ -42953,6 +42958,39 @@
     - platform: google
       queries:
         - intitle:"/cbs/logon.do"
+
+- name: docker-proxy
+  vendor: dqzboy
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="hubcmdui"
+    - platform: shodan
+      queries:
+        - http.html:"hubcmdui"
+
+- name: richdocumentscode
+  vendor: collabora
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/apps/richdocumentscode/"
+    - platform: publicwww
+      queries:
+        - /apps/richdocumentscode/
+    - platform: shodan
+      queries:
+        - http.html:"/apps/richdocumentscode/"
+
+- name: wp-booking-system
+  vendor: wpbookingsystem
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-booking-system/"
 
 - name: element
   vendor: matrix
