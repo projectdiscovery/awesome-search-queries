@@ -42939,14 +42939,6 @@
       queries:
         - http.title:"lighter"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: ahsaycbs
   vendor: ahsay
   type: product
@@ -42954,6 +42946,18 @@
     - platform: fofa
       queries:
         - body="ahsaycbs" || body="/cbs/logon.do"
+        - title="/cbs/logon.do"
     - platform: shodan
       queries:
         - http.title:"/cbs/logon.do"
+    - platform: google
+      queries:
+        - intitle:"/cbs/logon.do"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
