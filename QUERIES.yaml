@@ -42996,14 +42996,6 @@
       queries:
         - http.html:"/wp-content/plugins/wp-booking-system/"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: diafan
   vendor: diafan
   type: product
@@ -43014,3 +43006,30 @@
     - platform: shodan
       queries:
         - http.html:"diafan.cms"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: check-email
+  vendor: checkemail
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/check-email/"
+
+- name: extplorer
+  vendor: extplorer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="extplorer"
+    - platform: shodan
+      queries:
+        - http.title:"extplorer"
