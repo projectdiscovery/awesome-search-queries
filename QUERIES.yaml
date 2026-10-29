@@ -30817,6 +30817,7 @@
     - platform: fofa
       queries:
         - title="zammad helpdesk"
+        - title="zammad"
     - platform: shodan
       queries:
         - http.title:"zammad helpdesk"
@@ -42991,6 +42992,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/wp-booking-system/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wp-booking-system/"
 
 - name: element
   vendor: matrix
@@ -42999,3 +43003,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: diafan
+  vendor: diafan
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="diafan.cms"
+    - platform: shodan
+      queries:
+        - http.html:"diafan.cms"
