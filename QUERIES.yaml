@@ -43007,14 +43007,6 @@
       queries:
         - http.html:"diafan.cms"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: check-email
   vendor: checkemail
   type: product
@@ -43022,6 +43014,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/check-email/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/check-email/"
 
 - name: extplorer
   vendor: extplorer
@@ -43033,3 +43028,25 @@
     - platform: shodan
       queries:
         - http.title:"extplorer"
+    - platform: google
+      queries:
+        - intitle:"extplorer"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: crystal-server
+  vendor: nuuo
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="nuuo"
+    - platform: shodan
+      queries:
+        - http.html:"nuuo"
