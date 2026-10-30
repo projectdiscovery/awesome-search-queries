@@ -43032,14 +43032,6 @@
       queries:
         - intitle:"extplorer"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: crystal-server
   vendor: nuuo
   type: product
@@ -43050,3 +43042,11 @@
     - platform: shodan
       queries:
         - http.html:"nuuo"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
