@@ -43050,3 +43050,47 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: plex_media_server
+  vendor: plex
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - port="32400" && header="x-plex-protocol"
+    - platform: shodan
+      queries:
+        - port:32400 "x-plex-protocol"
+
+- name: langchain-chatchat
+  vendor: chatchat-space
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="langchain-chatchat api server"
+    - platform: shodan
+      queries:
+        - http.title:"langchain-chatchat api server"
+
+- name: infisical
+  vendor: infisical
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="infisical"
+    - platform: shodan
+      queries:
+        - http.title:"infisical"
+
+- name: pocket-id
+  vendor: pocket-id
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash=="-1013186657"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-1013186657
