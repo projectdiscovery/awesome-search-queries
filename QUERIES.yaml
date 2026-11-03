@@ -43043,14 +43043,6 @@
       queries:
         - http.html:"nuuo"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: plex_media_server
   vendor: plex
   type: product
@@ -43072,6 +43064,9 @@
     - platform: shodan
       queries:
         - http.title:"langchain-chatchat api server"
+    - platform: google
+      queries:
+        - intitle:"langchain-chatchat api server"
 
 - name: infisical
   vendor: infisical
@@ -43083,6 +43078,9 @@
     - platform: shodan
       queries:
         - http.title:"infisical"
+    - platform: google
+      queries:
+        - intitle:"infisical"
 
 - name: pocket-id
   vendor: pocket-id
@@ -43090,7 +43088,26 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash=-1013186657
         - icon_hash=="-1013186657"
     - platform: shodan
       queries:
         - http.favicon.hash:-1013186657
+        - http.favicon.hash:="-1013186657"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: meraki
+  vendor: cisco
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:804949239
+        - http.html:"device_noun"
