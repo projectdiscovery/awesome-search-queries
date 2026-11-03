@@ -791,9 +791,14 @@
     - platform: shodan
       queries:
         - http.favicon.hash:464587962
+        - http.title:"rancher"
     - platform: fofa
       queries:
         - icon_hash=464587962
+        - title="rancher"
+    - platform: google
+      queries:
+        - intitle:"rancher"
 
 - name: shardingsphere_elasticjob-ui
   vendor: apache
@@ -1443,6 +1448,7 @@
         - http.html:"gitlab enterprise edition"
         - http.html:"gitlab-ci.yml"
         - http.title:"gitlab"
+        - product:"gitlab"
     - platform: fofa
       queries:
         - app="gitlab"
@@ -12358,6 +12364,7 @@
       queries:
         - cpe:"cpe:2.3:a:php:php"
         - http.component:"php"
+        - 'http.headers:"x-powered-by: php"'
         - 'http.headers_hash:* "x-powered-by: php/"'
         - http.title:"php warning" || "fatal error"
         - http.title:"php" port:80,443
@@ -27709,6 +27716,7 @@
     - platform: google
       queries:
         - intext:"beyondtrust" "redistribution prohibited"
+        - intitle:"beyondtrust"
         - intitle:"remote support portal"
     - platform: shodan
       queries:
@@ -27716,6 +27724,7 @@
         - http.html:"beyondtrust remote support"
         - http.html:"beyondtrust"
         - http.html:"beyondtrust" "redistribution prohibited"
+        - http.title:"beyondtrust"
         - http.title:"remote support portal"
     - platform: fofa
       queries:
@@ -27723,6 +27732,7 @@
         - body="beyondtrust"
         - body="beyondtrust" "redistribution prohibited"
         - icon_hash="-694003434"
+        - title="beyondtrust"
         - title="remote support portal"
 
 - name: dixell_xweb-500
@@ -43095,14 +43105,6 @@
         - http.favicon.hash:-1013186657
         - http.favicon.hash:="-1013186657"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: meraki
   vendor: cisco
   type: product
@@ -43111,3 +43113,26 @@
       queries:
         - http.favicon.hash:804949239
         - http.html:"device_noun"
+    - platform: fofa
+      queries:
+        - body="device_noun"
+        - icon_hash=804949239
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: openpanel
+  vendor: openpanel
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="bull dashboard"
+    - platform: shodan
+      queries:
+        - http.title:"bull dashboard"
