@@ -43118,14 +43118,6 @@
         - body="device_noun"
         - icon_hash=804949239
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: openpanel
   vendor: openpanel
   type: product
@@ -43136,3 +43128,11 @@
     - platform: shodan
       queries:
         - http.title:"bull dashboard"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
