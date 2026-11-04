@@ -14418,6 +14418,7 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:redhat:jboss_application_server"
+        - http.component:"jboss"
         - http.title:"jboss"
     - platform: fofa
       queries:
@@ -43136,3 +43137,25 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: madong-admin-saas
+  vendor: madong-code
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="1349700189"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:1349700189
+
+- name: coolify
+  vendor: coollabs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="coolify"
+    - platform: shodan
+      queries:
+        - http.title:"coolify"
