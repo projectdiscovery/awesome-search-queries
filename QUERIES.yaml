@@ -43130,14 +43130,6 @@
       queries:
         - http.title:"bull dashboard"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: madong-admin-saas
   vendor: madong-code
   type: product
@@ -43147,7 +43139,7 @@
         - icon_hash="1349700189"
     - platform: shodan
       queries:
-        - http.favicon.hash:1349700189
+        - http.favicon.hash:"1349700189"
 
 - name: coolify
   vendor: coollabs
@@ -43159,3 +43151,14 @@
     - platform: shodan
       queries:
         - http.title:"coolify"
+    - platform: google
+      queries:
+        - intitle:"coolify"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
