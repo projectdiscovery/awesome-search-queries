@@ -3407,6 +3407,7 @@
   engines:
     - platform: shodan
       queries:
+        - http.component:"atlassian crowd"
         - http.component:"atlassian jira"
 
 - name: vue_pacs
@@ -38086,10 +38087,15 @@
   engines:
     - platform: fofa
       queries:
+        - body="/wp-content/plugins/newsletters-lite"
         - body="/wp-content/plugins/newsletters-lite/"
     - platform: shodan
       queries:
+        - http.html:"/wp-content/plugins/newsletters-lite"
         - http.html:"/wp-content/plugins/newsletters-lite/"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/newsletters-lite
 
 - name: showdoc
   vendor: star7th
@@ -43162,3 +43168,71 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: jpom
+  vendor: dromara
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="jpom"
+    - platform: shodan
+      queries:
+        - http.title:"jpom"
+
+- name: ape-volo-admin
+  vendor: xianhc
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="ape-volo-admin" && body="中后台管理权限框架"
+    - platform: shodan
+      queries:
+        - http.html:"ape-volo-admin" http.html:"中后台管理权限框架"
+
+- name: welcart_e-commerce
+  vendor: welcart
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/usc-e-shop"
+
+- name: comfyui-manager
+  vendor: comfy
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="comfyui"
+    - platform: shodan
+      queries:
+        - http.title:"comfyui"
+
+- name: better-search
+  vendor: webberzone
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/better-search/"
+
+- name: zulip_server
+  vendor: zulip
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="zulip"
+    - platform: shodan
+      queries:
+        - http.html:"zulip"
+
+- name: eventprime-event-calendar-management
+  vendor: eventprime
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="eventprime-event-calendar-management"
