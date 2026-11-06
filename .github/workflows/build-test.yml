@@ -26,7 +26,7 @@ jobs:
           go-version: ${{ matrix.go-version }}
 
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Go Mod hygiene
         run: |
