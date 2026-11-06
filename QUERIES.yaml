@@ -43161,14 +43161,6 @@
       queries:
         - intitle:"coolify"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: jpom
   vendor: dromara
   type: product
@@ -43179,6 +43171,9 @@
     - platform: shodan
       queries:
         - http.title:"jpom"
+    - platform: google
+      queries:
+        - intitle:"jpom"
 
 - name: ape-volo-admin
   vendor: xianhc
@@ -43187,6 +43182,7 @@
     - platform: fofa
       queries:
         - body="ape-volo-admin" && body="中后台管理权限框架"
+        - body="ape-volo-admin" http.html:"中后台管理权限框架"
     - platform: shodan
       queries:
         - http.html:"ape-volo-admin" http.html:"中后台管理权限框架"
@@ -43198,6 +43194,9 @@
     - platform: fofa
       queries:
         - body="wp-content/plugins/usc-e-shop"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/usc-e-shop"
 
 - name: comfyui-manager
   vendor: comfy
@@ -43209,6 +43208,9 @@
     - platform: shodan
       queries:
         - http.title:"comfyui"
+    - platform: google
+      queries:
+        - intitle:"comfyui"
 
 - name: better-search
   vendor: webberzone
@@ -43217,6 +43219,9 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/better-search/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/better-search/"
 
 - name: zulip_server
   vendor: zulip
@@ -43225,6 +43230,7 @@
     - platform: fofa
       queries:
         - app="zulip"
+        - body="zulip"
     - platform: shodan
       queries:
         - http.html:"zulip"
@@ -43236,3 +43242,14 @@
     - platform: fofa
       queries:
         - body="eventprime-event-calendar-management"
+    - platform: shodan
+      queries:
+        - http.html:"eventprime-event-calendar-management"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
