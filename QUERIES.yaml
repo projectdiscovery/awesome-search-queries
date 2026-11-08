@@ -43253,3 +43253,19 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: email_security_gateway
+  vendor: barracuda
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"barracuda"
+
+- name: slimstat-analytics
+  vendor: wp-slimstat
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-slimstat"
