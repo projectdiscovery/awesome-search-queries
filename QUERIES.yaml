@@ -43275,3 +43275,47 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: wp-data-access
+  vendor: peterschulznl
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-data-access"
+    - platform: shodan
+      queries:
+        - http.html:"wp-data-access"
+
+- name: mage-eventpress
+  vendor: magepeopleteam
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/mage-eventpress/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/mage-eventpress/"
+
+- name: latepoint
+  vendor: latepoint
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="latepoint"
+    - platform: shodan
+      queries:
+        - http.html:"latepoint"
+
+- name: drag-and-drop-file-upload-for-elementor-forms
+  vendor: add-ons.org
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/drag-and-drop-file-upload-for-elementor-forms"
+    - platform: shodan
+      queries:
+        - http.component:"wordpress"
