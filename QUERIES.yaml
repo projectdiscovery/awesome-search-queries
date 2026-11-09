@@ -43246,14 +43246,6 @@
       queries:
         - http.html:"eventprime-event-calendar-management"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: email_security_gateway
   vendor: barracuda
   type: product
@@ -43261,6 +43253,9 @@
     - platform: shodan
       queries:
         - http.html:"barracuda"
+    - platform: fofa
+      queries:
+        - body="barracuda"
 
 - name: slimstat-analytics
   vendor: wp-slimstat
@@ -43269,3 +43264,14 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/wp-slimstat"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wp-slimstat"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
