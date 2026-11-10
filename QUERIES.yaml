@@ -43313,6 +43313,28 @@
         - http.component:"wordpress"
         - http.html:"wp-content/plugins/drag-and-drop-file-upload-for-elementor-forms"
 
+- name: dashdot
+  vendor: dashdot
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="dashdot"
+    - platform: shodan
+      queries:
+        - http.html:"dashdot"
+
+- name: meilisearch
+  vendor: meilisearch
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="meilisearch"
+    - platform: shodan
+      queries:
+        - http.html:"meilisearch"
+
 - name: element
   vendor: matrix
   type: product
@@ -43320,3 +43342,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: actual_budget
+  vendor: actualbudget
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"actual"
