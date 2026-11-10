@@ -43268,14 +43268,6 @@
       queries:
         - http.html:"/wp-content/plugins/wp-slimstat"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: wp-data-access
   vendor: peterschulznl
   type: product
@@ -43319,3 +43311,12 @@
     - platform: shodan
       queries:
         - http.component:"wordpress"
+        - http.html:"wp-content/plugins/drag-and-drop-file-upload-for-elementor-forms"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
