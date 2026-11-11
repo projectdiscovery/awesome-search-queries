@@ -8466,11 +8466,14 @@
       queries:
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.favicon.hash:"-47932290"
+        - http.html:"craft cms"
         - http.html:"craftcms"
         - 'x-powered-by: craft cms'
     - platform: fofa
       queries:
+        - body="craft cms"
         - body="craftcms"
+        - 'header="x-powered-by: craft cms"'
         - icon_hash="-47932290"
 
 - name: companion_sitemap_generator
@@ -34433,12 +34436,16 @@
     - platform: shodan
       queries:
         - http.title:"freescout installer"
+        - http.title:"freescout"
     - platform: fofa
       queries:
         - title="freescout installer"
+        - title="freescout"
+        - title="freescout" || body="freescout"
     - platform: google
       queries:
         - intitle:"freescout installer"
+        - intitle:"freescout"
 
 - name: chromadb
   vendor: chroma-core
@@ -41253,12 +41260,15 @@
     - platform: shodan
       queries:
         - http.title:"kener - open source status page system"
+        - http.title:"kener"
     - platform: fofa
       queries:
         - title="kener - open source status page system"
+        - title="kener"
     - platform: google
       queries:
         - intitle:"kener - open source status page system"
+        - intitle:"kener"
 
 - name: cabot
   vendor: arachnys
@@ -43350,3 +43360,68 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: gutenkit-blocks-addon
+  vendor: wpmet
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/gutenkit-blocks-addon"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/gutenkit-blocks-addon"
+
+- name: postiz
+  vendor: gitroomhq
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="postiz register"
+    - platform: shodan
+      queries:
+        - http.html:"postiz register"
+
+- name: ht-contactform
+  vendor: hasthemes
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/ht-contactform/
+
+- name: shapepress-dsgvo
+  vendor: shapepress
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/shapepress-dsgvo/
+
+- name: directorist
+  vendor: wpwax
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/directorist/
+
+- name: edusoho
+  vendor: edusoho
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="powered by edusoho"
+    - platform: shodan
+      queries:
+        - http.title:"powered by edusoho"
+
+- name: wp-ecommerce-shop-styling
+  vendor: haet
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.component:"wordpress"
