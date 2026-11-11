@@ -43335,14 +43335,6 @@
       queries:
         - http.html:"meilisearch"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: actual_budget
   vendor: actualbudget
   type: product
@@ -43350,3 +43342,11 @@
     - platform: shodan
       queries:
         - http.title:"actual"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
