@@ -21854,10 +21854,14 @@
       queries:
         - ollama
         - ollama is running
+        - port:11434 "ollama is running"
     - platform: zoomeye
       queries:
         - app:"ollama llm"
         - app="ollama"
+    - platform: fofa
+      queries:
+        - body="ollama is running" && port="11434"
 
 - name: dir-845l
   vendor: dlink
@@ -43446,3 +43450,22 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: munin-httpd
+  vendor: munin
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="munin"
+    - platform: shodan
+      queries:
+        - http.title:"munin"
+
+- name: simple-301-redirects
+  vendor: betterlinks
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/simple-301-redirects/
