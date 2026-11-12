@@ -43353,24 +43353,18 @@
       queries:
         - http.title:"actual"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: gutenkit-blocks-addon
   vendor: wpmet
   type: product
   engines:
     - platform: fofa
       queries:
+        - body="/wp-content/plugins/gutenkit-blocks-addon"
         - body="wp-content/plugins/gutenkit-blocks-addon"
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/gutenkit-blocks-addon"
+        - http.html:"wp-content/plugins/gutenkit-blocks-addon"
 
 - name: postiz
   vendor: gitroomhq
@@ -43390,6 +43384,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/ht-contactform/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/ht-contactform/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/ht-contactform/
 
 - name: shapepress-dsgvo
   vendor: shapepress
@@ -43398,6 +43398,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/shapepress-dsgvo/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/shapepress-dsgvo/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/shapepress-dsgvo/
 
 - name: directorist
   vendor: wpwax
@@ -43406,6 +43412,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/directorist/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/directorist/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/directorist/
 
 - name: edusoho
   vendor: edusoho
@@ -43416,6 +43428,7 @@
         - body="powered by edusoho"
     - platform: shodan
       queries:
+        - http.html:"powered by edusoho"
         - http.title:"powered by edusoho"
 
 - name: wp-ecommerce-shop-styling
@@ -43425,3 +43438,11 @@
     - platform: shodan
       queries:
         - http.component:"wordpress"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
