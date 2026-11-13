@@ -43443,14 +43443,6 @@
       queries:
         - http.component:"wordpress"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: munin-httpd
   vendor: munin
   type: product
@@ -43461,6 +43453,9 @@
     - platform: shodan
       queries:
         - http.title:"munin"
+    - platform: google
+      queries:
+        - intitle:"munin"
 
 - name: simple-301-redirects
   vendor: betterlinks
@@ -43469,3 +43464,17 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/simple-301-redirects/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/simple-301-redirects/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/simple-301-redirects/
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
