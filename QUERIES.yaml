@@ -13034,6 +13034,10 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:caddy_project:caddy"
+        - http.component:"typo3"
+    - platform: fofa
+      queries:
+        - app="typo3-cms"
 
 - name: ftp_server
   vendor: cerberusftp
@@ -21385,9 +21389,11 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/notificationx"
+        - body="/wp-content/plugins/notificationx/"
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/notificationx"
+        - http.html:"/wp-content/plugins/notificationx/"
 
 - name: karma
   vendor: karma_project
@@ -27214,6 +27220,9 @@
     - platform: shodan
       queries:
         - 'server: tinyproxy'
+    - platform: fofa
+      queries:
+        - header="tinyproxy"
 
 - name: mongoose
   vendor: cesanta
@@ -43478,3 +43487,36 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: opendcim
+  vendor: opendcim
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="opendcim"
+    - platform: shodan
+      queries:
+        - http.html:"opendcim"
+
+- name: imperia-cms
+  vendor: imperia
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="imperia"
+    - platform: shodan
+      queries:
+        - http.html:"imperia"
+
+- name: stock_management_system
+  vendor: oretnom23
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="stock management system"
+    - platform: shodan
+      queries:
+        - http.title:"stock management system"
