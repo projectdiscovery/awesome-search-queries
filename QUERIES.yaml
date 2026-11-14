@@ -1906,6 +1906,7 @@
         - http.title:"traefik"
     - platform: fofa
       queries:
+        - app="traefik"
         - title="traefik"
     - platform: google
       queries:
@@ -43480,14 +43481,6 @@
       queries:
         - body=/wp-content/plugins/simple-301-redirects/
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: opendcim
   vendor: opendcim
   type: product
@@ -43520,3 +43513,30 @@
     - platform: shodan
       queries:
         - http.title:"stock management system"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
+
+- name: dagu
+  vendor: dagucloud
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"dagu"
+
+- name: chatwiki
+  vendor: zhimaai
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="chatwiki"
+    - platform: shodan
+      queries:
+        - http.title:"chatwiki"
