@@ -43514,14 +43514,6 @@
       queries:
         - http.title:"stock management system"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: dagu
   vendor: dagucloud
   type: product
@@ -43540,3 +43532,14 @@
     - platform: shodan
       queries:
         - http.title:"chatwiki"
+    - platform: google
+      queries:
+        - intitle:"chatwiki"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
