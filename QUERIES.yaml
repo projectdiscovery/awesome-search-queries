@@ -9218,6 +9218,12 @@
       queries:
         - app="泛微-eoffice"
         - app="泛微-协同办公oa"
+        - body="eoffice"
+        - body="weaver"
+    - platform: shodan
+      queries:
+        - http.html:"eoffice"
+        - http.html:"weaver"
 
 - name: art_gallery_management_system
   vendor: phpgurukul
@@ -20880,6 +20886,13 @@
     - platform: fofa
       queries:
         - app="yearning"
+        - title="yearning"
+    - platform: shodan
+      queries:
+        - http.title:"yearning"
+    - platform: google
+      queries:
+        - intitle:"yearning"
 
 - name: cp450_firmware
   vendor: totolink
@@ -21168,7 +21181,11 @@
   engines:
     - platform: fofa
       queries:
+        - body="mobile security framework - mobsf"
         - mobsf
+    - platform: shodan
+      queries:
+        - http.html:"mobile security framework - mobsf"
 
 - name: emlog
   vendor: emlog
@@ -43536,6 +43553,28 @@
       queries:
         - intitle:"chatwiki"
 
+- name: seata
+  vendor: apache
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="seata"
+    - platform: shodan
+      queries:
+        - http.title:"seata"
+
+- name: amoro
+  vendor: apache
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="apache amoro"
+    - platform: shodan
+      queries:
+        - http.title:"apache amoro"
+
 - name: element
   vendor: matrix
   type: product
@@ -43543,3 +43582,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: dokan-lite
+  vendor: wedevs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/dokan-lite/"
