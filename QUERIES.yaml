@@ -5648,14 +5648,19 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"/reports/rwservlet"
         - http.html:"weblogic application server"
+        - http.title:"oracle reports"
         - http.title:"weblogic"
     - platform: fofa
       queries:
+        - body="/reports/rwservlet"
         - body="weblogic application server"
+        - title="oracle reports"
         - title="weblogic"
     - platform: google
       queries:
+        - intitle:"oracle reports"
         - intitle:"weblogic"
 
 - name: dukapress
@@ -23344,9 +23349,12 @@
     - platform: shodan
       queries:
         - http.html:"codemeter"
+        - http.html:"codemeter" http.html:"webadmin"
     - platform: fofa
       queries:
         - body="codemeter"
+        - body="codemeter" && body="webadmin"
+        - body="codemeter" http.html:"webadmin"
 
 - name: openvas_manager
   vendor: openvas
@@ -23776,14 +23784,17 @@
         - app="acti-视频监控"
         - title="web configurator"
         - title="web configurator" html:"acti"
+        - title="web configurator" http.html:"acti"
     - platform: shodan
       queries:
         - http.title:"web configurator"
         - http.title:"web configurator" html:"acti"
+        - http.title:"web configurator" http.html:"acti"
     - platform: google
       queries:
         - intitle:"web configurator"
         - intitle:"web configurator" html:"acti"
+        - intitle:"web configurator" http.html:"acti"
 
 - name: opengear
   vendor: opengear
@@ -31944,7 +31955,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"magento_pagecache"
         - x-magento-tags
+    - platform: fofa
+      queries:
+        - body="magento_pagecache"
 
 - name: help_scout
   vendor: woocommerce
@@ -43727,6 +43742,223 @@
       queries:
         - '"ssh-2.0-openssh_6.0p1 debian-4+deb7u2"'
         - product:"openssh" version:"6.0p1 debian-4+deb7u2"
+
+- name: knowns
+  vendor: knowns-dev
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="knowns"
+    - platform: shodan
+      queries:
+        - http.title:"knowns"
+
+- name: miniorange-oauth-20-server
+  vendor: miniorange
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="miniorange-oauth-20-server"
+    - platform: shodan
+      queries:
+        - http.html:"miniorange-oauth-20-server"
+
+- name: grav
+  vendor: getgrav
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="gravcms"
+    - platform: shodan
+      queries:
+        - http.html:"gravcms"
+
+- name: directorypress
+  vendor: designinvento
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="directorypress"
+    - platform: shodan
+      queries:
+        - http.html:"directorypress"
+
+- name: wpbot
+  vendor: quantumcloud
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/chatbot"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/chatbot/"
+
+- name: gpustack
+  vendor: gpustack
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="umi." && body="/static/favicon.png"
+    - platform: shodan
+      queries:
+        - http.html:"umi." http.html:"/static/favicon.png"
+
+- name: funnelkit-stripe-woo-payment-gateway
+  vendor: funnelkit
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="funnelkit-stripe-woo-payment-gateway"
+    - platform: shodan
+      queries:
+        - http.html:"funnelkit-stripe-woo-payment-gateway"
+
+- name: serbian-transliteration
+  vendor: ivijanstefan
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/serbian-transliteration/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/serbian-transliteration/"
+
+- name: all-in-one_video_gallery
+  vendor: plugins360
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="all-in-one-video-gallery"
+    - platform: shodan
+      queries:
+        - http.html:"all-in-one-video-gallery"
+
+- name: mercury
+  vendor: mljar
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="--mercury-text-color"
+    - platform: shodan
+      queries:
+        - http.html:"--mercury-text-color"
+
+- name: tianxin_internet_behavior_management_system
+  vendor: topsecgroup
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="天融信-上网行为管理系统"
+
+- name: document_server
+  vendor: onlyoffice
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="onlyoffice"
+    - platform: shodan
+      queries:
+        - http.html:"onlyoffice docs"
+
+- name: wireless_access_point
+  vendor: engenius
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="engenius"
+    - platform: shodan
+      queries:
+        - http.html:"engenius"
+
+- name: uc_software
+  vendor: polycom
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="polycom web configuration utility"
+    - platform: shodan
+      queries:
+        - http.html:"polycom web configuration utility"
+
+- name: print_server
+  vendor: zebra
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="zebra technologies"
+    - platform: shodan
+      queries:
+        - http.html:"zebra technologies"
+
+- name: team_license_server
+  vendor: anylogic
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="anylogic team license server"
+    - platform: shodan
+      queries:
+        - http.html:"anylogic team license server"
+
+- name: altalink
+  vendor: xerox
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="altalink"
+    - platform: shodan
+      queries:
+        - http.html:"altalink"
+
+- name: remote_management_card
+  vendor: cyberpower
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="login_pass.cgi" && body="cyberpower"
+    - platform: shodan
+      queries:
+        - http.html:"login_pass.cgi" http.html:"cyberpower"
+
+- name: ip_camera
+  vendor: gwsecurity
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="gw security"
+    - platform: shodan
+      queries:
+        - http.html:"gw security"
+
+- name: ups_network_management_card
+  vendor: schneider-electric
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="apc | log on"
+    - platform: shodan
+      queries:
+        - http.title:"apc | log on"
 
 - name: element
   vendor: matrix
