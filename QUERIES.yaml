@@ -43620,6 +43620,12 @@
     - platform: shodan
       queries:
         - http.title:"openobserve"
+    - platform: fofa
+      queries:
+        - title="openobserve"
+    - platform: google
+      queries:
+        - intitle:"openobserve"
 
 - name: full_page_cache_warmer
   vendor: mirasvit
@@ -43628,6 +43634,9 @@
     - platform: fofa
       queries:
         - body="mirasvit_cachewarmer"
+    - platform: shodan
+      queries:
+        - http.html:"mirasvit_cachewarmer"
 
 - name: visual_form_builder
   vendor: vfbpro
@@ -43636,6 +43645,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/visual-form-builder/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/visual-form-builder/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/visual-form-builder/
 
 - name: givewp
   vendor: stellarwp
@@ -43666,6 +43681,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/the-events-calendar/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/the-events-calendar/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/the-events-calendar/
 
 - name: age-gate
   vendor: agegate
@@ -43674,6 +43695,12 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/age-gate/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/age-gate/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/age-gate/
 
 - name: nessie
   vendor: projectnessie
@@ -43682,14 +43709,12 @@
     - platform: shodan
       queries:
         - http.title:"nessie"
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
+    - platform: fofa
       queries:
-        - http.html:"manifest.json"
+        - title="nessie"
+    - platform: google
+      queries:
+        - intitle:"nessie"
 
 - name: cowrie
   vendor: cowrie
@@ -43702,3 +43727,11 @@
       queries:
         - '"ssh-2.0-openssh_6.0p1 debian-4+deb7u2"'
         - product:"openssh" version:"6.0p1 debian-4+deb7u2"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
