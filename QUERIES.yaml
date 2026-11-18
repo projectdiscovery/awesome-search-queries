@@ -9900,12 +9900,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:-266008933
+        - http.favicon.hash:"-266008933"
         - location:"/irj/portal"
     - platform: fofa
       queries:
         - header="/irj/portal"
-        - icon_hash=-266008933
+        - icon_hash="-266008933"
 
 - name: contact_form_to_db
   vendor: bestwebsoft
@@ -33491,8 +33491,10 @@
     - platform: shodan
       queries:
         - http.favicon.hash:"1895809524"
+        - http.html:"/helpdesk/webobjects/helpdesk.woa"
     - platform: fofa
       queries:
+        - body="/helpdesk/webobjects/helpdesk.woa"
         - icon_hash="1895809524"
 
 - name: wp_dream_carousel
@@ -40473,9 +40475,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"perses-dark-theme-enabled"
         - http.title:"perses"
     - platform: fofa
       queries:
+        - body="perses-dark-theme-enabled"
         - title="perses"
     - platform: google
       queries:
@@ -43542,9 +43546,14 @@
     - platform: fofa
       queries:
         - body="opendcim"
+        - title="opendcim"
     - platform: shodan
       queries:
         - http.html:"opendcim"
+        - http.title:"opendcim"
+    - platform: google
+      queries:
+        - intitle:"opendcim"
 
 - name: imperia-cms
   vendor: imperia
@@ -43980,6 +43989,88 @@
     - platform: shodan
       queries:
         - http.html:"backdrop cms"
+
+- name: local-sync
+  vendor: revmakx
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/local-sync/"
+    - platform: google
+      queries:
+        - inurl:"/wp-content/plugins/local-sync/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/local-sync/"
+
+- name: glances
+  vendor: nicolargo
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"glances"
+
+- name: bookit
+  vendor: stylemixthemes
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/bookit"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/bookit/"
+
+- name: gameyfin
+  vendor: gameyfin
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="gameyfin"
+    - platform: shodan
+      queries:
+        - http.html:"gameyfin"
+
+- name: apppresser
+  vendor: apppresser
+  type: product
+  engines:
+    - platform: google
+      queries:
+        - inurl:"/wp-json/appp/v1/"
+
+- name: smanga
+  vendor: lkw199711
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="we're sorry but smanga"
+    - platform: shodan
+      queries:
+        - http.html:"we're sorry but smanga"
+
+- name: duomicms
+  vendor: duomicms
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="power by duomicms"
+
+- name: dinky
+  vendor: datalinkdc
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="dinky"
+    - platform: shodan
+      queries:
+        - http.title:"dinky"
 
 - name: element
   vendor: matrix
