@@ -9335,6 +9335,7 @@
         - http.title:"phpmyfaq"
     - platform: fofa
       queries:
+        - app="phpmyfaq"
         - body="phpmyfaq"
         - phpmyfaq-setup
         - title="phpmyfaq"
@@ -43753,6 +43754,9 @@
     - platform: shodan
       queries:
         - http.title:"knowns"
+    - platform: google
+      queries:
+        - intitle:"knowns"
 
 - name: miniorange-oauth-20-server
   vendor: miniorange
@@ -43793,10 +43797,12 @@
   engines:
     - platform: fofa
       queries:
+        - body="/wp-content/plugins/chatbot/"
         - body="wp-content/plugins/chatbot"
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/chatbot/"
+        - http.html:"wp-content/plugins/chatbot"
 
 - name: gpustack
   vendor: gpustack
@@ -43805,6 +43811,7 @@
     - platform: fofa
       queries:
         - body="umi." && body="/static/favicon.png"
+        - body="umi." http.html:"/static/favicon.png"
     - platform: shodan
       queries:
         - http.html:"umi." http.html:"/static/favicon.png"
@@ -43867,10 +43874,12 @@
   engines:
     - platform: fofa
       queries:
+        - body="onlyoffice docs"
         - body="onlyoffice"
     - platform: shodan
       queries:
         - http.html:"onlyoffice docs"
+        - http.html:"onlyoffice"
 
 - name: wireless_access_point
   vendor: engenius
@@ -43934,6 +43943,7 @@
     - platform: fofa
       queries:
         - body="login_pass.cgi" && body="cyberpower"
+        - body="login_pass.cgi" http.html:"cyberpower"
     - platform: shodan
       queries:
         - http.html:"login_pass.cgi" http.html:"cyberpower"
@@ -43959,6 +43969,17 @@
     - platform: shodan
       queries:
         - http.title:"apc | log on"
+
+- name: backdrop_cms
+  vendor: backdropcms
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="backdrop cms"
+    - platform: shodan
+      queries:
+        - http.html:"backdrop cms"
 
 - name: element
   vendor: matrix
