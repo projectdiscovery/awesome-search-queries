@@ -38814,6 +38814,15 @@
     - platform: shodan
       queries:
         - http.html:"/srv/eng/"
+        - http.html:"geonetwork/srv"
+        - http.title:"geonetwork"
+    - platform: fofa
+      queries:
+        - body="geonetwork/srv"
+        - title="geonetwork"
+    - platform: google
+      queries:
+        - intitle:"geonetwork"
 
 - name: switchvox
   vendor: sangoma
@@ -41632,9 +41641,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"the admidio team"
         - http.title:"admidio"
     - platform: fofa
       queries:
+        - body="the admidio team"
         - title="admidio"
     - platform: google
       queries:
@@ -44085,6 +44096,42 @@
     - platform: google
       queries:
         - intitle:"dinky"
+
+- name: XWEB EVO
+  vendor: Copeland/Dixell
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="xweb" && body="xweb evo client"
+    - platform: shodan
+      queries:
+        - http.title:"xweb" "xweb evo client"
+
+- name: ansibleforms
+  vendor: ansibleforms
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="ansibleforms" || header="af_session"
+    - platform: shodan
+      queries:
+        - http.html:"ansibleforms"
+
+- name: drag-and-drop-file-upload-for-elementor-forms
+  vendor: addonsorg
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="drag-and-drop-file-upload-for-elementor-forms"
+    - platform: publicwww
+      queries:
+        - '"/wp-content/plugins/drag-and-drop-file-upload-for-elementor-forms"'
+    - platform: shodan
+      queries:
+        - http.html:"drag-and-drop-file-upload-for-elementor-forms"
 
 - name: element
   vendor: matrix
