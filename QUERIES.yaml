@@ -44011,6 +44011,12 @@
     - platform: shodan
       queries:
         - http.title:"glances"
+    - platform: fofa
+      queries:
+        - title="glances"
+    - platform: google
+      queries:
+        - intitle:"glances"
 
 - name: bookit
   vendor: stylemixthemes
@@ -44018,10 +44024,12 @@
   engines:
     - platform: fofa
       queries:
+        - body="/wp-content/plugins/bookit/"
         - body="wp-content/plugins/bookit"
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/bookit/"
+        - http.html:"wp-content/plugins/bookit"
 
 - name: gameyfin
   vendor: gameyfin
@@ -44060,6 +44068,9 @@
     - platform: fofa
       queries:
         - body="power by duomicms"
+    - platform: shodan
+      queries:
+        - http.html:"power by duomicms"
 
 - name: dinky
   vendor: datalinkdc
@@ -44071,6 +44082,9 @@
     - platform: shodan
       queries:
         - http.title:"dinky"
+    - platform: google
+      queries:
+        - intitle:"dinky"
 
 - name: element
   vendor: matrix
