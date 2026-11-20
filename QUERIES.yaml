@@ -44114,6 +44114,7 @@
   engines:
     - platform: fofa
       queries:
+        - body="ansibleforms"
         - title="ansibleforms" || header="af_session"
     - platform: shodan
       queries:
@@ -44125,13 +44126,26 @@
   engines:
     - platform: fofa
       queries:
+        - body="/wp-content/plugins/drag-and-drop-file-upload-for-elementor-forms"
         - body="drag-and-drop-file-upload-for-elementor-forms"
     - platform: publicwww
       queries:
         - '"/wp-content/plugins/drag-and-drop-file-upload-for-elementor-forms"'
     - platform: shodan
       queries:
+        - http.html:"/wp-content/plugins/drag-and-drop-file-upload-for-elementor-forms"
         - http.html:"drag-and-drop-file-upload-for-elementor-forms"
+
+- name: rclone
+  vendor: rclone
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="list of all rclone remotes."
+    - platform: shodan
+      queries:
+        - http.title:"list of all rclone remotes."
 
 - name: element
   vendor: matrix
