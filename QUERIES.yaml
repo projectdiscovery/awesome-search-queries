@@ -401,12 +401,15 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:microsoft:exchange_server"
+        - http.component:"outlook web app"
         - http.favicon.hash:1768726119
         - http.title:"outlook"
         - http.title:outlook exchange
         - vuln:cve-2021-26855
+        - x-owa-version
     - platform: fofa
       queries:
+        - app="microsoft-exchange"
         - icon_hash=1768726119
         - title="outlook"
         - title=outlook exchange
@@ -9901,11 +9904,18 @@
     - platform: shodan
       queries:
         - http.favicon.hash:"-266008933"
+        - http.html:"sap netweaver"
+        - http.title:"sap netweaver"
         - location:"/irj/portal"
     - platform: fofa
       queries:
+        - body="sap netweaver"
         - header="/irj/portal"
         - icon_hash="-266008933"
+        - title="sap netweaver"
+    - platform: google
+      queries:
+        - intitle:"sap netweaver"
 
 - name: contact_form_to_db
   vendor: bestwebsoft
@@ -34914,6 +34924,7 @@
         - http.title:"skywalking horizon ui"
     - platform: fofa
       queries:
+        - app="apache-skywalking"
         - title="skywalking horizon ui"
     - platform: google
       queries:
@@ -38818,6 +38829,7 @@
         - http.title:"geonetwork"
     - platform: fofa
       queries:
+        - app="geonetwork"
         - body="geonetwork/srv"
         - title="geonetwork"
     - platform: google
@@ -44146,6 +44158,20 @@
     - platform: shodan
       queries:
         - http.title:"list of all rclone remotes."
+    - platform: google
+      queries:
+        - intitle:"list of all rclone remotes."
+
+- name: nuxt
+  vendor: nuxt
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="__nuxt"
+    - platform: shodan
+      queries:
+        - http.html:"__nuxt"
 
 - name: element
   vendor: matrix
