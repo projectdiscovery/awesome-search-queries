@@ -403,6 +403,9 @@
         - cpe:"cpe:2.3:a:microsoft:exchange_server"
         - http.component:"outlook web app"
         - http.favicon.hash:1768726119
+        - http.headers:"x-owa-version"
+        - http.title:"outlook web app"
+        - http.title:"outlook web app" || http.title:"outlook"
         - http.title:"outlook"
         - http.title:outlook exchange
         - vuln:cve-2021-26855
@@ -410,11 +413,17 @@
     - platform: fofa
       queries:
         - app="microsoft-exchange"
+        - header="x-owa-version"
+        - header="x-owa-version" || title="outlook web app"
         - icon_hash=1768726119
+        - title="outlook web app"
+        - title="outlook web app" || http.title:"outlook"
         - title="outlook"
         - title=outlook exchange
     - platform: google
       queries:
+        - intitle:"outlook web app"
+        - intitle:"outlook web app" || http.title:"outlook"
         - intitle:"outlook"
         - intitle:outlook exchange
 
@@ -9000,10 +9009,12 @@
     - platform: fofa
       queries:
         - app="microsoft-sharepoint"
+        - header="microsoftsharepointteamservices"
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:microsoft:sharepoint_server"
         - http.component:"sharepoint"
+        - http.headers:"microsoftsharepointteamservices"
         - http.headers_hash:-1968878704
 
 - name: manageengine_firewall_analyzer
@@ -13086,7 +13097,14 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:chamilo:chamilo_lms"
+        - http.title:"chamilo"
         - 'x-powered-by: chamilo'
+    - platform: fofa
+      queries:
+        - title="chamilo"
+    - platform: google
+      queries:
+        - intitle:"chamilo"
 
 - name: sd-wan_vmanage
   vendor: cisco
@@ -30874,11 +30892,16 @@
         - body="cisco firepower management center"
         - body="secure firewall management center"
         - body="ua-110054821-1"
+        - title="firepower management center"
     - platform: shodan
       queries:
         - http.html:"cisco firepower management center"
         - http.html:"secure firewall management center"
         - http.html:"ua-110054821-1"
+        - http.title:"firepower management center"
+    - platform: google
+      queries:
+        - intitle:"firepower management center"
 
 - name: mapproxy
   vendor: mapproxy
@@ -38324,9 +38347,11 @@
   engines:
     - platform: fofa
       queries:
+        - body="etherpad"
         - title="etherpad"
     - platform: shodan
       queries:
+        - http.html:"etherpad"
         - http.title:"etherpad"
     - platform: google
       queries:
@@ -44172,6 +44197,141 @@
     - platform: shodan
       queries:
         - http.html:"__nuxt"
+
+- name: adaptive_security_appliance_software
+  vendor: cisco
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="cisco asdm"
+    - platform: shodan
+      queries:
+        - http.title:"cisco asdm"
+
+- name: openfga
+  vendor: openfga
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - header="openfga"
+    - platform: shodan
+      queries:
+        - http.html:"openfga"
+
+- name: homer
+  vendor: sipcapture
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="homer v11"
+    - platform: shodan
+      queries:
+        - http.title:"homer v11"
+    - platform: google
+      queries:
+        - intitle:"homer v11"
+
+- name: codechecker
+  vendor: ericsson
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-1496590341"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-1496590341
+
+- name: monailabel
+  vendor: monai
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="monailabel"
+    - platform: shodan
+      queries:
+        - http.html:"monailabel"
+
+- name: wp-libre-form
+  vendor: wp-libre-form
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-libre-form"
+    - platform: shodan
+      queries:
+        - http.html:"wplf_submit"
+
+- name: alerta
+  vendor: alerta_project
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="alerta api" || title="alerta" && body="alerta-webui"
+    - platform: shodan
+      queries:
+        - http.html:"alerta api"
+
+- name: dialoqbase
+  vendor: n4ze3m
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="dialoqbase"
+    - platform: shodan
+      queries:
+        - http.html:"dialoqbase"
+
+- name: semantic_mediawiki
+  vendor: semantic-mediawiki
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="powered by semantic mediawiki"
+    - platform: shodan
+      queries:
+        - http.html:"powered by semantic mediawiki"
+
+- name: obot
+  vendor: obot-platform
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="nanobotdark"
+    - platform: shodan
+      queries:
+        - http.html:"nanobotdark"
+
+- name: vite
+  vendor: vitejs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/@vite/client"
+    - platform: shodan
+      queries:
+        - http.html:"/@vite/client"
+
+- name: t_plus
+  vendor: chanjet
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/tplus/"
+    - platform: shodan
+      queries:
+        - http.html:"tplus"
 
 - name: element
   vendor: matrix
