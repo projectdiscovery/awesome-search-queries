@@ -5112,8 +5112,10 @@
     - platform: shodan
       queries:
         - http.title:"mikrotik routeros > administration"
+        - product:"mikrotik routeros sshd"
     - platform: fofa
       queries:
+        - protocol="ssh" && banner="rosssh"
         - title="mikrotik routeros > administration"
     - platform: google
       queries:
@@ -14541,6 +14543,9 @@
       queries:
         - cpe:"cpe:2.3:a:roundcube:webmail"
         - http.component:"roundcube"
+    - platform: fofa
+      queries:
+        - roundcube_sessid
 
 - name: ruby193
   vendor: ruby-lang
@@ -24250,10 +24255,12 @@
     - platform: shodan
       queries:
         - http.html:"initial server configuration"
+        - http.html:"poste.io"
         - http.title:"administration login" html:"poste<span"
     - platform: fofa
       queries:
         - body="initial server configuration"
+        - body="poste.io"
         - title="administration login" html:"poste<span"
     - platform: google
       queries:
@@ -25600,9 +25607,11 @@
     - platform: shodan
       queries:
         - dgraph
+        - http.html:"dgraph browser is available"
         - http.title:"dgraph ratel dashboard"
     - platform: fofa
       queries:
+        - body="dgraph browser is available"
         - title="dgraph ratel dashboard"
     - platform: google
       queries:
@@ -44362,6 +44371,9 @@
     - platform: shodan
       queries:
         - http.title:"lakefs"
+    - platform: google
+      queries:
+        - intitle:"lakefs"
 
 - name: praisonai-platform
   vendor: praison
@@ -44370,6 +44382,12 @@
     - platform: shodan
       queries:
         - http.title:"praisonai platform"
+    - platform: fofa
+      queries:
+        - title="praisonai platform"
+    - platform: google
+      queries:
+        - intitle:"praisonai platform"
 
 - name: jupyter-mcp-server
   vendor: datalayer
@@ -44389,6 +44407,9 @@
     - platform: shodan
       queries:
         - http.title:"change detection"
+    - platform: google
+      queries:
+        - intitle:"change detection"
 
 - name: bookit
   vendor: stellarwp
@@ -44419,6 +44440,20 @@
     - platform: shodan
       queries:
         - http.html:"apache roller weblogger"
+    - platform: fofa
+      queries:
+        - body="apache roller weblogger"
+
+- name: king-addons-for-elementor
+  vendor: kingaddons
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/plugins/king-addons/"
+    - platform: shodan
+      queries:
+        - http.html:"/plugins/king-addons/"
 
 - name: element
   vendor: matrix
@@ -44427,3 +44462,11 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: salt
+  vendor: saltstack
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - port:4506 product:"saltstack salt"
