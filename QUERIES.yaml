@@ -8492,6 +8492,7 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.component:"craft cms"
         - http.favicon.hash:"-47932290"
         - http.html:"craft cms"
         - http.html:"craftcms"
@@ -12269,6 +12270,13 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:pulsesecure:pulse_connect_secure"
+        - http.title:"pulse connect secure"
+    - platform: fofa
+      queries:
+        - title="pulse connect secure"
+    - platform: google
+      queries:
+        - intitle:"pulse connect secure"
 
 - name: rabbitmq
   vendor: vmware
@@ -20751,10 +20759,12 @@
   engines:
     - platform: fofa
       queries:
+        - body="/wp-content/plugins/masterstudy-lms-learning-management-system/"
         - body="wp-content/plugins/masterstudy-lms-learning-management-system/"
         - body=/wp-content/plugins/masterstudy-lms-learning-management-system
     - platform: shodan
       queries:
+        - http.html:"/wp-content/plugins/masterstudy-lms-learning-management-system/"
         - http.html:"wp-content/plugins/masterstudy-lms-learning-management-system/"
         - http.html:/wp-content/plugins/masterstudy-lms-learning-management-system
     - platform: publicwww
@@ -44208,6 +44218,9 @@
     - platform: shodan
       queries:
         - http.title:"cisco asdm"
+    - platform: google
+      queries:
+        - intitle:"cisco asdm"
 
 - name: openfga
   vendor: openfga
@@ -44215,6 +44228,7 @@
   engines:
     - platform: fofa
       queries:
+        - body="openfga"
         - header="openfga"
     - platform: shodan
       queries:
@@ -44243,7 +44257,7 @@
         - icon_hash="-1496590341"
     - platform: shodan
       queries:
-        - http.favicon.hash:-1496590341
+        - http.favicon.hash:"-1496590341"
 
 - name: monailabel
   vendor: monai
@@ -44263,8 +44277,10 @@
     - platform: fofa
       queries:
         - body="wp-libre-form"
+        - body="wplf_submit"
     - platform: shodan
       queries:
+        - http.html:"wp-libre-form"
         - http.html:"wplf_submit"
 
 - name: alerta
@@ -44273,6 +44289,7 @@
   engines:
     - platform: fofa
       queries:
+        - body="alerta api"
         - body="alerta api" || title="alerta" && body="alerta-webui"
     - platform: shodan
       queries:
@@ -44329,9 +44346,79 @@
     - platform: fofa
       queries:
         - body="/tplus/"
+        - body="tplus"
     - platform: shodan
       queries:
+        - http.html:"/tplus/"
         - http.html:"tplus"
+
+- name: lakefs
+  vendor: lakefs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="lakefs"
+    - platform: shodan
+      queries:
+        - http.title:"lakefs"
+
+- name: praisonai-platform
+  vendor: praison
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"praisonai platform"
+
+- name: jupyter-mcp-server
+  vendor: datalayer
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"jupyter-mcp-server"
+
+- name: changedetection
+  vendor: webtechnologies
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="change detection"
+    - platform: shodan
+      queries:
+        - http.title:"change detection"
+
+- name: bookit
+  vendor: stellarwp
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="bookit-app"
+    - platform: shodan
+      queries:
+        - http.html:"bookit-app"
+
+- name: pdf-generator-for-wp
+  vendor: wpswings
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="action=genpdf"
+    - platform: shodan
+      queries:
+        - http.html:"action=genpdf"
+
+- name: roller
+  vendor: apache
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"apache roller weblogger"
 
 - name: element
   vendor: matrix
