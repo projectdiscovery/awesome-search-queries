@@ -38301,6 +38301,7 @@
       queries:
         - body="crawl4ai"
         - title="crawl4ai playground"
+        - title="crawl4ai playground" || body="crawl4ai"
     - platform: shodan
       queries:
         - http.html:"crawl4ai"
@@ -44455,14 +44456,6 @@
       queries:
         - http.html:"/plugins/king-addons/"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: salt
   vendor: saltstack
   type: product
@@ -44470,3 +44463,11 @@
     - platform: shodan
       queries:
         - port:4506 product:"saltstack salt"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
