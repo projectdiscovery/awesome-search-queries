@@ -3310,8 +3310,10 @@
       queries:
         - http.title:"parse dashboard"
         - http.title:"parse server" || "parse-server"
+        - x-parse-application-id
     - platform: fofa
       queries:
+        - header="x-parse-application-id"
         - title="parse dashboard"
         - title="parse server" || "parse-server"
     - platform: google
@@ -4815,9 +4817,14 @@
     - platform: shodan
       queries:
         - http.favicon.hash:1052926265
+        - http.title:"file browser"
     - platform: fofa
       queries:
         - icon_hash=1052926265
+        - title="file browser"
+    - platform: google
+      queries:
+        - intitle:"file browser"
 
 - name: sugarcrm
   vendor: sugarcrm
@@ -6164,12 +6171,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:1469328760
+        - http.favicon.hash:"1469328760"
         - http.html:"pmb group"
     - platform: fofa
       queries:
         - body="pmb group"
-        - icon_hash=1469328760
+        - icon_hash="1469328760"
 
 - name: eshop_-_ecommerce_\/_store_website
   vendor: wrteam
@@ -22830,6 +22837,13 @@
     - platform: fofa
       queries:
         - app="geoserver"
+        - title="geoserver"
+    - platform: shodan
+      queries:
+        - http.title:"geoserver"
+    - platform: google
+      queries:
+        - intitle:"geoserver"
 
 - name: apeosport-v_c3375
   vendor: fujixerox
@@ -23196,10 +23210,15 @@
       queries:
         - http.favicon.hash:-831756631
         - http.html:"n8n"
+        - http.title:"n8n.io - workflow automation"
     - platform: fofa
       queries:
         - body="n8n"
         - icon_hash=-831756631
+        - title="n8n.io - workflow automation"
+    - platform: google
+      queries:
+        - intitle:"n8n.io - workflow automation"
 
 - name: gophish
   vendor: getgophish
@@ -32683,9 +32702,11 @@
     - platform: fofa
       queries:
         - body="/wp-content/plugins/wordpress-seo/"
+        - body="this site is optimized with the yoast seo plugin"
     - platform: shodan
       queries:
         - http.html:"/wp-content/plugins/wordpress-seo/"
+        - http.html:"this site is optimized with the yoast seo plugin"
 
 - name: wp-mail-smtp
   vendor: developer
@@ -44464,6 +44485,83 @@
       queries:
         - port:4506 product:"saltstack salt"
 
+- name: caprover
+  vendor: caprover
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="caprover | server dashboard"
+    - platform: shodan
+      queries:
+        - http.title:"caprover | server dashboard"
+
+- name: ultimate-security-for-woocommerce
+  vendor: programmelab
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/ultimate-security-for-woocommerce/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/ultimate-security-for-woocommerce/"
+
+- name: data_tables_generator_by_supsystic
+  vendor: supsystic
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="data-tables-generator-by-supsystic"
+    - platform: shodan
+      queries:
+        - http.html:"data-tables-generator-by-supsystic"
+
+- name: xen-orchestra
+  vendor: vatesfr
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="xen orchestra"
+    - platform: shodan
+      queries:
+        - http.title:"xen orchestra"
+
+- name: easyimages2.0
+  vendor: icret
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="easyimage-简单图床"
+    - platform: shodan
+      queries:
+        - http.html:"easyimage2.0"
+
+- name: sonarr
+  vendor: sonarr
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="sonarr"
+    - platform: shodan
+      queries:
+        - http.title:"sonarr"
+
+- name: members
+  vendor: memberpress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="members_rescue_form"
+    - platform: shodan
+      queries:
+        - http.html:"members_rescue_form"
+
 - name: element
   vendor: matrix
   type: product
@@ -44471,3 +44569,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: unrealircd
+  vendor: unrealircd
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - server="unrealircd"
+    - platform: shodan
+      queries:
+        - 'server: unrealircd'
