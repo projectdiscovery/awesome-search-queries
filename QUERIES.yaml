@@ -174,6 +174,7 @@
         - product:"weblogic"
     - platform: fofa
       queries:
+        - app="weblogic"
         - product="weblogic" || header="weblogic server"
         - title="oracle peoplesoft sign-in"
     - platform: google
@@ -2030,7 +2031,15 @@
   engines:
     - platform: google
       queries:
+        - intitle:"sonicwall network security"
         - inurl:"auth.html" intitle:"sonicwall"
+    - platform: fofa
+      queries:
+        - title="sonicwall network security login"
+        - title="sonicwall network security"
+    - platform: shodan
+      queries:
+        - http.title:"sonicwall network security"
 
 - name: rancher
   vendor: rancher
@@ -44595,6 +44604,9 @@
     - platform: shodan
       queries:
         - http.title:"prefect server"
+    - platform: google
+      queries:
+        - intitle:"prefect server"
 
 - name: podinfo
   vendor: stefanprodan
@@ -44614,9 +44626,11 @@
     - platform: fofa
       queries:
         - 'body="forbidden: only"'
+        - body=only"
     - platform: shodan
       queries:
         - 'http.html:"forbidden: only"'
+        - http.html:only"
 
 - name: acf-frontend-form-element
   vendor: dynamiapps
@@ -44627,7 +44641,7 @@
         - body="/wp-content/plugins/acf-frontend-form-element/"
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/acf-frontend-form-element/
+        - http.html:"/wp-content/plugins/acf-frontend-form-element/"
 
 - name: wp-graphql-content-blocks
   vendor: wpengine
@@ -44661,6 +44675,9 @@
     - platform: shodan
       queries:
         - http.title:"kuboard"
+    - platform: google
+      queries:
+        - intitle:"kuboard"
 
 - name: agent
   vendor: kerberos-io
@@ -44676,6 +44693,64 @@
       queries:
         - intitle:"kerberos agent"
 
+- name: hasura
+  vendor: hasura
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="graphql-engine-cdn.hasura.io"
+    - platform: google
+      queries:
+        - inurl:"/console" "graphql-engine-cdn.hasura.io"
+    - platform: shodan
+      queries:
+        - http.html:"graphql-engine-cdn.hasura.io"
+
+- name: orientdb
+  vendor: orientdb
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="orientdb"
+    - platform: shodan
+      queries:
+        - product:"orientdb"
+
+- name: kirki
+  vendor: kirki
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/kirki/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/kirki/"
+
+- name: mealie
+  vendor: mealie
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="mealie"
+    - platform: shodan
+      queries:
+        - http.title:"mealie"
+
+- name: dnsserver
+  vendor: technitium
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="technitium dns server"
+    - platform: shodan
+      queries:
+        - http.title:"technitium dns server"
+
 - name: element
   vendor: matrix
   type: product
@@ -44683,3 +44758,14 @@
     - platform: shodan
       queries:
         - http.html:"manifest.json"
+
+- name: freeswitch
+  vendor: freeswitch
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="freeswitch"
+    - platform: shodan
+      queries:
+        - product:"freeswitch"
