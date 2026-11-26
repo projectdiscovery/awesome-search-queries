@@ -1802,6 +1802,7 @@
         - 'set-cookie: i_like_gogs='
     - platform: fofa
       queries:
+        - app="gogs"
         - icon_hash="-449283196"
         - icon_hash="1935513730"
         - icon_hash="917966895"
@@ -43467,9 +43468,11 @@
   engines:
     - platform: fofa
       queries:
+        - body="/wp-content/plugins/latepoint/"
         - body="latepoint"
     - platform: shodan
       queries:
+        - http.html:"/wp-content/plugins/latepoint/"
         - http.html:"latepoint"
 
 - name: drag-and-drop-file-upload-for-elementor-forms
@@ -44461,9 +44464,11 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"/roller-services/"
         - http.html:"apache roller weblogger"
     - platform: fofa
       queries:
+        - body="/roller-services/"
         - body="apache roller weblogger"
 
 - name: king-addons-for-elementor
@@ -44528,6 +44533,9 @@
     - platform: shodan
       queries:
         - http.title:"xen orchestra"
+    - platform: google
+      queries:
+        - intitle:"xen orchestra"
 
 - name: easyimages2.0
   vendor: icret
@@ -44536,6 +44544,7 @@
     - platform: fofa
       queries:
         - app="easyimage-简单图床"
+        - body="easyimage2.0"
     - platform: shodan
       queries:
         - http.html:"easyimage2.0"
@@ -44550,6 +44559,9 @@
     - platform: shodan
       queries:
         - http.title:"sonarr"
+    - platform: google
+      queries:
+        - intitle:"sonarr"
 
 - name: members
   vendor: memberpress
@@ -44562,14 +44574,6 @@
       queries:
         - http.html:"members_rescue_form"
 
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"manifest.json"
-
 - name: unrealircd
   vendor: unrealircd
   type: product
@@ -44580,3 +44584,102 @@
     - platform: shodan
       queries:
         - 'server: unrealircd'
+
+- name: prefect
+  vendor: prefect
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="prefect server"
+    - platform: shodan
+      queries:
+        - http.title:"prefect server"
+
+- name: podinfo
+  vendor: stefanprodan
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="stefanprodan/podinfo"
+    - platform: shodan
+      queries:
+        - http.html:"stefanprodan/podinfo"
+
+- name: bird-lgproxy
+  vendor: xddxdd
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - 'body="forbidden: only"'
+    - platform: shodan
+      queries:
+        - 'http.html:"forbidden: only"'
+
+- name: acf-frontend-form-element
+  vendor: dynamiapps
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/acf-frontend-form-element/"
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/acf-frontend-form-element/
+
+- name: wp-graphql-content-blocks
+  vendor: wpengine
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-graphql"
+    - platform: shodan
+      queries:
+        - http.html:"wp-graphql"
+
+- name: dragonfly
+  vendor: linuxfoundation
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="dragonfly console is the front-end console of dragonfly"
+    - platform: shodan
+      queries:
+        - http.html:"dragonfly console is the front-end console of dragonfly"
+
+- name: kuboard
+  vendor: kuboard
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="kuboard"
+    - platform: shodan
+      queries:
+        - http.title:"kuboard"
+
+- name: agent
+  vendor: kerberos-io
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="kerberos agent"
+    - platform: shodan
+      queries:
+        - http.title:"kerberos agent"
+    - platform: google
+      queries:
+        - intitle:"kerberos agent"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
