@@ -44768,6 +44768,47 @@
       queries:
         - product:"freeswitch"
 
+- name: kolibri
+  vendor: learningequality
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"kolibri"
+
+- name: anubis
+  vendor: techaro
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="anubis_challenge"
+    - platform: shodan
+      queries:
+        - http.html:"anubis_challenge"
+
+- name: bambuddy
+  vendor: bambuddy
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="bambuddy"
+    - platform: shodan
+      queries:
+        - http.title:"bambuddy"
+
+- name: virtuemart
+  vendor: virtuemart
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="com_virtuemart"
+    - platform: shodan
+      queries:
+        - http.html:"com_virtuemart"
+
 - name: element
   vendor: matrix
   type: product
