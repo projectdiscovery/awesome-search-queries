@@ -44739,6 +44739,9 @@
     - platform: shodan
       queries:
         - http.title:"mealie"
+    - platform: google
+      queries:
+        - intitle:"mealie"
 
 - name: dnsserver
   vendor: technitium
@@ -44750,14 +44753,9 @@
     - platform: shodan
       queries:
         - http.title:"technitium dns server"
-
-- name: element
-  vendor: matrix
-  type: product
-  engines:
-    - platform: shodan
+    - platform: google
       queries:
-        - http.html:"manifest.json"
+        - intitle:"technitium dns server"
 
 - name: freeswitch
   vendor: freeswitch
@@ -44769,3 +44767,11 @@
     - platform: shodan
       queries:
         - product:"freeswitch"
+
+- name: element
+  vendor: matrix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"manifest.json"
