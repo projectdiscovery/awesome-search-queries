@@ -44830,6 +44830,9 @@
     - platform: shodan
       queries:
         - http.title:"apache syncope"
+    - platform: google
+      queries:
+        - intitle:"apache syncope"
 
 - name: wp-recipe-maker
   vendor: bootstrappers
@@ -44852,6 +44855,9 @@
     - platform: shodan
       queries:
         - http.title:"recce"
+    - platform: google
+      queries:
+        - intitle:"recce"
 
 - name: uncanny_automator
   vendor: uncannyowl
