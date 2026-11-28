@@ -22237,10 +22237,12 @@
   engines:
     - platform: shodan
       queries:
+        - '"vmware" port:389'
         - http.title:"vmware vcenter"
         - vmware vcenter server
     - platform: fofa
       queries:
+        - app="vmware-vcenter"
         - title="vmware vcenter"
     - platform: google
       queries:
@@ -44775,6 +44777,12 @@
     - platform: shodan
       queries:
         - http.title:"kolibri"
+    - platform: fofa
+      queries:
+        - title="kolibri"
+    - platform: google
+      queries:
+        - intitle:"kolibri"
 
 - name: anubis
   vendor: techaro
@@ -44797,6 +44805,9 @@
     - platform: shodan
       queries:
         - http.title:"bambuddy"
+    - platform: google
+      queries:
+        - intitle:"bambuddy"
 
 - name: virtuemart
   vendor: virtuemart
@@ -44808,6 +44819,50 @@
     - platform: shodan
       queries:
         - http.html:"com_virtuemart"
+
+- name: syncope
+  vendor: apache
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="apache syncope"
+    - platform: shodan
+      queries:
+        - http.title:"apache syncope"
+
+- name: wp-recipe-maker
+  vendor: bootstrappers
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-recipe-maker/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wp-recipe-maker/"
+
+- name: recce
+  vendor: datarecce
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="recce"
+    - platform: shodan
+      queries:
+        - http.title:"recce"
+
+- name: uncanny_automator
+  vendor: uncannyowl
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/uncanny-automator/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/uncanny-automator/"
 
 - name: element
   vendor: matrix
